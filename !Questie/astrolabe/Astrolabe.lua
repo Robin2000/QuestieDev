@@ -12,7 +12,7 @@ Description:
     This is a library for the World of Warcraft UI system to place
     icons accurately on both the Minimap and the Worldmaps accurately
     and maintain the accuracy of those positions.
-
+    这个库让UI系统将icons精确放置在迷你地图和世界地图
 License:
 
 Copyright (C) 2006  James Carrothers

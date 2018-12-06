@@ -1,8 +1,13 @@
 ## Interface: 11200
 ## Title: |cFFFFFFFFQuestie|r|cFF00FF00 v3.7.0|r
-## Author: Aero/Schaka/Logonz/Dyaxler/Muehe/Zoey & all of our contributors
 ## Notes: A standalone Vanilla QuestHelper
+## Title-zhCN: |cFFFFFFFF任务辅助|r|cFF00FF00 v3.7.0|r
+## Title-zhTW: |cFFFFFFFF任務輔助|r|cFF00FF00 v3.7.0|r
+## Notes-zhCN: 独立的经典旧世任务辅助工具
+## Notes-zhTW: 獨立的經典舊世任務輔助工具
+## Author: Aero/Schaka/Logonz/Dyaxler/Muehe/Zoey & Robin2000
 ## Version: 3.7.0
+## eMail: 29698868@qq.com
 ## RequiredDeps:
 ## OptionalDeps: Cartographer, MetaMap, EQL3, ShaguQuest
 ## SavedVariables:
