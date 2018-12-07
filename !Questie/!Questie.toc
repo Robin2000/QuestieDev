@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: |cFFFFFFFFQuestie|r|cFF00FF00 v3.67|r
+## Title: |CFFDD66DDQuestie|r|cFF00FF00 v3.67|r|cFFFF0000 小球加强版|r
 ## Author: Aero/Schaka/Logonz/Dyaxler/everyone else
 ## Notes: A standalone Vanilla QuestHelper
 ## Version: 3.67
