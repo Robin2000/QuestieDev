@@ -1,12 +1,12 @@
 CREATE VIEW `monsters` AS
 SELECT c.entry AS 'id', c.name AS 'name'
-FROM mangos.creature_template c
+FROM creature_template c
 WHERE c.entry IN (
-    SELECT monster_id FROM questie.item_vendors
+    SELECT monster_id FROM item_vendors
     UNION ALL
-    SELECT monster_id FROM questie.item_drops 
+    SELECT monster_id FROM item_drops 
     UNION ALL
-    SELECT monster_id FROM questie.quest_objective_slay
+    SELECT monster_id FROM quest_objective_slay
     UNION ALL
-    SELECT monster_id FROM questie.reputation_monsters
+    SELECT monster_id FROM reputation_monsters
 )
