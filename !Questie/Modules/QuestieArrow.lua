@@ -202,7 +202,7 @@ local function OnUpdate(self, elapsed)
                 self:Hide()
                 return
             end
-            status:SetText(sformat("%d yards", dist))
+            status:SetText(sformat("%d 米", dist))
             local cell
             -- Showing the arrival arrow?
             if dist <= 5 then
