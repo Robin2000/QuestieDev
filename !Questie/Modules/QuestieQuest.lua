@@ -32,6 +32,8 @@ QuestDetailAcceptButton = nil;
 Questie.lastCollapsedCount = 0;
 Questie.collapsedThisRun = false;
 QUESTIE_LAST_UPDATECACHE = GetTime();
+
+QuestieZonesInt(); --[[开头]]
 ---------------------------------------------------------------------------------------------------
 --Blizzard Hook: Quest Abandon On Accept
 ---------------------------------------------------------------------------------------------------
@@ -1143,27 +1145,46 @@ end
 ---------------------------------------------------------------------------------------------------
 RaceBitIndexTable = {
     ['human'] = 1,
+	['人类'] = 1,
     ['orc'] = 2,
+	['兽人'] = 2,
     ['dwarf'] = 3,
+	['矮人'] = 3,
     ['nightelf'] = 4,
     ['night elf'] = 4,
+	['暗夜精灵'] = 4,
     ['scourge'] = 5,
     ['undead'] = 5,
+	['亡灵'] = 5,
     ['tauren'] = 6,
+	['牛头人'] = 6,
     ['gnome'] = 7,
+	['侏儒'] = 7,
     ['troll'] = 8,
-    ['goblin'] = 9
+	['巨魔'] = 8,
+    ['goblin'] = 9,
+	['地精'] = 9,
+	['哥布林'] = 9
 };
 ClassBitIndexTable = {
     ['warrior'] = 1,
+	['战士'] = 1,
     ['paladin'] = 2,
+	['圣骑士'] = 2,
     ['hunter'] = 3,
+	['猎人'] = 3,
     ['rogue'] = 4,
+	['盗贼'] = 4,
     ['priest'] = 5,
+	['牧师'] = 5,
     ['shaman'] = 7,
+	['萨满祭司'] = 7,
     ['mage'] = 8,
+	['法师'] = 8,
     ['warlock'] = 9,
-    ['druid'] = 11
+	['术士'] = 9,
+    ['druid'] = 11,
+	['德鲁伊'] = 11
 };
 ---------------------------------------------------------------------------------------------------
 function unpackBinary(val)
@@ -1180,6 +1201,7 @@ end
 ---------------------------------------------------------------------------------------------------
 function checkRequirements(class, race, dbClass, dbRace)
     local valid = true;
+	if class ~= nil and race ~= nil then --[[新添加]]
     if race and dbRace and not (dbRace == 0) then
         local racemap = unpackBinary(dbRace);
         valid = racemap[RaceBitIndexTable[strlower(race)]];
@@ -1188,6 +1210,7 @@ function checkRequirements(class, race, dbClass, dbRace)
         local classmap = unpackBinary(dbClass);
         valid = classmap[ClassBitIndexTable[strlower(class)]];
     end
+	end
     return valid;
 end
 ---------------------------------------------------------------------------------------------------
