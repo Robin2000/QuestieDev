@@ -38,7 +38,7 @@
                     </Anchors>
                     <TexCoords left="0.2" right="0.8" top="0" bottom="0.6" />
                 </Texture>
-                <FontString name="$parentTitleString" inherits="GameFontNormalSmall" text="Questie Options">
+                <FontString name="$parentTitleString" inherits="GameFontNormalSmall" text="选项">
                     <Size>
                         <AbsDimension x="140" y="0" />
                     </Size>
@@ -92,7 +92,7 @@
                     </FontHeight>
                 </ButtonText>
             </Button>
-            <Button name="$parentResetDefaultsButton" inherits="GameMenuButtonTemplate" text="Reset Defaults">
+            <Button name="$parentResetDefaultsButton" inherits="GameMenuButtonTemplate" text="默认设置">
                 <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
                 <Size>
                     <AbsDimension x="100" y="22" />
@@ -159,7 +159,7 @@
                         </Backdrop>
                         <Layers>
                             <Layer>
-                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="Min Show Level">
+                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="最小显示等级">
                                     <Anchors>
                                         <Anchor point="BOTTOM" relativePoint="TOP" />
                                     </Anchors>
@@ -271,7 +271,7 @@
                         </Backdrop>
                         <Layers>
                             <Layer>
-                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="Max Show Level">
+                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="最大显示等级">
                                     <Anchors>
                                         <Anchor point="BOTTOM" relativePoint="TOP" />
                                     </Anchors>
@@ -383,7 +383,7 @@
                         </Backdrop>
                         <Layers>
                             <Layer>
-                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="Tracker Scale">
+                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="跟踪大小">
                                     <Anchors>
                                         <Anchor point="BOTTOM" relativePoint="TOP" />
                                     </Anchors>
@@ -495,7 +495,7 @@
                         </Backdrop>
                         <Layers>
                             <Layer>
-                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="Tracker Transparency">
+                                <FontString name="$parentTitle" inherits="GameFontNormalSmall" text="跟踪透明度">
                                     <Anchors>
                                         <Anchor point="BOTTOM" relativePoint="TOP" />
                                     </Anchors>
@@ -573,7 +573,7 @@
                     </Slider>
                 </Frames>
             </Frame>
-            <Button name="$parentDoneButton" inherits="GameMenuButtonTemplate" text="Done">
+            <Button name="$parentDoneButton" inherits="GameMenuButtonTemplate" text="完成">
                 <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
                 <Size>
                     <AbsDimension x="136" y="31" />
@@ -644,7 +644,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Always Show Quests">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="总显示任务">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -701,7 +701,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Questie Arrow">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="方向箭头">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -758,7 +758,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Questie Tracker Colors">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="跟踪颜色">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -815,7 +815,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Max Level Filter">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="最大等级过滤">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -872,7 +872,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Min Level Filter">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="最小等级过滤">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -905,7 +905,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Map Notes">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示地图提示">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -938,7 +938,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Hide Objective Markers">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="隐藏目标标注">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -971,7 +971,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Profession Quests">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示专业任务">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1004,7 +1004,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Tracker Header">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示跟踪标头">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1037,7 +1037,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Tooltips">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示鼠标提示">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1070,7 +1070,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Questie Tracker">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="任务跟踪">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1103,7 +1103,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Tracker Sorting Direction">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="排序方式">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1136,7 +1136,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Tracker Background">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="跟踪背景">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1169,7 +1169,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Resize Worldmap">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="调整地图大小">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1202,7 +1202,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Hide Minimap Icons">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="隐藏小地图图标">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1235,7 +1235,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Minimap Button">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示小地图按钮">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1268,7 +1268,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Version">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="版本">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1561,7 +1561,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Show Corpse Arrow">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="显示尸体方向箭头">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>
@@ -1618,7 +1618,7 @@
                 </Anchors>
                 <Layers>
                     <Layer>
-                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="Cluster Worldmap Notes">
+                        <FontString name="$parentLabel" setAllPoints="true" inherits="GameFontNormalSmall" text="合并地图提示">
                             <FontHeight>
                                 <AbsValue val="12" />
                             </FontHeight>

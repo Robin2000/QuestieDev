@@ -263,51 +263,51 @@ function Questie:OnUpdate(elapsed)
                             break;
                         end
                     end
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring(GetTime()- UpdateTime).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring(GetTime()- UpdateTime).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "UPDATECACHE") then
                     local UpdateCacheTime = GetTime();
                     Questie:UpdateGameClientCache();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- UpdateCacheTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- UpdateCacheTime)*1000).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "CHECKLOG") then
                     local CheckLogTime = GetTime();
                     Questie:CheckQuestLog();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- CheckLogTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- CheckLogTime)*1000).." ms");
                 elseif (v.EVENT == "TRACKER") then
                     local TrackerTime = GetTime();
                     QuestieTracker:SortTrackingFrame();
                     QuestieTracker:FillTrackingFrame();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- TrackerTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- TrackerTime)*1000).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "SYNCLOG") then
                     local SyncLogTime = GetTime();
                     QuestieTracker:syncQuestLog();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- SyncLogTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- SyncLogTime)*1000).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "SYNCWATCH") and (not IsAddOnLoaded("EQL3")) and (not IsAddOnLoaded("ShaguQuest")) then
                     local SyncWoWLogTime = GetTime();
                     QuestieTracker:syncQuestWatch();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- SyncWoWLogTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- SyncWoWLogTime)*1000).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "DRAWNOTES") then
                     local DrawNotesTime = GetTime();
                     Questie:SetAvailableQuests();
                     Questie:RedrawNotes();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- DrawNotesTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- DrawNotesTime)*1000).." ms");
                     Questie:debug_Print();
                 elseif (v.EVENT == "LOADEVENTS") then
                     local LoadEventsTime = GetTime();
                     GameLoadingComplete = true;
                     Questie:OnLoad_QuestEvents();
                     QUESTIE_EVENTQUEUE[k] = nil;
-                    Questie:debug_Print("OnUpdate: "..v.EVENT.." Took: "..tostring((GetTime()- LoadEventsTime)*1000).." ms");
+                    Questie:debug_Print("OnUpdate: "..v.EVENT.." 花费: "..tostring((GetTime()- LoadEventsTime)*1000).." ms");
                     Questie:debug_Print();
                 end
             else
@@ -534,9 +534,9 @@ end
 ---------------------------------------------------------------------------------------------------
 function Questie:ClearConfig(arg)
     if arg == "slash" then
-        msg = "|cFFFFFF00You are about to clear your characters settings. This will NOT delete your quest database but it will clean it up a little. This will reset abandoned quests, and remove any finished or stale quest entries in the QuestTracker database. Your UI will be reloaded automatically to finalize the new settings.|n|nAre you sure you want to continue?|r";
+        msg = "|cFFFFFF00清除角色设置. 不会删除任务数据库. 会重置放弃的任务, 从跟踪列表移除完成的任务. 自动重载完成设置.|n|n真的要继续吗?|r";
     elseif arg == "version" then
-        msg = "|cFFFFFF00VERSION CHECK!|n|nIt appears you have installed Questie for the very first time or you have recently upgraded to a new version. Your UI will automatically be reloaded and your QuestieConfig will be updated and cleaned of any stale entries. This will NOT clear your quest history.|n|nPlease click Yes to begin the update.|r";
+        msg = "|cFFFFFF00版本检查!|n|n版本太老了. 会清理旧版的跟踪数据. 不会影响任务列史.|n|n点击确定开始更新.|r";
     end
     StaticPopupDialogs["CLEAR_CONFIG"] = {
         text = TEXT(msg),
@@ -573,9 +573,9 @@ end
 ---------------------------------------------------------------------------------------------------
 function Questie:NUKE(arg)
     if arg == "slash" then
-        msg = "|cFFFFFF00You are about to completely wipe your characters saved variables. This includes all quests you've completed, settings and preferences, and QuestTracker location.|n|nAre you sure you want to continue?|r";
+        msg = "|cFFFFFF00准备删除角色保存的状态. 包括所有完成的任务, 设置, 任务位置跟踪.|n|n真的要继续吗?|r";
     elseif arg == "newcharacter" then
-        msg = "|cFFFFFF00ERROR! Database Detected!|n|nIt appears that you've used this name for a previous character. There are entries in the QuestDatabase that need to be cleared in order for Questie to work properly with this character. Your UI will be reloaded automatically to clear your config.|n|nAre you sure you want to continue?|r";
+        msg = "|cFFFFFF00错误! 数据库检查!|n|n可能使用了前面角色的名字. 需要清理旧的角色跟踪数据. 界面会重新加载清理配置.|n|n真的要继续吗?|r";
     end
     StaticPopupDialogs["NUKE_CONFIG"] = {
         text = TEXT(msg),
@@ -609,9 +609,9 @@ QuestieFastSlash = {
     --Default: True
         QuestieConfig.arrowEnabled = not QuestieConfig.arrowEnabled;
         if QuestieConfig.arrowEnabled then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Arrow On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (箭头开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Arrow Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (箭头关) |r");
             TomTomCrazyArrow:Hide();
         end
     end,
@@ -641,9 +641,9 @@ QuestieFastSlash = {
             local val = tonumber(args);
             QuestieConfig.trackerAlpha = val/100;
             QuestieTracker:FillTrackingFrame();
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieTracker:|c0000ffc0 (Background Alpha Set To: |r|c0000c0ff"..val.."%|r|c0000ffc0)|r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieTracker:|c0000ffc0 (背景透明设置到: |r|c0000c0ff"..val.."%|r|c0000ffc0)|r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222 Error: Invalid Number Supplied! |r");
+            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222 错误: 无效数字! |r");
         end
     end,
     ["clearconfig"] = function()
@@ -652,7 +652,7 @@ QuestieFastSlash = {
     ["cleartracker"] = function()
     --Default: None - Popup confirmation of Yes or No - Popup has a 60 second timeout.
         StaticPopupDialogs["CLEAR_TRACKER"] = {
-            text = "|cFFFFFF00You are about to reset your QuestTracker. This will only reset it's saved location and place it in the center of your screen. Your UI will be reloaded automatically.|n|nAre you sure you want to continue?|r",
+            text = "|cFFFFFF00重置选项. 界面会重新加载.|n|n真的要继续吗?|r",
             button1 = TEXT(YES),
             button2 = TEXT(NO),
             OnAccept = function()
@@ -681,9 +681,9 @@ QuestieFastSlash = {
     --Default: True
         QuestieConfig.clusterQuests = not QuestieConfig.clusterQuests;
         if QuestieConfig.clusterQuests then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Clustered Icons On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (合并图标开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Clustered Icons Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (合并图标关) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -691,9 +691,9 @@ QuestieFastSlash = {
     --Default: False
         QuestieConfig.boldColors = not QuestieConfig.boldColors;
         if QuestieConfig.boldColors then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (Alternate Colors On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (替换颜色开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (Alternate Colors Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (替换颜色关) |r");
         end
         QuestieTracker:FillTrackingFrame();
     end,
@@ -701,9 +701,9 @@ QuestieFastSlash = {
     --Default: True
         QuestieConfig.corpseArrow = not QuestieConfig.corpseArrow;
         if QuestieConfig.corpseArrow then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieCorpse:|c0000ffc0 (Arrow On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieCorpse:|c0000ffc0 (箭头开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieCorpse:|c0000ffc0 (Arrow Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieCorpse:|c0000ffc0 (箭头关) |r");
             TomTomCrazyArrow:Hide();
         end
     end,
@@ -711,7 +711,7 @@ QuestieFastSlash = {
     --Default: False
         if (QuestieConfig.showTrackerHeader == false) then
             StaticPopupDialogs["TRACKER_HEADER_F"] = {
-                text = "|cFFFFFF00Due to the way the QuestTracker frame is rendered, your UI will automatically be reloaded.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00由于任务跟踪器窗口的呈现方式, 界面会自动重新加载.|n|n想要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -726,7 +726,7 @@ QuestieFastSlash = {
         end
         if (QuestieConfig.showTrackerHeader == true) then
             StaticPopupDialogs["TRACKER_HEADER_T"] = {
-                text = "|cFFFFFF00Due to the way the QuestTracker frame is rendered, your UI will automatically be reloaded.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00由于任务跟踪器框架的呈现方式, 界面需要重新加载.|n|n要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -744,9 +744,9 @@ QuestieFastSlash = {
     --Default: False
         QuestieConfig.hideMinimapIcons = not QuestieConfig.hideMinimapIcons;
         if QuestieConfig.hideMinimapIcons then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieStarters:|c0000ffc0 (Are now being hidden) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieStarters:|c0000ffc0 (设置隐藏) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieStarters:|c0000ffc0 (Are now being shown) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieStarters:|c0000ffc0 (设置显示) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -754,9 +754,9 @@ QuestieFastSlash = {
     --Default: False
         QuestieConfig.hideObjectives = not QuestieConfig.hideObjectives;
         if QuestieConfig.hideObjectives then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (Set to always hide) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (设置总是隐藏) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (Set to always show) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (设置总是显示) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -764,7 +764,7 @@ QuestieFastSlash = {
     --Default: False
         if (QuestieConfig.trackerList == false) then
             StaticPopupDialogs["BOTTOM_UP"] = {
-                text = "|cFFFFFF00You are about to change the way quests are listed in the QuestTracker. They will grow from bottom --> up and sorted by distance from top --> down.|n|nYour UI will be automatically reloaded to apply the new settings.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00该表任务列表的显示. 从小到大 --> 距离从大 --> 小.|n|n界面重新加载.|n|n真的要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -786,7 +786,7 @@ QuestieFastSlash = {
             StaticPopup_Show ("BOTTOM_UP");
         elseif (QuestieConfig.trackerList == true) then
             StaticPopupDialogs["TOP_DOWN"] = {
-                text = "|cFFFFFF00You are about to change the tracker back to it's default state. Quests will grow from top --> down and also sorted by distance from top --> down in the QuestTracker.|n|nYour UI will be reloaded to apply the new settings.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00改变到默认设置. 任务将从大 --> 小，且距离从大 --> 小.|n|n界面重新加载.|n|n真的要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -812,18 +812,18 @@ QuestieFastSlash = {
     --Default: True
         Questie:Toggle();
         if QuestieConfig.showMapNotes then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Map Notes On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (地图提示开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Map Notes Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (地图提示关) |r");
         end
     end,
     ["maxlevel"] = function()
     --Default: True
         QuestieConfig.maxLevelFilter = not QuestieConfig.maxLevelFilter;
         if QuestieConfig.maxLevelFilter then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Max-Level Filter On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (最大等级过滤开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Max-Level Filter Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (最大等级过滤关) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -840,10 +840,10 @@ QuestieFastSlash = {
     --Default: False
         QuestieConfig.minimapZoom = not QuestieConfig.minimapZoom;
         if QuestieConfig.minimapZoom then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieMiniMap:|c0000ffc0 (MiniMap Auto-Zoom On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieMiniMap:|c0000ffc0 (小地图自动缩放开) |r");
             QuestieConfig.minimapZoom = true;
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieMiniMap:|c0000ffc0 (MiniMap Auto-Zoom Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieMiniMap:|c0000ffc0 (小地图自动缩放关) |r");
             QuestieConfig.minimapZoom = false;
         end
     end,
@@ -851,20 +851,20 @@ QuestieFastSlash = {
     --Default: True
         QuestieConfig.minLevelFilter = not QuestieConfig.minLevelFilter;
         if QuestieConfig.minLevelFilter then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Min-Level Filter On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (小地图自动过滤开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Min-Level Filter Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (小地图自动过滤关) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
     ["mintracker"] = function()
     --Default: False
         if QuestieConfig.trackerMinimize then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (Maximized) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (最小化) |r");
             QuestieConfig.trackerMinimize = false;
             QuestieTracker.frame:Show();
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (Minimized) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestTracker:|c0000ffc0 (最大化) |r");
             QuestieConfig.trackerMinimize = true;
             QuestieTracker.frame:Hide();
         end
@@ -877,9 +877,9 @@ QuestieFastSlash = {
     --Default: False
         QuestieConfig.showProfessionQuests = not QuestieConfig.showProfessionQuests;
         if QuestieConfig.showProfessionQuests then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Profession Quests On) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (专业任务开) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (Profession Quests Off) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieQuest:|c0000ffc0 (专业任务关) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -895,7 +895,7 @@ QuestieFastSlash = {
             QuestieConfig.trackerScale = 1.0;
             ReloadUI();
         else
-            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222 Error: Invalid Option.");
+            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222 Error: 非法选项.");
         end
     end,
     ["resizemap"] = function()
@@ -911,10 +911,10 @@ QuestieFastSlash = {
     --Default7:Quests will not appear until your level is 7 levels below the quest's minimum level
         if args then
             local val = tonumber(args);
-            DEFAULT_CHAT_FRAME:AddMessage("Max-Level filter set to "..val);
+            DEFAULT_CHAT_FRAME:AddMessage("最大等级设置 "..val);
             QuestieConfig.maxShowLevel = val;
         else
-            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222Error: Invalid Number Supplied!");
+            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222Error: 无效数字!");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -922,10 +922,10 @@ QuestieFastSlash = {
     --Default4:Quests will stop appearing when their recommended level is below your level minus 4
         if args then
             local val = tonumber(args);
-            DEFAULT_CHAT_FRAME:AddMessage("Min-Level filter set to "..val);
+            DEFAULT_CHAT_FRAME:AddMessage("最小等级设置 "..val);
             QuestieConfig.minShowLevel = val;
         else
-            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222Error: Invalid Number Supplied!");
+            DEFAULT_CHAT_FRAME:AddMessage("|cFFFF2222Error: 无效数字!");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -936,9 +936,9 @@ QuestieFastSlash = {
     --Default: True
         QuestieConfig.alwaysShowObjectives = not QuestieConfig.alwaysShowObjectives;
         if QuestieConfig.alwaysShowObjectives then
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieOjectives:|c0000ffc0 (Set to always show) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieOjectives:|c0000ffc0 (设置总是显示) |r");
         else
-            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (Only show on maps while tracking) |r");
+            DEFAULT_CHAT_FRAME:AddMessage("QuestieObjectives:|c0000ffc0 (仅跟踪的任务在地图上显示) |r");
         end
         Questie:AddEvent("DRAWNOTES", 0.1);
     end,
@@ -957,7 +957,7 @@ QuestieFastSlash = {
     --Default: True
         if (QuestieConfig.trackerEnabled == true) then
             StaticPopupDialogs["HIDE_TRACKER"] = {
-                text = "|cFFFFFF00You are about to disable the QuestieTracker. If you're using a QuestLog mod with a built in tracker then after your UI reloads you will be using that mods default tracker. Otherwise you'll use WoW's default tracker.|n|nYour UI will be automatically reloaded to apply the new settings.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00要禁止QuestieTracker. 如果使用任务日志跟踪任务，将使用 WoW 默认的设置.|n|n界面自动重新加载.|n|n真的要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -973,7 +973,7 @@ QuestieFastSlash = {
             StaticPopup_Show ("HIDE_TRACKER");
         elseif (QuestieConfig.trackerEnabled == false) then
             StaticPopupDialogs["SHOW_TRACKER"] = {
-                text = "|cFFFFFF00You are about to enabled the QuestieTracker. The previous quest tracker will be disabled.|n|nYour UI will be reloaded to apply the new settings.|n|nAre you sure you want to continue?|r",
+                text = "|cFFFFFF00要启用QuestieTracker. 系统任务跟踪会被禁止掉.|n|n你的界面会重新加载.|n|n要继续吗?|r",
                 button1 = TEXT(YES),
                 button2 = TEXT(NO),
                 OnAccept = function()
@@ -1044,7 +1044,7 @@ function Questie_SlashHandler(msgbase)
     end
     if QuestieFastSlash[msg] ~= nil then
         if ( QuestieOptionsForm:IsVisible() ) then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Error: cannot execute commands while the Questie options window is open.|r")
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Error: 当任务选项窗口未关闭时，不能执行命令.|r")
         else
             QuestieFastSlash[msg](args);
         end
@@ -1052,7 +1052,7 @@ function Questie_SlashHandler(msgbase)
         if (not msg or msg=="") then
             QuestieFastSlash["help"]();
         else
-            DEFAULT_CHAT_FRAME:AddMessage("Unknown operation: " .. msg .. " try /questie help");
+            DEFAULT_CHAT_FRAME:AddMessage("未知操作: " .. msg .. " try /questie help");
         end
     end
 end
