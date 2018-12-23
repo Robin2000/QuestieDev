@@ -483,8 +483,8 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Blackrock Depths"] = "黑石深渊",
 		["Blackrock Mountain"] = "黑石山",
 		["Blackrock Spire"] = "黑石塔",
-    ["Lower Blackrock Spire"] = true,
-    ["Upper Blackrock Spire"] = true,
+    ["Lower Blackrock Spire"] = "黑石塔下层",
+    ["Upper Blackrock Spire"] = "黑石塔上层",
 		["Blackwing Lair"] = "黑翼之巢",
 		["Blasted Lands"] = "诅咒之地",
 		["Booty Bay"] = "藏宝海湾",
@@ -615,7 +615,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Shattrath City"] = "沙尔特拉城",
 		["Karazhan"] = "卡拉赞",
 		["Caverns of Time"] = "时光之穴",
---		["Zul'Aman"] = true,
+		["Zul'Aman"] = "祖阿曼",
 	}
 end)
 
