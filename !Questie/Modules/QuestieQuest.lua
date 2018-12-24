@@ -32,6 +32,8 @@ QuestDetailAcceptButton = nil;
 Questie.lastCollapsedCount = 0;
 Questie.collapsedThisRun = false;
 QUESTIE_LAST_UPDATECACHE = GetTime();
+
+QuestieZonesInt(); --[[开头]]
 ---------------------------------------------------------------------------------------------------
 --Blizzard Hook: Quest Abandon On Accept
 ---------------------------------------------------------------------------------------------------
