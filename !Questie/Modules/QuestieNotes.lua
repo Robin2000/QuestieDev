@@ -476,23 +476,23 @@ function Questie:GetTooltipLines(path, indent, highlightInfo, lines)
     for sourceType, sources in pairs(path) do
         local prefix;
         if sourceType == "drop" then
-            prefix = "Dropped by";
+            prefix = "爆落";
         elseif sourceType == "rewardedby" then
-            prefix = "Awarded by";
+            prefix = "奖励";
         elseif sourceType == "contained" then
-            prefix = "Contained in";
+            prefix = "包含于";
         elseif sourceType == "contained_id" then
-            prefix = "Contained in";
+            prefix = "包含在";
         elseif sourceType == "containedi" then
-            prefix = "Opened in";
+            prefix = "打开于";
         elseif sourceType == "created" then
-            prefix = "Created by";
+            prefix = "创造者";
         elseif sourceType == "openedby" then
-            prefix = "Opened by";
+            prefix = "开启人";
         elseif sourceType == "transforms" then
-            prefix = "Used on";
+            prefix = "转化";
         elseif sourceType == "transformedby" then
-            prefix = "Created by";
+            prefix = "转化自";
         end
         if prefix then
             for sourceName, sourcePath in pairs(sources) do
@@ -593,16 +593,16 @@ function Questie_Tooltip_OnEnter()
                 end
                 local questLine = "["..QuestieHashMap[data.questHash].questLevel.."] "..QuestieHashMap[data.questHash].name;
                 if data.icontype == "available" then
-                    questLine = questLine.." |cFF33FF00(available)|r";
+                    questLine = questLine.." |cFF33FF00(可接)|r";
                 elseif data.icontype == "availablesoon" then
-                    questLine = questLine.." |cFFa6a6a6(not available)|r";
+                    questLine = questLine.." |cFFa6a6a6(不可接)|r";
                 end
                 Tooltip:AddLine(questLine);
-                Tooltip:AddLine("Min Level: |cFFa6a6a6"..QuestieHashMap[data.questHash].level.."|r",1,1,1);
-                Tooltip:AddLine("Started by: |cFFa6a6a6"..Questie:RemoveUniqueSuffix(QuestieHashMap[data.questHash].startedBy).."|r",1,1,1);
+                Tooltip:AddLine("最低等级: |cFFa6a6a6"..QuestieHashMap[data.questHash].level.."|r",1,1,1);
+                Tooltip:AddLine("开始于: |cFFa6a6a6"..Questie:RemoveUniqueSuffix(QuestieHashMap[data.questHash].startedBy).."|r",1,1,1);
                 Questie:AddPathToTooltip(Tooltip, questMeta['path'], 1);
                 if questOb ~= nil then
-                    Tooltip:AddLine("Description: |cFFa6a6a6"..Questie:RemoveUniqueSuffix(questOb).."|r",1,1,1,true);
+                    Tooltip:AddLine("描述: |cFFa6a6a6"..Questie:RemoveUniqueSuffix(questOb).."|r",1,1,1,true);
                 end
                 canManualComplete = 1;
             end
@@ -612,7 +612,7 @@ function Questie_Tooltip_OnEnter()
             if count > 1 then
                 Tooltip:AddLine(" ");
             end
-            Tooltip:AddLine("Shift+Click: |cFFa6a6a6Manually complete quest!|r",1,1,1);
+            -- Tooltip:AddLine("Shift+Click: |cFFa6a6a6Manually complete quest!|r",1,1,1);
         end
         if(NOTES_DEBUG and IsAltKeyDown()) then
             Tooltip:AddLine("!DEBUG!", 1, 0, 0);

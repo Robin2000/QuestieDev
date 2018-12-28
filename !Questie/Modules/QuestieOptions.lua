@@ -1,6 +1,6 @@
 BINDING_HEADER_QUESTIE = "Questie"
-BINDING_NAME_QUESTIEOPTIONS = "Open Questie Options"
-BINDING_NAME_QUESTIETOGGLE = "Toggle Questie On or Off"
+BINDING_NAME_QUESTIEOPTIONS = "打开Questie选项"
+BINDING_NAME_QUESTIETOGGLE = "切换Questie开关"
 
 Questie_Options = AceLibrary("AceAddon-2.0"):new("AceHook-2.1")
 
@@ -156,45 +156,45 @@ function Questie:OptionsForm_ApplyOptions()
     QuestieConfig.trackerList = Questie:toboolean(QO_trackerlist:GetChecked())
     QuestieConfig.trackerScale = tonumber(QO_trackerscale:GetValue() / 100)
 
-    DEFAULT_CHAT_FRAME:AddMessage("Questie Options Applied", 1, 0.75, 0)
+    DEFAULT_CHAT_FRAME:AddMessage("选项已生效", 1, 0.75, 0)
 
     local bDisplayWarning = false
-    local WarningMessage = "|cFFFFFF00Some options require a ReloadUI to apply:|n|n"
+    local WarningMessage = "|cFFFFFF00某些选项需要重新加载应用:|n|n"
     if(QuestieConfig.resizeWorldmap ~= CachedValues.resizeWorldmap) then
-        WarningMessage = WarningMessage.."Resize World Map|n"
+        WarningMessage = WarningMessage.."更改地图大小|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.showToolTips ~= CachedValues.showToolTips) then
-        WarningMessage = WarningMessage.."Show Tool Tips|n"
+        WarningMessage = WarningMessage.."显示鼠标提示|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.showTrackerHeader ~= CachedValues.showTrackerHeader) then
-        WarningMessage = WarningMessage.."Show Tracker Header|n"
+        WarningMessage = WarningMessage.."显示跟踪标题|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.trackerBackground ~= CachedValues.trackerBackground) then
-        WarningMessage = WarningMessage.."Tracker Background|n"
+        WarningMessage = WarningMessage.."跟踪背景|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.trackerEnabled ~= CachedValues.trackerEnabled) then
-        WarningMessage = WarningMessage.."Tracker Enabled|n"
+        WarningMessage = WarningMessage.."启用跟踪|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.trackerList ~= CachedValues.trackerList) then
-        WarningMessage = WarningMessage.."Tracker List|n"
+        WarningMessage = WarningMessage.."跟踪列表|n"
         bDisplayWarning = true
     end
     if(QuestieConfig.trackerScale ~= CachedValues.trackerScale) then
-        WarningMessage = WarningMessage.."Tracker Scale|n"
+        WarningMessage = WarningMessage.."跟踪框大小|n"
         bDisplayWarning = true
     end
-    WarningMessage = WarningMessage.."|nDo you want to reload now or revert these settings?|r"
+    WarningMessage = WarningMessage.."|n要重新加载设置吗?|r"
 
     if(bDisplayWarning) then
         StaticPopupDialogs["OPTIONS_WARNING_F"] = {
             text = WarningMessage,
-            button1 = TEXT("Reload"),
-            button2 = TEXT("Revert"),
+            button1 = TEXT("重载"),
+            button2 = TEXT("复原"),
             OnAccept = function()
                 ReloadUI()
             end,
@@ -208,7 +208,7 @@ function Questie:OptionsForm_ApplyOptions()
                 QuestieConfig.trackerList = CachedValues.trackerList
                 QuestieConfig.trackerScale = CachedValues.trackerScale
                 Questie:AddEvent("TRACKER", 0)
-                DEFAULT_CHAT_FRAME:AddMessage("Questie Options that required a UI Reload have been reverted", 1, 0.75, 0)
+                DEFAULT_CHAT_FRAME:AddMessage("Questie选项已经复原", 1, 0.75, 0)
             end,
             timeout = 60,
             exclusive = 1,
