@@ -1,5 +1,6 @@
 local N = UnitName("player");
 local R = UnitRace("player");
+QuestieZonesInt(); --[[开头]]
 QuestieLevLookup = {
  ["艾露恩的枭兽"]={
   ["与达纳苏斯的大德鲁伊范达尔·鹿盔谈一谈。"]={77,1617756149},
@@ -44,18 +45,18 @@ QuestieLevLookup = {
   ["带10张中皮给铁炉堡军事区的士兵波特。"]={0,1050834840},
  },
  ["毒水之源"]={
-  ["Use the Empty Cliffspring Falls Sampler to draw a sample of water from the mouth of the cave by the falls.\n\nDeliver the Filled Cliffspring Falls Sampler to Alanndarian Nightsong in Auberdine, Darkshore."]={8,150041920},
+  ["使用空的峭壁之泉取样器在瀑布洞口获得水样。\n\n将盛满的峭壁之泉取样器送到黑海岸奥伯丁的奥兰达利亚·夜歌那里。"]={8,150041920},
  },
  ["高速青铜齿轮"]={
   [""]={0,12438792},
  },
  ["可怕的堡垒 - 纳克萨玛斯"]={
-  ["Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 5 Arcane Crystals, 2 Nexus Crystals, 1 Righteous Orb and 60 gold pieces. You must also be Honored with the Argent Dawn.\n"]={0,1076561088},
+  ["东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯需要5块奥术水晶、2块连结水晶、1个正义宝珠和60金币。你在银色黎明中的声望必须达到尊敬。"]={0,1076561088},
   ["东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯需要2块奥术水晶、1块连结水晶和30金币。你在银色黎明中的声望必须达到崇敬。"]={0,2302857152},
   ["东瘟疫之地圣光之愿礼拜堂的大法师安琪拉·多桑杜将免费给你秘法掩护。你一定要在银色黎明达到崇拜声望。"]={0,1517459552},
  },
  ["搜寻乌鸦岭"]={
-  ["Find the Shadowy Figure.  Your clues:\n\nHe is not native to Darkshire.\n\nHe is a nervous, jittery person.\n\nHe left Darkshire and headed west."]={77,1518817533},
+  ["找到那个模糊的人影。你的线索：\n\n他不是夜色镇的本地人。\n\n他是个紧张而敏感的人。\n\n他离开夜色镇往西边去了。"]={77,1518817533},
  },
  ["乔恩·星眼"]={
   ["与陶拉祖营地的乔恩·星眼谈一谈。"]={178,2590765442},
@@ -122,8 +123,8 @@ QuestieLevLookup = {
   ["将野性之心腰带，一套野性之心手套带给铁炉堡的德莉娜。"]={0,2225212464},
   ["将野性之心腰带和1套野性之心手套带给奥格玛的莫克瓦。"]={178,919737650},
   ["将驭兽者腰带和1套驭兽者手套带给铁炉堡的德莉娜。"]={0,1685470200},
-  ["Bring a Magister's Belt and a set of Magister's Gloves to Deliana in Ironforge.\n"]={0,4215417272},
-  ["Bring a Lightforge Belt and a set of Lightforge Gauntlets to Deliana in Ironforge.\n"]={0,2555132224},
+  ["将博学者腰带和1套博学者手套带给铁炉堡的德莉娜。"]={0,4215417272},
+  ["将一条光铸腰带和一副光铸护腕交给铁炉堡的德莉亚娜。"]={0,2555132224},
   ["将虔诚腰带和1套虔诚手套带给铁炉堡的德莉娜。"]={0,3086094712},
   ["将迅影腰带和1套迅影手套带给铁炉堡的德莉娜。"]={0,3587847016},
   ["将一条鬼雾腰带和一副鬼雾手套交给铁炉堡的德莉亚娜。"]={0,14820544},
@@ -132,16 +133,16 @@ QuestieLevLookup = {
   ["将博学者腰带和1套博学者手套带给奥格玛的莫克瓦。"]={0,1850879904},
   ["将虔诚腰带和1套虔诚手套带给奥格玛的莫克瓦。"]={0,49421232},
   ["将迅影腰带和1套迅影手套带给奥格玛的莫克瓦。"]={0,15351200},
-  ["Bring a Cord of Elements and a set of Gauntlets of Elements to Mokvar in Orgrimmar.\n"]={0,3730983920},
-  ["Bring a Dreadmist Belt and a set of Dreadmist Wraps to Mokvar in Orgrimmar.\n"]={0,3996268360},
-  ["Bring a Belt of Valor and a set of Gauntlets of Valor to Mokvar in Orgrimmar.\n"]={0,43727960},
+  ["将元素束腰和1套元素护手带给奥格玛的莫克瓦。"]={0,3730983920},
+  ["将鬼雾腰带和1套鬼雾手套带给奥格玛的莫克瓦。"]={0,3996268360},
+  ["将勇气腰带和1套勇气护手带给奥格玛的莫克瓦。"]={0,43727960},
  },
  ["达尔松夫人的日记"]={
   [""]={0,9494984},
  },
  ["挑战奈古拉什"]={
-  ["Bring 10 Barbecued Buzzard Wings and 5 bottles of Junglevine Wine to Captain Smotts' Lifeboat.\n\nKill Negolash, and bring Smotts' Cutlass to Captain Smotts in Stranglethorn."]={77,2923459197},
-  ["Bring 10 Barbecued Buzzard Wings and 5 bottles of Junglevine Wine to Captain Smotts' Lifeboat.\n\nKill Negolash, and bring Smotts' Cutlass to Captain Smotts in Stranglethorn."]={178,2927522658},
+  ["将10块烧烤秃鹰翅膀和5瓶密林葡萄酒带到斯莫特船长的救生艇上去。\n\n然后杀死奈古拉什，将斯莫特的弯刀交给荆棘谷的斯莫特船长。"]={77,2923459197},
+  ["将10块烧烤秃鹰翅膀和5瓶密林葡萄酒带到斯莫特船长的救生艇上去。\n\n然后杀死奈古拉什，将斯莫特的弯刀交给荆棘谷的斯莫特船长。"]={178,2927522658},
  },
  ["藏尸者的妻子"]={
   ["找到伊莉莎的坟墓，从她的身上取回藏尸者的心脏，把它交给艾尔罗·埃伯洛克。"]={77,3135971621},
@@ -164,13 +165,13 @@ QuestieLevLookup = {
   ["把蠢人酒带给侏儒车队老板。"]={0,370947912},
  },
  ["瑟尔林·卡斯迪诺夫教授"]={
-  ["Find Doctor Theolen Krastinov inside the Scholomance. Destroy him, then burn the Remains of Eva Sarkhoff and the Remains of Lucien Sarkhoff. Return to Eva Sarkhoff when the task is complete.\n"]={0,1447010840},
+  ["在通灵学院中找到瑟尔林·卡斯迪诺夫教授。杀死他，并烧毁艾瓦·萨克霍夫和卢森·萨克霍夫的遗体。任务完成后就回到艾瓦·萨克霍夫那儿。"]={0,1447010840},
  },
  ["神谕者的外套"]={
   ["把上古之神的外鞘、2个死亡塑像、5个岩石甲虫和5个水晶甲虫交给安其拉的温瑟拉。你必须在诺兹多姆的子嗣中达到尊敬声望才能完成这个任务。"]={0,2592011928},
  },
  ["信仰便鞋"]={
-  ["Father Inigo Montoy at Light's Hope Chapel in the Eastern Plaguelands will make Sandals of Faith if you bring him the following: 1 Desecrated Sandals, 12 Wartorn Cloth Scraps, 2 Mooncloth and 3 Cured Rugged Hides.\n"]={0,3139312768},
+  ["如果你将1双被玷污的便鞋、12块布衣碎片、2张月布和3个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的英尼戈·蒙托尔神父，他会为你制作一双信仰便鞋。"]={0,3139312768},
  },
  ["英雄庆典"]={
   ["在英雄谷找到玛丁雷少校。"]={0,816179976},
@@ -290,8 +291,8 @@ QuestieLevLookup = {
   [""]={0,2691475272},
  },
  ["冬幕节"]={
-  ["Feel free to read the book, \"The Feast of Winter Veil\", to learn more about the holiday.  When you are finished with the book, deliver it to Cairne Bloodhoof in Thunder Bluff."]={178,1695569522},
-  ["Feel free to read the book, \"The Feast of Winter Veil\", to learn more about the holiday.  When you are finished with the book, deliver it to King Magni Bronzebeard in Ironforge."]={77,853565637},
+  ["阅读《冬幕节》学习更多关于该节日的知识。当你读完后，将书交给雷霆崖的凯恩·血蹄。"]={178,1695569522},
+  ["阅读《冬幕节》学习更多关于该节日的知识。当你读完后，将书交给铁炉堡国王麦格尼·铜须。"]={77,853565637},
  },
  ["失踪的卫兵"]={
   ["卫兵托马斯要你沿着河岸向北走，寻找两个失踪的卫兵罗尔夫和马拉凯。"]={77,2775329669},
@@ -307,13 +308,13 @@ QuestieLevLookup = {
   ["去西部荒野和密探吉尔妮谈一谈。"]={77,2917247421},
  },
  ["结伴而行"]={
-  ["Travel to Fire Plume Ridge, south of Marshal's Refuge.\n\nFind Blazerunner and use the totem to remove his protective aura. Once he has been defeated, acquire the Golden Flame from the cave."]={0,2308546440},
+  ["到马绍尔营地南边的火羽山去。\n\n找到火焰使者，并使用图腾除掉它的防护光环。在击败它之后从洞中取得金色火焰。"]={0,2308546440},
  },
  ["向多伦报告"]={
   ["与多伦上尉谈一谈。"]={77,1980002829},
  },
  ["工匠文书 - 邪恶皮甲头环"]={
-  ["Deliver 10 Wicked Leather Headbands and the Craftsman's Writ - Wicked Leather Headband - to Packmaster Stonebruiser at Light's Hope Chapel in the Eastern Plaguelands.\n"]={0,248948672},
+  ["将10个邪恶皮甲头环和工匠文书 - 邪恶皮甲头环交给东瘟疫之地圣光之愿礼拜堂的马队管理者布鲁斯·石锤。"]={0,248948672},
  },
  ["免费的午餐"]={
   ["将卫兵帕克的午餐带给他，他就在通向夜色镇的路上巡逻。"]={77,45729677},
@@ -324,10 +325,10 @@ QuestieLevLookup = {
   ["与贫瘠之地的先知塔卡尔交谈。"]={65,1202544761},
  },
  ["多彩挑战者腿甲"]={
-  ["To forge the Legplates of the Chromatic Defier, you will be required to bring the following items to Jeziba the 'Sculptor':\n\n1 Chromatic Carapace.\n\n10 Brilliant Chromatic Scales.\n\n10 Blood of Heroes.\n\n5 Skin of Shadow."]={0,3066363024},
+  ["为了铸造多彩挑战者腿甲，你必须把以下材料交给雕刻者耶兹巴：\n\n1块多彩龙鳞。\n\n10块闪亮的彩色龙鳞。\n\n10份英雄之血。\n\n5块暗影之皮。"]={0,3066363024},
  },
  ["耶斯帕尔的万圣节糖果！"]={
-  ["Speak with the innkeepers of Stormwind, Ironforge, and Darnassus, as well as Talvash del Kissel in Ironforge.  Perform the tricks they ask of you in exchange for the treats they offer.\n\nReturn to Jesper at the Stormwind Orphanage with a Darnassus Marzipan, Gnomeregan Gumdrop, Stormwind Nougat, and Ironforge Mint."]={0,1189241088},
+  ["与暴风城、铁炉堡和达纳苏斯的旅店老板以及铁炉堡的塔瓦斯德·基瑟尔谈一谈。按照他们的要求做出动作，并获得他们的礼物。\n\n把达纳苏斯水果糖、诺莫瑞根橡皮糖、暴风城杏仁糖和铁炉堡薄荷糖交给暴风城孤儿院的耶斯帕尔。"]={0,1189241088},
  },
  ["狂暴的镰爪龙"]={
   ["杀死赤鳞迅猛龙并收集它们的羽毛，把这些羽毛放在3个赤鳞镰爪龙的巢穴里，然后返回十字路口的瑟格拉·黑棘那里。"]={178,2423749450},
@@ -336,7 +337,7 @@ QuestieLevLookup = {
   ["把这箱月神矿石交给铁匠玛希尔。"]={77,1483035765},
  },
  ["监牢之链"]={
-  ["Travel to Dire Maul in Feralas and recover 15 Satyr Blood from the Wildspawn Satyr that inhabit the Warpwood Quarter. Return to Daio in the Tainted Scar when this is done.\n"]={0,3737093256},
+  ["到菲拉斯的厄运之槌去，从扭木广场的荒野萨特身上找到15份萨特之血，然后把它们交给腐烂之痕的戴奥。"]={0,3737093256},
  },
  ["暗影守卫"]={
   ["与奥格瑞玛的乌尔库谈一谈。"]={128,1735134192},
@@ -383,7 +384,7 @@ QuestieLevLookup = {
   ["把你从斯温的农场找到的书交给他。"]={77,4192190573},
  },
  ["究根问底"]={
-  ["Krakle in Un'Goro Crater wants you to find the hottest area of Fire Plume Ridge.\n\nWhenever you find a hot spot, right click the thermometer to check the temperature. Keep looking until you find the hottest one."]={0,2715103160},
+  ["安戈洛尔环形山的克拉兰克要你去找到火羽山中温度最高的地方。\n\n当你找到一个看上去很热的地方时，就右键点击温度计来测量当地的温度。不断尝试，直到你找到温度最高的地方。"]={0,2715103160},
  },
  ["奎恩提斯的技艺"]={
   ["把被丢弃的小刀交给羽月要塞的奎恩提斯。"]={77,865636741},
@@ -404,7 +405,7 @@ QuestieLevLookup = {
   ["把20块铜锭交给奥格瑞玛精神谷的矿工克罗威尔。"]={0,1583144736},
  },
  ["分离的痛苦"]={
-  ["Huntsman Markhor at Revantusk Village in the Hinterlands wants you to recover his twin brother's remains. Find and return Huntsman Malkhor's Skull and Huntsman Malkhor's Bones to Huntsman Markhor.\n\nMarkhor mentioned that his brother's remains were fed to the oozes and wolves of the Vilebranch. He also mentioned that there is a refuse pit filled with oozes in Jintha'alor as well as a wolf den. Both of these places are near the top of the temple."]={178,4034135658},
+  ["辛特兰恶齿村的猎户马克霍尔要你去找回他的双胞胎兄弟的尸体。找到它，然后把猎户莫克霍尔的头颅和猎户莫克霍尔的骨头交给猎户马克霍尔。\n\n马克霍尔说过，他兄弟的尸体被软泥怪和邪枝巨魔的狼群分食。他还提到在辛萨罗有个大坑，里面全都是软泥怪，那里还有个狼穴。这两个地方都在靠近辛萨罗神庙顶部的区域。"]={178,4034135658},
  },
  ["寒脊山谷的送信任务"]={
   ["把这一摞信件送给塔林·锐眼。"]={77,698120285},
@@ -445,10 +446,10 @@ QuestieLevLookup = {
   ["收集8块变异的钳嘴龟壳，把它们交给十字路口的图加。"]={178,468404282},
  },
  ["拉文霍德庄园"]={
-  ["Take the Seal of Ravenholdt to Fahrad at Ravenholdt Manor, hidden away in the hills of Hillsbrad.\n\nYour cunning will be tested along the way. Be prepared."]={0,48240048},
+  ["把拉文霍德徽记交给拉文霍德庄园的法拉德，庄园就坐落在希尔斯布莱德的群山之中。\n\n你的智慧将在这次旅途中得到考验。做好准备吧。"]={0,48240048},
  },
  ["权力珍宝：捕猎者衬肩"]={
-  ["Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,3649790808},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔：1块原始哈卡莱盾牌。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n盲眼法希尔在荆棘谷的尤亚姆巴岛上。"]={0,3649790808},
  },
  ["偷钱的迅猛龙"]={
   ["收集12颗迅猛龙的头颅，把它们交给十字路口的加兹罗格。"]={178,3785779498},
@@ -478,13 +479,13 @@ QuestieLevLookup = {
   [""]={0,546258504},
  },
  ["玛雷的腿"]={
-  ["Bring Maury's Key to \"Sea Wolf\" Mackinley in Booty Bay."]={0,2266996472},
+  ["把玛雷的钥匙带给藏宝海湾的“海狼”马克基雷。"]={0,2266996472},
  },
  ["健康的龙鳞"]={
   ["把健康的龙鳞交给东瘟疫之地圣光之愿礼拜堂中的贝蒂娜·比格辛克。"]={0,2808216528},
  },
  ["圣光节杖"]={
-  ["Get the Sceptre of Light and then return it to Azore Aldamort at the tower in Ethel Rethor.\n"]={0,3121883904},
+  ["拿到圣光节杖，并将它交给艾瑟雷索塔里的阿佐尔·奥达蒙特。"]={0,3121883904},
  },
  ["月光羽毛"]={
   ["从冬泉谷收集10片月光羽毛，然后将它们带给鲁瑟兰村的艾瑞拉斯·琥珀。"]={77,3689439533},
@@ -499,8 +500,8 @@ QuestieLevLookup = {
   [""]={0,1621216008},
  },
  ["无上的荣耀"]={
-  ["Bring 3 Alterac Valley Marks of Honor, 3 Arathi Basin Marks of Honor and 3 Warsong Gulch Marks of Honor to a Horde Warbringer outside the battlegrounds."]={178,601433874},
-  ["Bring 3 Alterac Valley Marks of Honor, 3 Arathi Basin Marks of Honor and 3 Warsong Gulch Marks of Honor to a Horde Warbringer outside the battlegrounds."]={178,601444626},
+  ["把3枚奥特兰克山谷荣誉奖章，3枚阿拉希盆地荣誉奖章和3枚战歌峡谷荣誉奖章交给战场外的战争使者。"]={178,601433874},
+  ["把3枚奥特兰克山谷荣誉奖章，3枚阿拉希盆地荣誉奖章和3枚战歌峡谷荣誉奖章交给战场外的战争使者。"]={178,601444626},
  },
  ["海盗的帽子！"]={
   ["塔纳利斯热砂港的傲慢的店主要你去帮他收集20顶南海海盗帽。"]={0,3969463248},
@@ -560,7 +561,7 @@ QuestieLevLookup = {
   ["杀掉10只赤脊山蛮兵和8只赤脊山秘法师，然后向弗纳·奥斯古复命。"]={0,3718108280},
  },
  ["审判和救赎"]={
-  ["Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth the spirits you must judge.  Defeating these spirits will summon forth Death Knight Darkreaver.  Defeat him and reclaim the lost soul of the fallen charger.\n\nGive the Charger's Redeemed Soul and the Blessed Enchanted Barding to Darkreaver's Fallen Charger."]={5,2515440821},
+  ["在通灵学院尸骨储藏所地下室的中心使用预言水晶球。将你要审判的灵魂引领出来。将这些灵魂击败然后死亡骑士达克雷尔就将被召唤出来。将其击败然后获得堕落战马的灵魂。\n\n把赎罪的战马之魂和被祝福的奥金马铠一起附在达克雷尔的堕落战马身上。"]={5,2515440821},
  },
  ["奥莉尔·金叶"]={
   ["与塞纳里奥城堡的奥莉尔·金叶谈话。"]={0,502603544},
@@ -579,7 +580,7 @@ QuestieLevLookup = {
  },
  ["爱与家庭"]={
   ["到凯尔达隆岛去，寻找关于那副画的线索。凯尔达隆岛在瘟疫之地南部的湖中央。"]={0,184247176},
-  ["Travel to Stratholme, in the northern part of the Plaguelands. It is in the Scarlet Bastion that you will find the painting 'Of Love and Family,' hidden behind another painting depicting the twin moons of our world.\n\nReturn the painting to Tirion Fordring."]={0,2757015992},
+  ["到瘟疫之地北部的斯坦索姆去。你可以在血色十字军堡垒中找到“爱与家庭”这幅画，它被隐藏在另一幅描绘两个月亮的画之后。\n\n把这幅画还给提里奥·弗丁。"]={0,2757015992},
  },
  ["石塔长者"]={
   [""]={0,280846344},
@@ -686,7 +687,7 @@ QuestieLevLookup = {
   ["回到雷霆崖长者高地的图拉克·符文图腾那里。"]={32,3905990672},
  },
  ["骷髅石"]={
-  ["Gather Searing Collars from the cultists in Skull Rock.\n\nBring them to Margoz at his camp."]={178,499856202},
+  ["在骷髅石中的火刃祭司身上收集灼热项圈，\n\n然后交给玛高兹。"]={178,499856202},
  },
  ["幽林长者"]={
   [""]={0,11936776},
@@ -733,15 +734,15 @@ QuestieLevLookup = {
   ["格罗姆高营地的指挥官阿格罗戈什要求你杀死10个食人魔蛮兵和5个食人魔巫医。"]={178,1193185098},
  },
  ["机器的崛起"]={
-  ["Venture to the Burning Steppes and recover 10 Fractured Elemental Shards for Hierophant Theodora Mulvadania.\n\nYou recall Theodora mentioning the golems and elementals of that region as being a source for these shards."]={178,3796466314},
-  ["Take the Elemental Shard Sample to Lotwil Veriatus.\n\nYou recall Theodora saying that Lotwil was stationed in a camp to the east.\n"]={178,3885529602},
+  ["到燃烧平原去为塞朵拉·穆瓦丹尼收集10块断裂的元素碎片。$b$b塞朵拉曾经说过，那里的机械傀儡和元素生物是这种碎片的主要来源。"]={178,3796466314},
+  ["将元素碎片样本交给鲁特维尔·沃拉图斯。\n\n塞朵拉说鲁特维尔就在东边的一处营地里。"]={178,3885529602},
   ["找到并杀掉傀儡统帅阿格曼奇，将他的头交给鲁特维尔。你还需要从守卫着阿格曼奇的狂怒傀儡和战斗傀儡身上收集10块完整的元素核心。"]={178,937531890},
  },
  ["迪尔格的超美味奇美拉肉片"]={
   ["加基森的迪尔格·奎克里弗要你给他带去20份地精火箭燃油和20份石中盐。"]={0,2262535584},
  },
  ["奥玛里恩的手册"]={
-  ["Take Omarion's Handbook to Craftsman Wilhelm at Light's Hope Chapel in the Eastern Plaguelands.\n"]={0,2178197000},
+  ["将奥玛里恩的手册交给东瘟疫之地圣光之愿礼拜堂的工匠威尔海姆。"]={0,2178197000},
  },
  ["精良的作战装备 - 银色黎明尊敬"]={
   ["如果你有20枚银色黎明徽记和20枚十字军徽记，就能从银色黎明库存的宝藏中挑选一件物品。"]={0,3435044736},
@@ -762,14 +763,14 @@ QuestieLevLookup = {
   [""]={178,2158070202},
  },
  ["银鬃捕猎者"]={
-  ["Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill 10 Silvermane Stalkers and 10 Silvermane Howlers. Return to him once the task is complete.\n\nMarkhor mentioned that the wolves hide in the wilds of the Hinterlands."]={178,2907205226},
+  ["辛特兰恶齿村的猎户马克霍尔要求你去杀掉10头银鬃捕猎者和10头银鬃嗥狼。完成任务之后就回到他那里复命。\n\n马克霍尔说过那些狼都躲在辛特兰的野外。"]={178,2907205226},
  },
  ["血顶之颅"]={
   ["将甘祖拉恩的头颅和奈兹里奥克的头颅带回格罗姆高营地，放入冒泡的大锅中。"]={178,3878162578},
  },
  ["巴罗夫的继承人"]={
-  ["Travel to Chillwind Camp - Alliance territory - and assassinate Weldon Barov. Take his head and return to Alexi Barov.\n\nBe warned, Weldon will probably be well protected by Alliance scum."]={178,694347778},
-  ["Travel to the Bulwark - Horde territory - and assassinate Alexi Barov. Take his head and return to Weldon Barov.\n\nBe warned, Alexi will probably be well protected by Horde filth."]={77,425906245},
+  ["到冰风岗——联盟的领地——去暗杀维尔顿·巴罗夫。把他的脑袋交给阿莱克斯·巴罗夫。\n\n要多加小心，联盟也许对维尔顿实施了严密的保护。"]={178,694347778},
+  ["去亡灵壁垒——部落的领地——去暗杀阿莱克斯·巴罗夫。把他的脑袋交给维尔顿·巴罗夫。\n\n要小心，部落也许对阿莱克斯实施了严密的保护。"]={77,425906245},
  },
  ["永望镇报告"]={
   ["把永望镇报告送给西瘟疫地冰风岗的银色黎明军官普尔哈特。"]={77,4267870861},
@@ -795,8 +796,8 @@ QuestieLevLookup = {
   ["收集4个毒尾蝎的毒囊，把它们交给奥格瑞玛的考格汉。"]={178,2963179514},
  },
  ["比修的装置"]={
-  ["Find Bijou's Belongings and return them to her. You recall her mentioning that she stashed them on the bottom floor of the city.\n"]={0,344732320},
-  ["Find Bijou's Belongings and return them to her. Good luck!\n"]={0,2727578184},
+  ["找到比修的装置并把它们还给她。你记得她说过她把装置藏在城市的最底层。"]={0,344732320},
+  ["找到比修的装置并把它们还给她。祝你好运！"]={0,2727578184},
  },
  ["十枚荣誉徽章换取物资"]={
   [""]={0,4041856328},
@@ -891,7 +892,7 @@ QuestieLevLookup = {
   ["用超级摄影器FX给加莫里塔拍张照片，然后把它交给鲁瑟兰村的达蕾恩·轻风。"]={77,463522229},
  },
  ["通缉：邪恶祭司海克斯和她的爪牙"]={
-  ["You have been ordered to slay Vile Priestess Hexx and 10 Vilebranch Aman'zasi Guards. See Primal Torntusk at Revantusk Village in the Hinterlands once this task is complete.\n\nVile Priestess Hexx and the Aman'zasi Guards can be found atop Jintha'alor in the Hinterlands."]={178,343425538},
+  ["你必须杀掉邪恶祭司海克斯和10名邪枝精英守卫。任务完成之后回到辛特兰的恶齿村，向断齿族长报告。\n\n你可以在辛特兰的邪枝巨魔城市辛萨罗的顶部找到他们。"]={178,343425538},
  },
  ["伊兰尼库斯精华"]={
   ["把伊兰尼库斯精华放在精华之泉里，精华之泉就在沉没的神庙中，伊兰尼库斯的巢穴里。"]={0,3621870888},
@@ -937,7 +938,7 @@ QuestieLevLookup = {
   ["干掉萨瑞鲁斯·法伯尼，把他的首级交给银风避难所的哨兵维尔莉妮·星坠。"]={77,3562019197},
  },
  ["\"Pretty Boy\" Duncan"]={
-  ["Get Catelyn's dagger from \"Pretty Boy\" Duncan."]={77,3950629629},
+  ["从“帅小伙子”邓肯那里夺回凯特琳的匕首。"]={77,3950629629},
  },
  ["回到原点"]={
   ["回到铁炉堡的王座厅和德莉娜谈谈。"]={77,178213341},
@@ -983,7 +984,7 @@ QuestieLevLookup = {
   ["将安哈努的皮货交给雷霆崖的塔尔。"]={32,943700232},
  },
  ["克拉文之塔"]={
-  ["Steal the Defias Tower Key, break into the Defias Tower and uncover the contents of the Duskwood Chest. Take whatever information you find back to Mathias Shaw in Stormwind. Read Kearnen's Journal to gain insight about the tower.\n"]={77,635952621},
+  ["偷取迪菲亚塔楼钥匙，进入迪菲亚塔楼，看看暮色森林的箱子里到底有什么东西，然后向暴风城的马迪亚斯·肖尔汇报。"]={77,635952621},
  },
  ["铁肩铠"]={
   ["将4把青铜战斧和4把青铜战锤交给奥格瑞玛的奥罗克·沃姆什。"]={0,79912496},
@@ -995,7 +996,7 @@ QuestieLevLookup = {
   ["打败莫格穆洛克，再把消息带给蕨墙村的德拉兹辛比。"]={178,3637455242},
  },
  ["邪灵劣魔"]={
-  ["Kill 12 Vile Familiars.\n\nReturn to Zureetha Fargaze outside the Den."]={178,3118500082},
+  ["杀死12只邪灵劣魔，然后向大兽穴外的祖雷萨复命。"]={178,3118500082},
   ["给鲁赞带回6颗邪灵劣魔的头颅。"]={178,3564146898},
   ["与祖雷萨谈一谈。"]={178,611883498},
  },
@@ -1008,7 +1009,7 @@ QuestieLevLookup = {
   ["把达索克的亲笔信交给金吉尔，他住在石爪山的洞穴中。"]={178,1063378930},
  },
  ["击败纳克罗什"]={
-  ["Kill Chieftain Nek'rosh\n\nBring Nek'rosh's Head to Captain Stoutfist."]={0,1711486352},
+  ["杀掉纳克罗什酋长。\n\n将纳克罗什的头颅交给斯托菲队长。"]={0,1711486352},
  },
  ["斯塔文的传说"]={
   ["去夜色镇大厅找到书记员达尔塔。"]={77,1585516741},
@@ -1194,7 +1195,7 @@ QuestieLevLookup = {
   ["收集15颗深苔蜘蛛的卵，把它们交给棘齿城的麦伯克·米希瑞克斯。"]={0,1450168496},
  },
  ["亡者农场"]={
-  ["Kill rot hide gnolls at the Dead Fields.\n\nWhen Nightlash appears, kill her.\n\nBring the Essence of Nightlash to High Executor Hadrec at the Sepulcher."]={178,3989804026},
+  ["清剿亡者农场的腐皮豺狼人。\n\n当奈塔拉什出现时，把她也杀掉。\n\n将奈塔拉什的灵魂带给瑟伯切尔的高级执行官哈德瑞克。"]={178,3989804026},
  },
  ["与纳菲恩交谈"]={
   ["沿着费伍德森林的路向北走，与一个名叫纳菲恩的熊怪谈谈。他站在木喉要塞的入口处。"]={0,4081733456},
@@ -1306,7 +1307,7 @@ QuestieLevLookup = {
   ["将被污染的水球交给灰谷碎木哨岗的马斯托克·维尔西斯。"]={178,2546799722},
  },
  ["肮脏的爪子"]={
-  ["Go to the Silver Stream Mine and collect 4 loads of Miners' Gear.\n\nReturn to Mountaineer Stormpike."]={77,2324580925},
+  ["到银泉矿洞去收集4套矿工装备，然后向巡山人卡尔·雷矛复命。"]={77,2324580925},
  },
  ["弗伦的铠甲"]={
   ["收集必需的材料，将它们交给暴风城的弗伦·长须。"]={77,417173653},
@@ -1330,7 +1331,7 @@ QuestieLevLookup = {
   ["从菲拉斯被遗忘的海岸那里的海元素和巨型海元素身上获取6块水元素核心，把它们交给码头附近的索尔宾·范达瑟。"]={0,1958260336},
  },
  ["格杀勿论：高阶黑铁军官"]={
-  ["Venture to Blackrock Depths and destroy the vile aggressors!\n\nWarlord Goretooth wants you to kill 10 Anvilrage Medics, 10 Anvilrage Soldiers and 10 Anvilrage Officers. Return to him once your task is complete."]={0,3719807136},
+  ["到黑石深渊去消灭那些邪恶的侵略者！\n\n高图斯军阀要你杀死10个铁怒医师,、10个铁怒士兵和10个铁怒军官。完成任务之后回去向他复命。"]={0,3719807136},
  },
  ["冠军的回报"]={
   ["Take the Green Scepter Shard to Anachronos at the Caverns of Time in Tanaris.\n"]={0,956135648},
@@ -1400,7 +1401,7 @@ QuestieLevLookup = {
   ["给十字路口的基尔哈拉带去12缕欢笑姐妹的头发。"]={144,1205057480},
  },
  ["权力珍宝：恶魔师长袍"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,783187056},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1块原始哈卡莱套索。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,783187056},
  },
  ["乌洛克"]={
   ["阅读瓦罗什的卷轴。将瓦罗什的蟑螂交给他。"]={0,2605143824},
@@ -1442,7 +1443,7 @@ QuestieLevLookup = {
   ["到马绍尔营地那里的山洞中去找科琳。"]={0,3227080944},
  },
  ["丹奥加兹告急"]={
-  ["Traverse Dun Algaz.\n\nKill 8 Dragonmaw Scouts and 6 Dragonmaw Grunts.\n\nReport to Valstag Ironjaw in Menethil Harbor."]={77,1185299053},
+  ["翻越丹奥加兹。\n\n杀死8个龙喉斥候和6个龙喉步兵。\n\n向米奈希尔港的瓦斯塔格·铁腭报到。"]={77,1185299053},
  },
  ["深铁矿洞的补给"]={
   ["把10份深铁矿洞补给品交给丹巴达尔的联盟军需官。"]={77,3143737661},
@@ -1469,8 +1470,8 @@ QuestieLevLookup = {
   ["将水仙花送给达希。"]={77,3415524717},
  },
  ["兄弟情深"]={
-  ["Travel into Stormpike territory and slay Commander Karl Philips. Return to Commander Louis Philips when the task is complete.\n"]={0,518621176},
-  ["Travel into Frostwolf territory and slay Commander Louis Philips. Return to Commander Karl Philips when the task is complete.\n"]={0,1625393720},
+  ["深入雷矛部族的领地，杀掉指挥官卡尔·菲利普。任务完成之后向指挥官刘易斯·菲利普复命。"]={0,518621176},
+  ["深入霜狼氏族的领地，杀掉指挥官刘易斯·菲利普。任务完成之后，回到指挥官卡尔·菲利普处复命。"]={0,1625393720},
  },
  ["踩在脚下"]={
   ["将4顶绿铁头盔、4副绿铁护腕和4副绿铁护腿交给奥格瑞玛的奥罗克·沃姆什。"]={0,4032282832},
@@ -1495,7 +1496,7 @@ QuestieLevLookup = {
  },
  ["赞吉尔之触"]={
   ["到兵营的地窖里去和道克·米希匹克斯谈一谈。"]={77,2711233421},
-  ["/Lay down to be examined by Doc Mixilpixil. How can he find the cure if he can't find the cause?\n"]={77,3808072637},
+  ["用/lay指令躺下，接受道克·米希匹克斯的治疗。如果他找不到病因，就找不到治疗的方法。"]={77,3808072637},
   ["Bring Doc Mixilpixil one bundle of Simple Wildflowers, one Leaded Vial, one Bronze Tube, and one Spool of Light Chartreuse Silk Thread. The 'itis' doesn't cure itself, young <fella/lady>. "]={77,3288569901},
  },
  ["迷失者塞尔杜林"]={
@@ -1514,7 +1515,7 @@ QuestieLevLookup = {
   ["暴风城的尼科瓦·拉斯克要你取得10条红色毛纺面罩。"]={77,2866819845},
  },
  ["杀死格鲁迪格·暗云"]={
-  ["Kill Grundig Darkcloud and 6 Grimtotem Brutes, and return to Makaba Flathoof near the southeastern edge of Stonetalon.\n"]={178,2346748874},
+  ["杀掉格鲁迪格·暗云和6个恐怖图腾蛮兵，然后向石爪山东南面的玛卡巴·扁蹄复命。"]={178,2346748874},
  },
  ["火焰管制"]={
   ["给绿色守卫者雷希耶尔带回9块粗制打火石。"]={0,3966529448},
@@ -1538,7 +1539,7 @@ QuestieLevLookup = {
   ["把锻造好的钢锭带给贫瘠之地的索恩格瑞姆·火眼。"]={178,3496265842},
  },
  ["目标：佐拉守卫"]={
-  ["Slay 30 Hive'Zora Waywatchers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing VI in order to complete this quest.\n"]={0,2840248280},
+  ["击杀30只佐拉守卫，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 VI才能完成这个任务。"]={0,2840248280},
  },
  ["新的部落"]={
   ["与高内克谈一谈。卡尔图克在你的地图上标出了他的位置，并告诉你高内克居住在西边的大兽穴中。"]={178,4224603402},
@@ -1553,21 +1554,21 @@ QuestieLevLookup = {
   ["把范达尔的信交给黑海岸古树之林里的安努。"]={0,2530963720},
  },
  ["通缉：矮人！"]={
-  ["You have been tasked with slaying opposing Dwarf players in Alterac Valley.\n\nKill a Dwarf and rip out their spine. Take the Dwarf Spine to Sergeant Yazra Bloodsnarl at Frostwolf Keep."]={178,1373349890},
+  ["你被指派去杀死奥特兰克山谷中的矮人玩家。\n\n杀掉一个矮人，然后把矮人的脊椎交给霜狼要塞的亚斯拉·血矛。"]={178,1373349890},
  },
  ["部族制皮"]={
-  ["Bring a Wild Leather Vest and a Wild Leather Helmet to Caryssia Moonhunter in Feralas.\n\nCompleting this quest will give you access to the Tribal Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Elemental Leatherworking; be sure this is the path you wish to follow before doing so."]={77,1811450909},
-  ["Bring a Wild Leather Vest and a Wild Leather Helmet to Se'Jib in Stranglethorn Vale.\n\nCompleting this quest will give you access to the Tribal Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Elemental Leatherworking; be sure this is the path you wish to follow before doing so."]={178,2804976730},
+  ["将1件蛮皮外衣和1件蛮皮头盔交给菲拉斯的凯雷希亚·猎月。\n\n完成这项任务之后，你就可以学到部族制皮技术了。\n\n同时，你也将永远无法学习元素制皮技术和龙鳞制皮技术，在决定之前先考虑清楚。"]={77,1811450909},
+  ["将1件蛮皮外衣和1件蛮皮头盔交给荆棘谷的瑟伊布。\n\n完成这项任务之后，你就可以学到部族制皮技术了。\n\n同时，你也将永远无法学习元素制皮技术和龙鳞制皮技术，在决定之前先考虑清楚。"]={178,2804976730},
  },
  ["星灵长者"]={
   [""]={0,11080712},
  },
  ["武器铸造师之道"]={
-  ["To become a Weaponsmith, you must make the following items and return them to Ironus: 4 Moonsteel Broadswords, 4 Massive Iron Axes, 2 Heavy Mithril Axes, and 2 Big Black Maces.\n"]={77,2674574125},
-  ["To become a Weaponsmith, you must make the following items and return them to Borgosh: 4 Moonsteel Broadswords, 4 Massive Iron Axes, 2 Heavy Mithril Axes, and 2 Big Black Maces.\n"]={178,2375215666},
+  ["要想成为一名武器铸造师的话，你必须将下列物品交给埃隆努斯·冷钢：4把月钢宽剑、4把巨型铁斧、2把秘银重斧和2把巨型黑色锤。"]={77,2674574125},
+  ["要想成为一名武器铸造师的话，你必须将下列物品交给伯古什：4把月钢宽剑、4把巨型铁斧、2把秘银重斧和2把巨型黑色锤。"]={178,2375215666},
  },
  ["魔王贝恩霍勒"]={
-  ["Purchase Shadowy Potions from Gorzeeki in the Burning Steppes.\n\nUse the potions to travel through Jaedenar, and speak with Lord Banehollow."]={0,1170279400},
+  ["从燃烧平原的戈瑟奇那里购买暗影药水。\n\n使用这种药剂进入加德纳尔，然后与魔王贝恩霍勒谈一谈。"]={0,1170279400},
  },
  ["冬蹄长者"]={
   [""]={0,2696737800},
@@ -1583,7 +1584,7 @@ QuestieLevLookup = {
   ["对贫瘠之地北部的10只生病的瞪羚使用动物医疗药膏，以此来治疗它们。在穿过十字路口的那条东西走向的大路北面到处都是生病的蹬羚。"]={32,3470907400},
  },
  ["熔岩蜘蛛的威胁！"]={
-  ["Hansel Heavyhands wants you to kill 20 Greater Lava Spiders in the Searing Gorge. You can find Greater Lava Spiders in the plateaus and lava pools of the Searing Gorge.\n\nReturn to Hansel Heavyhands in the Searing Gorge when you have killed enough Greater Lava Spiders."]={0,607127544},
+  ["汉瑟尔·重拳要你杀死灼热峡谷中的20只巨型熔岩蜘蛛。你可以在灼热峡谷的高地和熔岩池里找到巨型熔岩蜘蛛。\n\n当你杀死足够的巨型熔岩蜘蛛之后，回到汉瑟尔·重拳那里复命。"]={0,607127544},
  },
  ["被缩小的巨人"]={
   ["使用索尔宾的超级压缩器来缩小菲拉斯的任意种类的巨人，将他们缩小到更容易控制的体积。从缩小过的巨人身上收集15份微缩残渣，把它们交给菲拉斯被遗忘的海岸码头的索尔宾·范达瑟。"]={0,1786785592},
@@ -1635,8 +1636,8 @@ QuestieLevLookup = {
   ["希利苏斯塞纳里奥要塞的比提克斯·斯巴格要求你带8个石鞭蝎之刺和8个掠沙蜘蛛的牙齿给他。"]={0,1335012016},
  },
  ["湖中试炼"]={
-  ["Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use the Shrine Bauble.\n\nYou must speak with Tajarri at the shrine afterwards in order to complete the trial."]={32,2010760120},
-  ["Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use the Shrine Bauble.\n\nYou must speak with Tajarri at the shrine afterwards in order to complete the trial."]={8,2010760608},
+  ["在月神湖寻找神殿灵珠，把它带到月光林地西北部的雷姆洛斯神殿去。在神殿中使用神殿灵珠，然后与神殿中的塔加里谈话来完成试炼。"]={32,2010760120},
+  ["在月神湖寻找神殿灵珠，把它带到月光林地西北部的雷姆洛斯神殿去。在神殿中使用神殿灵珠，然后与神殿中的塔加里谈话来完成试炼。"]={8,2010760608},
  },
  ["侵略者的天灾石"]={
   [""]={77,2428093461},
@@ -1708,16 +1709,16 @@ QuestieLevLookup = {
   ["带10张硬甲皮给奥格玛精神谷的塞拉图斯。"]={0,1811977416},
  },
  ["克罗苏斯的恶魔之核"]={
-  ["Search Shatter Scar Vale in Felwood for the remains of Kroshius. When you locate the remains, use the Fel Fire near them and await Kroshius' return. When the infernal has awoken, slay him and take from his corpse Kroshius' Infernal Core.\n\nReturn Kroshius' Infernal Core to Niby the Almighty in Felwood."]={0,2328254528},
+  ["在费伍德森林的碎痕谷中搜寻克罗苏斯的尸体。当你找到尸体后，在他身上使用魔火，并等待克罗苏斯复生。当这个地狱火被唤醒之后，干掉他，从他的身上拿取克罗苏斯的恶魔之核。\n\n把克罗苏斯的恶魔之核交给费伍德森林的尼比。"]={0,2328254528},
  },
  ["测试容器"]={
-  ["Travel to the Hinterlands, and locate the Wildkin. Kill 10, and use the Muisek Vessel to shrink and capture the fallen Wildkin.\n\nBring 10 Wildkin Muiseks and the Muisek Vessel to Witch Doctor Uzer'i in Feralas."]={178,2597840762},
+  ["到辛特兰去杀掉10头枭兽，然后使用灵魂精华容器捕获它们的灵魂。\n\n将灵魂精华容器和10个枭兽灵魂精华交给菲拉斯的巫医尤克里。"]={178,2597840762},
  },
  ["甘鲁尔的召唤"]={
   ["去奥格瑞玛和甘鲁尔·血眼谈一谈。"]={178,1428688250},
  },
  ["权力珍宝：忏悔者衬肩"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,242608448},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1块原始哈卡莱之盾。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,242608448},
  },
  ["瓶中的小鬼"]={
   ["把瓶中的小鬼带到通灵学院的炼金实验室中。在小鬼制造出羊皮纸之后，把瓶子还给戈瑟奇·邪眼。"]={0,2838874632},
@@ -1739,13 +1740,13 @@ QuestieLevLookup = {
   ["与铁炉堡的大机械师卡斯派普谈一谈。"]={0,2426924016},
  },
  ["目标：佐拉坑道蝎"]={
-  ["Slay 30 Hive'Zora Tunnelers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing VII in order to complete this quest.\n"]={0,3321164176},
+  ["击杀40只佐拉坑道蝎。"]={0,3321164176},
  },
  ["工匠文书 - 强效奥术防护药水"]={
-  ["Deliver 15 Greater Arcane Protection Potions and the Craftsman's Writ - Greater Arcane Protection Potion - to Packmaster Stonebruiser at Light's Hope Chapel in the Eastern Plaguelands.\n"]={0,2941916408},
+  ["将15份强效奥术防护药水和工匠文书 - 强效奥术防护药水交给东瘟疫之地圣光之愿礼拜堂的马队管理者布鲁斯·石锤。"]={0,2941916408},
  },
  ["塞雷布拉斯节杖"]={
-  ["Assist Celebras the Redeemed while he creates the Scepter of Celebras.\n\nSpeak with him when the ritual is complete."]={0,224218224},
+  ["帮助赎罪的塞雷布拉斯制作塞雷布拉斯节杖。\n\n当仪式完成之后再和他谈谈。"]={0,224218224},
  },
  ["赤脊山的补给"]={
   ["托姆斯·深炉要你给赤脊山的弗纳·奥斯古带去4条铜质符文腰带和4把铜质大锤。"]={77,1968055197},
@@ -1770,7 +1771,7 @@ QuestieLevLookup = {
   ["将你在祖尔格拉布找到的哈卡莱宝石带往尤亚姆巴岛的赞扎祭坛进行销毁，然后跟祭坛旁边的温卡萨谈一谈。"]={0,3748678136},
  },
  ["光与影的平衡"]={
-  ["Save 50 Peasants before 15 are slain. Speak with Eris Havenfire should you accomplish this task.\n\nYou may view the Death Post to view how many Peasants have been slain."]={0,2238865280},
+  ["在总计有15个农夫被杀死之前拯救50个农夫。完成任务之后与艾瑞斯·哈文法谈谈。\n\n你可以通过浏览死亡布告来了解自己拯救了多少农夫。"]={0,2238865280},
  },
  ["暴怒图腾长者"]={
   [""]={0,1890917896},
@@ -1796,8 +1797,8 @@ QuestieLevLookup = {
   ["把冬泉仪祭图腾拿到木喉要塞去，看看是否有熊怪想要研究一下它。只有当你在木喉要塞的声望达到中立或者更高级别的时候，木喉要塞的熊怪才会和你说话。"]={0,3634488440},
  },
  ["身心之力"]={
-  ["Use the Cenarion Moondust on the Moonkin Stone of Auberdine to bring forth Lunaclaw.  From there, you must face Lunaclaw and earn the strength of body and heart it possesses.\n\nSpeak with Mathrengyl Bearwalker in Darnassus when you are done."]={8,823722704},
-  ["Use the Cenarion Lunardust on the Moonkin Stone between Mulgore and the Barrens to bring forth Lunaclaw.  From there, you must face Lunaclaw and earn the strength of body and heart it possesses.\n\nSpeak with Turak Runetotem in Thunder Bluff when you are done."]={32,1441347424},
+  ["使用奥伯丁的月夜枭兽之石上面的塞纳里奥月尘引出月爪枭兽，然后击败月爪枭兽并吸取它所拥有的身心之力。\n\n任务完成之后，与达纳苏斯的玛斯雷·驭熊者谈一谈。"]={8,823722704},
+  ["使用莫高雷与贫瘠之地交界处的月夜枭兽之石上面的塞纳里奥月尘引出月爪枭兽，然后击败月爪枭兽并吸取它所拥有的身心之力。\n\n任务完成之后，与雷霆崖的图拉克·符文图腾谈一谈。"]={32,1441347424},
  },
  ["亲爱的科兰拉"]={
   ["将亨德瑞克中尉精心书写的信件交给暴风城银行外面的科兰拉·迪恩。"]={77,581769069},
@@ -1808,8 +1809,8 @@ QuestieLevLookup = {
   ["为石爪山的菲兹克斯偷来超级收割机6000型的设计图。"]={0,2878391800},
  },
  ["龙鳞制皮"]={
-  ["Bring 2 Tough Scorpid Breastplates, 2 Tough Scorpid Gloves, and 10 Worn Dragonscales to Peter Galen in Azshara.\n\nCompleting this quest will give you access to the Dragonscale Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Elemental Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."]={77,407443749},
-  ["Bring 2 Tough Scorpid Breastplates, 2 Tough Scorpid Gloves, and 10 Worn Dragonscales to Thorkaf Dragoneye in the Badlands.\n\nCompleting this quest will give you access to the Dragonscale Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Elemental Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."]={178,3620815674},
+  ["将2套硬化蝎壳胸甲、2套硬化蝎壳手套和10片龙鳞交给艾萨拉的彼得·加林。\n\n完成这项任务之后，你就可以学到龙鳞制皮技术了。\n\n同时，你也将永远无法学习元素制皮技术和部族制皮技术，在决定之前先考虑清楚。"]={77,407443749},
+  ["将2套硬化蝎壳胸甲、2套硬化蝎壳手套和10片龙鳞交给荒芜之地的索卡夫·龙眼。\n\n完成这项任务之后，你就可以学到龙鳞制皮技术了。\n\n同时，你也将永远无法学习元素制皮技术和部族制皮技术，在决定之前先考虑清楚。"]={178,3620815674},
  },
  ["收集蜜糖"]={
   ["从隐匿石一带被部落废弃的基地中的箱子里找到10瓶辛特兰蜜糖。"]={0,1223001800},
@@ -1824,7 +1825,7 @@ QuestieLevLookup = {
   ["查出是什么东西在乌鸦岭神出鬼没。"]={77,3165394213},
  },
  ["鹰身强盗"]={
-  ["Collect 8 Witchwing talons.\n\nReturn them to Darsok Swiftdagger at the Crossroads."]={178,4142313274},
+  ["收集8只巫翼鹰身人的爪子。\n\n把它们交给十字路口的达索克·快刀。"]={178,4142313274},
  },
  ["无辜者之血"]={
   ["为塔伦米尔的药剂师林度恩收集5瓶无辜者之血。"]={178,475825794},
@@ -1867,7 +1868,7 @@ QuestieLevLookup = {
   [""]={0,1891843080},
  },
  ["发光的碎片"]={
-  ["Travel to Ratchet to find someone that can tell you more about the glowing shard.\n\nThen, deliver the shard as you are directed."]={178,2568665058},
+  ["寻找更多有关这块噩梦碎片的信息。"]={178,2568665058},
  },
  ["祭司的头颅"]={
   ["将神圣之索穿上5颗导魔师的头颅，然后把这一串头颅交给尤亚姆巴岛上的伊克萨尔。"]={0,1073196968},
@@ -1926,14 +1927,14 @@ QuestieLevLookup = {
   ["法迪尔海湾的斯迪加特船长要你去杀掉10个刺脊袭击者和3个刺脊巫师。"]={0,2438305224},
  },
  ["海中的鱼人"]={
-  ["Kill 12 Bluegill Murlocs.\n\nSlay Gobbler and take his head.\n\nBring Gobbler's Head to Karl Boran in Menethil Harbor."]={0,2209897856},
+  ["杀掉12个蓝腮鱼人。\n\n杀掉高布勒尔并砍下它的头。\n\n将高布勒尔的头颅交给米奈希尔港的卡尔·波兰。"]={0,2209897856},
  },
  ["碎齿熊尤西乌斯"]={
   ["永望镇的斯托姆·影蹄想要你去杀死尤西乌斯。"]={178,2510978170},
  },
  ["伊格纳兹的逃亡"]={
-  ["Escort \"Stinky\" Ignatz, then speak with Morgan Stern in Theramore."]={77,3139647397},
-  ["Escort \"Stinky\" Ignatz, then speak with Mebok Mizzyrix in Ratchet."]={178,3422263498},
+  ["护送伊格纳兹，然后和塞拉摩的摩根·斯特恩谈一谈。"]={77,3139647397},
+  ["护送伊格纳兹，然后和棘齿城的麦伯克·米希瑞克斯谈一谈。"]={178,3422263498},
  },
  ["奥拉赫宝珠的净化"]={
   ["杀死宝珠之魔，然后与塔贝萨谈一谈。"]={0,3513350496},
@@ -2017,7 +2018,7 @@ QuestieLevLookup = {
   ["使用驯兽棒驯服一只巨翼恶枭。练习你的技能，然后将驯兽棒还给多兰纳尔的达扎拉。"]={8,1339691760},
  },
  ["破旧渡口"]={
-  ["Go to the Decrepit Ferry.\n\nSearch for the reason the Scourge are there."]={178,452846146},
+  ["到破旧渡口去，找到天灾军团占据那里的理由。"]={178,452846146},
  },
  ["雷霆啤酒"]={
   ["给葛瑞姆·雷酒带去5捆蛇麻草以完成他的特酿。"]={77,2561346005},
@@ -2049,7 +2050,7 @@ QuestieLevLookup = {
   ["奥伯丁的戈沙拉·夜语需要8块堕落者的脑干。"]={77,1358746989},
  },
  ["血色幻象"]={
-  ["Speak to Myranda to gain the Scarlet Illusion. Travel to Hearthglen while under the Scarlet Illusion and deliver Tirion's Gift to Highlord Taelan Fordring.\n\nHearthglen is to the north, Taelan should be inside of Mardenholde Keep."]={0,2162238992},
+  ["和巫女麦兰达交谈以获得血色幻象的效果。在血色幻象的掩护下深入壁炉谷，将提里奥的礼物交给大领主泰兰·弗丁。\n\n壁炉谷在北方，泰兰应该在玛登霍尔德城堡里面。"]={0,2162238992},
  },
  ["血色十字军圣者，德米提雅"]={
   ["血色十字军正在从提尔之手到斯坦索姆的路上巡逻，你可以在巡逻队中找到圣者德米提雅和她的随从，找到并杀死她。如果你成功了，就回到纳萨诺斯·凋零者那里去复命。"]={0,509242032},
@@ -2070,7 +2071,7 @@ QuestieLevLookup = {
   [""]={0,1085276680},
  },
  ["国王的命令"]={
-  ["Travel to Alterac Valley in the Hillsbrad Foothills. Outside of the entrance tunnel, find and speak with Lieutenant Haggerdin.\n\nFor the glory of Bronzebeard!"]={77,1504524237},
+  ["到希尔斯布莱德丘陵地区的奥特兰克山谷去。到那里之后，和哈格丁中尉谈谈。\n\n为了铜须的荣耀！"]={77,1504524237},
  },
  ["高涨的士气"]={
   [""]={178,1618472890},
@@ -2079,7 +2080,7 @@ QuestieLevLookup = {
   ["和玛伦·星眼谈一谈。"]={178,578111346},
  },
  ["幽灵灯塔"]={
-  ["Take the orphan to see the lighthouse off the coast of Westfall.\n"]={77,123870421},
+  ["带着你看护的孤儿去西部荒野海岸边的灯塔。"]={77,123870421},
  },
  ["觉醒吧,雷霆之怒"]={
   ["把风吻之刃交给德米提恩。"]={0,4097286688},
@@ -2100,7 +2101,7 @@ QuestieLevLookup = {
   [""]={0,2158515208},
  },
  ["逃离虫巢"]={
-  ["Free Raschal from the Zukk'ash hive.\n\nReturn to Ginro Hearthkindle in Feathermoon Stronghold and let him know that Raschal is alive and well."]={77,1996979357},
+  ["将拉斯卡尔安全护送到祖卡什虫巢外。\n\n回到羽月要塞的基恩诺·火花那儿，告诉他拉斯卡尔还活着，且状况良好。"]={77,1996979357},
  },
  ["冬泉酋长"]={
   ["冬泉谷的多诺瓦·雪山要你去击败冬泉酋长。"]={0,1648650208},
@@ -2120,7 +2121,7 @@ QuestieLevLookup = {
   ["将这本典籍交给它的主人。"]={0,1610400136},
  },
  ["卡兰·巨锤"]={
-  ["Travel to Blackrock Depths and find Kharan Mighthammer.\n\nThe King mentioned that Kharan was being held prisoner there - perhaps you should try looking for a prison."]={77,2667736309},
+  ["去黑石深渊找到卡兰·巨锤。\n\n国王提到卡兰在那里负责看守囚犯——也许你应该在监狱附近寻找他。"]={77,2667736309},
  },
  ["摩根·拉迪莫尔"]={
   ["去和夜色镇的指挥官阿尔泰娅·埃伯洛克谈一谈。"]={77,145064797},
@@ -2130,13 +2131,13 @@ QuestieLevLookup = {
  },
  ["永不安息的灵魂"]={
   ["找到埃根。你只知道他在斯坦索姆附近。"]={0,3436632920},
-  ["Use Egan's Blaster on the ghostly and spectral citizens of Stratholme. When the restless souls break free from their ghostly shells, use the blaster again - freedom will be theirs!\n\nFree 15 Restless Souls and return to Egan."]={0,2782441320},
+  ["对斯坦索姆城中的鬼魂使用埃根的冲击器。当那些永不安息的灵魂挣脱他们的外壳时，再次使用埃根的冲击器——他们就可以获得自由了！\n\n解放15个永不安息的灵魂，然后回到埃根那里去。"]={0,2782441320},
  },
  ["充满仇恨的土地"]={
   ["杀掉6个哈达尔萨特、2个哈达尔欺诈者和2个哈达尔魔仆，然后向灰谷与艾萨拉交界处的罗哈图复命。"]={0,2841567880},
  },
  ["The Principle Source"]={
-  ["Use the Empty Dreadmist Peak Sampler to draw a sample of water from a pool at the top of the peak.\n\nDeliver the Filled Dreadmist Peak Sampler to Tonga Runetotem at the Crossroads, Barrens."]={32,4036595824},
+  ["使用空的鬼雾峰取样器在山顶取水样。\n\n将盛满的鬼雾峰取样器送到贫瘠之地十字路口的图加·符文图腾那里。"]={32,4036595824},
  },
  ["森林里的狼人"]={
   ["为夜色镇的卡洛尔杀掉6个夜行织影狼人。"]={77,1883864773},
@@ -2160,7 +2161,7 @@ QuestieLevLookup = {
   [""]={0,1621481928},
  },
  ["札拉赞恩"]={
-  ["Defeat Zalazane.\n\nKill 8 Voodoo Trolls and 8 Hexed Trolls.\n\nBring Zalazane's Head to Gadrin."]={178,4003656890},
+  ["打败扎拉赞恩。\n\n杀死8个巫毒巨魔和8个妖术巨魔。\n\n把扎拉赞恩的头颅带给加德林大师。"]={178,4003656890},
  },
  ["挑战"]={
   ["到黑石深渊的竞技场去，在你被裁决者格里斯通宣判之后将挑战之旗插在场地中央。杀死塞尔德林和他的角斗士，然后将瓦塔拉克饰品第一部分交给东瘟疫之地的安泰恩·哈尔蒙。"]={0,386793864},
@@ -2178,8 +2179,8 @@ QuestieLevLookup = {
   ["保护哨兵阿娜莎，然后向灰谷迈斯特拉岗哨的奥奈雅报告。"]={0,2399681592},
  },
  ["月光林地"]={
-  ["Use the spell \"Teleport: Moonglade\" to travel to Moonglade.  When you arrive, speak with Dendrite Starblaze in the village of Nighthaven."]={8,1686192712},
-  ["Use the spell \"Teleport: Moonglade\" to travel to Moonglade.  When you arrive, speak with Dendrite Starblaze in the village of Nighthaven."]={32,1686193248},
+  ["使用法术“传送：月光林地”抵达月光林地，在那里与永夜港的德迪利特·星焰谈一谈。"]={8,1686192712},
+  ["使用法术“传送：月光林地”抵达月光林地，在那里与永夜港的德迪利特·星焰谈一谈。"]={32,1686193248},
  },
  ["克里斯托弗的书"]={
   ["回到教堂广场，将《金属的延展性》交给克里斯托弗修士。"]={77,1205501629},
@@ -2191,11 +2192,11 @@ QuestieLevLookup = {
   ["为奥伯丁的古博·布拉普抓6条黑海岸石斑鱼。"]={0,2642971672},
  },
  ["无畏马靴"]={
-  ["Korfax at Light's Hope Chapel in the Eastern Plaguelands will make Dreadnaught Sabatons if you bring him the following items: 1 Desecrated Sabatons, 12 Wartorn Plate Scraps, 2 Arcanite Bars and 3 Cured Rugged Hides.\n"]={0,3910548856},
+  ["如果你将1双被玷污的马靴、12块板甲碎片、2块奥金锭和3个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的科尔法克斯，他会为你制作一双无畏马靴。"]={0,3910548856},
  },
  ["标记哨塔"]={
-  ["Using the Beacon Torch, mark each tower in Andorhal; you will need to stand in the doorway of the tower to successfully mark it.\n\nOnce all four towers are marked, return the Beacon Torch to Commander Ashlam Valorfist in Chillwind Camp, Western Plaguelands."]={77,4265032205},
-  ["Using the Beacon Torch, mark each tower in Andorhal; you will need to stand in the doorway of the tower to successfully mark it.\n\nOnce all four towers are marked, return the Beacon Torch to High Executor Derrington at the Bulwark, Western Plaguelands."]={178,2085039706},
+  ["使用信号火炬为安多哈尔城中的四座哨塔做上标记，你必须站在哨塔门口才能成功地进行标记。\n\n在做完了标记之后，将信号火炬还给西瘟疫之地冰风岗的指挥官阿什拉姆·瓦罗菲斯特。"]={77,4265032205},
+  ["使用信号火炬为安多哈尔城中的四座哨塔做上标记，你必须站在哨塔门口才能成功地进行标记。\n\n在做完了标记之后，将信号火炬还给西瘟疫之地亡灵壁垒的高级执行官德灵顿。"]={178,2085039706},
  },
  ["蓝龙之怒"]={
   ["要是你想继续的话，就与哈尔琳谈一谈。"]={0,874579968},
@@ -2208,7 +2209,7 @@ QuestieLevLookup = {
   ["将OOX-17/TN护送到热砂港，然后向藏宝海湾的奥格索普·奥布诺提斯报告。"]={0,693527584},
  },
  ["特种部队"]={
-  ["Kill 10 Kurzen Commandoes and 6 Kurzen Headshrinkers.\n\nReport to Lieutenant Doren at the Rebel Camp."]={77,1819928581},
+  ["杀掉10名库尔森特种兵和6名库尔森精神医师。\n\n然后向反抗军营地的多伦上尉复命。"]={77,1819928581},
  },
  ["军需官"]={
   ["与雷矛军需管谈一谈。"]={77,2907916221},
@@ -2261,7 +2262,7 @@ QuestieLevLookup = {
   ["到阿拉希高地的激流堡遗迹里面寻找巫妖生前的遗物。如果你能找到这样的东西，就把它交给马杜克镇长。"]={0,3808588888},
  },
  ["权力珍宝：幻术师裹布"]={
-  ["Bring Al'tabim the All-Seeing Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,1361538272},
+  ["从祖尔格拉布把以下权力珍宝带给全知者阿塔比姆：1条原始哈卡莱护腕。你还必须在赞达拉部族中达到友善或更高的声望。\n\n全知者阿塔比姆克在荆棘谷的尤亚姆巴岛上。"]={0,1361538272},
  },
  ["森林之王伊弗斯"]={
   [""]={77,2158666069},
@@ -2301,7 +2302,7 @@ QuestieLevLookup = {
   ["将这张附有魔法的羊皮纸带给南海镇的博学者迪布斯。"]={77,3598473221},
  },
  ["普希林和埃斯托尔迪"]={
-  ["Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary.\n\nReturn to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations."]={0,3751527968},
+  ["到厄运之槌去找到小鬼普希林。你可以使用任何手段从小鬼那里得到埃斯托尔迪的咒术之书。\n\n找到咒术之书后，回到拉瑞斯小亭的埃斯托尔迪那里。"]={0,3751527968},
  },
  ["黎明先锋"]={
   ["将黎明先锋放在通灵学院的观察室里。打败维克图斯，然后回到贝蒂娜·比格辛克那里去。"]={0,3974109216},
@@ -2325,7 +2326,7 @@ QuestieLevLookup = {
   ["把上古之神的外鞘、2个战争塑像、5个银质甲虫和5个白骨甲虫交给安其拉的温瑟拉。你必须在诺兹多姆的子嗣中达到尊敬声望才能完成这个任务。"]={0,822428368},
  },
  ["权力珍宝：恶魔师衬肩"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Sash.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,3518812288},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1条原始哈卡莱腰带。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,3518812288},
  },
  ["无畏护手"]={
   ["如果你将1副被玷污的护手、8块板甲碎片、1块奥金锭和5个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的科尔法克斯，他会为你制作一副无畏护手。"]={0,3504208896},
@@ -2337,7 +2338,7 @@ QuestieLevLookup = {
   ["如果你将1个被玷污的头环、15块布衣碎片、3张月布和3块连结水晶交给东瘟疫之地圣光之愿礼拜堂的愤怒者玛塔乌斯，他会为你制作一个瘟疫之心头饰。"]={0,498017824},
  },
  ["通缉：兽人！"]={
-  ["You have been tasked with slaying opposing Orc players in Alterac Valley.\n\nKill an Orc and take their Orc Tooth back to Corporal Noreg Stormpike at Dun Baldar."]={0,2668433696},
+  ["你被指派去杀死奥特兰克山谷中的兽人玩家。\n\n杀掉一个兽人，然后把兽人的獠牙交给丹巴达尔的诺雷格·雷矛中尉。"]={0,2668433696},
  },
  ["碎手军礼"]={
   ["对着申苏尔练习碎手军礼。"]={178,2972382938},
@@ -2383,7 +2384,7 @@ QuestieLevLookup = {
   ["杀死这些德鲁伊：坦尼尔·黑木、尤希尔·唤月和玛沃里斯·裂云，然后向慰藉之林中的凯尼斯·静风复命。"]={77,3620727021},
  },
  ["腐蚀梦魇"]={
-  ["Travel to the four Emerald Dream portals in Azeroth and collect a Fragment of the Nightmare's Corruption from each. Return to Keeper Remulos in the Moonglade when you have completed this task.\n"]={0,4127948728},
+  ["到艾泽拉斯世界的四个翡翠梦境入口去，分别收集该处的腐蚀梦魇的碎片。当你任务完成之后，就回到月光林地的守护者雷姆洛斯那里。"]={0,4127948728},
  },
  ["部落需要更多绒线绷带！"]={
   ["把20卷绒线绷带交给奥格瑞玛精神谷的医师朗兰纳。"]={0,2846163232},
@@ -2448,7 +2449,7 @@ QuestieLevLookup = {
   ["与治安官玛克布莱德谈一谈。"]={77,1776565109},
  },
  ["艾萨拉水晶"]={
-  ["Recover twenty Crystallized Azsharite from southern Azshara. You may use the Felhound to assist you in 'sniffing' out the location of cleverly hidden deposits.\n\nReturn to Loramus when the task is complete.\n"]={0,1882807944},
+  ["在艾萨拉南部收集20块艾萨拉晶体。你可以使用地狱犬协助寻找一些隐藏的矿脉。\n\n任务完成之后就回到洛拉姆斯那里去。"]={0,1882807944},
  },
  ["蛮皮护肩"]={
   ["给羽月要塞的普拉特·马克格鲁带去6片厚重护甲片和1株野葡萄。"]={77,157035805},
@@ -2464,10 +2465,10 @@ QuestieLevLookup = {
   ["与藏宝海湾的马克迦文谈一谈。"]={178,4201680274},
  },
  ["世界在你脚下"]={
-  ["Bring two Heavy Mithril Boots and one Ornate Mithril Pants to Trenton Lighthammer.\n"]={0,3271542832},
+  ["将2双秘银重靴和1条精制秘银短裤交秘银短裤交给特伦顿·轻锤。"]={0,3271542832},
  },
  ["好东西"]={
-  ["Travel to Blackrock Depths and recover 20 Dark Iron Fanny Packs. Return to Oralius when you have completed this task. You assume that the Dark Iron dwarves inside Blackrock Depths carry these 'fanny pack' contraptions.\n"]={77,1721447405},
+  ["到黑石深渊去找到20个黑铁挎包。当你完成任务之后，回到奥拉留斯那里复命。你认为黑石深渊里的黑铁矮人应该会有这些黑铁挎包。"]={77,1721447405},
  },
  ["斑马的威胁"]={
   ["杀死快步斑马并收集4只斑马蹄，把它们交给十字路口的瑟格拉·黑棘。"]={178,1517467578},
@@ -2486,8 +2487,8 @@ QuestieLevLookup = {
   ["阅读亨里格·独眉的日记。"]={77,3582384629},
  },
  ["火羽山"]={
-  ["Take the Skeleton Key Mold and 2 Thorium Bars to the top of Fire Plume Ridge in Un'Goro Crater.  Use the Skeleton Key Mold by the lava lake to forge the Unfinished Skeleton Key.\n\nBring the Unfinished Skeleton Key to Alchemist Arbington at Chillwind Point, Western Plaguelands."]={77,637698605},
-  ["Take the Skeleton Key Mold and 2 Thorium Bars to the top of Fire Plume Ridge in Un'Goro Crater.  Use the Skeleton Key Mold by the lava lake to forge the Unfinished Skeleton Key.\n\nBring the Unfinished Skeleton Key to Apothecary Dithers at the Bulwark, Western Plaguelands."]={178,3777656130},
+  ["把骷髅钥匙模具和2块瑟银锭带到安戈洛尔环形山地区的火羽山顶部。在熔岩湖旁使用骷髅钥匙模具，铸造出一把未完工的骷髅钥匙。\n\n把未完工的骷髅钥匙交给西瘟疫之地冰风岗的化学家阿尔比顿。"]={77,637698605},
+  ["把骷髅钥匙模具和2块瑟银锭带到安戈洛尔环形山地区的火羽山顶部。在熔岩湖旁使用骷髅钥匙模具，铸造出一把未完工的骷髅钥匙。\n\n把未完工的骷髅钥匙交给西瘟疫之地亡灵壁垒的药剂师迪瑟斯。"]={178,3777656130},
  },
  ["风险投资公司"]={
   ["给藏宝海湾的克兰克·菲兹巴布带回10块蓝色歌唱水晶。"]={0,2231081384},
@@ -2609,10 +2610,10 @@ QuestieLevLookup = {
   ["奥本·怒爪要求你去杀掉他那失去灵魂的身体，然后对其尸体使用巫毒咒符。"]={0,3347336536},
  },
  ["丢失的书页"]={
-  ["Find the 12 missing pages of the Shredder Operating Manual, and put them together to form Chapters 1, 2, and 3. Return the pages to Gurda Ragescar near Splintertree Post.\n"]={178,2424043778},
+  ["找到丢失的12页伐木机操作指南，把它们合并为第1、2、3章。然后带着这些书页回到碎木岗哨去找古尔达·怒痕。"]={178,2424043778},
  },
  ["艾博斯塔夫"]={
-  ["Travel to the Wyrmbog in Dustwallow Marsh and seek out Emberstrife's Den. Once inside, wear the Amulet of Draconic Subversion and speak with Emberstrife.\n"]={178,2341254162},
+  ["到尘泥沼泽中的巨龙沼泽去，找到埃博斯塔夫的洞穴。进入洞穴之后戴上龙形护符，然后跟埃博斯塔夫交谈。"]={178,2341254162},
  },
  ["竞技场高手"]={
   ["与荆棘竞技场的小个子约翰·米斯瑞尔谈一谈。"]={0,2503800776},
@@ -2624,7 +2625,7 @@ QuestieLevLookup = {
   ["将名单登记员的信交给东瘟疫之地圣光之愿礼拜堂的名单登记员。"]={0,2852563864},
  },
  ["蜘蛛卵"]={
-  ["Travel to Blackrock Spire and collect 15 Spire Spider Eggs for Kibler.\n\nBy the sound of it, these eggs could be found near spiders.\n"]={0,3141699824},
+  ["到黑石塔去为基布雷尔收集15枚尖塔蜘蛛卵。\n\n听说那些蜘蛛周围有许多这样的卵。"]={0,3141699824},
  },
  ["突袭科卡尔"]={
   ["和吉尔吉斯部族保持良好的关系，把10个粗制咒符交给凄凉之地吉尔吉斯村的智者乌泰克。"]={77,182082445},
@@ -2655,17 +2656,17 @@ QuestieLevLookup = {
   ["杀掉绿龙索姆努斯，把他的颅骨交给埃博斯塔夫。"]={178,2788752714},
  },
  ["科尔拉克的传说"]={
-  ["According to legend, the leader of the mighty Winterax trolls appears at will to wreak havoc on the denizens of Alterac Valley.\n\nShould Korrak make himself known, destroy him and return to Warmaster Laggrond."]={178,4246966434},
+  ["血怒者科尔拉克躲在冰斧洞穴的深处。据说只有在第1001个冰斧巨魔被干掉的时候，这个强大的冰斧巨魔领袖才会出现。\n\n到冰斧洞穴中去，杀掉所有挡在你面前的巨魔，直到科尔拉克出现为止。杀掉科尔拉克，然后向拉格隆德复命。"]={178,4246966434},
  },
  ["命运的召唤"]={
-  ["Find Sethir the Ancient and bring back any clues that you may discover to Syurna.\n"]={77,1797355205},
+  ["找到远古的塞希尔，带回任何你可能发现的线索。"]={77,1797355205},
  },
  ["远方的软泥怪"]={
   ["将6瓶被诅咒的软泥怪样本和6瓶被污染的软泥怪样本交给铁炉堡的拉里斯·空轮。"]={77,1985345301},
-  ["Bring 10 Filled Pure Sample Jars to Laris Geardawdle in Ironforge.\n\nIf you have trouble finding them, perhaps try to get more clues from Laris."]={77,990285093},
+  ["将10个纯净样本瓶交给铁炉堡的拉里斯·空轮。\n\n如果你无法找到它们的话，不妨到拉里斯那里去再打听一些线索。"]={77,990285093},
  },
  ["魔法粮草"]={
-  ["Retrieve 20 Enriched Manna Biscuits - the key ingredient in making Manna-Enriched Horse Feed - for Merideth Carlson at Southshore in the Hillsbrad Foothills.  The Argent Dawn is known as the sole purveyor of the biscuits.\n\nYou also need to give her 50 gold to soothe her ruffled sensibilities."]={5,967840397},
+  ["把制作魔法粮草所需要的重要材料：20块可口的魔法点心带给希尔斯布莱德丘陵的梅丽德丝·卡尔森。据说银色黎明会出售这种饼干。\n\n你还需要给她50金币来对她进行安抚。"]={5,967840397},
  },
  ["谢申克的救赎"]={
   ["寻找初级勘探员谢申克的下落，把他或者他的勘探设备交给加基森的高级勘探员菲兹杜瑟。"]={0,29525856},
@@ -2680,14 +2681,14 @@ QuestieLevLookup = {
   ["莫沙彻营地的洛卡·奥赫希望你找到一颗戈杜尼之宝珠。"]={178,3178645250},
  },
  ["雷尔松的全视之眼"]={
-  ["Recover Master Ryson's All Seeing Eye from the Winterax caves and return it to Master Ryson.\n\nBe warned, it is said that Master Ryson's All Seeing Eye carries with it a terrible curse!"]={178,1896034178},
-  ["Recover Master Ryson's All Seeing Eye from the Winterax caves and return it to Master Ryson.\n\nBe warned, it is said that Master Ryson's All Seeing Eye carries with it a terrible curse!"]={77,1896034589},
+  ["从冰斧巨魔洞穴中找到雷尔松的全视之眼，然后回到指挥官雷尔松那里。要当心，据说雷尔松的全视之眼带有可怕的诅咒！"]={178,1896034178},
+  ["从冰斧巨魔洞穴中找到雷尔松的全视之眼，然后回到指挥官雷尔松那里。要当心，据说雷尔松的全视之眼带有可怕的诅咒！"]={77,1896034589},
  },
  ["部落的新兵"]={
-  ["Follow the western road from Razor Hill to the Barrens over a bridge.\n\nStop at the orc outpost across the bridge.\n\nGive Kargal Battlescar at the Barrens outpost your recruitment letter."]={178,734699746},
+  ["沿着剃刀岭西部的小路一直前进，过桥之后就可以进入贫瘠之地。\n\n在桥对面的兽人前哨找到卡加尔·战痕，将你的募兵信交给他。"]={178,734699746},
  },
  ["弗林特·沙多摩尔"]={
-  ["Travel to Chillwind Camp in the Western Plaguelands and meet up with your contact, Flint Shadowmore.\n"]={77,678754549},
+  ["到西瘟疫之地的冰风岗去跟弗林特·沙多摩尔会面。"]={77,678754549},
  },
  ["弗洛尔的屠龙技术纲要"]={
   ["将《弗洛尔的屠龙技术纲要》还回图书馆。"]={0,1460184616},
@@ -2714,7 +2715,7 @@ QuestieLevLookup = {
   ["从巫翼杀戮者那里收集6枚鹰身人首领之戒，把它们交给十字路口的达索克·快刀。"]={178,2289775394},
  },
  ["暗矛的青睐"]={
-  ["You have been tasked with slaying opposing night elf players in Alterac Valley.\n\nKill a night elf and return to Najak Hexxen at Frostwolf Keep with a Severed Night Elf Head."]={178,2997151810},
+  ["你被指派去杀死奥特兰克山谷中的暗夜精灵玩家。\n\n杀死一个暗夜精灵，然后把暗夜精灵的头颅交给霜狼要塞的纳亚克·海克森。"]={178,2997151810},
  },
  ["雕文备忘录"]={
   ["阅读雕文备忘录，然后与寒脊山谷上的安威玛尔镇里的玛瑞克·斯托纳尔谈一谈。"]={64,302108008},
@@ -2791,7 +2792,7 @@ QuestieLevLookup = {
   ["带着元素长靴，元素护腿和元素护肩回到奥格玛的莫克瓦那里。"]={178,2016425370},
   ["带着鬼雾便鞋，鬼雾护腿和鬼雾衬肩回到铁炉堡的德莉娜那里。"]={77,3287824053},
   ["带着勇气战靴，勇气腿铠和勇气肩甲回到铁炉堡的德莉娜那里。"]={77,4151390581},
-  ["Return to Mokvar in Orgimmar with a set of Wildheart Boots, a Wildheart Kilt and Wildheart Spaulders.\n"]={178,2045814906},
+  ["带着野性之心长靴，野性之心褶裙和野性之心肩甲回到奥格玛的莫克瓦那里。"]={178,2045814906},
   ["带着驭兽者长靴，驭兽者短裤和驭兽者衬肩回到奥格玛的莫克瓦那里。"]={178,4151100842},
   ["带着博学者长靴，博学者护腿和博学者衬肩回到奥格玛的莫克瓦那里。"]={178,1461233954},
   ["带上一双虔诚软鞋、一条虔诚长裙和一副虔诚衬肩，回去向奥格瑞玛的莫克瓦尔复命。"]={178,1628473114},
@@ -2806,13 +2807,13 @@ QuestieLevLookup = {
   ["将布满苔藓的心脏交给奥拉密斯湖畔的德纳兰。"]={0,4212317144},
  },
  ["目标：雷戈制奴者"]={
-  ["Kill 30 Hive'Regal Slavemakers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing X in order to complete this quest.\n"]={0,924743440},
+  ["击杀30只雷戈制奴者，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 X才能完成这个任务。"]={0,924743440},
  },
  ["暮光之锤的营地"]={
   ["到位于主宰之剑的暮光之锤营地去寻找线索。"]={0,1987777144},
  },
  ["女妖之王的勇士"]={
-  ["Speak with Nathanos Blightcaller in the Eastern Plaguelands. He is said to have taken up residence at the Marris Stead.\n"]={0,3843795792},
+  ["与东瘟疫之地的纳萨诺斯·凋零者谈一谈。据说他居住在玛瑞斯农场。"]={0,3843795792},
  },
  ["水晶中的碎骨"]={
   ["向奥伯丁的哨兵哨兵戈琳达·纳希恩报告你的发现。"]={0,134622800},
@@ -2845,13 +2846,13 @@ QuestieLevLookup = {
   ["把20个重符文绷带，20个厚丝质绷带和20个厚绒线绷带带给唤风者梅恩·长角。"]={77,2752169749},
  },
  ["迷路的沙恩"]={
-  ["Pick up Shay's Bell from the chest.\n\nEscort Shay Leafrunner to Rockbiter's camp."]={77,466911509},
+  ["从箱子里拿取沙恩的铃铛，然后护送沙恩·飘叶回到罗克比特的营地。"]={77,466911509},
  },
  ["冬泉熊怪的侵扰"]={
   ["雷沃·霜翼要你去杀死5个冬泉萨满祭司和5个冬泉巨熊怪。"]={77,3318861733},
  },
  ["梦魇的缠绕"]={
-  ["Find someone capable of deciphering the meaning behind the Nightmare Engulfed Object.\n\nPerhaps a druid of great power could assist you."]={0,1587211504},
+  ["寻找能解读梦魇包裹的物品中所隐藏的信息的人。\n\n或许拥有强大力量的德鲁伊可以帮助你。"]={0,1587211504},
  },
  ["书呆子赫罗德"]={
   ["找到书呆子赫罗德的档案。"]={77,1997055813},
@@ -2863,10 +2864,10 @@ QuestieLevLookup = {
   ["把克拉维尔的零件交给闪光平原的克拉维尔·浓须。"]={0,3155747552},
  },
  ["权力珍宝：预言者护腕"]={
-  ["Bring Maywiki of Zuldazar a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale."]={0,3098607848},
+  ["从祖尔格拉布把以下权力珍宝交给祖达萨的梅维克：1条原始哈卡莱护臂。你还必须在赞达拉部族中达到友善或更高的声望。\n\n祖达萨的梅维克在荆棘谷的尤亚姆巴岛上。"]={0,3098607848},
  },
  ["权力珍宝：捕猎者腰带"]={
-  ["Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,3288711704},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔：1条原始哈卡莱披肩。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n盲眼法希尔在荆棘谷的尤亚姆巴岛上。"]={0,3288711704},
  },
  ["莫格穆洛克的任务"]={
   ["蕨墙村的莫格穆洛克大王要你从石槌废墟拿回他的烈酒、鼻烟和保险箱。"]={178,2567801714},
@@ -2911,7 +2912,7 @@ QuestieLevLookup = {
   ["给黑海岸的桑迪斯·织风带去一块科尔宝石。"]={5,1853926925},
  },
  ["希诺特的帮助"]={
-  ["Travel to Tarren Mill in Hillsbrad Foothills and deliver the Sample of Zanzil's Mixture to Serge Hinott.\n\nTo get to Tarren Mill, take the Zeppelin to the Undercity and follow the road south through Silverpine and towards Hillsbrad. Follow the signs!\n\n"]={178,3216652722},
+  ["到希尔斯布莱德丘陵的塔伦米尔去，把赞吉尔的药剂样品交给瑟尔格·希诺特。\n\n要去塔伦米尔，可以搭乘飞艇到幽暗城，然后沿着大路向南穿过银松森林，直到希尔斯布莱德丘陵。跟着路标走！"]={178,3216652722},
   ["等待瑟尔格·希诺特完成解药。"]={178,899666378},
  },
  ["拯救沙普比克"]={
@@ -2934,7 +2935,7 @@ QuestieLevLookup = {
   ["杀死代弗林·阿加曼德，然后将代弗林的遗骸交给布瑞尔的库勒曼·法席恩。"]={178,551448498},
  },
  ["多多益善"]={
-  ["Bring Kum'isha Imperfect Draenethyst Fragments and be rewarded for each one you turn in.\n"]={0,2473008480},
+  ["将有瑕疵的德莱尼水晶碎片交给库米沙，你就可以得到相应的回报。"]={0,2473008480},
  },
  ["戒备森严"]={
   [""]={0,2963347016},
@@ -2955,7 +2956,7 @@ QuestieLevLookup = {
   [""]={0,816505096},
  },
  ["信仰手套"]={
-  ["Father Inigo Montoy at Light's Hope Chapel in the Eastern Plaguelands will make Gloves of Faith if you bring him the following: 1 Desecrated Gloves, 8 Wartorn Cloth Scraps and 4 Mooncloth.\n"]={0,2082504432},
+  ["如果你将1双被玷污的手套、8块布衣碎片和4张月布交给东瘟疫之地圣光之愿礼拜堂的英尼戈·蒙托尔神父，他会为你制作一双信仰手套。"]={0,2082504432},
  },
  ["盗取雷霆崖的烈焰"]={
   ["将雷霆崖烈焰交给节日博学者。"]={77,329751013},
@@ -3003,7 +3004,7 @@ QuestieLevLookup = {
   ["从斯坦索姆找回10个瘟疫肉块，并把它们交给贝蒂娜·比格辛克。你觉得斯坦索姆中的生灵都不大可能长着肉……"]={0,222378296},
  },
  ["赤脊山的联络员"]={
-  ["Venture forth to Lakeshire in the Redridge Mountains and speak with Lucius.\n"]={77,1840412909},
+  ["到赤脊山的湖畔镇去和卢修斯谈一谈。"]={77,1840412909},
  },
  ["塞拉摩码头"]={
   ["把指挥官的文件交给蕨墙村的纳泽尔·血矛。"]={178,2267681010},
@@ -3073,7 +3074,7 @@ QuestieLevLookup = {
   ["把暮光词典的三个章节交给希利苏斯的隐士奥泰尔。"]={0,1906942608},
  },
  ["烟鬼的炸药"]={
-  ["Travel to Plaguewood, northwest of Light's Hope. Destroy 8 Scourge Structures by using Smokey's Special Compound at the Mark of Detonation planted inside each building. Smokey has had the Ziggurats and Slaughterhouses marked.\n\nOnce you plant the bomb, leave the building and marvel at your handiwork.\n\nBy the way, Smokey's Special Compound is rather... unstable."]={0,1548072336},
+  ["到圣光之愿礼拜堂西北方的病木林去。在那些有爆炸标记的建筑物中对爆炸标记使用烟鬼的特殊混合物，以此来摧毁8座亡灵天灾建筑。烟鬼已经给通灵塔和屠宰房做上了标记。\n\n一旦你放置好炸弹，就离那些建筑物远一些，然后尽情欣赏你的杰作吧。\n\n顺便说一句，烟鬼的特殊混合物相当不稳定……"]={0,1548072336},
  },
  ["监狱暴动"]={
   ["杀死巴基尔·斯瑞德，把他的头带给监狱的典狱官塞尔沃特。"]={77,529924589},
@@ -3107,7 +3108,7 @@ QuestieLevLookup = {
   ["收集3个厚甲蝎螯、2个秃鹫的砂囊和1片诅咒之地的野猪肺，把它们血法师德拉吉亚。"]={0,1079777720},
  },
  ["壁泉河"]={
-  ["Travel north of Auberdine to the first waterfall along the Cliffspring River and draw a sample from the pool there.\n\nReturn to Thundris Windweaver in Auberdine with the Cliffspring River Sample."]={0,1861584928},
+  ["到奥伯丁的北面去，沿着壁泉河到达第一个瀑布处，从瀑布下的水潭中取出一份水样。\n\n将壁泉河水样交给奥伯丁的桑迪斯·织风。"]={0,1861584928},
  },
  ["风怒长者"]={
   [""]={0,1085976072},
@@ -3122,7 +3123,7 @@ QuestieLevLookup = {
   ["给塞拉摩的摩根·斯特恩收集8个分叉的泥石龟舌。"]={77,3043765445},
  },
  ["克罗格卢尔"]={
-  ["Recover Sha'ni's Nose-Ring from Krom'Grul and return it to Thal'trak in Kargath. Search the various caves and mines in Dreadmaul Rock.\n"]={178,991763098},
+  ["从克罗格鲁尔手中拿回沙妮的鼻环，把它还给卡加斯的萨特拉克。搜寻巨槌石的每一处山洞和矿井。"]={178,991763098},
  },
  ["至关重要的冷却剂"]={
   ["找到冰霜之油，把它交给荒芜之地的鲁特维尔·沃拉图斯。"]={0,2272449128},
@@ -3170,7 +3171,7 @@ QuestieLevLookup = {
   ["奥兰·斯内克威瑟是个学者，她对枯木巨魔很有研究，也许她可以帮你看看这块石板。奥兰就住在幽暗城的魔法区里。"]={178,1067196810},
  },
  ["古树的手杖"]={
-  ["You must find and destroy these four demonic corrupters:\n\nSimone the Seductress.\n\nKlinfran the Crazed.\n\nSolenor the Slayer.\n\nArtorius the Doombringer.\n\nDestroy these creatures and return to Vartrus the Ancient in Felwood with their heads.\n\nRefer to the Petrified Bark in your inventory for clues as to their whereabouts.\n\nYou MUST complete this task by yourself."]={0,973539144},
+  ["你必须找到并干掉下列4个恶魔：\n\n迷人的西蒙妮。\n\n疯狂的克林弗兰。\n\nS屠杀者索伦诺尔。\n\n摧毁者阿托留斯。\n\n杀掉这些恶魔，然后回到费伍德森林的古树瓦特鲁斯那里去。\n\n根据你背包中的石化树皮来找到它们所在位置的线索。\n\n你必须独自完成这个任务。"]={0,973539144},
  },
  ["法纹长袍"]={
   [""]={65,1357057609},
@@ -3200,7 +3201,7 @@ QuestieLevLookup = {
   ["从腐化之巢找5个森提帕尔昆虫肢体，把它们交给加基森的炼金师匹斯特苏格。"]={0,1791222136},
  },
  ["权力珍宝：忏悔者裹布"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,3408963248},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1条原始哈卡莱直柱。你还必须在赞达拉部族中达到友善或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,3408963248},
  },
  ["丢失的主人"]={
   ["收集5张优质月夜猛虎毛皮，把它们交给奥伯丁的特伦希斯。"]={0,1800505328},
@@ -3264,10 +3265,10 @@ QuestieLevLookup = {
   ["和蕨墙村的克罗格谈一谈。"]={178,1248611658},
  },
  ["权力珍宝：幻术师长袍"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,1044798576},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1块原始哈卡莱套索。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,1044798576},
  },
  ["目标：雷戈掘洞者"]={
-  ["Kill 30 Hive'Regal Burrowers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing XI in order to complete this quest.\n"]={0,2862302656},
+  ["击杀30只雷戈掘洞者，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 XI才能完成这个任务。"]={0,2862302656},
  },
  ["瘟疫之心护腿"]={
   ["如果你将1副被玷污的护腿、20块布衣碎片、4张月布和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的愤怒者玛塔乌斯，他会为你制作一副瘟疫之心护腿。"]={0,1061013144},
@@ -3280,7 +3281,7 @@ QuestieLevLookup = {
   ["与希利苏斯塞纳里奥要塞的唤风者梅恩·长角谈一谈。"]={178,3457658698},
  },
  ["追查雕文"]={
-  ["Rutgar Glyphshaper at Bronzebeard's Encampment in Silithus wants you to venture to Hive'Ashi, Hive'Zora, and Hive'Regal and recover Glyphed Rubbings from the Glyphed Crystals of each hive.\n\nUse the Geologist's Transcription Kit to make a reasonable facsimile of the ancient glyphs. Return to Rutgar Glyphshaper when you complete this task."]={0,4038261576},
+  ["希利苏斯铜须营地的鲁特加尔·雕石想要你前往亚什虫巢、佐拉虫巢和雷戈虫巢，从虫巢中的雕文水晶上取下拓文。\n\n使用地质学家的抄录工具包获取古老雕文的摹本。完成任务后回到鲁特加尔·雕石那儿。"]={0,4038261576},
  },
  ["更深重的堕落"]={
   ["费伍德森林的艾瑞丹·蓝风要你去杀掉8个碧火唤魔者、8个碧火背叛者、8个碧火欺诈者和萨瓦里克。任务完成之后回到艾瑞丹那里复命。"]={77,3705382637},
@@ -3289,7 +3290,7 @@ QuestieLevLookup = {
   ["如果你将1副被玷污的腿铠、20块皮甲碎片、1块奥金锭、8个熟化毛皮和100金币交给东瘟疫之地圣光之愿礼拜堂的杀手洛汗，他会为你制作一副骨镰腿铠。"]={0,1416558160},
  },
  ["古老的技艺"]={
-  ["Bring four Steel Breastplates and four Steel Plate Helms to Aturk the Anvil in Orgrimmar.\n"]={178,1124657498},
+  ["将4套钢质胸甲和4顶钢质头盔交给奥格瑞玛的铁砧阿图尔克。"]={178,1124657498},
  },
  ["耐力的试炼"]={
   ["把格林卡的爪子交给千针石林的多恩·平原行者。"]={178,2293654250},
@@ -3301,10 +3302,10 @@ QuestieLevLookup = {
   ["回到黑石山的布德利那里并将召唤火盆交给他。"]={0,3948900776},
  },
  ["噩梦显现"]={
-  ["Defend Nighthaven from Eranikus. Do not let Keeper Remulos perish. Do not slay Eranikus. Defend yourself. Await Tyrande.\n"]={0,2458934488},
+  ["保护永夜港免受伊兰尼库斯的伤害。不要让守护者雷姆洛斯死亡。不要杀掉伊兰尼库斯。保护好你们自己。等待泰兰妲。"]={0,2458934488},
  },
  ["吓唬病鬼"]={
-  ["Bring 5 Mistvale Giblets to \"Shaky\" Phillipe in Booty Bay."]={0,1418980120},
+  ["给藏宝海湾的“病鬼”菲利普带回5块薄雾谷猩猩的内脏。"]={0,1418980120},
  },
  ["其拉帝王武器"]={
   ["把其拉帝王武器和3块源质矿石交给安其拉神殿的亚雷戈斯，他会帮你制作使用源质强化过的武器。"]={0,842935552},
@@ -3327,7 +3328,7 @@ QuestieLevLookup = {
  },
  ["艾露恩祷言"]={
   ["听萨麦尔讲述他的故事。"]={0,4012619680},
-  ["Find the Prayer to Elune and take it to Astarii Starseeker in Darnassus.\n"]={77,2910078309},
+  ["找到艾露恩祷言，然后将其交给达纳苏斯的阿斯塔利·逐星。"]={77,2910078309},
  },
  ["原始雪人毛皮"]={
   ["把原始雪人毛皮交给菲拉斯羽月要塞的普拉特·马克格鲁比。"]={0,3413619744},
@@ -3389,7 +3390,7 @@ QuestieLevLookup = {
   ["收集5个地根草和5个科多兽角，把它们交给十字路口的图加·符文图腾，这样他就可以制作解药了。"]={32,1601939808},
  },
  ["黑木熊怪的堕落"]={
-  ["Fill the Empty Cleansing Bowl at the Auberdine Moonwell.\n\nGather a sample of fruit, nut, and grain from the northern Blackwood furbolg camps.\n\nMix the bowl and place it near the bonfire closest to the Cliffspring River at the northern camp, thus summoning the satyr corruptor.\n\nTake the Talisman of Corruption and bring it to Thundris Windweaver in Auberdine."]={0,3529270552},
+  ["在空的净化碗里盛满奥伯丁月亮井的井水。\n\n在黑木熊怪的北部营地里收集水果、坚果和谷物各一份。\n\n将水和三种食物混合起来，放置在壁泉河附近的营火边，这样就会召来唤引诱熊怪堕落的萨特。\n\n取回堕落护符，将它交给奥伯丁的桑迪斯·织风。"]={0,3529270552},
  },
  ["菲兹普罗克主管"]={
   ["杀掉菲兹普罗克主管，把他的笔记板带给血蹄村的摩林·云行者。"]={178,667847874},
@@ -3410,7 +3411,7 @@ QuestieLevLookup = {
   [""]={0,1888218568},
  },
  ["血色学者之帽"]={
-  ["In order to create the Cap of the Scarlet Savant, you will be required to bring the following items back to Malyfous Darkhammer: 1 Pristine Hide of the Beast; 5 Frayed Abomination Stitchings; 8 Arcane Crystals; 5 Enchanted Scarlet Thread. \n\nYou will also be required to pay 50 gold pieces for the crafting of the item."]={0,3925443464},
+  ["为了制造血色学者之帽，你必须将下列物品交给玛雷弗斯·暗锤：1块比斯巨兽的皮，5根磨损的憎恶缝合线，8块奥术水晶，5根魔化红线。\n\n另外你还必须支付50金币的制作费用。"]={0,3925443464},
  },
  ["防御水晶"]={
   [""]={0,275471176},
@@ -3462,7 +3463,7 @@ QuestieLevLookup = {
  ["勇气之书"]={
   ["与暴风城的达索瑞恩·拉尔谈一谈。"]={5,133583597},
   ["在西部荒野找到达芙妮·斯迪威尔。"]={5,1400785165},
-  ["Defend Daphne Stilwell from the Defias attack.\n\nNeither of your spirits must be released from their mortal coils if you wish to succeed.\n\nAfter you are successful, speak to Daphne Stilwell again."]={5,1355822029},
+  ["在迪菲亚兄弟会进攻时保护达芙妮·斯迪威尔的安全。\n\n如果你想成功的话，你和达芙妮都不能死在他们的剑下。"]={5,1355822029},
   ["与暴风城的达索瑞恩·拉尔谈一谈。"]={5,133585453},
  },
  ["传声盒411号"]={
@@ -3488,13 +3489,13 @@ QuestieLevLookup = {
   ["与监狱的典狱官塞尔沃特谈一谈。"]={77,3204607869},
  },
  ["卧底密探"]={
-  ["Travel to the Venture Co. Tower, north of the Sludge Fen and contact the Shattered Hand's covert operative, Taskmaster Fizzule.\n\nWhen the tower is in sight, use the Flare Gun to signal your arrival to Taskmaster Fizzule. Fire off TWO flares, then approach Taskmaster Fizzule and perform the Shattered /Salute.\n\nThese actions must be performed in the correct order, as Fizzule will attack and terminate any person he does not recognize."]={178,512889442},
+  ["到淤泥沼泽北边的风险投资公司塔楼去，联系碎手氏族的卧底费苏勒。\n\n看到塔楼之后，用信号枪发射信号，向工头费苏勒示意你已经到达。发出两个闪光信号，然后使用碎手军礼和工头费苏勒接头。\n\n注意，这些步骤必须依次进行，因为费苏勒会攻击并干掉任何他无法识别的人。"]={178,512889442},
  },
  ["我的兄弟……"]={
   ["将工头希斯耐特的探险者协会徽章交给暴风城的维尔德·蓟草。"]={77,1797906365},
  },
  ["诺莫瑞根大通缉！"]={
-  ["You have been tasked with slaying opposing tauren players in Alterac Valley.\n\nKill a tauren and return to Dirk Swindle at Dun'Baldar with a  Tauren Hoof."]={77,351118765},
+  ["你被指派去杀死奥特兰克山谷中的牛头人玩家。\n\n杀死一个牛头人，然后把牛头人的蹄子交给丹巴达尔的德尔克。"]={77,351118765},
  },
  ["善良的艾玛"]={
   ["找到暴风城的艾玛并弄清她是否就是艾玛·费尔斯通。如果是的话，那么她可能想要拿到詹妮丝·费尔斯通给她的包裹。"]={0,2737494616},
@@ -3506,8 +3507,8 @@ QuestieLevLookup = {
   ["设法召唤并击杀灰烬公爵，然后向塞纳里奥要塞的唤风者梅恩·长角复命。"]={0,2083384048},
  },
  ["维利塔恩的污染"]={
-  ["Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.\n\nUse the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.\n\nHeal 8 plants by killing these Noxxious Scion, then return to Vark Battlescar in Shadowprey Village."]={178,1225430946},
-  ["Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.\n\nUse the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.\n\nHeal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point."]={77,1779075957},
+  ["在玛拉顿里用天蓝水瓶在橙色水晶池中装满水。\n\n在维利斯塔姆藤蔓上使用装满水的天蓝水瓶，使堕落的诺克赛恩幼体出现。\n\n治疗8株植物并杀死那些诺克赛恩幼体，然后向葬影村的瓦克·战痕复命。"]={178,1225430946},
+  ["在玛拉顿里用天蓝水瓶在橙色水晶池中装满水。\n\n在维利斯塔姆藤蔓上使用装满水的天蓝水瓶，使堕落的诺克赛恩幼体出现。\n\n治疗8株植物并杀死那些诺克赛恩幼体，然后向尼耶尔前哨站的塔琳德莉亚复命。"]={77,1779075957},
  },
  ["生生不息"]={
   ["烈日石居的塔姆拉·荒原想让你去收集10枚盖亚之种。"]={178,3887556234},
@@ -3563,7 +3564,7 @@ QuestieLevLookup = {
   ["如果你想要对侏儒工程学有更多了解，就把工程学教材交给藏宝海湾的奥格索普·奥布诺提斯。"]={178,325980682},
  },
  ["温德索尔元帅"]={
-  ["Travel to Blackrock Mountain in the northwest and enter Blackrock Depths. Find out what became of Marshal Windsor.\n\nYou recall Ragged John talking about Windsor being dragged off to a prison."]={77,1144016845},
+  ["到西北部的黑石山脉去，在黑石深渊中找到温德索尔元帅的下落。\n\n狼狈不堪的约翰曾告诉你说温德索尔被关进了一个监狱。"]={77,1144016845},
  },
  ["灰烬公爵"]={
   ["设法召唤并击杀灰烬公爵，然后向塞纳里奥要塞的唤风者梅恩·长角复命。"]={0,1005497200},
@@ -3575,7 +3576,7 @@ QuestieLevLookup = {
   ["回到铁炉堡，把这个坏消息带给国王麦格尼·铜须。"]={77,2918821437},
  },
  ["保护卡雅"]={
-  ["Escort Kaya Flathoof to Camp Aparaje, and then return to Makaba Flathoof near the southeastern edge of Stonetalon.\n"]={178,3657747186},
+  ["护送卡雅·扁蹄回到阿帕拉耶营地，然后到石爪山东南边界附近的玛卡巴·扁蹄那里去复命。"]={178,3657747186},
  },
  ["诺奥拉赫宝珠"]={
   ["等待梅纳拉·沃伦德完成诺奥拉赫宝珠，然后再与她谈一谈。"]={0,1369834568},
@@ -3587,7 +3588,7 @@ QuestieLevLookup = {
   ["找到一个拉格纳罗斯符记，把它交给卡拉然·温布雷。"]={0,1871645208},
  },
  ["精良的作战装备 - 银色黎明友善"]={
-  ["For 30 Insignias of the Dawn and 30 Insignias of the Crusade you may choose an item from the Argent Dawn's treasure cache.\n"]={0,3252089312},
+  ["如果你有30枚银色黎明徽记和30枚十字军徽记，就能从银色黎明的宝藏中挑选一件物品。"]={0,3252089312},
  },
  ["西泉要塞"]={
   ["到西泉要塞去和瑞尼尔副队长谈一谈。"]={77,2104129845},
@@ -3599,7 +3600,7 @@ QuestieLevLookup = {
   ["纳拉其营地的格鲁尔·鹰风要求你去干掉斗猪，并带给他8块斗猪头和8块斗猪肋排。"]={178,2289221650},
  },
  ["一丝希望"]={
-  ["Return Marshal Windsor's Lost Information.\n\nMarshal Windsor believes that the information is being held by Golem Lord Argelmach and General Angerforge."]={77,2687685653},
+  ["找回温德索尔元帅遗失的情报。\n\n温德索尔元帅确信那些情报在安格弗将军和傀儡统帅阿格曼奇的手里。"]={77,2687685653},
  },
  ["索兰鲁克宝珠"]={
   ["找到3块索兰鲁克宝珠的碎片和1块索兰鲁克宝珠的大碎片，把它们交给贫瘠之地的杜安·卡汉。"]={0,2620792936},
@@ -3614,13 +3615,13 @@ QuestieLevLookup = {
   ["与幽暗城盗贼区的米奈特·卡加德谈一谈。"]={16,2264684056},
  },
  ["精良的作战装备 - 银色黎明崇敬"]={
-  ["For 7 Insignias of the Dawn and 7 Insignias of the Crusade you may choose an item from the Argent Dawn's treasure cache.\n"]={0,2138474784},
+  ["如果你有7枚银色黎明徽记和7枚十字军徽记，就能从银色黎明库存的宝藏中挑选一件物品。"]={0,2138474784},
  },
  ["纳特的卷尺"]={
   ["将纳特的卷尺交给尘泥沼泽的纳特·帕格。"]={0,551826112},
  },
  ["勇士的装备"]={
-  ["Bring 15 Cenarion Combat Badges, 20 Cenarion Logistics Badges, 20 Cenarion Tactical Badges and 1 Mark of Cenarius to Vargus at Cenarion Hold in Silithus.  You must also attain Exalted reputation with Cenarion Circle to be able to complete this quest.\n"]={0,349969144},
+  ["把15枚作战徽章、20枚后勤徽章、20枚战术徽章和1枚塞纳留斯印记交给塞纳里奥要塞的瓦古斯。你必须在塞纳里奥议会中达到崇拜声望才能完成这个任务。"]={0,349969144},
  },
  ["灰铁武器"]={
   [""]={77,1886582485},
@@ -3718,7 +3719,7 @@ QuestieLevLookup = {
   [""]={0,1902336776},
  },
  ["精神矍铄"]={
-  ["Bring ten Vulture Gizzards and two Snickerfang Jowls to Bloodmage Lynnore.\n"]={0,1382827280},
+  ["收集10个秃鹫的砂囊和2块弯牙土狼的颚骨，把它们交给血法师莱诺雷。"]={0,1382827280},
  },
  ["工蝎的尾巴"]={
   ["给大兽穴中的高内克带回10根工蝎的尾巴。"]={178,3179000618},
@@ -3757,7 +3758,7 @@ QuestieLevLookup = {
   [""]={0,2424096840},
  },
  ["决定性的打击"]={
-  ["Bring three Scorpok Pincers, two Vulture Gizzards, and one Blasted Boar Lung to Bloodmage Drazial.\n"]={0,2625404424},
+  ["收集3个厚甲蝎螯、2个秃鹫的砂囊和1片诅咒之地的野猪肺，把它们血法师德拉吉亚。"]={0,2625404424},
  },
  ["返回西部荒野"]={
   ["从狮鹫管理员杜加尔·朗德瑞克那里租用一头狮鹫飞到哨兵岭，然后将奥斯瑞克的箱子交给哨兵岭的刘易斯。"]={1,3019705169},
@@ -3849,10 +3850,10 @@ QuestieLevLookup = {
   ["和奥格隆一起去和雷瑟谈一谈，然后回到蕨墙村见克罗格。"]={178,3766754866},
  },
  ["亚什巨像的秘密"]={
-  ["Take the Colossus of Ashi's Husk to Oglethorpe Obnoticus in Booty Bay.\n"]={0,1432346328},
+  ["把亚什巨像的獠牙交给藏宝海湾的奥格索普·奥布诺提斯。"]={0,1432346328},
  },
  ["达隆郡的战斗"]={
-  ["Place the Relic Bundle at the Darrowshire town square.\n\nPrevent Davil Lightfire's death until the death of Horgus.\n\nPrevent Captain Redpath's death until Redpath the Corrupted appears.\n\nDefeat Redpath the Corrupted.\n\nSpeak with the spirit of Joseph Redpath when he appears at the town square, then speak with Pamela at her home."]={0,2576639008},
+  ["将遗物包裹放在达隆郡的广场中。\n\n在霍古斯死亡之前，达维必须存活。\n\n在雷德帕斯队长堕落之前保证他存活。\n\n击败堕落的雷德帕斯。\n\n当约瑟夫·雷德帕斯出现在广场中时，与他的灵魂进行交谈，然后回到帕米拉的家中去找帕米拉。"]={0,2576639008},
  },
  ["浸血的信封"]={
   ["将浸血的信封交给东瘟疫之地圣光之愿礼拜堂的名单登记员。"]={0,1578875960},
@@ -3883,7 +3884,7 @@ QuestieLevLookup = {
   ["击杀25只亚什工蝎和40只亚什雄蝎。"]={0,400103952},
  },
  ["伊崔格的智慧"]={
-  ["Speak with Eitrigg in Orgrimmar. When you have discussed matters with Eitrigg, seek council from Thrall.\n\nYou recall having seen Eitrigg in Thrall's chamber."]={178,3780643082},
+  ["和奥格瑞玛的伊崔格谈一谈。讨论完毕后，咨询萨尔的意见。\n\n你回忆起曾在萨尔的大厅中见过伊崔格。"]={178,3780643082},
  },
  ["夜光长者"]={
   [""]={0,2158940168},
@@ -3901,7 +3902,7 @@ QuestieLevLookup = {
   ["雷利亚·绿树要你和奥拉密斯湖的德纳兰谈一谈。"]={0,339851576},
  },
  ["卡雅还活着"]={
-  ["Tell Tammra Windfield in Sun Rock Retreat the good news.\n"]={178,3545615634},
+  ["把这个好消息告诉烈日石居的塔姆拉·荒原。"]={178,3545615634},
  },
  ["铸造火炬杆"]={
   ["给卡拉然带去8把瑟银匕首。"]={0,2901918968},
@@ -3931,7 +3932,7 @@ QuestieLevLookup = {
   ["把解密石板碑文交给指挥官玛尔利斯。"]={0,261881704},
  },
  ["讨债行动"]={
-  ["Bring Maury's Clubbed Foot, Jon-Jon's Golden Spyglass, and Chucky's Huge Ring to \"Sea Wolf\" MacKinley in Booty Bay."]={0,1147701824},
+  ["给藏宝海湾的“海狼”马克基雷带回玛雷的畸形足、乔乔的金色望远镜和苏克的巨型戒指。"]={0,1147701824},
  },
  ["伏击！"]={
   ["等待葛瑞格·莱斯科瓦公爵和沉默之刃马尔松在花园里的对话结束，杀死他们两个，之后向暴风城的提亚斯回报。"]={77,2803966381},
@@ -4009,7 +4010,7 @@ QuestieLevLookup = {
   ["按照酋长的指示找到罗卡鲁。他在凄凉之地的葬影村。"]={178,205166594},
  },
  ["牛头人的盟友"]={
-  ["You have been tasked with slaying opposing gnome players in Alterac Valley.\n\nKill a gnome and return to Ravak Grimtotem at Frostwolf Keep with a Tuft of Gnome Hair."]={178,2702373978},
+  ["你被指派去杀死奥特兰克山谷中的侏儒玩家。\n\n杀死一个侏儒，然后把一束侏儒的头发交给霜狼要塞的拉瓦克·恐怖图腾。"]={178,2702373978},
  },
  ["工匠令状 - 瑟银管"]={
   ["将14个瑟银管和工匠令状 - 瑟银管 - 带到东瘟疫之地给圣光之愿礼拜堂的军需筹备官·石汉 。"]={0,1358549216},
@@ -4019,11 +4020,11 @@ QuestieLevLookup = {
   ["将黑爪烈酒带给祈愿厅里的维沙克公爵。"]={77,3895691789},
  },
  ["驯鹿梅森"]={
-  ["Find Metzen the Reindeer.  Use the notes provided to you for clues as to where he is being held.\n\nWhen you find Metzen, have the Pouch of Reindeer Dust in your possession so you can sprinkle some of the dust on him; this should free Metzen from his bonds of captivity.\n\nReturn the Pouch of Reindeer Dust to Kaymard Copperpinch in Orgrimmar once Metzen is freed."]={0,1240113232},
-  ["Find Metzen the Reindeer.  Use the notes provided to you for clues as to where he is being held.\n\nWhen you find Metzen, have the Pouch of Reindeer Dust in your possession so you can sprinkle some of the dust on him; this should free Metzen from his bonds of captivity.\n\nReturn the Pouch of Reindeer Dust to Wulmort Jinglepocket in Ironforge once Metzen is freed."]={0,3161113808},
+  ["找到驯鹿梅森。在你手头上的便笺中查找有关梅森下落的线索。\n\n当你找到它之后，往它身上洒一些驯鹿之尘，这样就可以让它摆脱任何束缚。\n\n解救梅森之后，把驯鹿之尘还给奥格瑞玛的凯玛德·考伯宾奇。"]={0,1240113232},
+  ["找到驯鹿梅森。在你手头上的便笺中查找有关梅森下落的线索。\n\n当你找到它之后，往它身上洒一些驯鹿之尘，这样就可以让它摆脱任何束缚。\n\n解救梅森之后，把驯鹿之尘还给铁炉堡的乌莫尔特。"]={0,3161113808},
  },
  ["部落医疗队"]={
-  ["Travel to Hammerfall in the Arathi Highlands and speak with Doctor Gregory Victor about joining the ranks of Horde Trauma.\n"]={178,4294771218},
+  ["到阿拉希高地的落锤镇去，与格里高利·维克托医生谈一谈关于加入部落外科医疗队的事宜。"]={178,4294771218},
  },
  ["寻找塞尔瑞德"]={
   ["到黑暗深渊去找到银月守卫塞尔瑞德。"]={77,3946903277},
@@ -4056,10 +4057,10 @@ QuestieLevLookup = {
   ["将卡利夫·斯科比斯汀的头颅交给加基森的首席工程师沙克斯·比格维兹。"]={0,1931948912},
  },
  ["向纳萨诺斯复命"]={
-  ["Return to Nathanos Blightcaller with the new information.\n"]={178,3068577602},
+  ["带着新情报返回纳萨诺斯·凋零者那里。"]={178,3068577602},
  },
  ["游荡者目录"]={
-  ["Read from the Catalogue of the Wayward.\n"]={0,299863200},
+  ["阅读游荡者目录。"]={0,299863200},
  },
  ["热酒快递"]={
   ["在5分钟内把热酒交给安威玛尔的德南·弗卡特。"]={77,2258813909},
@@ -4243,7 +4244,7 @@ QuestieLevLookup = {
  },
  ["出了什么事？"]={
   ["保护哥沙克。"]={178,2378262154},
-  ["Speak with Kharan Mighthammer and gather information about Princess Moira Bronzebeard's kidnapping. Take that information to Thrall in Orgrimmar.\n\nYou recall Gor'shak mentioning that Kharan is being held in a cell nearby.\n"]={178,2759062354},
+  ["与卡兰·巨锤谈一谈，收集关于绑架公主铁炉堡公主茉艾拉·铜须这一事件的情报。将情报反馈给奥格瑞玛城里的萨尔。\n\n哥沙克提到过卡兰被关在附近的某个牢房中。"]={178,2759062354},
  },
  ["向塞弗伦回报"]={
   ["向布瑞尔的执政官塞弗伦报告。"]={178,325361410},
@@ -4291,7 +4292,7 @@ QuestieLevLookup = {
   ["收集8份蜥蜴样本、8份土狼样本和8份蝎子样本，然后在能量源耗尽之前把野外实验工具包还给加基森的安全主管吉罗姆·比格维兹。"]={178,2757902754},
  },
  ["绝密配方！"]={
-  ["Somewhere in the Slag Pit of the Cauldron you will find the Secret Plans: Fiery Flux that Overseer Maltorius stole. Find those plans and return them to Master Smith Burninate in the Searing Gorge.\n"]={0,208001616},
+  ["在大熔炉的熔渣之池中的某个地方，你可以找到工头玛托留斯偷走的秘密设计图：炽热助熔剂。找到这些设计图，把它们还给灼热峡谷的大铁匠博恩奈特。"]={0,208001616},
  },
  ["霜火长袍"]={
   ["如果你将1件被玷污的长袍、25块布衣碎片、4张月布和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯，她会为你制作一件霜火长袍。"]={0,3361684504},
@@ -4310,13 +4311,13 @@ QuestieLevLookup = {
   ["护送亡灵哨兵埃兰德避过群狼，直到他找到兰妮·尤瑞克。"]={178,2914928474},
  },
  ["朋友的帮助"]={
-  ["Lead Ringo to Spraggle Frock at Marshal's Refuge.\n\nIf Ringo faints, use Spraggle's Canteen to revive him."]={0,591147608},
+  ["把林格带回马绍尔营地的斯普拉格·弗劳克身边。\n\n如果林格晕倒了，就用斯普拉格的水壶让他恢复。"]={0,591147608},
  },
  ["冰川外衣"]={
   ["东瘟疫之地圣光之愿礼拜堂的铁匠维尔海姆需要你带给他8个冰冻符文，8份符文布卷，6个水之精华，4份铁网蛛丝，还有300金。同时你必须在银色黎明达到崇拜声望值，才能完成这项任务。"]={0,1926872672},
  },
  ["时间问题"]={
-  ["Use the Temporal Displacer near one of Andorhal's silos and uncover Temporal Parasites.\n\nSlay 10 Temporal Parasites, and then return the Temporal Displacer to Chromie in the Andorhal Inn, Western Plaguelands."]={0,1218999176},
+  ["在安多哈尔的一处仓库附近使用时光置换器，使时光寄生虫现身。\n\n杀掉10只时光寄生虫，然后将时光置换器还给西瘟疫之地安多哈尔旅店的克罗米。"]={0,1218999176},
  },
  ["冬泉谷的枭兽"]={
   ["费伍德森林的特鲁尔·法贝恩要你去冬泉谷猎杀15头狂怒的枭兽和15头蓬毛枭兽。"]={178,2930853786},
@@ -4342,7 +4343,7 @@ QuestieLevLookup = {
   ["杀掉6个刺背寻水者、12个刺背织棘者和12个刺背地卜师，然后到陶拉祖营地的碎牙那里复命。"]={178,4038793858},
  },
  ["蛮王戈泰什"]={
-  ["Find Gor'tesh, somewhere to the west of Dreadmaul Rock. Kill Gor'tesh and then take Gor'tesh's Lopped Off Head back to Oralius in Burning Steppes.\n"]={77,850070725},
+  ["找到戈泰什，他应该在巨槌石西面的某处。杀掉戈泰什并把他的头颅交给燃烧平原的奥拉留斯。"]={77,850070725},
  },
  ["铁环挖掘场"]={
   ["和麦格玛尔·落斧谈一谈。"]={77,607870853},
@@ -4377,7 +4378,7 @@ QuestieLevLookup = {
   ["杀死12个辛迪加劫匪和8个辛迪加盗贼，然后回到南海镇向赫尼·马雷布镇长报到。"]={77,54326237},
  },
  ["金砂交易"]={
-  ["Bring 10 Gold Dust to Remy \"Two Times\" in Goldshire.  Gold Dust is gathered from Kobolds in Elwynn Forest."]={77,742008757},
+  ["为闪金镇的雷米收集10袋金砂，这种东西可以从艾尔文森林的狗头人身上找到。"]={77,742008757},
  },
  ["炽热助熔剂的补给：重皮"]={
   [""]={0,3780616968},
@@ -4386,7 +4387,7 @@ QuestieLevLookup = {
   ["杀死30只瘟疫蝙蝠，然后向提里奥·弗丁复命。"]={0,1419024328},
  },
  ["加尔和蜘蛛眼"]={
-  ["Bring 20 Unpopped Darkmist Eyes to \"Swamp Eye\" Jarl at the Swamplight Manor."]={0,1713323016},
+  ["收集20颗黑雾蜘蛛的眼球，把它们交给水光庄园的“沼泽之眼”加尔。"]={0,1713323016},
  },
  ["穆尔金和拉瑞安"]={
   ["从安戈洛尔环形山的血瓣花猛击者和血瓣花掠夺者身上收集20个血瓣花，然后向穆尔金回复。"]={77,1818035429},
@@ -4459,17 +4460,17 @@ QuestieLevLookup = {
   ["将15份冬泉谷血样、20枚金币，以及一副博学者腕轮交给铁炉堡的德莉亚娜。"]={77,1590005869},
   ["将15份冬泉谷血样、20枚金币，以及一副光铸护腕交给铁炉堡的德莉亚娜。"]={77,533172405},
   ["将15份冬泉谷血样、20枚金币，以及一副虔诚护腕交给铁炉堡的德莉亚娜。"]={77,433947797},
-  ["Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Shadowcraft Bracers to Deliana in Ironforge.\n"]={77,2145754717},
-  ["Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Dreadmist Bracers to Deliana in Ironforge.\n"]={77,1957534101},
+  ["将15份冬泉谷血样、20枚金币，以及一副迅影护腕交给铁炉堡的德莉亚娜。"]={77,2145754717},
+  ["取得15滴冬泉血滴样本，20金和1套鬼雾护腕给铁炉堡的德莉娜。"]={77,1957534101},
   ["将15份冬泉谷血样、20枚金币，以及一副勇气护腕交给铁炉堡的德莉亚娜。"]={77,4005466149},
   ["将15份希利苏斯毒液样品、20枚金币以及一副野性之心护腕交给奥格瑞玛的莫克瓦尔。"]={178,400918794},
   ["将15份希利苏斯毒液样品、20枚金币以及一副野兽追猎者护腕交给奥格瑞玛的莫克瓦尔。"]={178,2106694978},
-  ["Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Magister's Bindings to Mokvar in Orgrimmar.\n"]={178,1804965962},
-  ["Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Devout Bracers to Mokvar in Orgrimmar.\n"]={178,2719845362},
-  ["Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Shadowcraft Bracers to Mokvar in Orgrimmar.\n"]={178,2879757802},
-  ["Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Bindings of Elements to Mokvar in Orgrimmar.\n"]={178,3390415146},
+  ["将15份希利苏斯毒液样品、20枚金币以及一副博学者腕轮交给奥格瑞玛的莫克瓦尔。"]={178,1804965962},
+  ["取得15滴希利苏斯毒液样本，20金和1套虔诚护腕，带给奥格玛的莫克瓦。"]={178,2719845362},
+  ["将15份希利苏斯毒液样品、20枚金币以及一副迅影护腕交给奥格瑞玛的莫克瓦尔。"]={178,2879757802},
+  ["将15份希利苏斯毒液样品、20枚金币以及一副元素腕轮交给奥格瑞玛的莫克瓦尔。"]={178,3390415146},
   ["将15份希利苏斯毒液样品、20枚金币以及一副鬼雾护腕交给奥格瑞玛的莫克瓦尔。"]={178,166040786},
-  ["Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Bracers of Valor to Mokvar in Orgrimmar.\n"]={178,418289666},
+  ["将15份希利苏斯毒液样品、20枚金币以及一副勇气护腕交给奥格瑞玛的莫克瓦尔。"]={178,418289666},
  },
  ["机械修理包"]={
   [""]={0,1354760456},
@@ -4508,7 +4509,7 @@ QuestieLevLookup = {
   ["把罗卡里姆的碎片交给千针石林的多恩·平原行者。"]={178,4205452466},
  },
  ["达克雷尔的威胁"]={
-  ["Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight.  Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Sagorne Creststrider in the Valley of Wisdom, Orgrimmar."]={178,1552887730},
+  ["在斯坦索姆地下室的尸骨储藏所的中心使用预言水晶球。然后你必须与被召唤出来的幽灵作战。击败这些幽灵之后，死亡骑士达克雷尔才会出现，你的任务就是击败他。\n\n把死亡骑士达克雷尔的头颅交给奥格瑞玛智慧谷的萨格尼。"]={178,1552887730},
  },
  ["毁灭之力"]={
   ["将《暗影法术研究》和《扭曲虚空的魔法》这两本书交给幽暗城的瓦里玛萨斯。"]={178,2350133634},
@@ -4554,10 +4555,10 @@ QuestieLevLookup = {
   ["在雷角之井使用雷角之井净化图腾，然后回来见穆尔。"]={32,3502459688},
  },
  ["权力珍宝：忏悔者腰带"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Sash.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,1893905536},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1条原始哈卡莱腰带。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,1893905536},
  },
  ["野猪的活力"]={
-  ["Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n"]={0,2429334632},
+  ["收集3片诅咒之地的野猪肺、2个厚甲蝎螯和1颗石化蜥蜴的大脑，把它们交给血法师德拉吉亚。"]={0,2429334632},
  },
  ["盗贼兄弟会"]={
   ["给北郡的维里副队长带回12个红色粗麻面罩。"]={77,2422200749},
@@ -4566,8 +4567,8 @@ QuestieLevLookup = {
   [""]={0,2701101320},
  },
  ["海狮试炼"]={
-  ["Find the Half Pendant of Aquatic Agility and the Half Pendant of Aquatic Endurance.  Speak with the residents of Moonglade to learn clues as to where these items may be located.\n\nForm the Pendant of the Sea Lion from the two pendant halves.  You need to be in proximity of the Shrine of Remulos to do this.\n\nBring the joined pendant to Dendrite Starblaze in the village of Nighthaven, Moonglade."]={32,2265485928},
-  ["Find the Half Pendant of Aquatic Agility and the Half Pendant of Aquatic Endurance.  Speak with the residents of Moonglade to learn clues as to where these items may be located.\n\nForm the Pendant of the Sea Lion from the two pendant halves.  You need to be in proximity of the Shrine of Remulos to do this.\n\nBring the joined pendant to Dendrite Starblaze in the village of Nighthaven, Moonglade."]={8,2265609808},
+  ["寻找水兽耐力坠饰和水兽敏捷坠饰。与月光林地的居民谈一谈，找出这些东西可能被放在哪里。\n\n在雷姆洛斯神殿附近将海狮坠饰的两部分合而为一。\n\n将合并好的坠饰交给月光林地永夜港中的德迪利特·星焰。"]={32,2265485928},
+  ["寻找水兽耐力坠饰和水兽敏捷坠饰。与月光林地的居民谈一谈，找出这些东西可能被放在哪里。\n\n在雷姆洛斯神殿附近将海狮坠饰的两部分合而为一。\n\n将合并好的坠饰交给月光林地永夜港中的德迪利特·星焰。"]={8,2265609808},
  },
  ["隐士"]={
   ["去乌鸦岭墓地附近的小屋查看老人的情况。"]={77,492611093},
@@ -4648,7 +4649,7 @@ QuestieLevLookup = {
   ["到棘齿城去，在玛尔冯·瑞文斯克的车间里找到他。"]={178,1037155162},
  },
  ["权力珍宝：辩护者护臂"]={
-  ["Bring Jin'rokh the Breaker a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,1747530920},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱护臂。你还必须在赞达拉部族中达到友善或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,1747530920},
  },
  ["蓝叶薯"]={
   ["Grab a Crate with Holes.\nGrab a Snufflenose Command Stick.\nGrab and read the Snufflenose Owner's Manual.\n\nIn Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers.\n\nBring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet."]={0,3493398616},
@@ -4668,10 +4669,10 @@ QuestieLevLookup = {
   ["Bring 20 Arthas' Tears to Sergeant Major Germaine at the airfield in Dun Morogh."]={0,2872301640},
  },
  ["蚌肉大餐"]={
-  ["Dirge Quikcleave wants you to get the following items:\n\n12 Giant Eggs. You will find those on the Rocs wandering Tanaris or any other species of large bird.\n\n10 pieces of Zesty Clam Meat. You can find those in clams, naturally!\n\n20 pieces of Alterac Swiss. Get thee to a cheesery!\n\nGather all of the items and return to Dirge."]={0,496038240},
+  ["迪尔格·奎克里弗想要你收集这些原料：\n\n12只巨蛋。你可以在塔纳利斯的大鹏或是其它大型鸟类那里获得这种蛋。\n\n10块美味的蚌肉。你可以从任何蚌类身上获得这种原料！\n\n20块奥特兰克冷酪。去买就是了！\n\n收集好所有原料，然后把它们交给迪尔格。"]={0,496038240},
  },
  ["显肌肉，换糖果"]={
-  ["Do a flex emote at Innkeeper Allison, and in exchange you'll receive Stormwind Nougat!\n"]={0,3647370480},
+  ["向旅店老板奥里森炫耀自己强壮的肌肉，作为交换，你将得到一颗暴风城杏仁糖！"]={0,3647370480},
   ["向旅店老板格雷什卡炫耀自己强壮的肌肉，作为交换，你将得到一颗奥格瑞玛软糖！"]={0,3874386976},
  },
  ["迪菲亚兄弟会"]={
@@ -4742,7 +4743,7 @@ QuestieLevLookup = {
   [""]={0,280808968},
  },
  ["家族墓穴"]={
-  ["Kill 8 Wailing Ancestors and 8 Rotting Ancestors.\n\nKill Captain Dargol, and bring his skull to Magistrate Sevren in Brill."]={178,1481241954},
+  ["杀死8个哀嚎的鬼魂和8个腐烂的古尸。\n\n消灭达高尔队长，并将他的颅骨交给布瑞尔的执政官塞弗伦。"]={178,1481241954},
  },
  ["岛民"]={
   ["和克兰诺克·马克雷德谈一谈。"]={0,1310064976},
@@ -4763,7 +4764,7 @@ QuestieLevLookup = {
   ["将脓液样本交给幽暗城的比索·埃斯沙德。"]={178,654366082},
  },
  ["监视"]={
-  ["Climb the intact watch tower beside Stonewatch Keep.\n\nFind a suitable container to place the Glyph of Azora."]={77,4142429533},
+  ["爬上石堡要塞一旁的哨塔。\n\n为阿祖拉的铭文饰品找一个合适的容器。"]={77,4142429533},
  },
  ["戴兹帕可汗"]={
   ["把戴兹帕可汗的头颅交给凄凉之地的费古尔·双刃。"]={178,3841623338},
@@ -4810,7 +4811,7 @@ QuestieLevLookup = {
   ["将克萨维亚水样交给奥格瑞玛的迪诺。"]={144,1289681736},
  },
  ["霜火肩垫"]={
-  ["Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands will make Frostfire Shoulderpads if you bring her the following: 1 Desecrated Shoulderpads, 12 Wartorn Cloth Scraps, 2 Mooncloth and 3 Cured Rugged Hides.\n"]={0,3237864008},
+  ["如果你将1副被玷污的肩垫、12块布衣碎片、2张月布和3个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯，她会为你制作一副霜火肩垫。"]={0,3237864008},
  },
  ["扭曲的仇恨"]={
   ["杀掉迈雷纳斯，带他的头去见多兰纳尔的塔隆凯·捷根。"]={0,3993888896},
@@ -4840,19 +4841,19 @@ QuestieLevLookup = {
   ["杀死15名藓皮豺狼人和10名混血藓皮豺狼人，然后向湿地的绿色守卫者雷希耶尔复命。"]={0,378222104},
  },
  ["往日的回忆"]={
-  ["Learn all that you can of the past, then speak with Anachronos at the Caverns of Time in Tanaris.\n"]={0,3076539888},
+  ["了解所以可以的过去的事情，然后和塔纳利斯时光之穴的阿纳克洛斯谈谈。"]={0,3076539888},
  },
  ["伊沙姆哈尔"]={
   ["把伊沙姆哈尔的牙齿交给陶拉祖营地的乔恩。"]={178,3269431154},
  },
  ["猎杀收货人"]={
-  ["Find and kill \"the Collector\"  then return to Marshal Dughan with The Collector's Ring."]={77,1860690525},
+  ["找到“收货人”并将他杀掉，然后带着收货人的戒指回来见治安官杜汉。"]={77,1860690525},
  },
  ["海底沉船"]={
   ["剃刀岭的加索克要你从海岸边的舰队残骸中打捞出3件侏儒的工具。"]={178,3314871874},
  },
  ["拯救公主"]={
-  ["Slay Emperor Dagran Thaurissan and free Princess Moira Bronzebeard from his evil spell. \n"]={178,1236622234},
+  ["杀掉达格兰·索瑞森大帝，然后将铁炉堡公主茉艾拉·铜须从他的邪恶诅咒中拯救出来。"]={178,1236622234},
  },
  ["枯木巨魔的牢笼"]={
   ["检查两个枯木巨魔村落里的笼子，然后向狮鹫管理员沙拉克·鹰斧回复。"]={77,2381435469},
@@ -4880,7 +4881,7 @@ QuestieLevLookup = {
   ["将一柄深渊节杖交给塞纳里奥要塞的鲍尔·蛮鬃。"]={0,1938526920},
  },
  ["甜美的平静"]={
-  ["Travel to Stratholme and kill the Crimson Hammersmith. Recover the Crimson Hammersmith's Apron and return to Lilith.\n"]={0,3322059488},
+  ["到斯坦索姆去杀死红衣铸锤师。将红衣铸锤师的围裙交给莉莉丝。"]={0,3322059488},
   ["Travel to Stratholme and kill the Crimson Hammersmith. Recover the Crimson Hammersmith's Apron and return to Lilith."]={0,357985424},
  },
  ["特雷·莱弗治的残骸"]={
@@ -4898,7 +4899,7 @@ QuestieLevLookup = {
   ["与幽暗城的艾萨莱斯特谈一谈。"]={16,4123521720},
  },
  ["拉玛兰迪的寒冰之握"]={
-  ["Korfax at Light's Hope Chapel in the Eastern Plaguelands wants you to bring him 1 Frozen Rune, 1 Blue Sapphire and 1 Arcanite Bar.\n"]={0,4121556952},
+  ["东瘟疫之地圣光之愿礼拜堂的科尔法克斯要1个冰冻符文、1块蓝宝石和1块奥金锭。"]={0,4121556952},
  },
  ["达隆郡的掠夺者"]={
   ["把5个共鸣颅骨和神秘水晶交给东瘟疫之地的卡林·雷德帕斯。"]={0,3846569680},
@@ -4913,7 +4914,7 @@ QuestieLevLookup = {
   [""]={0,2158547208},
  },
  ["多彩巨龙胸甲"]={
-  ["To forge the Breastplate of the Chromatic Flight, you will be required to bring the following items to Jeziba the 'Sculptor':\n\n1 Chromatic Carapace.\n\n10 Brilliant Chromatic Scales.\n\n10 Blood of Heroes.\n\n10 Frayed Abomination Stitchings."]={0,3677062136},
+  ["为了铸造多彩巨龙胸甲，你必须把以下材料交给雕刻者耶兹巴：\n\n1块多彩龙鳞。\n\n10块闪亮的彩色龙鳞。\n\n10份英雄之血。\n\n10块磨损的憎恶缝合线。"]={0,3677062136},
  },
  ["狂热之心"]={
   ["幽暗城的大药剂师法拉尼尔需要20颗狂热之心。"]={178,824839330},
@@ -4962,10 +4963,10 @@ QuestieLevLookup = {
   ["与斯托菲队长谈一谈。"]={0,4083244960},
  },
  ["红衣信使"]={
-  ["Return to Eastern Plaguelands and track down the Crimson Courier. Kill the Courier and recover the Grand Crusader's Command.\n\nTake the command to Nathanos Blightcaller for further instruction."]={178,2673060538},
+  ["返回东瘟疫之地，找到并杀死红衣信使，拿到大十字军的命令。\n\n把命令交给纳萨诺斯·凋零者，并等待进一步的指示。"]={178,2673060538},
  },
  ["精兵的装备"]={
-  ["Bring 7 Cenarion Combat Badges, 4 Cenarion Logistics Badges and 4 Cenarion Tactical Badges to Vargus at Cenarion Hold in Silithus.  You must also attain Honored reputation with Cenarion Circle to be able to complete this quest.\n"]={0,1984315688},
+  ["把5枚后勤徽章、10枚战术徽章和10枚作战徽章交给塞纳里奥要塞的瓦古斯。你必须在塞纳里奥议会中达到友善声望才能完成这个任务。"]={0,1984315688},
  },
  ["与塞弗伦交谈"]={
   ["与布瑞尔的执政官塞弗伦谈一谈。"]={178,233404330},
@@ -4985,10 +4986,10 @@ QuestieLevLookup = {
   [""]={0,1086022920},
  },
  ["权力珍宝：思考者腰带"]={
-  ["Bring Jin'rokh the Breaker a Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,635333536},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱披肩。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,635333536},
  },
  ["游侠之王的命令"]={
-  ["Travel to the northern borders of the Eastern Plaguelands and recover the Quel'Thalas Registry. The item is somewhere in the Quel'Lithien lodge.\n\nYou must also slay 8 Rangers, 8 Pathstriders, and 8 Woodsmen."]={0,2077278568},
+  ["到东瘟疫之地的北方边界去找回奎尔萨拉斯名册，这件物品在奎尔林斯小屋的某处。\n\n另外你还必须杀掉8个游侠、8个巡路者和8个护林者。"]={0,2077278568},
  },
  ["码头管理员迪兹维格"]={
   ["把克拉维尔的零件订单交给棘齿城的码头管理员迪兹维格。"]={0,3871460224},
@@ -5007,7 +5008,7 @@ QuestieLevLookup = {
   ["与安多哈尔废墟南边的玛莱恩谈一谈。"]={0,194350904},
  },
  ["禁锢之石"]={
-  ["Gather the Burning Key, the Cresting Key and the Thundering Key from the Stone of West Binding, the Stone of East Binding and the Stone of Outer Binding.\n\nBring them to the Stone of Inner Binding."]={0,2273057776},
+  ["从西禁锢之石、东禁锢之石和外禁锢之石中搜集烈焰钥匙、海浪钥匙和雷霆钥匙。\n\n把它们带到内禁锢之石处。"]={0,2273057776},
  },
  ["议会领主"]={
   ["带5块大而艳丽的碎片和3个深渊羽饰给塞纳里奥城堡的奥莉尔·金叶。"]={0,3589713408},
@@ -5147,7 +5148,7 @@ QuestieLevLookup = {
   ["If you bring me your white stallion, I'll trade you for one from the new herd. The new horse will be just as fast as your old one, but have a different look to it. You can look at the swift steeds here to see what it will look like.\n\nMUST PAY 500 Gold too...."]={0,3622402864},
  },
  ["奥斯里安之死"]={
-  ["Deliver the Head of Ossirian the Unscarred to Commander Mar'alith at Cenarion Hold in Silithus.\n"]={0,2919215912},
+  ["将无疤者奥斯里安的头颅交给希利苏斯塞纳里奥要塞的指挥官玛尔利斯。"]={0,2919215912},
  },
  ["守护秘密"]={
   ["把蓝羽项链交给血毒岗哨的特鲁尔·法贝恩。"]={178,166308978},
@@ -5172,7 +5173,7 @@ QuestieLevLookup = {
   ["从碧火萨特的月亮井中收集一份被腐化的水的样本，把它交给血毒哨所的温娜·哈萨德。"]={178,2171768042},
  },
  ["加莫里塔！"]={
-  ["Katoom the Angler at Revantusk Village in the Hinterlands wants you to kill Gammerita and retrieve Katoom's Best Lure from her corpse.\n\nKatoom mentioned that Gammerita hangs out on the coast with the other turtles."]={178,272271042},
+  ["辛特兰恶齿村的钓鱼者卡图姆要你去杀掉加莫里塔，并从它的尸体上找到卡图姆的超级鱼饵。\n\n卡图姆说加莫里塔和其它海龟都在海岸附近活动。"]={178,272271042},
  },
  ["克希雷姆的报酬"]={
   ["将克希雷姆的便笺交给艾萨拉的杰迪加。"]={178,3946139066},
@@ -5208,7 +5209,7 @@ QuestieLevLookup = {
   ["暴风城的典狱官塞尔沃特要求你杀死监狱中的10名迪菲亚囚徒、8名迪菲亚罪犯和8名迪菲亚叛军。"]={77,3162494373},
  },
  ["巨像的秘密 - 雷戈"]={
-  ["Take the Colossus of Regal's Husk to Overseer Oilfist in Searing Gorge.\n"]={0,1156989784},
+  ["把雷戈巨像的甲壳带给灼热峡谷的工头奥菲斯特。"]={0,1156989784},
  },
  ["塞纳留斯的遗产"]={
   ["为石爪峰附近的布莱林·火拳杀死4名塞纳留斯的儿子，4名塞纳留斯的女儿以及4名塞纳里奥植物学家。"]={178,3161406410},
@@ -5283,13 +5284,13 @@ QuestieLevLookup = {
   ["带20朵紫莲花给铁炉堡军事区的夜歌大师。"]={0,266402072},
  },
  ["科尔拉克归来"]={
-  ["Should Korrak the Bloodrager make a return to the Field of Strife, seek him out and destroy him.\n\nReturn the Skull of Korrak to Warmaster Laggrond in the Hillsbrad Foothills."]={178,2835858970},
+  ["如果科尔拉克重新出现在奥特兰克山谷的冰斧山洞中，就找到并干掉他。\n\n将科尔拉克的颅骨交给霜狼要塞的拉格隆德。"]={178,2835858970},
  },
  ["信仰头环"]={
   ["如果你将1件被玷污的头环、15块布衣碎片、3张月布和3块连结水晶交给东瘟疫之地圣光之愿礼拜堂的英尼戈·蒙托尔神父，他会为你制作一件信仰头环。"]={0,168693416},
  },
  ["宾格斯的补给品"]={
-  ["Find and return Bingles' supplies:\n\nBingles' Wrench, Bingles' Screwdriver, Bingles' Hammer, and Bingles' Blastencapper."]={77,2252798293},
+  ["找回宾格斯的装备：$B$宾格斯的气压炸弹、宾格斯的扳手、宾格斯的榔头和宾格斯的螺丝起子。"]={77,2252798293},
  },
  ["安泰恩的老朋友"]={
   ["将未完成的挑战之旗交给厄运之槌图书馆内的法尔林·树影。"]={0,1985556056},
@@ -5359,7 +5360,7 @@ QuestieLevLookup = {
   ["与塞纳里奥城堡的奥莉尔·金叶谈话。"]={0,236635928},
  },
  ["误导血色十字军"]={
-  ["Proceed to the Scarlet Crusade's base camp between Felstone Field and Dalson's Tears and destroy their command tent.\n\nPlace the Scourge banner at the camp, and then return to High Executor Derrington at the Bulwark, Western Plaguelands."]={178,1285283130},
+  ["到血色十字军建在费尔斯通农场和达尔松之泪之间的营地去，摧毁他们的指挥帐篷。\n\n将亡灵天灾的战旗插在营地中，然后回到西瘟疫之地亡灵壁垒的高级执行官德灵顿那儿。"]={178,1285283130},
  },
  ["快递消息"]={
   ["将刘易斯的便笺交给狮鹫管理员索尔。"]={1,3051752753},
@@ -5386,21 +5387,21 @@ QuestieLevLookup = {
   ["为奥格瑞玛附近的雷兹拉克杀掉12个尘风暴徒和8个尘风雷巫。"]={0,2150321344},
  },
  ["无暇的恶魔精华"]={
-  ["Impsy in Felwood has asked that you bring him three Flawless Fel Essences originating from three distinct locations.\n\nThe Legashi Satyrs of Azshara hold the Flawless Fel Essence of their region. The Jaedenar Legionnaires of Jaedenar hold the Flawless Fel Essence of their region. The Felguard Sentries of the Blasted Lands hold the Flawless Fel Essence of their region.\n\nRecover the Flawless Fel Essences and return  to Impsy in Felwood."]={0,1363040928},
+  ["费伍德的伊普斯要求你从三个不同的地区收集三块无暇的恶魔精华，然后把它们交给他。\n\n艾萨拉的雷加斯萨特、费伍德森林的加德纳尔军团士兵和诅咒之地的地狱卫士斥候分别拥有一种无暇的恶魔精华。"]={0,1363040928},
  },
  ["末日草"]={
-  ["Collect 10 Doom Weed and deliver them back to Junior Apothecary Holland.\n"]={178,650573594},
+  ["收集10株末日草，把它们交给初级药剂师霍兰德。"]={178,650573594},
  },
  ["补充坐骑"]={
   ["找到奥特兰克山谷中的霜狼。使用霜狼口套来驯服它们。被驯服的霜狼会跟随你回到兽栏管理员那里，然后与兽栏管理员谈话以获得你的奖励。"]={178,2175900546},
-  ["Locate an Alterac Ram in Alterac Valley. Use the Stormpike Training Collar when you are near the Alterac Ram to 'tame' the beast. Once tamed, the Alterac Ram will follow you back to the Stable Master. Speak with the Stable Master to earn credit for the capture.\n"]={77,1963047133},
+  ["找到奥特兰克山谷中的山羊。使用雷矛训练颈圈来驯服它们。被驯服的山羊会跟随你回到兽栏管理员那里，然后与兽栏管理员谈话以获得你的奖励。"]={77,1963047133},
  },
  ["巨熊之灵"]={
   ["到月光林地的西北部去寻找巨熊之灵，向它学习关于熊的知识，然后回到月光林地的永夜港去找德迪利特·星焰。"]={8,385555408},
   ["到月光林地的西北部去寻找巨熊之灵，向它学习关于熊的知识，然后回到月光林地的永夜港去找德迪利特·星焰。"]={32,385555944},
  },
  ["大主教的仁慈"]={
-  ["You have been tasked with slaying opposing Forsaken players in Alterac Valley.\n\nKill a Forsaken and return to Commander Karl Philips (who wanders between the lumber mill and the mine) with a Forsaken Heart."]={77,597419741},
+  ["你被指派去杀死奥特兰克山谷中的被遗忘者玩家。\n\n杀死一个被遗忘者，然后把一枚被遗忘者的精华交给指挥官卡尔·菲利普（他一般在伐木场和矿井之间徘徊）。"]={77,597419741},
  },
  ["占领矿洞"]={
   ["占领一座还没有被雷矛部族控制的矿洞，然后向丹巴达尔的雷矛军需官复命。"]={77,1990262141},
@@ -5450,7 +5451,7 @@ QuestieLevLookup = {
   [""]={0,2696293896},
  },
  ["被腐蚀的猫"]={
-  ["Take Winna's kitten to the corrupted moonwell, release it, then bring it back to Winna.\n\nOnce you have returned to Winna, click on the cat to release it to Winna."]={178,135308866},
+  ["把温娜的小猫带到堕落的月亮井旁边，把猫放出来，然后把它还给温娜。\n\n当你回到温娜那里之后，点击猫就可以将它还给温娜。"]={178,135308866},
  },
  ["豺狼人的入侵"]={
   ["找到菲尔顿副队长。"]={77,1493254741},
@@ -5475,7 +5476,7 @@ QuestieLevLookup = {
   [""]={0,278541576},
  },
  ["嗜血胸甲"]={
-  ["In order to create the Breastplate of Bloodthirst, you will be required to bring the following items back to Malyfous Darkhammer: 1 Pristine Hide of the Beast; 10 Frayed Abomination Stitchings; 5 Arcanite Bars; 5 Skin of Shadow.\n\nYou will also be required to pay 50 gold pieces for the crafting of the item."]={0,1149550840},
+  ["为了制造嗜血胸甲，你必须将下列物品交给玛雷弗斯·暗锤：1块比斯巨兽的皮，10根磨损的憎恶缝合线，5块奥金锭，5块暗影之皮。\n\n另外你还必须支付50金币的制作费用。"]={0,1149550840},
  },
  ["搜寻雕像"]={
   ["继续在鱼人村落中搜寻米奈希尔雕像的踪迹。"]={77,4287410165},
@@ -5490,10 +5491,10 @@ QuestieLevLookup = {
   ["与幽暗城的维罗拉·奈特雷谈一谈。"]={0,4082602976},
  },
  ["甘祖拉恩"]={
-  ["Kill 8 Skullsplitter Hunters, 6 Skullsplitter Headhunters, and 4 Skullsplitter Berserkers.\n\nBring the Broken Armor of Ana'thek to the Bubbling Cauldron at the Grom'gol Base Camp."]={178,765961346},
+  ["杀死8名劈颅猎人、6名劈颅猎头者和4名劈颅狂战士。\n\n将安纳希克的盔甲碎片放入格罗姆高营地中的冒泡的大锅里。"]={178,765961346},
  },
  ["破冰胸甲"]={
-  ["Craftsman Wilhelm at Light's Hope Chapel in the Eastern Plaguelands wants 8 Frozen Runes, 16 Thorium Bars, 2 Arcanite Bars, 4 Essence of Water and 300 gold. You will also need to be of Exalted reputation with the Argent Dawn.\n"]={0,2579929176},
+  ["将8个冰冻符文、16块瑟银锭、2块奥金锭、4个水之精华和300金币交给东瘟疫之地圣光之愿礼拜堂的工匠威尔海姆。你在银色黎明的声望必须达到崇拜。"]={0,2579929176},
  },
  ["平原陆行鸟的威胁"]={
   ["收集7个陆行鸟的喙，把它们交给十字路口的瑟格拉·黑棘。"]={178,3989126474},
@@ -5521,7 +5522,7 @@ QuestieLevLookup = {
   ["将1枚其拉典礼戒指、2个琥珀雕像、5个黄金甲虫和5个陶土甲虫交给唤风者耶萨德拉。你必须在塞纳里奥议会中达到尊敬声望才能完成这个任务。"]={0,2116684752},
  },
  ["以彼之道还施彼身"]={
-  ["Kill 15 Kurzen Jungle Fighters.\n\nReturn to Sergeant Yohwa at the Rebel Camp."]={77,2920815309},
+  ["杀死15名库尔森丛林战士，然后向反抗军营地的尤瓦中士复命。"]={77,2920815309},
  },
  ["炖陆行鸟"]={
   ["给急弯河的奥兰达利亚·夜歌带回5块陆行鸟肉。"]={0,2979745008},
@@ -5542,7 +5543,7 @@ QuestieLevLookup = {
   ["给闪光平原的普兹克找10根空心秃鹫骨。"]={0,3957098928},
  },
  ["沙漠生存包"]={
-  ["Bring a Skin of Shadow, 3 Frayed Abomination Stitchings and 1 Twilight Cultist Robe to Aurel Goldleaf at Cenarion Hold in Silithus.  You must also bring Logistics Task Briefing XI in order to complete this quest.\n"]={0,1074497416},
+  ["将1块暗影之皮、3条磨损的憎恶缝合线和1件暮光信徒长袍交给塞纳里奥要塞的奥蕾尔·金叶。你还必须随身带着后勤任务简报 XI才能完成这个任务。"]={0,1074497416},
  },
  ["无畏护腕"]={
   ["如果你将1副被玷污的护腕、6块板甲碎片、1块奥金锭和1块连结水晶交给东瘟疫之地圣光之愿礼拜堂的科尔法克斯，他会为你制作一副无畏护腕。"]={0,2878772536},
@@ -5595,7 +5596,7 @@ QuestieLevLookup = {
   ["将6块碎浪多头怪的鳞片交给艾萨拉的奥汀克。奥汀克居住在埃达拉斯废墟东北部的悬崖顶部。"]={0,3488834040},
  },
  ["不和谐的火焰"]={
-  ["Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n"]={178,2134619058},
+  ["进入黑石深渊并找到伊森迪奥斯。杀掉它，然后把你找到的信息汇报给桑德哈特。"]={178,2134619058},
  },
  ["山羊坐具"]={
   ["null"]={77,329621805},
@@ -5622,7 +5623,7 @@ QuestieLevLookup = {
   ["收集5块光铸铁锭，把它们交给湿地的戈罗林·钢眉。"]={77,3619351373},
  },
  ["向马克基雷回报"]={
-  ["Bring Shaky's Payment to \"Sea Wolf\" MacKinley."]={0,2411158384},
+  ["将菲利浦的还款交给“海狼”马克基雷。"]={0,2411158384},
  },
  ["正义试炼"]={
   ["去和铁炉堡的乔丹·斯迪威尔谈一谈。"]={5,1911422085},
@@ -5642,7 +5643,7 @@ QuestieLevLookup = {
   ["把巴拉克的头颅交给十字路口的雷戈萨·死门。"]={178,1289989402},
  },
  ["上古之书"]={
-  ["Get the Book of the Ancients and return it to Azore Aldamort at the tower in Ethel Rethor.\n"]={0,576427104},
+  ["拿到上古之书，将其交给艾瑟雷索塔中的阿佐尔·奥达蒙特。"]={0,576427104},
  },
  ["白骨碎片"]={
   [""]={0,3499891976},
@@ -5661,7 +5662,7 @@ QuestieLevLookup = {
   ["收集6个草原捕食者的爪子和6个平原狮的爪子，把它们带给穆尔·雷角。"]={32,1797931944},
  },
  ["权力珍宝：预言者腰带"]={
-  ["Bring Maywiki of Zuldazar a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale."]={0,591226464},
+  ["从祖尔格拉布把以下权力珍宝带给祖达萨的梅维克：1条原始哈卡莱束带。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n祖达萨的梅维克在荆棘谷的尤亚姆巴岛上。"]={0,591226464},
  },
  ["蜘蛛之神"]={
   ["阅读塞卡石板，了解枯木巨魔的蜘蛛之神的名字，然后回到加德林大师那里。"]={178,1626233826},
@@ -5689,7 +5690,7 @@ QuestieLevLookup = {
   [""]={77,3500286805},
  },
  ["解除诅咒"]={
-  ["Get the Intrepid Strongbox Key from Captain Halyndor.\n\nUse the key to open the Intrepid's Locked Strongbox."]={0,1040226328},
+  ["从哈林多尔船长那里拿到无畏号的保险箱钥匙。\n\n用钥匙打开无畏号上的保险箱。"]={0,1040226328},
  },
  ["下厨"]={
   ["塞纳里奥要塞的卡兰德拉斯需要制作10只沙漠肉丸子。"]={0,4172358088},
@@ -5714,7 +5715,7 @@ QuestieLevLookup = {
   ["把丁奇的信交给菲诺克。"]={0,2199329328},
  },
  ["艾瑞安的命令"]={
-  ["Travel to Stormwind City and seek council with Renzik \"The Shiv.\"\n"]={77,2581831949},
+  ["到暴风城去找到“剃刀”雷吉克。"]={77,2581831949},
  },
  ["火焰灵契"]={
   ["向泰尔夫·祖拉姆再要一个 火焰灵契。"]={178,1423306818},
@@ -5741,7 +5742,7 @@ QuestieLevLookup = {
   [""]={0,1084952520},
  },
  ["盗墓贼"]={
-  ["Kill Rot Hide Graverobbers and Rot Hide Mongrels.  \n\nBring 8 Embalming Ichors to Magistrate Sevren in Brill."]={178,2664584194},
+  ["杀死腐皮盗墓贼和混血腐皮豺狼人。\n\n给布瑞尔的执政官塞弗伦带回8瓶防腐剂。"]={178,2664584194},
  },
  ["恐惧谷的灵魂"]={
   ["使用驱魔香炉召唤恐惧谷中的灵魂。当你杀掉25个恐惧谷的灵魂之后，回到暴风城教堂区的格雷森·沙东布瑞克公爵那里复命。"]={5,2554655757},
@@ -5759,7 +5760,7 @@ QuestieLevLookup = {
   ["把萨拉·巴鲁的便笺交给铁炉堡的国王麦格尼·铜须。"]={77,2580144157},
  },
  ["权力珍宝：幻术师衬肩"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,2868687872},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1条原始哈卡莱披肩。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n全知者阿塔比姆克在荆棘谷的尤亚姆巴岛上。"]={0,2868687872},
  },
  ["目标：佐拉雌蝎"]={
   ["击杀30只佐拉雌蝎，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 V才能完成这个任务。"]={0,3321976184},
@@ -5781,9 +5782,9 @@ QuestieLevLookup = {
   ["把一块艾泽拉斯钻石和一块原始黑钻石交给暴风城教堂区的格雷森·沙东布瑞克公爵。"]={5,3595446205},
  },
  ["烈焰精华"]={
-  ["Show Cyrus Therepentous the Black Dragonflight Molt you received from Kalaran Windblade.\n"]={0,503731112},
-  ["Show Cyrus Therepentous proof of your worth.\n\nYou have a feeling that Cyrus already knows that you are unworthy."]={0,911646792},
-  ["Travel to Blackrock Depths and slay Bael'Gar.\n\nYou only know that the giant resides inside Blackrock Depths. Remember to use the Altered Black Dragonflight Molt on Bael'Gar's remains to capture the Fiery Essence.\n\nReturn the Encased Fiery Essence to Cyrus Therepentous.\n\n"]={0,1529900928},
+  ["向塞勒斯·萨雷芬图斯展示你从卡拉然·温布雷那里得到的黑龙皮。"]={0,503731112},
+  ["向塞勒斯·萨雷芬图斯证明你的价值。\n\n你感觉到塞勒斯似乎对你不屑一顾。"]={0,911646792},
+  ["到黑石深渊去杀掉贝尔加。\n\n你只知道这个巨型怪物住在黑石深渊的最深处。记住你要使用特殊的黑龙皮从贝尔加的尸体上采集烈焰精华。\n\n将你采集到的烈焰精华交给塞勒斯·萨雷芬图斯。"]={0,1529900928},
  },
  ["灾难之后"]={
   ["与卡拉诺斯的奥齐·电环谈一谈。"]={77,4223564597},
@@ -5801,7 +5802,7 @@ QuestieLevLookup = {
   [""]={0,2429280520},
  },
  ["野猪人的头目"]={
-  ["Kill 8 Razormane Geomancers, 8 Razormane Defenders, and Kreenig Snarlsnout.\n\nThen bring Kreenig Snarlsnout's Tusk to Thork at the Crossroads."]={178,2077376978},
+  ["杀掉8个钢鬃地卜师、8个钢鬃防御者和他们的头目克里尼格·糟鼻。\n\n把克里尼格·糟鼻的獠牙交给十字路口的索克。"]={178,2077376978},
  },
  ["雕文石板"]={
   ["阅读雕文石板，然后和试炼谷里大兽穴入口附近的迈安谈一谈。"]={128,3411411368},
@@ -5862,7 +5863,7 @@ QuestieLevLookup = {
   ["在蛮鬃之井使用蛮鬃之井净化图腾，然后回来见穆尔·雷角。"]={32,2783797040},
  },
  ["野蛮的亲戚"]={
-  ["Mystic Yayo'jin at Revantusk Village in the Hinterlands wants you to kill 15 Vilebranch Scalpers and 10 Vilebranch Soothsayers. Return to her when this task is complete.\n\nYayo'jin indicated that these trolls could be found near the Shaol'watha and Agol'watha temples in the north by northeastern region of the Hinterlands."]={178,2319225778},
+  ["辛特兰恶齿村的秘法师雅尔金要你去杀掉15个邪枝割颅者和10个邪枝占卜者。任务完成之后回到他那里去复命。\n\n秘法师雅尔金说过，你可以在辛特兰东北部的沙尔瓦萨和亚戈瓦萨神庙附近找到那些巨魔。"]={178,2319225778},
  },
  ["急速圣典"]={
   ["将急速圣典、1块原始黑钻石、2份大块魔光碎片和2份英雄之血交给厄运之槌的博学者莱德罗斯，以换取一份急速秘药。"]={0,2443152016},
@@ -5889,7 +5890,7 @@ QuestieLevLookup = {
   ["把奥雷迪尔的药剂交给阿斯特兰纳的皮尔图拉斯·怀特姆恩。"]={77,4138864653},
  },
  ["狮子大开口"]={
-  ["Smokey LaRue wants you to get 2 Thorium Bars, 1 Golden Rod, 8 Hi-Explosive Bombs, and 8 Unstable Triggers.\n\nYou will have to find a blacksmith and an engineer for these items."]={0,3510018024},
+  ["烟鬼拉鲁恩要你拿来2块瑟银锭、1根金棒、8颗高爆炸弹和8个不牢固的扳机。\n\n你需要找铁匠和工程学技师帮忙制作这些东西。"]={0,3510018024},
  },
  ["萨科斯"]={
   ["杀死萨科斯并将它的爪子带回去交给哈纳祖。"]={178,4003235650},
@@ -5908,7 +5909,7 @@ QuestieLevLookup = {
   ["带着兽皮去找十字路口的迪弗拉克。"]={32,3774246416},
  },
  ["阿卡纳护腿"]={
-  ["In order to create the Leggings of Arcana, you will be required to bring the following items back to Malyfous Darkhammer: 1 Pristine Hide of the Beast; 5 Frayed Abomination Stitchings; 5 Arcanite Bars; 5 Frostwhisper's Embalming Fluid.\n\nYou will also be required to pay 50 gold pieces for the crafting of the item."]={0,2888033392},
+  ["为了制造阿卡纳护腿，你必须将下列物品交给玛雷弗斯·暗锤：1块比斯巨兽的皮，5根磨损的憎恶缝合线，5块奥金锭，5份莱斯·霜语的防腐液。\n\n另外你还必须支付300金币的制作费用。"]={0,2888033392},
  },
  ["哈加尔的召唤"]={
   ["与幽暗城的凯伦丁·哈加尔谈一谈。"]={178,3050032698},
@@ -5931,7 +5932,7 @@ QuestieLevLookup = {
   ["将2顶秘银罩帽和1副精制秘银护肩带秘银护肩交给特伦顿·轻锤。"]={0,4049516640},
  },
  ["释放他们"]={
-  ["Find the Mysterious Artifact being guarded by the Twilight's Hammer Idolaters in the northwest quadrant of the Searing Gorge and bring it to the Altar of Suntara in the Slag Pit.\n"]={77,1660644197},
+  ["到北方去找到被暮光之锤守卫着的神秘的古器，然后把它带到熔渣之池的苏塔纳祭坛上。"]={77,1660644197},
  },
  ["废土"]={
   ["在希利苏斯的勇士之墓附近找莱耶·星击谈谈，把拉比恩的信交给他。"]={0,407123824},
@@ -5946,10 +5947,10 @@ QuestieLevLookup = {
   ["带着你看护的孤儿去达纳苏斯的银行。银行就坐落在一棵中空的树里，它被称为永恒之树。"]={77,2380504869},
  },
  ["权力珍宝：辩护者胸甲"]={
-  ["Bring Jin'rokh the Breaker a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,2581488592},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱套索。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,2581488592},
  },
  ["腐肉虫"]={
-  ["Seek out the Carrion Grubs and Devourers of the region. Slay them and harvest their meat. Return to Tirion Fordring when you have gathered 15 Slabs of Carrion Worm Meat.\n"]={0,2265326856},
+  ["在东瘟疫之地搜索腐肉虫和腐肉吞噬者。杀了它们并收集它们的肉。当你收集到15块食腐虫肉块之后，就回到提里奥·弗丁那里。"]={0,2265326856},
  },
  ["给格拉兹的羽毛"]={
   ["Some of the Deadwood furbolgs wear a distinctive headdress that may be used as a means of proof in thinning their numbers. Bring me a feather from any headdresses you acquire; for every set of five you bring me, you will earn recognition amongst the Timbermaw."]={0,2368149072},
@@ -5961,13 +5962,13 @@ QuestieLevLookup = {
   ["到卡拉诺斯的雷酒酿造厂酒窖里去，把一桶雷霆啤酒换成热麦酒。"]={77,3184761309},
  },
  ["秘银会"]={
-  ["Speak with Galvan the Ancient in Stranglethorn Vale.\n"]={0,1893836664},
+  ["和荆棘谷的加尔文谈一谈。"]={0,1893836664},
  },
  ["塔纳利斯的账本"]={
   ["把古德斯迪尔的账本和上面所列的物品交给塔纳利斯的克林科·古德斯迪尔。"]={0,3212165112},
  },
  ["职位空缺：恶齿村卫兵队长"]={
-  ["You have been tasked with the decimation of 20 Vilebranch Berserkers, 20 Vilebranch Shadow Hunters, 20 Vilebranch Blood Drinkers, and 20 Vilebranch Soul Eaters.\n\nShould you complete this task, return to Primal Torntusk at Revantusk Village in the Hinterlands."]={178,3631723474},
+  ["你必须消灭10个邪枝狂战士、5个邪枝暗影猎手、5个邪枝饮血者和5个邪枝噬魂者。\n\n完成任务之后向辛特兰恶齿村的断齿族长复命。"]={178,3631723474},
  },
  ["童年的记忆"]={
   ["到巴隆斯·阿历克斯顿在西部荒野的房子里去找到他的指南针，并将它带回暴风城的教堂广场交给他。"]={77,2655299237},
@@ -5987,7 +5988,7 @@ QuestieLevLookup = {
   ["带着你从斯温的农场找到的书，把它拿给夜色镇上的人看看。"]={77,819273557},
  },
  ["权力珍宝：狂妄者衬肩"]={
-  ["Bring Falthir the Sightless a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,3879677600},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔：1条原始哈卡莱束带。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n盲眼法希尔在荆棘谷的尤亚姆巴岛上。"]={0,3879677600},
  },
  ["野蛮外交"]={
   ["和玛格拉姆部族建立良好的关系，然后和瓦鲁格谈一谈。"]={77,4244683229},
@@ -6017,15 +6018,15 @@ QuestieLevLookup = {
   ["如果你有75枚银色黎明徽记和75枚十字军徽记，就能从银色黎明库存的宝藏中挑选一件物品。"]={0,2097226272},
  },
  ["诺斯弗德农场"]={
-  ["Kill 10 Syndicate Highwaymen and 6 Syndicate Mercenaries.\n\nReturn to Captain Nials at Refuge Pointe."]={0,1207131408},
+  ["杀掉6个辛迪加雇佣兵和10个辛迪加路霸，然后回到避难谷地去向尼艾丝队长复命。"]={0,1207131408},
  },
  ["血色之路"]={
   ["杀掉30个亡灵劫掠者，然后向尼耶尔前哨站的安东修士复命。"]={77,3034854469},
   ["将安东修士的表彰信带给南海镇的虔诚的莱雷恩。"]={77,2509404821},
  },
  ["戈多克食人魔的事务"]={
-  ["Find the Gauntlet of Gordok Might and return it to Captain Kromcrush in Dire Maul.\n\nAccording to Kromcrush, the \"old timey story\" says that Tortheldrin - a \"creepy\" elf who called himself a prince - stole it from one of the Gordok kings."]={0,1829047096},
-  ["Find the Gauntlet of Gordok Might and return it to Captain Kromcrush in Dire Maul.\n\nAccording to Kromcrush, the \"old timey story\" says that Tortheldrin - a \"creepy\" elf who called himself a prince - stole it from one of the Gordok kings."]={0,1832316216},
+  ["找到戈多克力量护手，并将它交给厄运之槌的克罗卡斯。\n\n根据克罗卡斯所说的，“传说”自称是王子的精灵托塞德林从一名戈多克食人魔手中偷走了那件神器。"]={0,1829047096},
+  ["找到戈多克力量护手，并将它交给厄运之槌的克罗卡斯。\n\n根据克罗卡斯所说的，“传说”自称是王子的精灵托塞德林从一名戈多克食人魔手中偷走了那件神器。"]={0,1832316216},
  },
  ["灰谷先驱者"]={
   ["杀掉9个灰谷先驱者，然后回到碎木哨岗的库莱比那里。"]={178,1605077538},
@@ -6040,7 +6041,7 @@ QuestieLevLookup = {
   ["Bring pages 18, 20, 21and 24 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter III."]={0,1437091296},
  },
  ["钓鱼专家纳特·帕格"]={
-  ["Nat Pagle wants you to catch the following fish:\n\nMisty Reed Mahi Mahi from the Misty Reed Strand in the Swamp of Sorrows.\n\nA Sar'theris Striker from the Sar'theris Strand in Desolace.\n\nFeralas Ahi from the Verdantis River of Feralas.\n\nSavage Coast Blue Sailfin from the Savage Coast of Stranglethorn Vale.\n\nReturn to Nat Pagle when you have reeled them all in!"]={0,1965854928},
+  ["纳特·帕格要你钓到以下几种鱼：\n\n悲伤沼泽芦苇海岸的芦苇海岸大马哈鱼。\n\n凄凉之地萨瑟里斯海岸的萨瑟里斯虎鱼。\n\n菲拉斯沃丹提斯河的菲拉斯草鱼。\n\n荆棘谷野人海岸的野人海岸蓝色叉牙鱼。\n\n当你钓到这些鱼之后，就可以回到纳特·帕格那里去了！"]={0,1965854928},
  },
  ["联盟需要铜锭！"]={
   ["带20个铜锭给铁炉堡军事区的石眉中尉。"]={0,2979987744},
@@ -6062,7 +6063,7 @@ QuestieLevLookup = {
   ["和库勒曼·法席恩谈一谈。"]={178,2166000826},
  },
  ["地穴追猎者束带"]={
-  ["Huntsman Leopold at Light's Hope Chapel in the Eastern Plaguelands will make a Cryptstalker Girdle if you bring him the following: 1 Desecrated Girdle, 8 Wartorn Chain Scraps, 1 Arcanite Bar and 3 Nexus Crystals.\n"]={0,2501718408},
+  ["如果你将1条被玷污的束带、8块锁甲碎片、1块奥金锭和3块连结水晶交给东瘟疫之地圣光之愿礼拜堂的猎手雷奥普德，他会为你制作一条地穴追猎者束带。"]={0,2501718408},
  },
  ["来自夜色镇的货物"]={
   ["去和伊瓦夫人谈一谈。"]={77,663739213},
@@ -6080,7 +6081,7 @@ QuestieLevLookup = {
   ["回到幽暗城银行附近的芬斯塔·艾吉勒那里。"]={0,1511830560},
  },
  ["尼古拉斯·瑟伦霍夫公爵"]={
-  ["Deliver the book, \"Studies in Spirit Speaking\", to Duke Nicholas Zverenhoff at Light's Hope Chapel, Eastern Plaguelands."]={0,2049048888},
+  ["将《灵语研究》这本书交给东瘟疫之地圣光之愿礼拜堂的尼古拉斯·瑟伦霍夫公爵。"]={0,2049048888},
  },
  ["龙火护符"]={
   ["你必须从达基萨斯将军身上取回黑龙勇士之血，你可以在黑石塔的晋升大厅后面的房间里找到他。"]={77,3371577029},
@@ -6112,7 +6113,7 @@ QuestieLevLookup = {
   ["将3枚战歌荣誉奖章交给战场外的部落战争使者。"]={178,3513334346},
  },
  ["鱼人的威胁"]={
-  ["Remy \"Two Times\" wants you to speak with Marshal Dughan in Goldshire."]={77,2413898893},
+  ["雷米要你去和闪金镇的治安官杜汉谈一谈。"]={77,2413898893},
  },
  ["梦游者束带"]={
   ["如果你将1条被玷污的束带、8块皮甲碎片、3张月布和2个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的莱茵，他会为你制作一条梦游者束带。"]={0,4038049288},
@@ -6178,7 +6179,7 @@ QuestieLevLookup = {
   ["看看其他的镇民有没有关于模糊的人影的线索。"]={77,1652668309},
  },
  ["权力珍宝：预言者外套"]={
-  ["Bring Maywiki of Zuldazar a Primal Hakkari Tabard.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale."]={0,3473479688},
+  ["从祖尔格拉布把以下权力珍宝带给祖达萨的梅维克：1条原始哈卡莱徽章。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n祖达萨的梅维克在荆棘谷的尤亚姆巴岛上。"]={0,3473479688},
  },
  ["众月之泪"]={
   ["被流放的费格雷要你取回他的众月之泪。"]={178,10781346},
@@ -6211,10 +6212,10 @@ QuestieLevLookup = {
   [""]={0,1622592520},
  },
  ["往返瑞斯班洞穴"]={
-  ["Enter the Rethban Caverns, reach the first fork, and return to Yorus Barleybrew within the time allowed.\n\nYou must not die and release your spirit."]={77,3867582325},
+  ["进入瑞斯班洞穴，然后在规定的时间内回到犹鲁斯·麦酒那里。\n\n在整个过程中你都不能死掉或者释放灵魂，否则任务就宣告失败。"]={77,3867582325},
  },
  ["指挥官哥沙克"]={
-  ["Find Commander Gor'shak in Blackrock Depths.\n\nYou recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort."]={178,1308895234},
+  ["在黑石深渊里找到指挥官哥沙克。\n\n在那幅草图上画着的是一个铁栏后面的兽人，也许你应该到某个类似监狱的地方去找找看。"]={178,1308895234},
  },
  ["搜寻项链"]={
   ["在奥达曼挖掘场中寻找一条珍贵的项链，然后将其交给奥格瑞玛的德兰·杜佛斯。项链有可能已经损坏。"]={0,2574499136},
@@ -6229,13 +6230,13 @@ QuestieLevLookup = {
   ["给哨兵岭哨塔的哨兵瑞尔带回10条红色丝质面罩。"]={77,231409645},
  },
  ["权力珍宝：辩护者腰带"]={
-  ["Bring Jin'rokh the Breaker a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,1956601376},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱束带。你还必须在赞达拉部族中达到尊敬或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,1956601376},
  },
  ["抢劫海盗"]={
-  ["Bring the Southsea Treasure back to Wrenix the Wretched in Ratchet. Do not forget to get an E.C.A.C. and Thieves' Tools from Wrenix's Gizmotronic Apparatus. You will need both of these items to complete your mission.\n\nShould you be attacked by any unusually hostile parrots, use your E.C.A.C.!\n\n"]={178,4093759922},
+  ["把南海宝藏带回给棘齿城的卑鄙的维尼克斯。不要忘了从维尼克斯的机械设备中拿取一份大饼干和盗贼工具，你的任务需要使用这两件东西。\n\n如果你被任何奇怪的鹦鹉攻击，就对它使用大饼干！"]={178,4093759922},
  },
  ["目标：雷戈伏击者"]={
-  ["Kill 30 Hive'Regal Ambushers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing VIII in order to complete this quest.\n"]={0,3639685944},
+  ["击杀30只雷戈伏击者，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 VIII才能完成这个任务。"]={0,3639685944},
  },
  ["黑龙之火"]={
   ["为西格鲁·铁斧拿到一颗黑色幼龙之心。"]={77,2799663301},
@@ -6307,13 +6308,13 @@ QuestieLevLookup = {
   [""]={0,1354351560},
  },
  ["召唤大地公主"]={
-  ["Go to the Shards of Myzrael, summon her and defeat her.\n\nGather her Eldritch Shackles and bind them to the Shards of Myzrael."]={0,1047459240},
+  ["到密斯莱尔水晶碎块去召唤她，然后打败她。\n\n搜出她身上的怪异镣铐，将其和密斯莱尔水晶碎块缚在一起。"]={0,1047459240},
  },
  ["通缉：范高雷中尉"]={
   ["杀死范高雷并将他的手掌割下，向湖畔镇的所罗门镇长复命。"]={77,686682789},
  },
  ["证明忠诚"]={
-  ["Obtain a Candle of Beckoning.\n\nSummon Lillith Nefara and kill her.\n\nReturn to Gunther on his island."]={178,356716890},
+  ["拿上一根诱灵蜡烛。\n\n召唤出莉莉丝·奈法拉并杀死她。\n\n然后向岛上的冈瑟尔回报。"]={178,356716890},
  },
  ["新的背包"]={
   ["剃刀岭了望塔中的弗恩·凝眉想要8块帆布脚料。"]={178,3577511882},
@@ -6332,7 +6333,7 @@ QuestieLevLookup = {
   ["把巴隆·朗绍尔的头颅交给棘齿城的加兹鲁维。"]={0,2158342480},
  },
  ["野猪之魂"]={
-  ["Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n"]={0,1892988520},
+  ["收集3片诅咒之地的野猪肺、2个厚甲蝎螯和1颗石化蜥蜴的大脑，把它们交给血法师德拉吉亚。"]={0,1892988520},
  },
  ["潜藏者"]={
   ["跟随雷吉纳德·温德索尔元帅在暴风城中前进。保护他，别让他受到伤害！"]={77,831563229},
@@ -6347,7 +6348,7 @@ QuestieLevLookup = {
   ["Bring me thise things and I will create a powerful enchantment for you! \nPrimal Hakkari Idol\nPunctured Voodoo Doll"]={0,3774874600},
  },
  ["活跃的探子"]={
-  ["Travel to Stratholme and search the ziggurats. Find and return new Scourge Data to Betina Bigglezink.\n"]={0,2863973512},
+  ["到斯坦索姆去探索那里的通灵塔。找到新的天灾军团档案，把它交给贝蒂娜·比格辛克。"]={0,2863973512},
  },
  ["给镇长的信"]={
   ["把亚伯克隆比的信交给夜色镇的艾尔罗·埃伯洛克镇长。"]={77,3419156789},
@@ -6389,7 +6390,7 @@ QuestieLevLookup = {
   ["把海格纳的弹药交给丹莫罗的海格纳·重枪。"]={77,2815911253},
  },
  ["权力珍宝：狂妄者护腕"]={
-  ["Bring Falthir the Sightless a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,4063574824},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔：1条原始哈卡莱护腕。你还必须在赞达拉部族中达到友善或更高的声望。\n\n盲眼法希尔在荆棘谷的尤亚姆巴岛上。"]={0,4063574824},
  },
  ["哈卡之心"]={
   ["把哈卡之心交给尤亚姆巴岛上的莫托尔。"]={0,2949800336},
@@ -6493,7 +6494,7 @@ QuestieLevLookup = {
   ["到奥伯丁的戈沙拉·夜语那儿去。"]={77,3802920341},
  },
  ["最后的元素"]={
-  ["Travel to Blackrock Depths and recover 10 Essence of the Elements. Your first inclination is to search the golems and golem makers. You remember Vivian Lagrave also muttering something about elementals.\n"]={178,2121180330},
+  ["到黑石深渊去取得10份元素精华。你应该在那些作战傀儡和傀儡制造者身上找找，另外，薇薇安·拉格雷也提到了一些有关元素生物的话题……"]={178,2121180330},
  },
  ["戈多克食人魔装*"]={
   ["把4份符文布卷、8块硬甲皮、2卷符文线和一份食人魔鞣酸交给诺特·希姆加克。他现在被拴在厄运之槌的戈多克食人魔那边。"]={77,3350102925},
@@ -6515,7 +6516,7 @@ QuestieLevLookup = {
   ["带20份阿萨斯之泪给铁炉堡军事区的士官长戈麦恩。"]={0,3485512656},
  },
  ["伊莫塔尔的疯狂"]={
-  ["You must destroy the guardians surrounding the 5 Pylons that power the Prison of Immol'thar. Once the Pylons have powered down, the force field surrounding Immol'thar will have dissipated.\n\nEnter the Prison of Immol'thar and eradicate the foul demon that stands at its heart. Finally, confront Prince Tortheldrin in Athenaeum.\n\nReturn to the Shen'dralar Ancient in the courtyard should you complete this quest."]={0,796465440},
+  ["你必须干掉5座水晶塔周围的守卫，那5座水晶塔维持着关押伊莫塔尔的监狱。一旦水晶塔的能量被削弱，伊莫塔尔周围的能量力场就会消散。\n\n进入伊莫塔尔的监狱，干掉站在中间的那个恶魔。最后，在图书馆挑战托塞德林王子。\n\n当任务完成之后，到庭院中去找辛德拉古灵。"]={0,796465440},
  },
  ["矿工的宝贝"]={
   ["从风险投资公司的某个监督或者执行者那里夺取猫眼翡翠，然后把它交给棘齿城的码头管理员迪兹维格。"]={0,2656167592},
@@ -6530,7 +6531,7 @@ QuestieLevLookup = {
   ["将1块恶魔布交给费伍德森林的伊普斯。"]={0,1931237712},
  },
  ["莫甘斯"]={
-  ["Defeat Morganth.\n\nBring his Pendant of Shadow to Theocritus at the Tower of Azora in Elwynn Forest."]={77,2816945181},
+  ["击败莫甘斯。\n\n将他的阴影坠饰带给塞欧克瑞图斯，他就在艾尔文森林内的阿祖拉之塔中。"]={77,2816945181},
  },
  ["权力珍宝：占卜师外套"]={
   ["从祖尔格拉布把以下权力珍宝带给祖达萨的梅维克：1条原始哈卡莱徽章。你还必须在赞达拉部族中达到崇敬或更高的声望。$B$B祖达萨的梅维克在荆棘谷的尤亚姆巴岛上。"]={0,1592866272},
@@ -6571,7 +6572,7 @@ QuestieLevLookup = {
   ["杀死诅咒之地的魔誓者，然后回到部落英雄的灵魂那儿。"]={0,3479723824},
  },
  ["通缉：莫克迪普！"]={
-  ["Find and slay the murloc known as Murkdeep.  The creature is thought to be defending the murloc huts south of Auberdine along the water.\n\nReport the death of Murkdeep to Sentinel Glynda Nal'Shea in Auberdine."]={0,981936600},
+  ["找到并杀死名为莫克迪普的鱼人。它守护着位于奥伯丁南部海岸的鱼人营地。\n\n向奥伯丁的哨兵戈琳达·纳希恩报告莫克迪普的死讯。"]={0,981936600},
  },
  ["秘银小子"]={
   ["将2件重型秘银胸甲和1副精制秘银手套带给特秘银手套交给特伦顿·轻锤。"]={0,3828084296},
@@ -6583,7 +6584,7 @@ QuestieLevLookup = {
   ["到月光林地去找到雷姆洛斯，将生命之种交给他。"]={0,3650181232},
  },
  ["沙漠隐士"]={
-  ["Take the restored tablet to Hermit Ortell in Silithus.\n"]={0,2154392872},
+  ["把复原的石板带给希利苏斯的隐士奥泰尔。"]={0,2154392872},
  },
  ["向加翰回复"]={
   ["从双足飞龙管理员塔尔那里租用一头飞往十字路口的双足飞龙，并把安哈努的皮货交给加翰·鹰翼。"]={32,77294136},
@@ -6627,7 +6628,7 @@ QuestieLevLookup = {
   ["在加基森镇外的墓地中使用视灵药剂，然后按照多诺瓦的指示找到加里杨。"]={0,599749568},
  },
  ["传令官基尔图诺斯"]={
-  ["Return to the Scholomance with the Blood of Innocents. Find the porch and place the Blood of Innocents in the brazier. Kirtonos will come to feast upon your soul.\n\nFight valiantly, do not give an inch! Destroy Kirtonos and return to Eva Sarkhoff.\n"]={0,4006060104},
+  ["带着无辜者之血回到通灵学院，将它放在门廊的火盆下面，基尔图诺斯会前来吞噬你的灵魂。\n\n勇敢地战斗吧，不要退缩！杀死基尔图诺斯，然后回到艾瓦·萨克霍夫那儿。"]={0,4006060104},
  },
  ["红色皮质面罩"]={
   ["给哨兵岭的哨兵加里安带回15条红色皮质面罩。"]={77,3020781045},
@@ -6684,16 +6685,16 @@ QuestieLevLookup = {
   ["把拉克塔曼尼的蹄子交给陶拉祖营地的乔恩。"]={178,1653215690},
  },
  ["龙骨试炼，斯克利尔"]={
-  ["You must find the blue dragonflight drake champion, Scryer, and slay him. Pry his skull from his corpse and return it to Emberstrife.\n\nYou know that Scryer can be found in Winterspring."]={178,3170970658},
+  ["找到蓝龙斯克利尔并杀掉他。从他的身上取下他的颅骨，然后将其交给埃博斯塔夫。\n\n你可以在冬泉谷找到斯克利尔。"]={178,3170970658},
  },
  ["权力珍宝：恶魔师裹带"]={
-  ["Bring Al'tabim the All-Seeing a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale."]={0,202867376},
+  ["从祖尔格拉布把以下权力珍宝交给全知者阿塔比姆：1条原始哈卡莱直柱。你还必须在赞达拉部族中达到友善或更高的声望。\n\n全知者阿塔比姆在荆棘谷的尤亚姆巴岛上。"]={0,202867376},
  },
  ["骨镰马靴"]={
   ["如果你将1双被玷污的马靴、12块皮甲碎片、3个熟化毛皮、2块连结水晶和25金币交给东瘟疫之地圣光之愿礼拜堂的杀手洛汗，他会为你制作一双骨镰马靴。"]={0,132161256},
  },
  ["收集破碎的护符"]={
-  ["Slay Grol the Destroyer, Lady Sevine, and Archmage Allistarj. From their corpses take the Amulet of Grol, the Amulet of Sevine, and the Amulet of Allistarj.\n\nRemember to USE your Enchanted Azsharite Fel Weaponry to weaken the triad. They cannot be killed otherwise - but use them wisely...\n"]={0,559965448},
+  ["杀掉毁灭者戈洛尔、瑟温妮，以及大法师奥利斯塔。从他们到尸体上拿到戈洛尔的护符、瑟温妮的护符和奥利斯塔的护符。\n\n记住使用你的魔化艾萨拉水晶武器来削弱他们，否则他们是无法被杀死的——你必须小心谨慎地使用你的武器……"]={0,559965448},
  },
  ["黎明衬肩"]={
   ["Bring 10 Argent Dawn Valor Tokens to Quartermaster Hasana at the Bulwark, Western Plaguelands."]={0,3794365360},
@@ -6704,7 +6705,7 @@ QuestieLevLookup = {
   ["在森金村外面的拉尔·猎齿要求你粉碎科卡尔峭壁内的三份进攻计划。"]={178,3981859658},
  },
  ["元素交易"]={
-  ["Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 30 Core of Elements.\n"]={0,3611062600},
+  ["东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯要30个元素之核。"]={0,3611062600},
  },
  ["偷偷溜走"]={
   ["离开熊怪洞穴，然后去见奥伯丁的特伦希斯。"]={0,698149976},
@@ -6733,13 +6734,13 @@ QuestieLevLookup = {
   ["找到意志石板，把它们交给铁炉堡的顾问贝尔格拉姆。"]={77,981057821},
  },
  ["异型的生态"]={
-  ["Use the Scraping Vial to collect a Hive Wall Sample from one of the Gorishi hive hatcheries in Un'Goro Crater.  Look for the chambers with the hanging larval spawns.\n\nBring the Hive Wall Sample to Hol'anyee Marshal in Un'Goro Crater."]={0,1288616768},
+  ["使用采集瓶从安戈洛环形山的某个格里什虫巢的孵化室中收集一份巢穴侧壁的样本，在有悬挂着的虫卵的房间里收集样本。\n\n将虫穴内壁样本交给安戈洛环形山的霍莱伊·马绍尔。"]={0,1288616768},
  },
  ["石雕"]={
   ["收集10个用旧的石雕，把它们带给塔伦米尔的看守者贝尔杜加。"]={178,233761562},
  },
  ["暗影蛛丝"]={
-  ["Kill the group of Shadow Silk Poachers that wander the Searing Gorge. Nilith has reason to believe that there are five of them that need to be exterminated. Return to Nilith in the Searing Gorge when this task is complete.\n"]={0,1338283504},
+  ["杀死在灼热峡谷游荡的暗影蛛丝偷猎者小队。尼莉丝认为他们共有5名成员，你的任务就是把他们全都干掉。"]={0,1338283504},
  },
  ["好味道"]={
   ["马林·诺格弗格让你与加基森的斯普琳科谈一谈。"]={0,2469742776},
@@ -6754,7 +6755,7 @@ QuestieLevLookup = {
   [""]={0,4046471944},
  },
  ["野蛮的枭兽"]={
-  ["Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill 20 Savage Owlbeasts. Return to him once the task is complete.\n\nMarkhor mentioned that the Savage Owlbeasts occupy the wilds of the Hinterlands."]={178,3788925386},
+  ["辛特兰恶齿村的猎户马克霍尔要求你去杀掉20头野蛮的枭兽。完成任务之后就回到他那里复命。\n\n马克霍尔说过那些野蛮的枭兽都躲在辛特兰的野外。"]={178,3788925386},
  },
  ["工匠文书 - 火山战锤"]={
   ["将3把火山战锤和工匠文书 - 火山战锤交给东瘟疫之地圣光之愿礼拜堂的马队管理者布鲁斯·石锤。"]={0,4082290272},
@@ -6763,7 +6764,7 @@ QuestieLevLookup = {
   ["给陶拉祖营地的塔特纳克·钢炉带去一把钢鬃背刺匕首、一根烧焦的钢鬃魔杖和一面钢鬃大盾。"]={178,2233232554},
  },
  ["权力珍宝：思考者护臂"]={
-  ["Bring Jin'rokh the Breaker Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,2775081600},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱护腕。你还必须在赞达拉部族中达到友善或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,2775081600},
  },
  ["与萨尔法交谈"]={
   ["穿过木喉要塞去冬泉谷。和萨尔法谈谈，他就在木喉要塞另一头的出口处。"]={0,3569591224},
@@ -6781,7 +6782,7 @@ QuestieLevLookup = {
   ["找到一颗无暇的德莱尼水晶球，把它交给收藏家库米沙。"]={0,634012312},
  },
  ["丈夫的复仇"]={
-  ["Kill Valdred Moray.\n\nBring his hands to Raleigh Andrean in the Undercity."]={178,894423362},
+  ["杀掉瓦德雷·莫莱。\n\n把他的双手带给幽暗城的拉林夫·安迪恩。"]={178,894423362},
  },
  ["神秘头饰"]={
   ["把维克尼拉斯的头饰、2个夜晚塑像、5个青铜甲虫和5个象牙甲虫交给安其拉的安多葛斯。你必须首先在诺兹多姆的子嗣中达到友善声望才可以完成这个任务。"]={0,228144456},
@@ -6900,7 +6901,7 @@ QuestieLevLookup = {
   ["收集20瓶巨魔调和剂，把它们交给加基森的特伦顿·轻锤。"]={0,3656006944},
  },
  ["艾瑞安·影语"]={
-  ["Contact Erion Shadewhisper in Darnassus.\n"]={77,766146541},
+  ["与达那苏斯的艾瑞安·影语取得联系。"]={77,766146541},
  },
  ["贫瘠之地的港口"]={
   ["和棘齿城的码头管理员迪兹维格谈一谈。"]={77,2561009149},
@@ -6943,7 +6944,7 @@ QuestieLevLookup = {
   ["将食物箱和研究设备交给安戈洛环形山的威利德·马绍尔。"]={0,2424180008},
  },
  ["压制"]={
-  ["Venture forth into the Tainted Scar and locate a Doomguard Commander.\n\nUse the Glowing Crystal Prison on the Doomguard Commander. Be prepared for a ferocious onslaught of attacks, as the demon attempts to escape capture.\n\nShould you succeed, return the Imprisoned Doomguard to Daio in the Tainted Scar."]={0,478251048},
+  ["在腐烂之痕中找到一个末日守卫指挥官。\n\n对其使用光芒水晶监牢。你要做好承受疯狂攻击的准备，那个恶魔会拼命挣扎试图逃脱。\n\n如果你成功了，就把被囚禁的末日守卫交给腐烂之痕的戴奥。"]={0,478251048},
  },
  ["霜火手套"]={
   ["如果你将1双被玷污的手套、8块布衣碎片和4张月布交给东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯，她会为你制作一双霜火手套。"]={0,3522010600},
@@ -6992,7 +6993,7 @@ QuestieLevLookup = {
   ["在幽暗城找到杰雷米亚·派森并查明他是否就是你要找的杰雷米亚·费尔斯通。如果他是的话，那么他可能会想要拿到詹妮丝·费尔斯通寄给他的包裹。"]={178,1709265874},
  },
  ["黑手的命令"]={
-  ["That is one stupid orc. It would appear as if you need to find this brand and gain the Mark of Drakkisath in order to access the Orb of Command.\n\nThe letter indicates that General Drakkisath guards the brand. Perhaps you should investigate."]={0,3202779360},
+  ["真是个愚蠢的兽人。看来你需要找到那枚烙印并获得达基萨斯徽记才可以使用命令宝珠。\n\n你从信中获知，达基萨斯将军守卫着烙印。也许你应该就此进行更深入的调查。"]={0,3202779360},
  },
  ["深渊徽记"]={
   [""]={0,2694722824},
@@ -7110,7 +7111,7 @@ QuestieLevLookup = {
   ["把探水棒交给加基森的首席工程师沙克斯·比格维兹。"]={0,3462731888},
  },
  ["为我的村庄复仇"]={
-  ["Kill 8 Grimtotem Ruffians and 6 Grimtotem Mercenaries, and then return to Makaba Flathoof near the southeastern edge of Stonetalon.\n"]={178,1917763378},
+  ["杀掉8个恐怖图腾恶徒和6个恐怖图腾佣兵，然后向石爪山脉东南边界处的玛卡巴·扁蹄复命。"]={178,1917763378},
  },
  ["奥里登·匹瑞诺德领主"]={
   ["杀了奥里登·匹瑞诺德领主，并从他的情人艾丽萨身上拿回塔蕾莎的项链。"]={178,3498620250},
@@ -7137,7 +7138,7 @@ QuestieLevLookup = {
   [""]={0,3501016584},
  },
  ["秃鹫的活力"]={
-  ["Bring ten Vulture Gizzards and two Snickerfang Jowls to Bloodmage Lynnore.\n"]={0,843633424},
+  ["收集10个秃鹫的砂囊和2块弯牙土狼的颚骨，把它们交给血法师莱诺雷。"]={0,843633424},
  },
  ["前线的便条"]={
   ["将干净的便条带到东瘟疫之地的圣光之愿礼拜堂交给名册保管者。"]={0,3350273600},
@@ -7166,7 +7167,7 @@ QuestieLevLookup = {
   ["与尘泥沼泽的塔贝萨谈一谈。"]={0,4117710720},
  },
  ["给马克基雷的货物"]={
-  ["Bring Stoley's Bottle to \"Sea Wolf\" MacKinley in Booty Bay."]={0,1841161680},
+  ["将斯杜雷的瓶子交给藏宝海湾的“海狼”马克基雷。"]={0,1841161680},
  },
  ["巫妖归顺"]={
   ["将虚空宝石交给幽暗城的比索·埃斯沙德。"]={178,313936770},
@@ -7190,7 +7191,7 @@ QuestieLevLookup = {
   ["去十字路口和索克谈一谈。"]={32,2281209672},
  },
  ["鹿盔的挽歌"]={
-  ["You have been tasked with slaying opposing troll players in Alterac Valley.\n\nKill a troll and return to Athramanis at Dun'Baldar with Darkspear Troll Mojo."]={77,2900354021},
+  ["你被指派去杀死奥特兰克山谷中的巨魔玩家。$B$$杀死一个巨魔，将暗矛巨魔魔精交给丹巴达尔的亚斯拉玛尼斯。"]={77,2900354021},
  },
  ["等待希拉完工"]={
   ["稍等片刻，然后再和希拉·沃宁迪交谈。"]={77,3304446917},
@@ -7228,7 +7229,7 @@ QuestieLevLookup = {
   ["Bring 25 Argent Dawn Valor Tokens to Quartermaster Hasana at the Bulwark, Western Plaguelands."]={0,1924531168},
  },
  ["碎地者护腕"]={
-  ["Rimblat Earthshatter at Light's Hope Chapel in the Eastern Plaguelands will make Earthshatter Wristguards if you bring him the following: 1 Desecrated Wristguards, 6 Wartorn Chain Scraps, 1 Arcanite Bar and 2 Cured Rugged Hides.\n"]={0,1488221112},
+  ["东瘟疫之地圣光之愿礼拜堂的林布拉特·大地粉碎者将为你制作碎地者护腕，只要你将下列物品带给他：1对被亵渎的束腕，6个受战争破坏的链甲碎片，1个奥金锭和2块熟化毛皮。"]={0,1488221112},
  },
  ["跳跳舞，换糖果"]={
   ["为旅店老板塞琳尼模仿跳舞动作，作为交换，你将得到一颗达纳苏斯水果糖！"]={0,3392286488},
@@ -7265,7 +7266,7 @@ QuestieLevLookup = {
   ["夺取东瘟疫之地的皇冠哨塔、东墙哨塔、北地哨塔和病木林哨塔，然后向圣光之愿礼拜堂的高莫克大使复命。"]={178,3820565826},
  },
  ["瘟疫蔓延"]={
-  ["Capture a living Rabid Thistle Bear and bring it back to Tharnariun.\n\nShould you fail to capture a Rabid Thistle Bear and lose your trap, return to Tharnariun Treetender and request another trap."]={0,1210063744},
+  ["活捉一只狂暴蓟熊，把它带到萨纳瑞恩那里。"]={0,1210063744},
  },
  ["暗影戒卫"]={
   ["东瘟疫之地圣光之愿礼拜堂的愤怒者玛塔乌斯需要10枚十字军徽记和30金币。"]={0,1976369840},
@@ -7274,10 +7275,10 @@ QuestieLevLookup = {
   ["到森林里去杀掉20头狂暴蓟熊。"]={0,3691288056},
  },
  ["十字路口征兵"]={
-  ["Follow the western road from Kargal's Far Watch Outpost.\n\nAt the T intersection, turn left and follow the road south. \n\nFind Sergra Darkthorn at the crossing of roads within the Crossroads."]={178,1166850426},
+  ["从卡加尔的前沿哨所往西走。\n\n在丁字路口往左拐，然后朝南走。\n\n在十字路口的道路交汇处找到瑟格拉·黑棘。"]={178,1166850426},
  },
  ["军情七处"]={
-  ["Travel to Stormwind and seek out Renzik \"The Shiv.\"\n"]={77,3965941693},
+  ["到暴风城去找到“剃刀”雷吉克。"]={77,3965941693},
  },
  ["联盟需要更多中皮！"]={
   ["带10张中皮给丹莫洛飞机场的士兵波特。"]={0,301309456},
@@ -7304,7 +7305,7 @@ QuestieLevLookup = {
   ["将塔莎拉的坠饰带给达纳苏斯的塔莎拉·静水。"]={77,3143108293},
  },
  ["人类的病态"]={
-  ["You have been tasked with slaying opposing human players in Alterac Valley.\n\nKill a human and return to Commander Louis Philips (who wanders between the front lines and Frostwolf keep) with a  Human Bone Chip.\n\nA cure for the human condition is close at hand!"]={178,1314696426},
+  ["你被指派去杀死奥特兰克山谷中的人类玩家。\n\n杀死一个人类，然后把人类的骨头交给指挥官刘易斯·菲利普（他一般出现在前线和霜狼要塞之间）。\n\n治疗人类的药剂唾手可得！"]={178,1314696426},
  },
  ["雷矛的包裹"]={
   ["把给卡尔·雷矛的包裹交给洛克莫丹北部哨塔里的巡山人卡尔·雷矛。"]={77,3402590989},
@@ -7313,7 +7314,7 @@ QuestieLevLookup = {
   ["带着你看护的孤儿去贫瘠之地的棘齿城码头。"]={178,3330274594},
  },
  ["石化蜥蜴的大脑"]={
-  ["Bring ten Basilisk Brains and two Vulture Gizzards to Bloodmage Lynnore.\n"]={0,2643912},
+  ["收集10颗石化蜥蜴的大脑和2个秃鹫的砂囊，把它们交给血法师莱诺雷。"]={0,2643912},
  },
  ["新的生命"]={
   ["将10枚盖亚之种种植在盖亚土堆中，然后与烈日石居的塔姆拉谈一谈。"]={178,3558859330},
@@ -7386,7 +7387,7 @@ QuestieLevLookup = {
   ["藏宝海湾的独眼迪兹要求你从血帆海盗那里找回他的眼睛。"]={0,2960950640},
  },
  ["给蛮锤部族的警告"]={
-  ["Otho Moji'ko at Revantusk Village in the Hinterlands wants you to slaughter 15 Highvale Outrunners, 15 Highvale Scouts, 15 Highvale Marksman and 15 Highvale Rangers. Return to him when this task is complete.\n\nYou can find the Highvale high elves at the Quel'Danil Lodge in the northwestern region of the Hinterlands."]={178,2147883418},
+  ["辛特兰恶齿村的奥索·莫吉克要你去杀掉15个高原前锋、15个高原斥候、15个高原神射手和15个高原游侠。任务完成之后回到他那里去复命。\n\n你可以在辛特兰西北部的奎尔丹尼小屋找到那些高原精灵。"]={178,2147883418},
  },
  ["魔化瑟银板甲：第一卷"]={
   ["将这本典籍交给它的主人。"]={0,2150937992},
@@ -7404,10 +7405,10 @@ QuestieLevLookup = {
   ["前往一处召唤法阵，杀死一名末日之影，然后向东瘟疫之地圣光之愿礼拜堂的指挥官托马斯·海勒拉复命。"]={0,2131784496},
  },
  ["玛拉顿的传说"]={
-  ["Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond.\n\nFind a way to speak with Celebras."]={0,1359051704},
+  ["找回塞雷布拉斯节杖的两个部分：塞雷布拉斯魔棒和塞雷布拉斯钻石。\n\n然后设法和塞雷布拉斯对话。"]={0,1359051704},
  },
  ["沼泽蛙的腿"]={
-  ["Bring 3 Soothing Spices to \"Swamp Eye\" Jarl in Dustwallow Marsh."]={0,50820040},
+  ["为尘泥沼泽的“沼泽之眼”加尔收集10条沼泽蛙的腿。"]={0,50820040},
  },
  ["啤酒烤猪排"]={
   ["卡拉诺斯的拉格纳·雷酒需要6块峭壁野猪肋排和1杯狂想麦酒。"]={77,782779661},
@@ -7437,13 +7438,13 @@ QuestieLevLookup = {
   ["将辛耶尔石板交给奥格瑞玛的杰斯雷蒙。"]={178,2308027042},
  },
  ["权力珍宝：占卜师护腕"]={
-  ["Bring Maywiki of Zuldazar a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale."]={0,2323497552},
+  ["从祖尔格拉布把以下权力珍宝带给祖达萨的梅维克：1条原始哈卡莱直柱。你还必须在赞达拉部族中达到友好或更高的声望。\n\n祖达萨的梅维克在荆棘谷的尤亚姆巴岛上。"]={0,2323497552},
  },
  ["穴居人的威胁"]={
   ["给南部警戒塔的拉格弗斯上尉带去8颗穴居人的石牙。"]={77,1228390909},
  },
  ["押送囚徒"]={
-  ["Escort your prisoner, Grark Lorkrub, through Burning Steppes and through Blackrock Mountain to the Searing Gorge.\n\nYou recall Lexlort mentioning that he would have his men waiting on the other side to take Grark into custody.\n\nYou will also be required to hand over your Thorium Shackles to Lexlort."]={178,1743674554},
+  ["押送你的囚犯格拉克·洛克鲁布。穿过燃烧平原和黑石山脉，一直走到灼热峡谷。\n\n雷克斯洛特曾经告诉过你，他会让他的人等在黑石山脉的另外一边准备接收格拉克。\n\n另外，你还要把瑟银镣铐一并还给雷克斯洛特。"]={178,1743674554},
  },
  ["巡查后方"]={
   ["杀死8个可怕的血僵尸和8个游荡的幽灵，然后向亡灵卫兵林奈汇报。"]={178,1254015434},
@@ -7498,10 +7499,10 @@ QuestieLevLookup = {
   ["阅读神圣符记，然后与奥达希尔的珊达谈一谈。"]={8,221089632},
  },
  ["德莱尼的垃圾…"]={
-  ["Bring Kum'isha Imperfect Draenethyst Fragments. Any form of monster in the Blasted Lands could be carrying a fragment.\n"]={0,1068119416},
+  ["将有瑕疵的德莱尼水晶碎片交给库米沙。诅咒之地的任何怪物都有可能携带着这样的碎片。"]={0,1068119416},
  },
  ["权力珍宝：狂妄者外套"]={
-  ["Bring Falthir the Sightless a Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,3303623968},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔：1块原始哈卡莱之盾。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n盲眼法希尔在荆棘谷的尤亚姆巴岛上。"]={0,3303623968},
  },
  ["奥肯斯古尔"]={
   ["奥拉密斯湖的德纳兰要你去拿到奥肯斯古尔身上的巨大的瘤。"]={0,555608032},
@@ -7510,7 +7511,7 @@ QuestieLevLookup = {
   ["给雷霆崖的维尔伦·陆行者带去4块轻皮和4份粗线。"]={178,2648441930},
  },
  ["血怒者科尔拉克"]={
-  ["According to legend, the leader of the mighty Winterax trolls appears at will to wreak havoc on the denizens of Alterac Valley.\n\nShould Korrak make himself known, destroy him and return to Lieutenant Haggerdin in the Alterac Mountains."]={77,305780925},
+  ["血怒者科尔拉克躲在冰斧洞穴的深处。据说只有在第1001个冰斧巨魔被干掉的时候，这个强大的冰斧巨魔领袖才会出现。\n\n到冰斧洞穴中去，杀掉所有挡在你面前的巨魔，直到科尔拉克出现为止。杀掉科尔拉克，然后向哈格丁中尉复命。"]={77,305780925},
  },
  ["戈杜尼卷轴"]={
   ["将戈杜尼卷轴交给莫沙彻营地的洛克·奥汉。"]={178,3887684058},
@@ -7576,7 +7577,7 @@ QuestieLevLookup = {
   ["与肯维雷谈一谈。"]={178,1861256042},
  },
  ["亚奎门塔斯"]={
-  ["Take the Book of Aquor, the Silvery Claws, and the Irontree Heart to Tanaris.\n\nUse the Book of Aquor to summon Aquementas.\n\nAfter you have the completed totem, take it to J.D. Collie in Marshal's Refuge."]={0,3813862968},
+  ["把阿奎尔之书、银爪和铁树之心带到塔纳利斯去。\n\n使用这本书召唤亚奎门塔斯。\n\n在图腾完成之后，把它交给马绍尔营地的科琳。"]={0,3813862968},
  },
  ["斯温的复仇"]={
   ["到斯温的农场去找出埋在老树桩后面的是什么东西。"]={77,3563825205},
@@ -7630,7 +7631,7 @@ QuestieLevLookup = {
   ["给湖畔镇的码头管理员巴伦带去10条斑点太阳鱼。"]={77,2829662189},
  },
  ["被绑架的断齿长者！"]={
-  ["Primal Torntusk at Revantusk Village in the Hinterlands wants you to rescue her mate, Elder Torntusk, from Jintha'alor.\n\nYou have been told that he is being held prisoner atop Jintha'alor, the Vilebranch capital city located in the southern region of the Hinterlands."]={178,78964898},
+  ["辛特兰恶齿村的断齿族长要求你到辛萨罗去拯救她的爱人，断齿长者。\n\n你听说他被关在辛萨罗顶部，辛萨罗位于辛特兰的南部地区，那里是邪枝巨魔的主城。"]={178,78964898},
  },
  ["供与求"]={
   ["收集2张淡水鳄的皮，把它们交给藏宝海湾的崔斯里克。"]={0,1509544232},
@@ -7733,7 +7734,7 @@ QuestieLevLookup = {
   ["将艾德温·范克里夫的信交给巴隆斯·阿历克斯顿。"]={77,3402674421},
  },
  ["被盗：鼓风机和望远镜"]={
-  ["Find and return the Smithing Tuyere and Lookout's Spyglass to Taskmaster Scrange in the Searing Gorge.\n\nThe only information you have about these items is the following: They were definitely stolen by Dark Iron dwarves. The Smithing Tuyere is a blacksmithing tool used by blacksmiths and the Lookout's Spyglass is an invaluable monitoring tool to lookouts. "]={0,3603995480},
+  ["找到冶炼鼓风机和侦查员的望远镜，把它们还给灼热峡谷的监工斯克兰格。\n\n你所知道的关于这些物品的惟一信息是：它们肯定是被黑铁矮人偷走的。冶炼鼓风机是铁匠用的锻造工具，侦查员的望远镜是侦查员所需的侦查工具。"]={0,3603995480},
  },
  ["目标：费尔斯通农场"]={
   ["到西瘟疫之地的费尔斯通农场去，找到并击败那里的护锅者，用它的钥匙打开瘟疫之锅。你必须随身携带费尔斯通农场的空瓶来采集瘟疫之锅中的毒药样本。"]={77,3389274365},
@@ -7752,13 +7753,13 @@ QuestieLevLookup = {
   [""]={178,1617682298},
  },
  ["黑暗议会"]={
-  ["Kill 4 Argus Shadow Mages.\n\nBring the Head of Nagaz to Magistrate Maleb in Southshore."]={77,2218537941},
+  ["杀死4个暗影大法师。\n\n把纳伽兹的头带给南海镇的马雷布镇长。"]={77,2218537941},
  },
  ["索兰萨尔废墟"]={
   ["探索索兰萨尔废墟，并调查纳迦在那个地区的情况。"]={77,3554402373},
  },
  ["恶魔熔炉"]={
-  ["Travel to Blackrock Spire and find Goraluk Anvilcrack. Slay him and then use the Blood Stained Pike upon his corpse. After his soul has been siphoned, the pike will be Soul Stained.\n\nYou must also find the Unforged Rune Covered Breastplate.\n\nReturn both the Soul Stained Pike and the Unforged Rune Covered Breastplate to Lorax in Winterspring."]={0,3546842304},
+  ["到黑石塔去找到古拉鲁克。杀死他，然后用血污长矛刺入他的尸体。当他的灵魂被吸干后，这支矛就会成为穿魂长矛。\n\n你还必须找到未铸造的符文覆饰胸甲。\n\n将穿魂长矛和未铸造的符文覆饰胸甲都交给冬泉谷的罗拉克斯。"]={0,3546842304},
  },
  ["拯救耶尼库"]={
   ["将装满的灵魂宝石交给尼姆布亚。"]={178,1790694194},
@@ -7781,8 +7782,8 @@ QuestieLevLookup = {
  ["晨光麦研究"]={
   ["将大德鲁伊的草种购买券交给达纳苏斯城塞纳里奥区的玛斯雷·驭熊者。"]={77,1820654653},
   ["将草种购买券交给雷霆崖的巴珊娜·符文图腾。"]={178,1442092130},
-  ["Use an Evergreen Pouch with a Packet of Tharlendis Seeds and two Un'Goro Soil samples to try and cultivate samples of Morrowgrain.\n\nBring 10 Morrowgrain to Mathrengyl Bearwalker in Darnassus."]={77,461774661},
-  ["Use an Evergreen Pouch with a Packet of Tharlendis Seeds and two Un'Goro Soil samples to try and cultivate samples of Morrowgrain.\n\nBring 10 Morrowgrain to Bashana Runetotem in Thunder Bluff."]={178,3807256066},
+  ["用一个常青袋、一包萨伦迪斯种子以及两份安戈洛的泥土来尝试种植晨光麦。\n\n将10株晨光麦交给达纳苏斯的玛斯雷·驭熊者。"]={77,461774661},
+  ["用一个常青袋、一包萨伦迪斯种子以及两份安戈洛的泥土来尝试种植晨光麦。\n\n将10株晨光麦交给雷霆崖的巴珊娜·符文图腾。"]={178,3807256066},
  },
  ["塞纳里奥的装备"]={
   ["与希利苏斯塞纳里奥要塞的瓦古斯谈一谈。"]={0,803863656},
@@ -7826,7 +7827,7 @@ QuestieLevLookup = {
   ["将签署的安全之路令状送到东瘟疫之地给圣光之愿礼拜堂的发送指挥官梅兹。"]={0,2907366832},
  },
  ["They Call Me \"The Rooster\""]={
-  ["Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands wants an Argent Dawn Valor Token.\n"]={0,983429160},
+  ["东瘟疫之地圣光之愿礼拜堂的物资官员梅兹要一枚银色黎明勇气勋章。"]={0,983429160},
  },
  ["铁炉堡的译码者"]={
   ["把密码信带给铁炉堡的勘察员塔伯斯·雷矛。"]={77,3717333813},
@@ -7897,8 +7898,8 @@ QuestieLevLookup = {
   ["把埃其亚基的皮交给十字路口的瑟格拉·黑棘。"]={178,1106765282},
  },
  ["战地任务"]={
-  ["Report for duty at the Ironforge Brigade post near Hive'Zora.  Prepare your Unsigned Field Duty Papers and obtain Signed Field Duty Papers from Captain Blackanvil and return to Windcaller Kaldon at Cenarion Hold in Silithus.\n\nNote: Healing or casting beneficial spells on a member of the Ironforge Brigade will flag you for PvP."]={77,772335813},
-  ["Report to Krug Skullsplit at the Orgrimmar Legion post in front of Hive'Regal.  Prepare your Unsigned Field Duty Papers, obtain Signed Field Duty Papers and bring them to Windcaller Kaldon in Cenarion Hold.\n\nNote: Healing or casting beneficial spells on a member of the Orgrimmar Legion will flag you for PvP."]={178,3223482298},
+  ["向佐拉虫巢外的铁炉堡军团报到，从布莱卡维尔上尉那里拿到签过字的战地任务文件，把它交给希利苏斯塞纳里奥要塞的唤风者卡尔东。\n\n注意：给铁炉堡军团的士兵治疗或者施放增益法术会打开你的PvP标志。"]={77,772335813},
+  ["向雷戈虫巢外的奥格瑞玛军团报到，从克鲁格·碎颅那里拿到签过字的战地任务文件，把它交给希利苏斯塞纳里奥要塞的唤风者卡尔东。\n\n注意：给奥格瑞玛军团的士兵治疗或者施放增益法术会打开你的PvP标志。"]={178,3223482298},
  },
  ["剃刀高地的亡灵天灾"]={
   ["如果你同意帮助奔尼斯特拉兹，就再跟他谈谈，并将誓言石还给他。"]={0,4084878640},
@@ -7917,11 +7918,11 @@ QuestieLevLookup = {
   [""]={0,819242248},
  },
  ["东部的瘟疫"]={
-  ["Scour the Eastern Plaguelands for clues as to the \"Blightcaller\" and the missing SI:7 agents. If you find any SI:7 Insignias, return them to Flint Shadowmore at Chillwind Camp."]={77,4032996901},
+  ["搜寻东瘟疫之地，寻找“凋零者”的线索以及失踪的军情七处密探。如果你找到任何军情七处徽章，就把它们交给冰风岗的弗林特·沙多摩尔。"]={77,4032996901},
  },
  ["黑市交易"]={
-  ["Slay Trade Master Kovic and his minion Clunk. Retrieve the Trader's Satchel from his corpse and return it to Nilith.\n"]={0,1653608544},
-  ["Speak with Vizzklick in Gadgetzan.\n"]={0,3914287920},
+  ["杀了贸易首领考维克和他的同伙科朗克。从他的尸体上拿回商人的背包，把它交给尼莉丝。"]={0,1653608544},
+  ["和加基森的维兹格里克谈一谈。"]={0,3914287920},
  },
  ["工匠文书 - 板鳞鱼"]={
   ["将30条板鳞鱼和工匠文书 - 板鳞鱼交给东瘟疫之地圣光之愿礼拜堂的马队管理者布鲁斯·石锤。"]={0,3038430216},
@@ -7943,7 +7944,7 @@ QuestieLevLookup = {
   ["将这本典籍交给它的主人。"]={0,2948863880},
  },
  ["权力珍宝：思考者胸甲"]={
-  ["Bring Jin'rokh the Breaker a Primal Hakkari Tabard.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale."]={0,808808456},
+  ["从祖尔格拉布把以下权力珍宝带给击碎者金罗克：1条原始哈卡莱徽章。你还必须在赞达拉部族中达到崇敬或更高的声望。\n\n击碎者金罗克在荆棘谷的尤亚姆巴岛上。"]={0,808808456},
  },
  ["拉斯塔哈之手"]={
   ["跟荆棘谷的莫托尔谈一谈。"]={0,3116324656},
@@ -7975,10 +7976,10 @@ QuestieLevLookup = {
   ["从驭风者管理员多拉斯那里雇一只驭风者前往十字路口，然后将格雷什卡的信交给十字路口的扎尔夫。"]={130,1757981642},
  },
  ["北极护腕"]={
-  ["Craftsman Wilhelm at Light's Hope Chapel in the Eastern Plaguelands wants 4 Frozen Runes, 12 Enchanted Leather, 3 Essence of Water, 3 Cured Rugged Hides and 200 gold. \n"]={0,2902465352},
+  ["将4个冰冻符文、12个魔化皮、3个水之精华、3个熟化毛皮和200金币交给东瘟疫之地圣光之愿礼拜堂的工匠威尔海姆。"]={0,2902465352},
  },
  ["悬赏：工头玛托留斯"]={
-  ["Deep within the Slag Pit of the Cauldron, in the Searing Gorge, you will find the traitorous Dark Iron dwarf named Overseer Maltorius.\n\nSlay Overseer Maltorius and take his head. Return the head to Lookout Captain Lolo Longstriker in the Searing Gorge for your reward."]={0,3479425408},
+  ["那个叫做工头玛托留斯的黑铁矮人叛徒就藏在大熔炉的熔渣之池深处。\n\n杀死工头玛托留斯，将他的头颅交给灼热峡谷的侦查队长洛洛尔以换取你的奖励。"]={0,3479425408},
  },
  ["密文碎片"]={
   ["将10块密文碎片交给艾萨拉的大法师克希雷姆。"]={0,889757488},
@@ -8020,7 +8021,7 @@ QuestieLevLookup = {
   ["寻找埃达拉斯废墟中的纳迦携带的那些符石，然后把它们交给艾萨拉的基姆加尔。"]={0,2761515704},
  },
  ["又一个给蛮锤部族的警告"]={
-  ["Otho Moji'ko at Revantusk Village in the Hinterlands wants you to bring him 10 Long Elegant Feathers from the gryphons that inhabit the Hinterlands. Return to him once this task is complete.\n\nGryphons are known to inhabit every region of the Hinterlands."]={178,4259613338},
+  ["辛特兰恶齿村的奥索·莫吉克要你从辛特兰的狮鹫身上收集10根细长的狮鹫羽毛。任务完成之后回到他那里去复命。\n\n在辛特兰各处都有狮鹫出没。"]={178,4259613338},
  },
  ["可怕的真相"]={
   ["将巴纳扎尔的头颅交给东瘟疫之地的尼古拉斯·瑟伦霍夫公爵。"]={0,1496417960},
@@ -8062,7 +8063,7 @@ QuestieLevLookup = {
   [""]={0,280406024},
  },
  ["伊兰尼库斯，梦境之暴君"]={
-  ["Travel to the continent of Teldrassil and find Malfurion's agent somewhere outside the walls of Darnassus.\n"]={0,2383710560},
+  ["到达纳苏斯的城墙外去找到玛法里奥的亲信。"]={0,2383710560},
  },
  ["流放精华"]={
   [""]={0,3498159432},
@@ -8131,7 +8132,7 @@ QuestieLevLookup = {
   ["阅读密文符记，然后与幽影谷的弗拉胡恩·影语者谈一谈。"]={8,1725799832},
  },
  ["寻找碎手氏族"]={
-  ["Journey to Orgrimmar and speak with Shenthul at the Cleft of Shadow.\n\n\n\n"]={178,1255118538},
+  ["前往奥格瑞玛，和暗影裂口那的申苏尔谈一谈。"]={178,1255118538},
  },
  ["导电器"]={
   ["收集12个导电器，把它们交给奥伯丁的维兹班恩·曲针。"]={77,1534159093},
@@ -8163,7 +8164,7 @@ QuestieLevLookup = {
   ["斯通纳德的费泽鲁尔要求你收集10件阿塔莱神器。"]={178,3895904738},
  },
  ["超越"]={
-  ["Venture to Stratholme and destroy Baron Rivendare. Take his head and return to Duke Nicholas Zverenhoff.\n"]={0,2208203368},
+  ["到斯坦索姆去杀掉瑞文戴尔男爵，把他的头颅交给尼古拉斯·瑟伦霍夫公爵。"]={0,2208203368},
  },
  ["调查安伯米尔"]={
   ["为瑟伯切尔的暗影牧师奥利斯特抢到8个达拉然坠饰。"]={178,3383057274},
@@ -8228,7 +8229,7 @@ QuestieLevLookup = {
   ["杀掉摩拉迪姆，把他的头骨交给夜色镇的指挥官阿尔泰娅·埃伯洛克。"]={0,1932429624},
  },
  ["格拉克·洛克鲁布"]={
-  ["Travel to the Burning Steppes and find Grark Lorkrub. You recall Lexlort mentioning that he was last seen in a massive Blackrock fortress.\n\nWhen you find Grark Lorkrub, use the Thorium Shackles to bind him and then lead him back through Blackrock Mountain to the Searing Gorge. Lexlort will have his men waiting on the other side to take Grark into custody.\n"]={0,3813926720},
+  ["到燃烧平原去找到格拉克·洛克鲁布。你回忆起雷克斯洛特曾经提起过，格拉克应该是在一座大型的黑石要塞中。\n\n当你找到格拉克·洛克鲁布之后，用瑟银镣铐把他铐起来，然后将其带回灼热峡谷。雷克斯洛特会让他的部下等在那里接应你。"]={0,3813926720},
  },
  ["请求援助"]={
   ["去避难谷地找到尼艾丝队长。"]={0,1664838912},
@@ -8265,7 +8266,7 @@ QuestieLevLookup = {
   ["将第一块和第二块摩沙鲁石板交给塔纳利斯的叶基亚。"]={0,3682519512},
  },
  ["烧掉它们！"]={
-  ["Set the North, South, East, and West Sentry Towers on fire by using the Torch of Retribution inside each of the buildings. \n"]={0,151727432},
+  ["使用惩戒火炬点燃北部、南部、东部和西部的哨塔。"]={0,151727432},
  },
  ["简易备忘录"]={
   ["阅读简易备忘录，然后与寒脊山谷的斯兰·库尔曼谈一谈。"]={64,3411289368},
@@ -8347,8 +8348,8 @@ QuestieLevLookup = {
   ["将心灵之眼交给反抗军营地里的尼麦兹修士。"]={77,643335309},
  },
  ["元素制皮"]={
-  ["Bring 2 Heart of Fire, 2 Globe of Water, 2 Core of Earth, and 2 Breath of Wind to Sarah Tanner in Searing Gorge.\n\nCompleting this quest will give you access to the Elemental Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."]={77,3425979981},
-  ["Bring 2 Heart of Fire, 2 Globe of Water, 2 Core of Earth, and 2 Breath of Wind to Brumn Winterhoof in the Arathi Mountains.\n\nCompleting this quest will give you access to the Elemental Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."]={178,3222042394},
+  ["将2个火焰之心、2个纯水之球、2个大地之核和2个风之气息交给灼热峡谷的萨拉·坦尼。\n\n一旦你完成这项任务，就可以开始学习元素制皮技艺了。\n\n同时，你也就无法再学习龙鳞制皮和部落制皮了，在你决定之前要考虑清楚。"]={77,3425979981},
+  ["将2个火焰之心、2个纯水之球、2个大地之核和2个风之气息交给阿拉希山脉的布鲁姆·白蹄。\n\n一旦你完成这项任务，就可以开始学习元素制皮技艺了。\n\n同时，你也就无法再学习龙鳞制皮和部落制皮了，在你决定之前要考虑清楚。"]={178,3222042394},
  },
  ["信仰护腿"]={
   ["如果你将1件被玷污的护腿、20块布衣碎片、4张月布和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的英尼戈·蒙托尔神父，他会为你制作一件信仰护腿。"]={0,2750721824},
@@ -8421,7 +8422,7 @@ QuestieLevLookup = {
   ["去黑石塔杀死大酋长雷德·黑手，带着他的头颅返回奥格瑞玛。"]={178,292143954},
  },
  ["两半合一"]={
-  ["Locate the other half of the Good Luck Charm somewhere on the Felstone Farm in Western Plaguelands and reassemble it.\n\nGive the Good Luck Charm to Janice Felstone on the Felstone Farm, Western Plaguelands."]={0,1051755592},
+  ["在西瘟疫之地的费尔斯通农场某地找到另外一半好运护符，并把两半护符合并。\n\n把好运护符交给西瘟疫之地费尔斯通农场的詹妮丝·费尔斯通。"]={0,1051755592},
  },
  ["丹莫德的陷落"]={
   ["在丹莫德镇附近寻找布莱德·长须的踪迹。"]={0,374545176},
@@ -8448,7 +8449,7 @@ QuestieLevLookup = {
   ["把关于克鲁恩的消息告诉剃刀岭西北部农场中的米莎·托克伦。"]={178,1315490194},
  },
  ["封印神像"]={
-  ["Escort Belnistrasz to the Quilboar's idol in Razorfen Downs.\n\nProtect Belnistrasz while he performs the ritual to shut down the idol."]={0,2623808320},
+  ["保护奔尼斯特拉兹来到剃刀高地的野猪人神像处。\n\n当他在进行仪式封印神像时保护他。"]={0,2623808320},
  },
  ["寻求指引"]={
   ["把基特斯的日记交给暴风城的主教法席恩。"]={77,136346693},
@@ -8498,7 +8499,7 @@ QuestieLevLookup = {
   ["将安德隆的账本交给幽暗城黑暗女王大厅里的瓦里玛萨斯。"]={16,3026286352},
  },
  ["宝珠碎片"]={
-  ["Speak to Menara's acolytes inside the tower above Ratchet and choose one of their paths to follow.\n\nAfterwards, bring an Infernal Orb to Tabetha in Dustwallow Marsh."]={0,2564508824},
+  ["在棘齿城外的塔里与梅纳拉的侍僧们谈话，选择自己修行的方式。\n\n然后给尘泥沼泽的塔贝萨带去一颗地狱火珠。"]={0,2564508824},
  },
  ["螳螂捕蝉！"]={
   ["塔纳利斯的纳瑞安要你去冬泉谷，把一袋金子放在绑匪的勒索信上所写的位置。他还要求你教训一下那些家伙！"]={0,3846065272},
@@ -8523,7 +8524,7 @@ QuestieLevLookup = {
   ["收集5份星尘，把它们交给灰谷的皮尔图拉斯·怀特姆恩。"]={77,4257535253},
  },
  ["设备之战"]={
-  ["Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar.\n"]={0,2212335616},
+  ["从诺莫瑞根拿到钻探设备蓝图和麦克尼尔的保险箱密码，把它们交给奥格瑞玛的诺格。"]={0,2212335616},
  },
  ["坠星湖"]={
   ["从沼泽兽智者那里取回一枚陨落的月亮石，并把它带给阿斯特兰纳的皮尔图拉斯·怀特姆恩。"]={77,472229765},
@@ -8593,7 +8594,7 @@ QuestieLevLookup = {
  ["恶魔之名"]={
   ["与艾萨拉的亚考罗克谈一谈。你应该在海边搜索亚考兰神殿。"]={0,2136417152},
   ["杀掉赫塔拉，将染血的赫塔拉头颅、破碎的赫塔拉头颅和淤血的赫塔拉头颅交给亚考罗克。"]={0,3095872672},
-  ["Take the temper back to Loramus Thalipedes.\n"]={0,330203056},
+  ["将调剂交给洛拉姆斯·萨里比迪斯。"]={0,330203056},
  },
  ["法戈第矿洞"]={
   ["调查法戈第矿洞，然后回到闪金镇去见治安官杜汉。"]={77,3199781597},
@@ -8694,7 +8695,7 @@ QuestieLevLookup = {
   [""]={0,2958203528},
  },
  ["其拉的秘密"]={
-  ["Take the Ancient Qiraji Artifact to the dragons hiding near the entrance of the temple.\n"]={0,1221111872},
+  ["把上古其拉神器交给隐藏在神殿入口处的龙类。"]={0,1221111872},
  },
  ["召唤地狱战马"]={
   ["与贫瘠之地棘齿城的斯坦哈德·法尔杉谈一谈。"]={178,2577504026},
@@ -8716,7 +8717,7 @@ QuestieLevLookup = {
   ["收集草原狼的心脏、平原狮的腿骨、平原陆行鸟的鳞片和猛鹫的胃各一份，把它们交给血蹄村的茂尔·祈雨。"]={178,3223239610},
  },
  ["其拉帝王徽记"]={
-  ["Merithra of the Dream in the Temple of Ahn'Qiraj will create Elementium Infused Armaments for you should you bring her Imperial Qiraji Regalia and 3 Elementium Ore.\n"]={0,2617714416},
+  ["把其拉帝王徽记和3块源质矿石交给安其拉神殿的梦境之龙麦琳瑟拉，她会帮你制作使用源质强化过的武器。"]={0,2617714416},
  },
  ["奥姆·石蹄和野蛮头盔"]={
   ["和雷霆崖的奥姆·石蹄谈一谈。"]={178,1916166466},
@@ -8725,7 +8726,7 @@ QuestieLevLookup = {
   ["收集4大块野猪肉和2张厚熊皮，把它们交给钢架补给站的驾驶员贝隆·风箱。"]={77,1865263941},
  },
  ["比修的侦察报告"]={
-  ["Take Bijou's Reconnaissance Report back to Grandmaster Lexlort in Kargath.\n"]={0,1190632192},
+  ["把比修的侦查报告交给卡加斯的雷克斯洛特。"]={0,1190632192},
  },
  ["科娜塔一家"]={
   ["将科娜塔、法迪尔和马塞尔的头颅交给幽暗城的吉纳维·卡隆。"]={178,1487048778},
@@ -8740,7 +8741,7 @@ QuestieLevLookup = {
   ["把卡尼托的背包交给铁炉堡的罗顿·石锤。"]={77,3103883117},
  },
  ["捕捉皇后"]={
-  ["Defeat the Gorishi Hive Queen once she is summoned.\n\nBring the Gorishi Queen's Brain to Alchemist Pestlezugg in Gadgetzan."]={0,3955648912},
+  ["召唤格里什皇后，然后击败她。\n\n把格里什皇后的大脑交给加基森的炼金师匹斯特苏格。"]={0,3955648912},
  },
  ["Wanted:  \"Hogger\""]={
   ["杀死豺狼人霍格，把他那巨大的豺狼人爪带给治安官杜汉。"]={77,2250606541},
@@ -8784,10 +8785,10 @@ QuestieLevLookup = {
   ["搜寻加德纳尔，找出血红钥匙的用途。"]={0,387783864},
  },
  ["权力珍宝：捕猎者护腕"]={
-  ["Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale."]={0,913405696},
+  ["从祖尔格拉布把以下权力珍宝带给盲眼法希尔克：1条原始哈卡莱护腕。你还必须在赞达拉部族中达到友善或更高的声望。\n\n盲眼法希尔克在荆棘谷的尤亚姆巴岛上。"]={0,913405696},
  },
  ["亲爱的纳塔莉亚"]={
-  ["Commander Mar'alith at Cenarion Hold in Silithus wants you to question the inhabitants of Bronzebeard's Encampment. You will find Bronzebeard's Encampment south of Cenarion Hold.\n\nOnce you have gathered the requested information, return to Commander Mar'alith."]={0,4234551376},
+  ["希利苏斯塞纳里奥要塞的指挥官玛尔利斯想要你询问铜须营地的矮人。你可以在塞纳里奥要塞以南找到铜须营地。\n\n一旦你收集到有用的信息，就回到指挥官玛尔利斯那儿。"]={0,4234551376},
  },
  ["磨坊告急"]={
   ["收集5根锯齿肋骨和3个焦黑的颅骨，然后向布瑞尔的亡灵卫兵迪林格尔回报。"]={178,2867435042},
@@ -8798,10 +8799,10 @@ QuestieLevLookup = {
   ["将充满感情的信件交给幽暗城银行附近的艾琳娜·海东。"]={178,3947152426},
  },
  ["玛尔戈的巨角"]={
-  ["Take Margol's Gigantic Horn to Mountaineer Pebblebitty.\n"]={77,382037253},
+  ["将玛尔戈的巨角交给巡山人贝波蒂。"]={77,382037253},
  },
  ["野人装甲"]={
-  ["Bring two Patterned Bronze Bracers, two Bronze Greatswords, and two Sharp Claws to Orokk Omosh in Orgrimmar.\n"]={0,3272762496},
+  ["将2副青铜花纹护腕、2把青铜巨剑和2只锋利的爪子交给奥格瑞玛的奥罗克·沃姆什。"]={0,3272762496},
  },
  ["火焰的节日"]={
   ["Touch the bonfires within Stormwind, Ironforge, and Darnassus, then speak to a Festival Loremaster within the capital cities."]={77,1522818261},
@@ -8824,7 +8825,7 @@ QuestieLevLookup = {
   ["将奥妮克希亚的头颅交给暴风城的伯瓦尔·弗塔根公爵。"]={0,1655339632},
  },
  ["骨镰头盔"]={
-  ["Rohan the Assassin at Light's Hope Chapel in the Eastern Plaguelands will make a Bonescythe Helmet if you bring him the following: 1 Desecrated Helmet, 15 Wartorn Leather Scraps, 8 Cured Rugged Hides, 1 Nexus Crystal and 75 gold pieces.\n"]={0,185258824},
+  ["如果你将1顶被玷污的头盔、15块皮甲碎片、8个熟化毛皮、1块连结水晶和75金币交给东瘟疫之地圣光之愿礼拜堂的杀手洛汗，他会为你制作一顶骨镰头盔。"]={0,185258824},
  },
  ["石环"]={
   ["到棘齿城去，从玛尔冯·瑞文斯克的车间里取回石环。"]={0,3543636368},
@@ -8836,7 +8837,7 @@ QuestieLevLookup = {
   ["把主动式负载平衡器交给棘齿城的斯布特瓦夫。"]={0,194422216},
  },
  ["斯波普斯的万圣节糖果！"]={
-  ["Speak with the innkeepers of Orgrimmar, Undercity, and Thunder Bluff, as well as Kali Remik in Sen'jin Village.  Perform the tricks they ask of you in exchange for the treats they offer.\n\nReturn to Spoops at the Orgrimmar Orphanage with a Thunder Bluff Marzipan, Darkspear Gumdrop, Orgrimmar Nougat, and Undercity Mint."]={0,3948681208},
+  ["与奥格瑞玛、幽暗城和雷霆崖的旅店老板以及森金村的卡利·雷米克谈一谈。按照他们的要求做出动作，并获得他们的礼物。\n\n把雷霆崖奶糖、暗矛橡皮糖、奥格瑞玛软糖和幽暗城薄荷糖交给奥格瑞玛孤儿院的斯波普斯。"]={0,3948681208},
  },
  ["金井长者"]={
   [""]={0,2695764488},
@@ -8884,8 +8885,8 @@ QuestieLevLookup = {
   [""]={0,1623019528},
  },
  ["救死扶伤"]={
-  ["Save patients by using Triage Bandages to tend to their wounds. You must save 15 patients before 6 of them die from their injuries.\n\nRemember the order of triage! Critically Injured Soldiers die the fastest followed by Badly Injured Soldiers. Injured Soldiers take the longest to die and should be saved AFTER your Critically Injured and Badly Injured Soldiers have been triaged."]={178,3942507290},
-  ["Save patients by using Triage Bandages to tend to their wounds. You must save 15 patients before 6 of them die from their injuries.\n\nRemember the order of triage! Critically Injured Soldiers die the fastest followed by Badly Injured Soldiers. Injured Soldiers take the longest to die and should be saved AFTER your Critically Injured and Badly Injured Soldiers have been triaged."]={77,3942508213},
+  ["使用急救绷带来治疗病人。你必须在6个病人死亡之前拯救15个病人。\n\n一定要牢记治疗的顺序！受致命伤的病人会很快死亡，其次是重伤病人，受普通伤的病人死亡得最慢。所以你最好在治疗那些受致命伤和重伤的病人之后再去治疗受普通伤的病人。"]={178,3942507290},
+  ["使用急救绷带来治疗病人。你必须在6个病人死亡之前拯救15个病人。\n\n一定要牢记治疗的顺序！受致命伤的病人会很快死亡，其次是重伤病人，受普通伤的病人死亡得最慢。所以你最好在治疗那些受致命伤和重伤的病人之后再去治疗受普通伤的病人。"]={77,3942508213},
  },
  ["联盟需要更多瑟银锭！"]={
   ["把20块瑟银锭交给铁炉堡军事区的达米。"]={77,941234901},
@@ -8900,7 +8901,7 @@ QuestieLevLookup = {
   [""]={77,2158392661},
  },
  ["扫清道路"]={
-  ["Kill 10 Skeletal Flayers and 10 Slavering Ghouls in Sorrow Hill.\n\nReturn to Commander Ashlam Valorfist at Chillwind Camp, Western Plaguelands."]={77,624103557},
+  ["杀掉悔恨岭中的10个骷髅剥皮者和10个被奴役的食尸鬼。\n\n然后向西瘟疫之地冰风岗的指挥官阿什拉姆·瓦罗菲斯特复命。"]={77,624103557},
  },
  ["小巧的商人"]={
   ["到冬泉谷南部的暗语峡谷入口附近去，在那里的一处洞穴内的某个小鬼那里购买一根恶魔元素之杖，并把它交给加基森的穆克斯·玛纳斯卡波。"]={0,1205495760},
@@ -8909,8 +8910,8 @@ QuestieLevLookup = {
   ["把刺鬃酋长的头颅交给红云台地的卫兵维萨罗·风羽。"]={178,2380928082},
  },
  ["晋升印章"]={
-  ["Find the three gemstones of command: The Gemstone of Smolderthorn, Gemstone of Spirestone, and Gemstone of Bloodaxe. Return them, along with the Unadorned Seal of Ascension, to Vaelan.\n\nThe Generals, as told to you by Vaelan, are: War Master Voone of the Smolderthorn; Highlord Omokk of the Spirestone; and Overlord Wyrmthalak  of the Bloodaxe."]={0,2678380656},
-  ["Travel to the Wyrmbog in Dustwallow Marsh. Find the ancient drake, Emberstrife and beat him without mercy until his will is broken.\n\nIt is at that moment which you must place the Unforged Seal of Ascension before the great beast. You must then be quick to use the Orb of Draconic Energy on his weakened form and claim dominion over his mental faculties. Control the beast and force the Flames of the Black Dragonflight upon the Unforged Seal of Ascension!"]={0,2424185216},
+  ["找到三块命令宝石：燃棘宝钻、尖石宝钻和血斧宝钻。把它们和原始晋升印章一起交给维埃兰。\n\n可能携带者三块宝石的将军是：燃棘氏族的指挥官沃恩、尖石氏族的欧莫克大王，以及血斧氏族的维姆萨拉克。"]={0,2678380656},
+  ["到尘泥沼泽中的巨龙沼泽去。找到上古老龙埃博斯塔夫，对他发起无情的攻击，直到他的意志被摧毁。\n\n此时，你必须尽快将未铸造的晋升印章放在这条龙面前，并使用龙力宝珠控制他的躯体，强迫他将黑龙的烈焰喷向未铸造的晋升印章！"]={0,2424185216},
  },
  ["十字军信使"]={
   ["到十字军营地去杀掉信使迈文·考加尔，将你发现的情报交给执行官阿伦。"]={178,4096695994},
@@ -8922,7 +8923,7 @@ QuestieLevLookup = {
   ["和加基森的特伦顿·轻锤谈一谈。"]={0,493393272},
  },
  ["达基萨斯将军之死"]={
-  ["Travel to Blackrock Spire and destroy General Drakkisath. Return to Marshal Maxwell when the job is done.\n"]={77,695763253},
+  ["到黑石塔去杀掉达基萨斯将军，完成任务之后就回到麦克斯韦尔元帅那里复命。"]={77,695763253},
  },
  ["梦游者头饰"]={
   ["如果你将1件被玷污的头饰、15块皮甲碎片、6个熟化毛皮和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的莱茵，他会为你制作一件梦游者头饰。"]={0,3596740680},
@@ -8984,7 +8985,7 @@ QuestieLevLookup = {
  ["被激怒的枭兽"]={
   ["在冬泉谷的南部寻找加隆·石矛的被破坏的营帐，以及他的补给物资。"]={77,1814659981},
   ["找到加隆·石矛的马车。"]={77,2548109205},
-  ["Pick up Jaron's Supplies from the snow, then find the wildkin that stole the amulet Jaron spoke of.\n\nBring Jaron's Supplies and the Blue-feathered Amulet to Jaron Stoneshaper at the lodge in Winterspring."]={77,3407541293},
+  ["从雪地中拾起加隆的补给物资，然后寻找盗取加隆所说的护符的枭兽。\n\n将加隆的补给物资和蓝色羽毛护符交给冬泉谷的加隆·石矛。"]={77,3407541293},
   ["与坠星村的加隆·石矛谈一谈。"]={77,3377907397},
  },
  ["赤脊山炖肉"]={
@@ -9061,7 +9062,7 @@ QuestieLevLookup = {
   [""]={0,546187528},
  },
  ["暗翼蝠"]={
-  ["Find Duskwing and slay him. From the corpse, recover a Patch of Duskwing's Fur and return it to Nathanos Blightcaller.\n\nIt is said that Duskwing roams the countryside to the north of Marris Stead."]={0,4187473696},
+  ["找到暗翼蝠并杀掉它。从尸体上取下一块暗翼蝠的皮，并把它交给纳萨诺斯·凋零者。\n\n据说暗翼蝠游荡在玛瑞斯农场北面的荒原上。"]={0,4187473696},
  },
  ["被污染的信件"]={
   ["阅读被污染的信件，然后与北郡修道院旁边的杜希拉·拉萨雷谈一谈。"]={1,1538704897},
@@ -9147,13 +9148,13 @@ QuestieLevLookup = {
   ["Bring me thise things and I will create a powerful enchantment for you! \nPrimal Hakkari Idol\nPunctured Voodoo Doll"]={0,820401640},
  },
  ["目标：亚什毒蝎"]={
-  ["Kill 30 Hive'Ashi Stingers and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing XII in order to complete this quest.\n"]={0,2113599736},
+  ["击杀30只亚什毒蝎，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 XII才能完成这个任务。"]={0,2113599736},
  },
  ["以往的努力"]={
   ["把斯托姆·影蹄的徽记交给雷霆崖的梅洛·石蹄。"]={178,3796784778},
  },
  ["国王的搜查"]={
-  ["Travel to Stormwind and seek out Renzik \"The Shiv.\""]={77,1229307245},
+  ["到暴风城里去找到“剃刀”雷吉克。"]={77,1229307245},
  },
  ["月神之兽？"]={
   ["为鲁瑟兰村的艾瑞拉斯·琥珀收集15支枭兽羽毛。"]={77,1895234445},
@@ -9168,7 +9169,7 @@ QuestieLevLookup = {
   [""]={0,3766813448},
  },
  ["烦恼之风"]={
-  ["Seek out Gaerolas Talvethren in Starbreeze Village.\n"]={77,2759173245},
+  ["在星风村找到盖洛拉斯·塔文斯伦。"]={77,2759173245},
  },
  ["烈焰之王"]={
   ["收集伊森迪奥斯的余炭、艾博希尔灰烬和灰烬公爵的残渣，并从银色黎明军需官那儿购买一只空火盆，然后将这些东西交给黑石山的伯德雷。"]={0,4156090056},
@@ -9243,7 +9244,7 @@ QuestieLevLookup = {
   ["将塞达尔的头颅交给圣光之愿礼拜堂的护理者奥林。"]={0,1738106232},
  },
  ["弗拉斯·希亚比"]={
-  ["Find Fras Siabi's smoke shop in Stratholme and recover a box of Siabi's Premium Tobacco. Return to Smokey LaRue when the job is done.\n"]={0,2285950856},
+  ["找到弗拉斯·希亚比在斯坦索姆的烟草店，并从中找回一盒希亚比的烟草，把它交给烟鬼拉鲁恩。"]={0,2285950856},
  },
  ["寻求救赎！"]={
   ["收集3个魔锥果，把它们给在多兰纳尔外面的赛恩·腐蹄。"]={0,2720181112},
@@ -9305,7 +9306,7 @@ QuestieLevLookup = {
   ["与奥格瑞玛的科尔丹谈一谈。"]={178,291129186},
  },
  ["征服者派隆"]={
-  ["Slay Overmaster Pyron and return to Jalinda Sprig.\n\nYou recall Jalinda talking about Pyron guarding the quarry. Perhaps you should search there?"]={77,3620804893},
+  ["杀掉征服者派隆，然后向加琳达复命。\n\n加琳达告诉过你，派隆守在采矿场中，也许你应该去那里找找。"]={77,3620804893},
  },
  ["被捕的空军指挥官"]={
   ["到霜狼氏族的领地中去搜寻空军指挥官斯里多尔、空军指挥官维波里和空军指挥官艾克曼。任务完成之后向指挥官杜菲复命。"]={77,1871184525},
@@ -9330,7 +9331,7 @@ QuestieLevLookup = {
   ["多兰纳尔的塔隆凯·捷根要你杀掉7个瘤背秘法师，并找到遗失的珠宝。"]={0,302387664},
  },
  ["矮人的挖掘场"]={
-  ["Collect 5 Prospector's Picks.\n\nAt a forge, smash the Prospector's Picks to create Broken Tools.\n\nBring 5 Broken Tools to Baine Bloodhoof in Bloodhoof Village."]={178,3270161338},
+  ["收集5个勘察员的锄头。\n\n在铁匠铺砸碎这些勘察员的锄头。\n\n把5件损坏的工具交给血蹄村的贝恩·血蹄。"]={178,3270161338},
  },
  ["更换霜山羊"]={
   [""]={0,1352995400},
@@ -9405,7 +9406,7 @@ QuestieLevLookup = {
   ["杀死8只小盐齿鳄鱼、10只沼泽纺丝蛛和10只沼泽虎，然后向悲伤沼泽的卫兵比格斯报告。"]={77,1683978237},
  },
  ["熏火龙"]={
-  ["Hansel Heavyhands wants you to kill 20 Incendosaurs.\n\nYou will find Incendosaurs occupying the lava pools inside the Slag Pit. The Slag Pit can be found in the Cauldron of the Searing Gorge.\n\nReturn to Hansel Heavyhands in the Searing Gorge when you have killed enough Incendosaurs."]={0,349607096},
+  ["汉瑟尔·重拳让你去杀掉20个熏火龙。\n\n熏火龙侵占了熔渣之池中的那些岩浆池。熔渣之池就在灼热峡谷的大熔炉中。\n\n当你杀死足够数量的熏火龙后，就回去找汉瑟尔·重拳。"]={0,349607096},
  },
  ["夜行蜘蛛洞穴"]={
   ["执行官阿伦要你去杀掉10只小夜行蜘蛛和8只夜行蜘蛛。"]={178,2615305018},
@@ -9414,7 +9415,7 @@ QuestieLevLookup = {
   ["在厄运之槌中找到魔藤，然后从它上面采集一块碎片。只有干掉了奥兹恩之后，你才能进行采集工作。使用净化之匣安全地封印碎片，然后将其交给月光林地永夜港的拉比恩·萨图纳。"]={0,3411052840},
  },
  ["惩戒火炬"]={
-  ["Wait for Kalaran Windblade to complete the Torch of Retribution.\n"]={0,2418190224},
+  ["等待卡拉然·温布雷完成惩戒火炬。"]={0,2418190224},
   ["拿起惩戒火炬。"]={0,3061464968},
  },
  ["沉默的舒尼"]={
@@ -9453,10 +9454,10 @@ QuestieLevLookup = {
  },
  ["天寒地冻"]={
   ["寻找被偷走的礼品，把它交还给铁炉堡的凯玛德·考伯宾奇。看起来是格林奇偷走了礼品，他就在奥特兰克山脉雪域附近。"]={0,2559281024},
-  ["Locate and return the Stolen Treats to Wulmort Jinglepocket in Ironforge.  It was last thought to be in the possession of the Abominable Greench, found somewhere in the snowy regions of the Alterac Mountains.\n"]={77,3284407069},
+  ["寻找被偷走的礼品，把它交还给铁炉堡的乌莫尔特。看起来是格林奇偷走了礼品，他就在奥特兰克山脉雪域附近。"]={77,3284407069},
  },
  ["金牙"]={
-  ["Bring Bernice's Necklace to \"Auntie\" Bernice Stonefield at the Stonefield Farm."]={77,3741115437},
+  ["把波尼斯的项链带给斯通菲尔德农场的波尼斯·斯通菲尔德。"]={77,3741115437},
  },
  ["刨花皮靴"]={
   ["给藏宝海湾的崔斯里克带回1张老鳄鱼的皮。"]={0,3516955904},
@@ -9505,7 +9506,7 @@ QuestieLevLookup = {
   ["收集12颗紫色蘑菇，把它们交给卡加斯的加卡尔。"]={178,1102168794},
  },
  ["苏塔拉之石"]={
-  ["Help Dorius get back to Ironforge.\n"]={77,151679493},
+  ["帮助杜里奥斯回到铁炉堡。"]={77,151679493},
   ["把烧焦的信件交给铁炉堡的索里奥斯，他在探险者大厅里。"]={77,1604512293},
  },
  ["黑暗深渊中的邪恶"]={
@@ -9528,13 +9529,13 @@ QuestieLevLookup = {
   ["收集3个鞭尾龙的蛋，并把它们带给剃刀岭的厨师托尔卡。"]={178,765190074},
  },
  ["无畏胸甲"]={
-  ["Korfax at Light's Hope Chapel in the Eastern Plaguelands will make a Dreadnaught Breastplate if you bring him the following items: 1 Desecrated Breastplate, 25 Wartorn Plate Scraps, 4 Arcanite Bars and 2 Nexus Crystals.\n"]={0,2736391096},
+  ["如果你将1件被玷污的胸甲、25块板甲碎片、4块奥金锭和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的科尔法克斯，他会为你制作一件无畏胸甲。"]={0,2736391096},
  },
  ["火刃奖章"]={
   ["给大兽穴外的祖雷萨带回火刃奖章。"]={178,2501324658},
  },
  ["罗拉克斯的故事"]={
-  ["Speak with Lorax. Listen to what he has to say.\n"]={0,2790069472},
+  ["与罗拉克斯谈一谈，听听他要说什么。"]={0,2790069472},
  },
  ["神圣的磨刀石"]={
   [""]={178,2700888506},
@@ -9547,7 +9548,7 @@ QuestieLevLookup = {
   ["塔纳利斯时光之穴的阿纳克洛斯要你找到埃提耶什的法杖顶部和埃提耶什的杖柄末端。"]={0,1638332872},
  },
  ["更多的辐射尘！"]={
-  ["Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly.\n\nOzzie will also require your Heavy Leaden Collection Phial when the task is complete.\n"]={77,3598879197},
+  ["到诺莫瑞根去收集高强度辐射尘。要多加小心，这种辐射尘非常不稳定，很快就会分解。\n\n奥齐要求你把沉重的铅瓶也交给他。"]={77,3598879197},
  },
  ["失踪人员"]={
   ["保护基沙恩下士回到赤脊。"]={77,3922027317},
@@ -9568,10 +9569,10 @@ QuestieLevLookup = {
   [""]={178,1084333114},
  },
  ["阿迦玛甘的血岩碎片"]={
-  ["Bring a Blood Shard to Mangletooth in Camp Taurajo in the Barrens.\n\nCollect more Blood Shards if you want him to bless you with Agamaggan's power."]={178,2557023474},
+  ["给陶拉祖营地的碎牙带去一块血岩碎片。\n\n如果你想要他赐予你阿迦玛甘的力量，就搜集更多的血岩碎片。"]={178,2557023474},
  },
  ["恶魔拉瑟莱克"]={
-  ["Destroy Razelikh the Defiler and return the Severed Horn of the Defiler to the Fallen Hero of the Horde. You will also need to return the Ward of the Defiler so that the Fallen Hero can destroy it, preventing it from ever falling into the wrong hands.\n"]={0,1725553032},
+  ["消灭污染者拉瑟莱克，将污染者之角交给部落英雄的灵魂。另外你还要把污染者防护结界交给他，这样部落英雄的灵魂就可以消灭它，以避免它落入邪恶势力之手。"]={0,1725553032},
  },
  ["暗影残片"]={
   ["从玛拉顿收集10块暗影残片，然后把它们交给奥格瑞玛的尤塞尔奈。"]={0,3974382688},
@@ -9641,11 +9642,11 @@ QuestieLevLookup = {
  },
  ["真正的主人"]={
   ["把赫林迪斯·河角的信交给湖畔镇的所罗门镇长。"]={77,2794962685},
-  ["Travel to Stormwind and deliver Solomon's Plea to Highlord Bolvar Fordragon.\n\nBolvar resides in Stormwind Keep. "]={77,3918535357},
+  ["到暴风城去把所罗门的求援信交给伯瓦尔·弗塔根公爵。\n\n伯瓦尔在暴风要塞里。"]={77,3918535357},
   ["与女伯爵卡特拉娜·普瑞斯托谈话，然后再与伯瓦尔·弗塔根公爵谈话。"]={77,73905509},
-  ["Take Bolvar's Decree to Magistrate Solomon in Lakeshire.\n"]={77,2486663501},
+  ["把伯瓦尔的命令交给湖畔镇的所罗门镇长。"]={77,2486663501},
   ["和燃烧平原的麦克斯韦尔元帅谈一谈。"]={77,276278621},
-  ["Speak with Ragged John to learn of Marshal Windsor's fate and return to Marshal Maxwell when you have completed this task.\n\nYou recall Marshal Maxwell telling you to search for him in a cave to the north."]={77,1439789269},
+  ["和狼狈不堪的约翰谈谈来了解温德索尔元帅的命运，然后回到麦克斯韦尔元帅那里。\n\n你想起麦克斯韦尔元帅说过他在一个北面的洞穴那里。"]={77,1439789269},
  },
  ["雷杰德的新酒"]={
   ["和雷杰德·麦酒谈一谈。  "]={77,3647661629},
@@ -9693,7 +9694,7 @@ QuestieLevLookup = {
   ["收集6个黑暗深渊遗物，把它们交给古树之林的安努。"]={0,36969848},
  },
  ["王国的命运"]={
-  ["Return to Blackrock Depths and rescue Princess Moira Bronzebeard from the evil clutches of Emperor Dagran Thaurissan.\n"]={0,2588119400},
+  ["回到黑石深渊，从达格兰·索瑞森大帝的魔掌中救出铁炉堡公主茉艾拉·铜须。"]={0,2588119400},
  },
  ["坠星村"]={
   ["找到冬泉谷的坠星村，在那里与维恩德·夜风谈一谈。"]={77,614820181},
@@ -9729,7 +9730,7 @@ QuestieLevLookup = {
  },
  ["铸造奎尔塞拉"]={
   ["把黯淡的精灵剑交给博学者莱德罗斯。"]={0,2376094768},
-  ["You must get Onyxia to breathe fire on the Unfired Ancient Blade. Once this is done, pick up the now Heated Ancient Blade. Be warned, a Heated Ancient Blade will not remain heated forever - time is of the essence.\n\nThe last step before returning to me is to slay the beast and drive the Heated Ancient Blade into her corpse.\n\nDo this and Quel'Serrar will be yours."]={0,2458109960},
+  ["你必须设法让奥妮克希亚对这把未淬火的上古之刃喷射火焰。完成之后，捡起加热过的上古之刃。你要注意的是，加热过的上古之刃不会一直保持被加热的状态，时间非常紧迫。\n\n在把它给我拿回来之前的最后一步是杀掉那条龙，并将加热过的上古之刃插入她的尸体中。\n\n完成这些之后，奎尔塞拉就是你的了。"]={0,2458109960},
  },
  ["摩弗拉斯之血"]={
   ["前往沉没的阿塔哈卡神庙，杀死绿龙摩弗拉斯，将他的血液交给费伍德森林中的格雷塔·苔蹄。沉没的神庙的入口就在悲伤沼泽中。"]={0,4001950496},
@@ -9741,7 +9742,7 @@ QuestieLevLookup = {
   ["将10份木爪豺狼人的鬃毛交给莫沙彻营地的哈杜肯·迅蹄。"]={178,1116195194},
  },
  ["邪枝窃贼"]={
-  ["Smith Slagtree at Revantusk Village in the Hinterlands wants you to find Slagtree's Lost Tools. Return to him once this task is complete.\n\nYou recall Smith Slagtree mentioning that the tools might be at one of the Vilebranch temples in the northeastern region of the Hinterlands. You should also check Skulk Rock."]={178,4183626114},
+  ["辛特兰恶齿村的铁匠斯拉提要你去找到斯拉提的工具。完成任务之后就回到他那里去。\n\n你记得铁匠斯拉提说过，你可以在辛特兰东北部的某个邪枝巨魔神庙中找到它，要不然就是在隐匿石那边。"]={178,4183626114},
  },
  ["邪恶之雾"]={
   ["收集5份阿塔莱之雾的样本，然后向安戈洛环形山的穆尔金复命。"]={77,1561074373},
@@ -9756,7 +9757,7 @@ QuestieLevLookup = {
   ["如果你将1个被玷污的头环、15块布衣碎片、3张月布和3块连结水晶交给东瘟疫之地圣光之愿礼拜堂的大法师安吉拉·杜萨图斯，她会为你制作一个霜火头饰。"]={0,1288909808},
  },
  ["明希纳的颅骨"]={
-  ["Retrieve Minshina's skull from the circle of power on the Echo Isles.\n\nBring it to Master Gadrin in Sen'jin Village."]={178,3353834394},
+  ["到回音群岛上去，将岛上法阵中的明希纳的颅骨带回来，交给森金村的加德林大师。"]={178,3353834394},
  },
  ["火热的死亡"]={
   ["世界上一定有人知道关于这副手套的事情，祝你好运！"]={0,3792557976},
@@ -9793,7 +9794,7 @@ QuestieLevLookup = {
   ["如果你将1副被玷污的肩铠，12块板甲碎片，2块奥金锭和2块连结水晶交给东瘟疫之地圣光之愿礼拜堂的指挥官埃里戈尔·黎明使者，他将为你制作一副救赎肩铠。"]={0,1888619632},
  },
  ["莫达洛克"]={
-  ["Slay Agmond's killer, Murdaloc.\n\nSlay 12 Stonevault Bonesnappers.\n\nReport to Prospector Ironband in Loch Modan."]={77,1426759469},
+  ["干掉杀害阿戈莫德的凶手：莫达洛克。\n\n顺便杀掉12个石窟断骨者。\n\n然后向洛克莫丹的勘察员基恩萨·铁环报告。"]={77,1426759469},
  },
  ["赶赴暴风城"]={
   ["从狮鹫管理员索尔那里租用一头狮鹫，然后把刘易斯的便笺交给暴风城的奥斯瑞克·斯图恩。"]={1,2712516937},
@@ -9802,7 +9803,7 @@ QuestieLevLookup = {
   [""]={8,1888336016},
  },
  ["巨像的秘密 - 佐拉"]={
-  ["Take the Colossus of Zora's Husk to Lord Maxwell Tyrosus at Light's Hope Chapel in the Eastern Plaguelands.\n"]={0,2593241992},
+  ["把佐拉巨像的甲壳带到东瘟疫之地的圣光之愿礼拜堂给玛克斯韦尔·泰罗索斯男爵。"]={0,2593241992},
  },
  ["死亡执行者的胸甲"]={
   ["把上古之神的外鞘、2个征战塑像、5个青铜甲虫和5个象牙甲虫交给安其拉的温瑟拉。"]={0,1832970600},
@@ -9832,7 +9833,7 @@ QuestieLevLookup = {
   ["在海达希亚水元素中达到被尊敬的声望，然后与艾萨拉的海达克西斯公爵谈一谈。"]={0,131299864},
  },
  ["为库米沙效力"]={
-  ["In your journeys throughout the Blasted Lands, should you ever come across a Flawless Draenethyst Sphere, take the item back to Kum'isha the Collector.\n\nBe warned, this gem is one of the most rare crystals in all of Azeroth. Any creature in these lands could be holding a Flawless Draenethyst Sphere.\n\nYou will be rewarded for each Flawless Draenethyst Sphere you have collected."]={0,2154838096},
+  ["在你探索诅咒之地的旅程中，如果碰巧发现了无暇的德莱尼水晶球，就把它交给收藏家库米沙。\n\n你要知道，这种宝石是整个艾泽拉斯最珍稀的水晶。诅咒之地上的任何一种生物都有可能带着一颗无暇的德莱尼水晶球。\n\n每找到一颗，你都会得到相应的酬劳。"]={0,2154838096},
  },
  ["堕落熊怪"]={
   ["搜寻费伍德森林北部的死木熊怪的营帐，继续寻找线索。"]={0,232382264},
@@ -9841,7 +9842,7 @@ QuestieLevLookup = {
   ["继续和玛格拉姆部族保持良好的关系，把3块破碎之泪交给玛格拉姆村庄的瓦鲁格。"]={0,547611024},
  },
  ["目标：雷戈喷毒者"]={
-  ["Kill 30 Hive'Regal Spitfires and report back to Commander Mar'alith at Cenarion Hold in Silithus.  You must also bring Combat Task Briefing IX in order to complete this quest.\n"]={0,3045204272},
+  ["击杀30只雷戈喷毒者，然后向塞纳里奥要塞的指挥官玛尔利斯复命。你还必须带着作战任务简报 IX才能完成这个任务。"]={0,3045204272},
  },
  ["玛格拉姆部族"]={
   ["和玛格拉姆部族建立良好的关系，然后和瓦鲁格谈一谈。"]={178,2902222274},
@@ -9864,7 +9865,7 @@ QuestieLevLookup = {
   ["把莱弗维奇的包裹交给铁炉堡的罗顿·石锤。"]={77,621757349},
  },
  ["大自然的苦楚"]={
-  ["Destroy 8 Diseased Wolves, and then return to Mulgris Deepriver at the Writhing Haunt, Western Plaguelands.\n\n"]={0,3518259384},
+  ["消灭8只生病的狼，然后去找西瘟疫之地嚎哭鬼屋的穆格雷斯·深水。"]={0,3518259384},
   ["消灭8只生病的灰熊，然后去找西瘟疫之地嚎哭鬼屋的穆格雷斯·深水。"]={0,33317040},
  },
  ["伐木机"]={
@@ -9883,7 +9884,7 @@ QuestieLevLookup = {
   ["把盖罗恩农场的样本瓶交给西瘟疫之地亡灵壁垒的暗影牧师范蒂丝。"]={178,2073558530},
  },
  ["我认识一个家伙…"]={
-  ["Travel to Gadgetzan in the Tanaris desert and speak with Dirge Quikcleave about advancing your cooking career.\n"]={77,3843657045},
+  ["到塔纳利斯沙漠的加基森去，与迪尔格·奎克里弗谈谈你的厨师生涯。"]={77,3843657045},
  },
  ["基利斯"]={
   ["找到基利斯的下落。"]={0,2739702288},
@@ -9908,7 +9909,7 @@ QuestieLevLookup = {
   ["如果你将1双被玷污的长靴、12块皮甲碎片、3张月布和2个熟化毛皮交给东瘟疫之地圣光之愿礼拜堂的莱茵，他会为你制作一双梦游者长靴。"]={0,1394258520},
  },
  ["工匠文书 - 毛皮护甲片"]={
-  ["Deliver 25 Rugged Armor Kits and the Craftsman's Writ - Rugged Armor Kit - to Packmaster Stonebruiser at Light's Hope Chapel in the Eastern Plaguelands.\n"]={0,1132249136},
+  ["将25个毛皮护甲片和工匠文书 - 毛皮护甲片交给东瘟疫之地圣光之愿礼拜堂的马队管理者布鲁斯·石锤。"]={0,1132249136},
  },
  ["瘟疫与你"]={
   ["在东瘟疫之地的蚁丘上使用空的白蚁瓶。当你收集了100只瘟疫白蚁之后，就回到提瑞斯法林地的亡灵壁垒去找米克·莱文。"]={178,1277861866},
@@ -9940,7 +9941,7 @@ QuestieLevLookup = {
   ["Speak to Shikrik in the Valley of Trials."]={128,854981856},
  },
  ["基本不可能的任务"]={
-  ["Steal Silixiz's Tower Key from Foreman Silixiz, then kill two Mutated Venture Co. Drones, two Venture Co. Patrollers, and two Venture Co. Lookouts.\n\nAssassinate Grand Foreman Gallywix and take his head, then pick the lock on Gallywix's lockbox and steal the Cache of Zanzil's Altered Mixture. Take the Cache and Gallywix's Head back to Shenthul in Orgrimmar for further instruction.\n"]={178,3561866578},
+  ["从工头希里克斯那里偷出希里克斯的塔楼钥匙，进入塔楼，然后杀掉两个变异风险投资公司工人、两个风险投资公司巡逻员、两个风险投资公司看守。\n\n杀掉大工头普兹克·加里维克斯，取了他的首级，然后打开加里维克斯的箱子，拿走赞吉尔的改良药剂。将药剂和加里维克斯的头颅交给奥格瑞玛的申苏尔，等候进一步的指示。"]={178,3561866578},
  },
  ["拯救OOX-22/FE！"]={
   ["将OOX-22/FE护送到被遗忘的海岸上的码头，然后向藏宝海湾的奥格索普·奥布诺提斯报告。"]={0,1924493264},
@@ -9974,7 +9975,7 @@ QuestieLevLookup = {
   ["和藏宝海湾的斯库提谈一谈。"]={0,837514432},
  },
  ["埃鲁索斯之手"]={
-  ["Retrieve the Demon Box from Thunder Axe Fortress, and return it, along with the Demon Pick to Taiga Wisemane in Shadowprey Village.\n"]={178,2764390602},
+  ["在雷斧堡垒中找到恶魔之盒，把它和恶魔之锄一起交给葬影村的泰迦·慧鬃。"]={178,2764390602},
  },
  ["冬泉熊怪的活动"]={
   ["Salfa wants you to kill 8 Winterfall Shaman, 8 Winterfall Den Watchers, and 8 Winterfall Ursa.  Salfa is located just outside the entrance to Timbermaw Hold in Winterspring."]={0,4254890712},
@@ -9983,7 +9984,7 @@ QuestieLevLookup = {
   [""]={5,3772793613},
  },
  ["敲诈"]={
-  ["Return the Ransom Letter to Narain Soothfancy in Tanaris.\n"]={0,2634876904},
+  ["把勒索信交给塔纳利斯的纳瑞安。"]={0,2634876904},
  },
  ["准备典礼"]={
   ["收集6根碧蓝色的羽毛和6根古铜色的羽毛，把它们交给雷霆崖的伊恩·鹰爪。"]={178,3413367682},
@@ -9998,7 +9999,7 @@ QuestieLevLookup = {
   [""]={0,1089979656},
  },
  ["洛丹伦的王座"]={
-  ["Take your ward to the old Lordaeron Throne Room that lies just before descending into the Undercity.\n"]={178,903252770},
+  ["带着你看护的孤儿去幽暗城电梯外的王座大厅。"]={178,903252770},
  },
  ["高迪尔"]={
   ["救出高迪尔，然后回到塔伦米尔去见克鲁斯克。"]={178,617943570},
@@ -10026,7 +10027,7 @@ QuestieLevLookup = {
   [""]={0,280287240},
  },
  ["拯救公主？"]={
-  ["Return to Thrall!\n"]={178,3093643106},
+  ["向萨尔报告！"]={178,3093643106},
  },
  ["猎头行动"]={
   ["给格罗姆高营地的尼姆布亚带去20个皱缩的头颅。"]={178,2663136178},
@@ -10054,7 +10055,7 @@ QuestieLevLookup = {
   ["将奥格瑞玛烈焰交给节日博学者。"]={77,1582562845},
  },
  ["连偷带抢"]={
-  ["Find the Defias Dockmaster and recover the Shipping Schedule for Master Mathias Shaw.\n"]={77,2325695133},
+  ["找到迪菲亚码头主管，从他那里为马迪亚斯·肖尔拿到迪菲亚船运时间表。"]={77,2325695133},
  },
  ["战地任务文件"]={
   [""]={77,816179029},
@@ -10100,10 +10101,10 @@ QuestieLevLookup = {
   ["收集红色能量水晶、蓝色能量水晶、黄色能量水晶和绿色能量水晶各7块，把它们交给马绍尔营地里的科琳。"]={0,1699365152},
  },
  ["骨镰的材料"]={
-  ["Rohan the Assassin at Light's Hope Chapel in the Eastern Plaguelands wants 30 Bone Fragments.\n"]={0,1932797792},
+  ["东瘟疫之地圣光之愿礼拜堂的洛汉要30个白骨碎片。"]={0,1932797792},
  },
  ["精灵龙的自由"]={
-  ["Using the Bamboo Cage Key, free the Sprite Darters from the pen in the Grimtotem camp. At least 6 Sprite Darters and Kindal Moonweaver must survive.\n\nYou have 6 minutes before Kindal decides it is time to retreat and you fail the quest."]={77,3677156597},
+  ["从恐怖图腾营地的围栏里释放被俘获的小精龙。至少6个小精龙和辛达尔·月纹必须活着。\n\n如果6分钟之内你还没能达成这个目标，辛达尔就会决定撤退，任务也会随即失败。"]={77,3677156597},
  },
  ["交付宝石"]={
   ["把项链和宝石送到奥格瑞玛的德兰·杜佛斯那里。"]={178,3173556738},
@@ -10189,7 +10190,7 @@ QuestieLevLookup = {
   ["将峭壁卫兵图林·长角的报告交给凄凉之地幽灵岗哨的纳塔卡·长角。"]={178,1925979810},
  },
  ["石爪山的困境"]={
-  ["Dispatch 12 Befouled Water Elementals at Mystral Lake, due east of the Talondeep Path and southwest of Splintertree Post.\n\nScout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost.\n\nReturn to Mastok Wrilehiss at Splintertree Post, Ashenvale."]={178,3204046258},
+  ["清除位于碎木哨岗西南和石爪小径正东的密斯特拉湖一带的12个污浊的水元素。\n\n在密斯特拉湖上的眺望台中侦查联盟的前哨站。\n\n返回灰谷慰藉之林的碎木哨岗，向马斯托克·维尔西斯报告。"]={178,3204046258},
  },
  ["强大的尤尔查"]={
   ["把尤尔查的毛皮交给安戈洛环形山入口处的托尔瓦·寻路者。"]={0,3180999440},
@@ -10246,7 +10247,7 @@ QuestieLevLookup = {
   ["与巫医玛艾里再次谈话，然后拿到好运符。"]={255,1268220607},
  },
  ["格杀勿论：黑铁矮人"]={
-  ["Venture to Blackrock Depths and destroy the vile aggressors!\n\nWarlord Goretooth wants you to kill 15 Anvilrage Guardsmen, 10 Anvilrage Wardens and 5 Anvilrage Footmen. Return to him once your task is complete.\n\n"]={178,1643376242},
+  ["到黑石深渊去消灭那些邪恶的侵略者！\n\n军官高图斯要你去杀死15个铁怒卫士、10个铁怒狱卒和5个铁怒步兵。完成任务之后回去向他复命。"]={178,1643376242},
  },
  ["萨尔曼的针线包"]={
   ["到暴风城法师区的拉尔森服装店去，将针线包带给萨尔曼·斯涅德。"]={77,3761564309},
@@ -10288,7 +10289,7 @@ QuestieLevLookup = {
   ["收集4份健康的野鹿腺体，把它们交给艾萨拉的奥汀克。奥汀克住在埃达拉斯废墟东北部悬崖的顶部。"]={0,1992194592},
  },
  ["废土的公正"]={
-  ["Take down 10 Wastewander Shadow Mages, 8 Wastewander Rogues, and 6 Wastewander Assassins for Chief Engineer Bilgewhizzle in Gadgetzan.\n"]={0,1512162672},
+  ["杀死10个废土暗法师、8个废土游荡者和6个废土刺客，然后向加基森的总工程师比格维兹报告。"]={0,1512162672},
  },
  ["密文羊皮纸"]={
   ["阅读密文羊皮纸，然后和试炼谷的鲁瓦格谈一谈。"]={2,375388738},
@@ -10309,7 +10310,7 @@ QuestieLevLookup = {
   [""]={0,279223240},
  },
  ["鞭笞者沃尔沙"]={
-  ["Keep Muglash safe as he travels to the brazier. Help him by putting the brazier out, then protect him as you fight against the Naga.\n\nIf you are successful, return to the Zoram'gar Outpost and inform the Warsong Runner of the death of Vorsha the Lasher."]={178,597427858},
+  ["在穆格拉什寻找火盆的过程中保证他的安全。帮助他扑灭火盆，然后在与纳迦作战时保护他。\n\n如果你成功了，就回到佐拉姆加前哨站去，把鞭笞者沃尔沙的死讯通知给战歌信使。"]={178,597427858},
  },
  ["打火钥匙"]={
   ["取得打火钥匙，把它交给维兹克兰克。"]={0,326329624},
@@ -10321,7 +10322,7 @@ QuestieLevLookup = {
   ["给辛迪加营地里的瓦里克带去一杯南海镇烈酒。"]={0,12872400},
  },
  ["给蛮锤部族的最后警告"]={
-  ["Otho Moji'ko at Revantusk Village in the Hinterlands wants you to travel to Aerie Peak in the western region of the Hinterlands and place the Final Message to the Wildhammer by the well in the center of town. Return to him once this task is complete.\n\nBeware of angry Wildhammer dwarves and unruly members of the Alliance."]={178,2161306706},
+  ["辛特兰恶齿村的奥索·莫吉克要你去辛特兰西部的鹰巢山，把给蛮锤部族的警告插在城镇中心的水井旁边。任务完成之后回到他那里去复命。\n\n当心那些愤怒的蛮锤矮人以及野蛮的联盟成员。"]={178,2161306706},
  },
  ["神谕者的长裤"]={
   ["把巨型沙虫的皮、2个重生塑像、5个黄金甲虫和5个陶土甲虫交给安其拉的坎多斯特拉兹。你必须首先在诺兹多姆的子嗣中达到友善声望才可以完成这个任务。"]={0,3343428248},
@@ -10367,7 +10368,7 @@ QuestieLevLookup = {
   ["阅读莫苏尔的指南，并召唤出一匹克索诺斯恐惧战马，击败它，然后控制它的灵魂。"]={0,76921584},
  },
  ["死者的复仇"]={
-  ["Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill a Razorbeak Skylord and retrieve its Skylord Plume. Return to him once the task is complete.\n\nMarkhor mentioned that the Razorbeak Skylord are a rare breed that tend to occupy the wilds of the Hinterlands."]={178,2457903714},
+  ["辛特兰恶齿村的猎户马克霍尔要求你杀掉一头翱翔的锋喙狮鹫，并将它的狮鹫长羽拿回去交给他。\n\n马克霍尔说过那些翱翔的锋喙狮鹫就躲在辛特兰的野外。"]={178,2457903714},
  },
  ["摩根的发现"]={
   ["回到暴风城银行附近的阿瑞斯坦·莫塔那里。"]={77,1184679269},
@@ -10439,7 +10440,7 @@ QuestieLevLookup = {
   ["找到特雷莱恩的护符匣、特雷莱恩的宝珠和特雷莱恩的黑玛瑙，把它们交给避难谷地的斯奎尔图。"]={77,1216165629},
  },
  ["上古圣马之魂"]={
-  ["Acquire special horse feed used for feeding a spirit horse.  Merideth Carlson in Southshore apparently is the source for such food.\n\nTravel to the Dire Maul dungeon in Feralas and slay Tendris Warpwood.  Doing so will free the Ancient Equine Spirit.  Feed it the special horse feed, thereby soothing the spirit.  Finally, give it the Arcanite Barding so it may bless it."]={5,11025789},
+  ["你需要特殊的饲料来喂养灵魂马。南海镇的梅丽德丝·卡尔森可以为你提供这样的粮草。\n\n到菲拉斯的厄运之槌去，杀掉特迪斯·扭木，释放上古圣马之魂。用特殊的粮草喂养它，这样可以安抚它的灵魂。最后，把奥金马铠交给它就可以完成祝福。"]={5,11025789},
  },
  ["塞拉摩间谍"]={
   ["杀掉9个塞拉摩间谍，然后回到蕨墙村去见纳泽尔·血矛。"]={178,2246518330},
@@ -10453,7 +10454,7 @@ QuestieLevLookup = {
   ["萨尔玛·萨丁需要3块秃鹫肉条、3只血牙野猪的头、3颗鱼人的眼睛和3棵秋葵。"]={77,131176245},
  },
  ["驾驶员的复仇"]={
-  ["Kill Mangeclaw.\n\nBring his Mangy Claw and Hildelve's Journal to Pilot Hammerfoot."]={77,2178626501},
+  ["杀死癞爪。\n\n把它的肮脏的爪子和莫里·铁钻的日记交给驾驶员塞克·锤足。"]={77,2178626501},
  },
  ["给赫布瑞姆的样本"]={
   ["把一箱蜘蛛毒带给贫瘠之地的药剂师赫布瑞姆。"]={178,2123770314},
@@ -10478,7 +10479,7 @@ QuestieLevLookup = {
   ["摧毁敌方的某座哨塔或者碉堡中的旗帜，然后向丹巴达尔的杜尔根·雷矛复命。"]={77,1104017669},
  },
  ["拉尔德的午餐"]={
-  ["Lard at Revantusk Village in the Hinterlands wants you to find Lard's Lunch. Return to him when this task is complete.\n\nLard mentioned that he left it on the island to the north. Watch out for Vilebranch trolls."]={178,2759979762},
+  ["辛特兰恶齿村的拉尔德要求你去找到拉尔德的午餐。完成任务之后就回到他那里去。\n\n拉尔德说他把午餐留在了北面的岛上。当心邪枝巨魔。"]={178,2759979762},
  },
  ["大地的震颤"]={
   ["Use the Sign of the Earth to activate the Pillars of Amethyst, Opal, and Diamond and obtain the Runestones.\n\nPlace the runestones in the Seal of the Earth to free Blacklash and Hematus.\n\nSlay them and return Blacklash's Bindings, the Chains of Hematus, and the Sign of the Earth to Garek."]={77,1573277861},
@@ -10497,7 +10498,7 @@ QuestieLevLookup = {
   ["给奥达希尔的基尔莎兰带回1枚树林蜘蛛的卵。"]={0,2950192384},
  },
  ["该死的手指头！"]={
-  ["Hansel Heavyhands wants you to kill 20 Heavy War Golems.\n\nThe Heavy War Golems wander the areas surrounding the Cauldron in the Searing Gorge. When you've killed enough, return to Hansel in Searing Gorge."]={0,2966617944},
+  ["汉瑟尔·重拳让你杀掉20个重型作战傀儡。\n\n重型作战傀儡就在灼热峡谷的大熔炉附近。当你杀死足够多的傀儡后，就回去找汉瑟尔·重拳。"]={0,2966617944},
  },
  ["鳄鱼小子和有胡子的鱼人"]={
   [""]={0,2970466056},
@@ -10764,7 +10765,7 @@ QuestieHashMap = {
   ['name']="黑色盾牌",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Black Shield",
+  ['startedBy']="黑色盾牌",
   ['finishedBy']="盖兰·维米斯队长",
   ['level']=30,
   ['questLevel']='35',
@@ -10840,7 +10841,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="斯温·约根",
-  ['finishedBy']="Mound of loose dirt",
+  ['finishedBy']="一堆松软的泥土",
   ['level']=20,
   ['questLevel']='25',
   ['rr']=77
@@ -10961,7 +10962,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="玛尔冯·瑞文斯克",
-  ['finishedBy']="Idol of Hakkar",
+  ['finishedBy']="哈卡神像",
   ['level']=46,
   ['questLevel']='51D',
   ['rq']=3543636368
@@ -11020,7 +11021,7 @@ QuestieHashMap = {
   ['name']="找出内鬼！",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Bookie Herod's Strongbox",
+  ['startedBy']="书呆子赫罗德的保险箱",
   ['finishedBy']="多伦上尉",
   ['level']=30,
   ['questLevel']='37',
@@ -11031,7 +11032,7 @@ QuestieHashMap = {
   ['name']="返回铁炉堡",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Uldum Pedestal",
+  ['startedBy']="奥丹姆石座",
   ['finishedBy']="史学家卡尼克",
   ['level']=45,
   ['questLevel']='50+',
@@ -11093,7 +11094,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="多诺瓦·雪山",
-  ['finishedBy']="Deadwood Cauldron",
+  ['finishedBy']="死木蒸锅",
   ['level']=52,
   ['questLevel']='56',
   ['rq']=1988011440
@@ -11211,7 +11212,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="基恩诺·火花",
-  ['finishedBy']="Large Leather Backpacks",
+  ['finishedBy']="大皮包",
   ['level']=41,
   ['questLevel']='44',
   ['rr']=77,
@@ -11458,7 +11459,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="桑德·裂蹄",
-  ['finishedBy']="Spectral Lockbox",
+  ['finishedBy']="鬼魂之箱",
   ['level']=45,
   ['questLevel']='57',
   ['rq']=4180098648
@@ -11517,7 +11518,7 @@ QuestieHashMap = {
   ['name']="返回羽月要塞",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Solarsal Gazebo",
+  ['startedBy']="索兰萨尔掺望台",
   ['finishedBy']="珊蒂斯·羽月",
   ['level']=40,
   ['questLevel']='43',
@@ -11961,7 +11962,7 @@ QuestieHashMap = {
   ['name']="耶尼库的命运",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Bubbling Cauldron",
+  ['startedBy']="冒泡的大锅",
   ['finishedBy']="肯维雷",
   ['level']=30,
   ['questLevel']='45',
@@ -12035,7 +12036,7 @@ QuestieHashMap = {
   ['name']="火热的死亡",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Human Remains",
+  ['startedBy']="人类遗骸",
   ['finishedBy']="玛雷弗斯·暗锤",
   ['level']=60,
   ['questLevel']='60D',
@@ -12192,8 +12193,8 @@ QuestieHashMap = {
   ['name']="甘祖拉恩",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Bubbling Cauldron",
-  ['finishedBy']="Bubbling Cauldron",
+  ['startedBy']="冒泡的大锅",
+  ['finishedBy']="冒泡的大锅",
   ['level']=30,
   ['questLevel']='46',
   ['rr']=178,
@@ -12389,7 +12390,7 @@ QuestieHashMap = {
   ['name']="发光的树叶",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Strange Fronded Plant",
+  ['startedBy']="奇怪的树木",
   ['finishedBy']="德纳兰",
   ['level']=7,
   ['questLevel']='10'
@@ -12418,7 +12419,7 @@ QuestieHashMap = {
   ['name']="被激怒的枭兽",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Jaron's Wagon",
+  ['startedBy']="加隆的马车",
   ['finishedBy']="加隆·石矛",
   ['level']=53,
   ['questLevel']='59',
@@ -12501,8 +12502,8 @@ QuestieHashMap = {
   ['name']="华丽的礼物",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Gaily Wrapped Present",
-  ['finishedBy']="Gaily Wrapped Present",
+  ['startedBy']="节日礼物",
+  ['finishedBy']="节日礼物",
   ['level']=20,
   ['questLevel']='60'
  },
@@ -12576,7 +12577,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="基恩诺·火花",
-  ['finishedBy']="Wrecked Row Boat",
+  ['finishedBy']="失事的独木舟",
   ['level']=40,
   ['questLevel']='43',
   ['rr']=77,
@@ -12639,8 +12640,8 @@ QuestieHashMap = {
   ['name']="轻轻摇晃过的礼品",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Gently Shaken Gift",
-  ['finishedBy']="Gently Shaken Gift",
+  ['startedBy']="精美的礼品",
+  ['finishedBy']="精美的礼品",
   ['level']=1,
   ['questLevel']='60'
  },
@@ -12658,7 +12659,7 @@ QuestieHashMap = {
   ['name']="返回冰风岗",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="高阶牧师玛多妮尔",
   ['level']=50,
   ['questLevel']='55',
@@ -12752,7 +12753,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="书记员达尔塔",
-  ['finishedBy']="Old Footlocker",
+  ['finishedBy']="旧提箱",
   ['level']=22,
   ['questLevel']='28',
   ['rr']=77,
@@ -12813,7 +12814,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Drakkisath's Brand",
+  ['finishedBy']="达基萨斯的烙印",
   ['level']=55,
   ['questLevel']='60D'
  },
@@ -12951,7 +12952,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="暗影牧师范蒂丝",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='53',
   ['rr']=178,
@@ -13262,8 +13263,8 @@ QuestieHashMap = {
   ['name']="杉德尔船长的宝藏",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Captain's Footlocker",
-  ['finishedBy']="Broken Barrel",
+  ['startedBy']="船长的手提箱",
+  ['finishedBy']="破桶",
   ['level']=10,
   ['questLevel']='16',
   ['rr']=77,
@@ -13513,7 +13514,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="特洛亚斯·月风",
-  ['finishedBy']="Equinex Monolith",
+  ['finishedBy']="艾奎尼克斯石碑",
   ['level']=42,
   ['questLevel']='50',
   ['rr']=77,
@@ -13544,7 +13545,7 @@ QuestieHashMap = {
   ['name']="帕雷斯之眼",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Intrepid's Locked Strongbox",
+  ['startedBy']="保险箱",
   ['finishedBy']="戈罗林·钢眉",
   ['level']=22,
   ['questLevel']='30',
@@ -13637,8 +13638,8 @@ QuestieHashMap = {
   ['name']="戒备森严",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Guarded Thunder Ale Barrel",
-  ['finishedBy']="Guarded Thunder Ale Barrel",
+  ['startedBy']="被看守着的酒桶",
+  ['finishedBy']="被看守着的酒桶",
   ['level']=1,
   ['questLevel']='1',
   ['rq']=null
@@ -13670,8 +13671,8 @@ QuestieHashMap = {
   ['name']="诱灵蜡烛",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Crate of Candles",
-  ['finishedBy']="Crate of Candles",
+  ['startedBy']="蜡烛箱",
+  ['finishedBy']="蜡烛箱",
   ['level']=5,
   ['questLevel']='10',
   ['rr']=178,
@@ -14847,8 +14848,8 @@ QuestieHashMap = {
   ['name']="精神水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Eastern Crystal Pylon",
-  ['finishedBy']="Eastern Crystal Pylon",
+  ['startedBy']="东部水晶塔",
+  ['finishedBy']="东部水晶塔",
   ['level']=53,
   ['questLevel']='53',
   ['rq']=177646728
@@ -15073,7 +15074,7 @@ QuestieHashMap = {
   ['name']="亨里格的日记",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Henrig Lonebrow's Journal",
+  ['startedBy']="亨里格·独眉的日记",
   ['finishedBy']="法芬德尔",
   ['level']=29,
   ['questLevel']='34+',
@@ -15340,7 +15341,7 @@ QuestieHashMap = {
   ['name']="格杀勿论：高阶黑铁军官",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="KILL ON SIGHT",
+  ['startedBy']="格杀勿论",
   ['finishedBy']="军官高图斯",
   ['level']=50,
   ['questLevel']='54D',
@@ -15350,8 +15351,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rq']=583730125
@@ -15380,8 +15381,8 @@ QuestieHashMap = {
   ['name']="被锁起来的矮人",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Wooden Outhouse",
-  ['finishedBy']="Wooden Outhouse",
+  ['startedBy']="木制厕所",
+  ['finishedBy']="木制厕所",
   ['level']=43,
   ['questLevel']='45'
  },
@@ -15545,7 +15546,7 @@ QuestieHashMap = {
   ['name']="勇气之书",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Tome of Valor",
+  ['startedBy']="勇气之书",
   ['finishedBy']="达索瑞恩·拉尔",
   ['level']=20,
   ['questLevel']='20',
@@ -15783,7 +15784,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="森古",
-  ['finishedBy']="Trollbane's Tomb",
+  ['finishedBy']="托尔贝恩的墓室",
   ['level']=32,
   ['questLevel']='42+',
   ['rq']=3892384320
@@ -15996,7 +15997,7 @@ QuestieHashMap = {
   ['name']="格杀勿论：黑铁矮人",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="WANTED",
+  ['startedBy']="通缉",
   ['finishedBy']="军官高图斯",
   ['level']=48,
   ['questLevel']='52D',
@@ -16038,7 +16039,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="高阶牧师玛多妮尔",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55',
   ['rr']=77,
@@ -16090,7 +16091,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="药剂师林度恩",
-  ['finishedBy']="Dusty Rug",
+  ['finishedBy']="布满灰尘的毯子",
   ['level']=24,
   ['questLevel']='30',
   ['rr']=178,
@@ -16485,7 +16486,7 @@ QuestieHashMap = {
   ['name']="戒指归来",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
   ['finishedBy']="诺格",
   ['level']=28,
   ['questLevel']='34D',
@@ -16675,7 +16676,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="主工程师辛德维尔七世",
-  ['finishedBy']="Explosive Charge",
+  ['finishedBy']="爆炸品",
   ['level']=16,
   ['questLevel']='18',
   ['rr']=77,
@@ -16744,7 +16745,7 @@ QuestieHashMap = {
   ['name']="返回亡灵壁垒",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="暗影牧师范蒂丝",
   ['level']=50,
   ['questLevel']='58',
@@ -17002,7 +17003,7 @@ QuestieHashMap = {
   ['name']="水坝危机",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Suspicious Barrel",
+  ['startedBy']="可疑的桶",
   ['finishedBy']="主工程师辛德维尔七世",
   ['level']=16,
   ['questLevel']='18',
@@ -17074,7 +17075,7 @@ QuestieHashMap = {
   ['name']="瘟疫与你",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Termite Barrel",
+  ['startedBy']="白蚁桶",
   ['finishedBy']="纳萨尼尔·杜马",
   ['level']=48,
   ['questLevel']='55',
@@ -17105,7 +17106,7 @@ QuestieHashMap = {
   ['name']="归还雕像",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Half-buried Barrel",
+  ['startedBy']="半埋的大桶",
   ['finishedBy']="卡尔·波兰",
   ['level']=20,
   ['questLevel']='25',
@@ -17251,7 +17252,7 @@ QuestieHashMap = {
   ['name']="瑞兹尔的图表",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Rizzle's Unguarded Plans",
+  ['startedBy']="瑞兹尔的计划",
   ['finishedBy']="普兹克",
   ['level']=38,
   ['questLevel']='41',
@@ -17466,7 +17467,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="卡拉然·温布雷",
-  ['finishedBy']="Torch of Retribution",
+  ['finishedBy']="惩戒火炬",
   ['level']=40,
   ['questLevel']='50',
   ['rq']=2418190224
@@ -17561,7 +17562,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="弗兰克罗恩·铸铁",
-  ['finishedBy']="Monument of Franclorn Forgewright",
+  ['finishedBy']="弗兰克罗恩·铸铁的雕像",
   ['level']=48,
   ['questLevel']='52D',
   ['rq']=4166110408
@@ -17707,7 +17708,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="驾驶员塞克·锤足",
-  ['finishedBy']="A Dwarven Corpse",
+  ['finishedBy']="矮人的尸体",
   ['level']=8,
   ['questLevel']='10',
   ['rr']=77
@@ -17863,7 +17864,7 @@ QuestieHashMap = {
   ['name']="嗜血胸甲",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Malyfous's Catalogue",
+  ['startedBy']="玛雷弗斯的目录",
   ['finishedBy']="玛雷弗斯·暗锤",
   ['level']=59,
   ['questLevel']='60+',
@@ -18104,7 +18105,7 @@ QuestieHashMap = {
   ['name']="恶臭的鸡蛋",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Keg",
+  ['startedBy']="小桶",
   ['finishedBy']="黑暗召唤者雅恩卡",
   ['level']=60,
   ['questLevel']='60PVP',
@@ -18134,7 +18135,7 @@ QuestieHashMap = {
   ['name']="饱经风霜的墓碑",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="A Weathered Grave",
+  ['startedBy']="破旧的坟墓",
   ['finishedBy']="希拉·沃宁迪",
   ['level']=28,
   ['questLevel']='35',
@@ -18393,7 +18394,7 @@ QuestieHashMap = {
   ['name']="瘟疫与你",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Termite Barrel",
+  ['startedBy']="白蚁桶",
   ['finishedBy']="米克·莱文",
   ['level']=48,
   ['questLevel']='55',
@@ -18414,8 +18415,8 @@ QuestieHashMap = {
   ['name']="科泰罗的谜题",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Musty Scroll",
-  ['finishedBy']="Cortello's Treasure",
+  ['startedBy']="发霉的卷轴",
+  ['finishedBy']="科泰罗的宝藏",
   ['level']=21,
   ['questLevel']='51',
   ['rq']=2798800320
@@ -18477,8 +18478,8 @@ QuestieHashMap = {
   ['name']="掘墓",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Eliza's Grave Dirt",
-  ['finishedBy']="Eliza's Grave Dirt",
+  ['startedBy']="伊莉莎的坟墓",
+  ['finishedBy']="伊莉莎的坟墓",
   ['level']=20,
   ['questLevel']='35',
   ['rq']=null
@@ -18683,8 +18684,8 @@ QuestieHashMap = {
   ['name']="有瑕疵的能量石",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Flawed Power Stones",
-  ['finishedBy']="Flawed Power Stones",
+  ['startedBy']="有裂痕的能量石",
+  ['finishedBy']="有裂痕的能量石",
   ['level']=9,
   ['questLevel']='14',
   ['rr']=178,
@@ -18796,7 +18797,7 @@ QuestieHashMap = {
   ['name']="萨多尔大桥",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Ebenezer Rustlocke's Corpse",
+  ['startedBy']="伊贝尼瑟的尸体",
   ['finishedBy']="拉格·加玛森",
   ['level']=28,
   ['questLevel']='31',
@@ -19112,7 +19113,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="克拉莉斯·弗斯特",
-  ['finishedBy']="Yuriv's Tombstone",
+  ['finishedBy']="尤瑞夫的墓碑",
   ['level']=12,
   ['questLevel']='15',
   ['rr']=178
@@ -19154,7 +19155,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="戈罗林·钢眉",
-  ['finishedBy']="Waterlogged Chest",
+  ['finishedBy']="浸水的箱子",
   ['level']=20,
   ['questLevel']='29',
   ['rq']=4163210949
@@ -19298,7 +19299,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="詹妮丝·费尔斯通",
-  ['finishedBy']="Janice's Parcel",
+  ['finishedBy']="詹妮丝的包裹",
   ['level']=50,
   ['questLevel']='52'
  },
@@ -19479,7 +19480,7 @@ QuestieHashMap = {
   ['name']="通缉：阿纳克·恐怖图腾",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted Poster - Arnak Grimtotem",
+  ['startedBy']="通缉：阿纳克·恐怖图腾",
   ['finishedBy']="峭壁卫兵图林·长角",
   ['level']=25,
   ['questLevel']='29',
@@ -19531,7 +19532,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="辛德拉古灵",
-  ['finishedBy']="Treasure of the Shen'dralar",
+  ['finishedBy']="辛德拉的宝藏",
   ['level']=57,
   ['questLevel']='60D',
   ['rr']=77,
@@ -19777,7 +19778,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="尼姆布亚",
-  ['finishedBy']="Bubbling Cauldron",
+  ['finishedBy']="冒泡的大锅",
   ['level']=30,
   ['questLevel']='41',
   ['rr']=178,
@@ -19819,7 +19820,7 @@ QuestieHashMap = {
   ['name']="通缉：邪恶祭司海克斯和她的爪牙",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Call to Arms!",
+  ['startedBy']="作战公告！",
   ['finishedBy']="断齿族长",
   ['level']=46,
   ['questLevel']='51+',
@@ -20374,7 +20375,7 @@ QuestieHashMap = {
   ['name']="晨光石",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Equinex Monolith",
+  ['startedBy']="艾奎尼克斯石碑",
   ['finishedBy']="特洛亚斯·月风",
   ['level']=42,
   ['questLevel']='50',
@@ -20597,7 +20598,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="史学家卡尼克",
-  ['finishedBy']="Uldum Pedestal",
+  ['finishedBy']="奥丹姆石座",
   ['level']=45,
   ['questLevel']='50+',
   ['rr']=77,
@@ -20618,7 +20619,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="卡兰德拉斯",
-  ['finishedBy']="Sandy Cookbook",
+  ['finishedBy']="盖满沙子的烹饪书",
   ['level']=54,
   ['questLevel']='57',
   ['rs']=185,
@@ -20770,7 +20771,7 @@ QuestieHashMap = {
   ['name']="斯塔文的传说",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Sealed Crate",
+  ['startedBy']="密封的箱子",
   ['finishedBy']="治安官哈迦德",
   ['level']=22,
   ['questLevel']='28',
@@ -21303,7 +21304,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="纳瑞安",
-  ['finishedBy']="Inconspicuous Crate",
+  ['finishedBy']="不起眼的箱子",
   ['level']=60,
   ['questLevel']='60',
   ['rq']=1623772936
@@ -21354,8 +21355,8 @@ QuestieHashMap = {
   ['name']="杉德尔船长的宝藏",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Broken Barrel",
-  ['finishedBy']="Old Jug",
+  ['startedBy']="破桶",
+  ['finishedBy']="旧罐子",
   ['level']=10,
   ['questLevel']='16',
   ['rr']=77,
@@ -21365,7 +21366,7 @@ QuestieHashMap = {
   ['name']="悬赏：工头玛托留斯",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted/Missing/Lost & Found",
+  ['startedBy']="通缉/失踪/失物招领",
   ['finishedBy']="侦查队长洛洛尔",
   ['level']=45,
   ['questLevel']='50+'
@@ -21449,7 +21450,7 @@ QuestieHashMap = {
   ['name']="密文信件",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Syndicate Documents",
+  ['startedBy']="辛迪加文档",
   ['finishedBy']="博学者迪布斯",
   ['level']=30,
   ['questLevel']='34',
@@ -21523,7 +21524,7 @@ QuestieHashMap = {
   ['name']="可疑的蹄印",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Suspicious Hoofprint",
+  ['startedBy']="可疑的蹄印",
   ['finishedBy']="盖兰·维米斯队长",
   ['level']=30,
   ['questLevel']='35',
@@ -21567,7 +21568,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="克雷迪格·安戈尔",
-  ['finishedBy']="Karnitol's Chest",
+  ['finishedBy']="卡尼托的箱子",
   ['level']=31,
   ['questLevel']='39',
   ['rr']=77,
@@ -21642,7 +21643,7 @@ QuestieHashMap = {
   ['name']="帕瓦尔·雷瑟上尉",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Theramore Guard Badge",
+  ['startedBy']="塞拉摩卫兵徽章",
   ['finishedBy']="盖兰·维米斯队长",
   ['level']=32,
   ['questLevel']='40',
@@ -21913,7 +21914,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="黑暗召唤者雅恩卡",
-  ['finishedBy']="Keg",
+  ['finishedBy']="小桶",
   ['level']=60,
   ['questLevel']='60PVP',
   ['rr']=178
@@ -22090,8 +22091,8 @@ QuestieHashMap = {
   ['name']="费尔斯通农场的瘟疫之锅",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Scourge Cauldron",
-  ['finishedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='53'
  },
@@ -22190,8 +22191,8 @@ QuestieHashMap = {
   ['name']="节日礼物",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Festive Gift",
-  ['finishedBy']="Festive Gift",
+  ['startedBy']="节日礼物",
+  ['finishedBy']="节日礼物",
   ['level']=10,
   ['questLevel']='60'
  },
@@ -22344,7 +22345,7 @@ QuestieHashMap = {
   ['name']="未寄出的信",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="An Unsent Letter",
+  ['startedBy']="未寄出的信",
   ['finishedBy']="巴隆斯·阿历克斯顿",
   ['level']=16,
   ['questLevel']='22',
@@ -22476,7 +22477,7 @@ QuestieHashMap = {
   ['name']="返回雷霆崖",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Uldum Pedestal",
+  ['startedBy']="奥丹姆石座",
   ['finishedBy']="纳拉·蛮鬃",
   ['level']=45,
   ['questLevel']='50+',
@@ -22571,7 +22572,7 @@ QuestieHashMap = {
   ['name']="预备行动计划",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Syndicate Documents",
+  ['startedBy']="辛迪加文档",
   ['finishedBy']="赫尼·马雷布镇长",
   ['level']=26,
   ['questLevel']='34',
@@ -22635,7 +22636,7 @@ QuestieHashMap = {
   ['name']="黑石之王",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Head of Nefarian",
+  ['startedBy']="奈法利安的头颅",
   ['finishedBy']="萨尔",
   ['level']=60,
   ['questLevel']='60',
@@ -22645,7 +22646,7 @@ QuestieHashMap = {
   ['name']="返回亡灵壁垒",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="暗影牧师范蒂丝",
   ['level']=50,
   ['questLevel']='55',
@@ -22721,7 +22722,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="加里杨",
-  ['finishedBy']="A Conspicuous Gravestone",
+  ['finishedBy']="明显的墓碑",
   ['level']=47,
   ['questLevel']='52',
   ['rq']=599749568
@@ -23042,8 +23043,8 @@ QuestieHashMap = {
   ['name']="精心包裹的礼物",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Carefully Wrapped Present",
-  ['finishedBy']="Carefully Wrapped Present",
+  ['startedBy']="节日礼物",
+  ['finishedBy']="节日礼物",
   ['level']=1,
   ['questLevel']='60'
  },
@@ -23165,7 +23166,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="摩林·云行者",
-  ['finishedBy']="Sealed Supply Crate",
+  ['finishedBy']="密封的补给箱",
   ['level']=5,
   ['questLevel']='8',
   ['rr']=178
@@ -23174,7 +23175,7 @@ QuestieHashMap = {
   ['name']="水晶中的碎骨",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Mysterious Red Crystal",
+  ['startedBy']="神秘的红色水晶",
   ['finishedBy']="哨兵戈琳达·纳希恩",
   ['level']=12,
   ['questLevel']='14',
@@ -23376,7 +23377,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="凯玛德·考伯宾奇",
-  ['finishedBy']="Holly Preserver",
+  ['finishedBy']="冬青树储藏器",
   ['level']=40,
   ['questLevel']='1'
  },
@@ -23677,7 +23678,7 @@ QuestieHashMap = {
   ['name']="返回冰风岗",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="高阶牧师玛多妮尔",
   ['level']=50,
   ['questLevel']='53',
@@ -23728,7 +23729,7 @@ QuestieHashMap = {
   ['name']="通缉：瓦杜斯男爵",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="WANTED",
+  ['startedBy']="通缉",
   ['finishedBy']="高级执行官达萨利亚",
   ['level']=35,
   ['questLevel']='40',
@@ -23818,8 +23819,8 @@ QuestieHashMap = {
   ['name']="杂质检测 - 安戈洛环形山",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Testing Equipment",
-  ['finishedBy']="Testing Equipment",
+  ['startedBy']="测试仪器",
+  ['finishedBy']="测试仪器",
   ['level']=48,
   ['questLevel']='52',
   ['rr']=178,
@@ -24353,7 +24354,7 @@ QuestieHashMap = {
   ['name']="莫达洛克",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Battered Dwarven Skeleton",
+  ['startedBy']="残破的矮人骸骨",
   ['finishedBy']="勘察员基恩萨·铁环",
   ['level']=30,
   ['questLevel']='42',
@@ -24633,8 +24634,8 @@ QuestieHashMap = {
   ['name']="被困的公主",
   ['startedType']="monster",
   ['finishedType']="object",
-  ['startedBy']="Shards of Myzrael",
-  ['finishedBy']="Iridescent Shards",
+  ['startedBy']="密斯莱尔水晶碎块",
+  ['finishedBy']="虹光水晶碎块",
   ['level']=30,
   ['questLevel']='37'
  },
@@ -24725,7 +24726,7 @@ QuestieHashMap = {
   ['name']="工作机会：肃清竞争对手",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted/Missing/Lost & Found",
+  ['startedBy']="通缉/失踪/失物招领",
   ['finishedBy']="监工斯克兰格",
   ['level']=45,
   ['questLevel']='48'
@@ -24735,7 +24736,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="安纳克罗斯",
-  ['finishedBy']="Crystalline Tear",
+  ['finishedBy']="水晶之泪",
   ['level']=60,
   ['questLevel']='60',
   ['rq']=2702857856
@@ -25049,8 +25050,8 @@ QuestieHashMap = {
   ['name']="引诱奈古拉什",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Ruined Lifeboat",
-  ['finishedBy']="Ruined Lifeboat",
+  ['startedBy']="破损的救生艇",
+  ['finishedBy']="破损的救生艇",
   ['level']=41,
   ['questLevel']='52'
  },
@@ -25142,7 +25143,7 @@ QuestieHashMap = {
   ['name']="苏塔拉之石",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Singed Letter",
+  ['startedBy']="烧焦的信件",
   ['finishedBy']="索里奥斯馆长",
   ['level']=40,
   ['questLevel']='48',
@@ -25300,7 +25301,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="暗影牧师范蒂丝",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55',
   ['rr']=178,
@@ -25401,7 +25402,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="大副菲兹莫斯",
-  ['finishedBy']="Intrepid's Locked Strongbox",
+  ['finishedBy']="保险箱",
   ['level']=22,
   ['questLevel']='30',
   ['rq']=3570488600
@@ -25550,8 +25551,8 @@ QuestieHashMap = {
   ['name']="禁锢之石",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Iridescent Shards",
-  ['finishedBy']="Stone of Inner Binding",
+  ['startedBy']="虹光水晶碎块",
+  ['finishedBy']="内禁锢之石",
   ['level']=30,
   ['questLevel']='38',
   ['rq']=88971736
@@ -25639,8 +25640,8 @@ QuestieHashMap = {
   ['name']="鬼魂之杯",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Spectral Chalice",
-  ['finishedBy']="Spectral Chalice",
+  ['startedBy']="鬼魂之杯",
+  ['finishedBy']="鬼魂之杯",
   ['level']=40,
   ['questLevel']='55D'
  },
@@ -26018,8 +26019,8 @@ QuestieHashMap = {
   ['name']="被锁起来的农夫",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Locked Cabinet",
-  ['finishedBy']="Locked Cabinet",
+  ['startedBy']="锁住的柜橱",
+  ['finishedBy']="锁住的柜橱",
   ['level']=52,
   ['questLevel']='60'
  },
@@ -26027,7 +26028,7 @@ QuestieHashMap = {
   ['name']="逃离虫巢",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Zukk'ash Pod",
+  ['startedBy']="祖卡什虫茧",
   ['finishedBy']="基恩诺·火花",
   ['level']=40,
   ['questLevel']='46',
@@ -26391,8 +26392,8 @@ QuestieHashMap = {
   ['name']="超级测蛋器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Egg-O-Matic",
-  ['finishedBy']="Egg-O-Matic",
+  ['startedBy']="测蛋器",
+  ['finishedBy']="测蛋器",
   ['level']=47,
   ['questLevel']='47'
  },
@@ -26422,7 +26423,7 @@ QuestieHashMap = {
   ['name']="丢失的铁锭",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Waterlogged Chest",
+  ['startedBy']="浸水的箱子",
   ['finishedBy']="戈罗林·钢眉",
   ['level']=20,
   ['questLevel']='29',
@@ -26550,7 +26551,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="哨兵戈琳达·纳希恩",
-  ['finishedBy']="Mysterious Red Crystal",
+  ['finishedBy']="神秘的红色水晶",
   ['level']=12,
   ['questLevel']='14',
   ['rr']=77,
@@ -26614,7 +26615,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="暗影牧师范蒂丝",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55',
   ['rr']=178,
@@ -26663,7 +26664,7 @@ QuestieHashMap = {
   ['name']="上古之神的仆从",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Damp Note",
+  ['startedBy']="潮湿的便笺",
   ['finishedBy']="耶努萨克雷",
   ['level']=22,
   ['questLevel']='22D',
@@ -26902,8 +26903,8 @@ QuestieHashMap = {
   ['name']="监视",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Old Lion Statue",
-  ['finishedBy']="An Empty Jar",
+  ['startedBy']="石狮子",
+  ['finishedBy']="空瓶子",
   ['level']=20,
   ['questLevel']='22+',
   ['rr']=77,
@@ -26934,7 +26935,7 @@ QuestieHashMap = {
   ['name']="通缉：辛迪加成员",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="WANTED",
+  ['startedBy']="通缉",
   ['finishedBy']="高级执行官达萨利亚",
   ['level']=17,
   ['questLevel']='22',
@@ -27111,8 +27112,8 @@ QuestieHashMap = {
   ['name']="搜寻雕像",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Sealed Barrel",
-  ['finishedBy']="Half-buried Barrel",
+  ['startedBy']="密封的桶",
+  ['finishedBy']="半埋的大桶",
   ['level']=20,
   ['questLevel']='25',
   ['rr']=77,
@@ -27460,7 +27461,7 @@ QuestieHashMap = {
   ['name']="阿卡纳护腿",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Malyfous's Catalogue",
+  ['startedBy']="玛雷弗斯的目录",
   ['finishedBy']="玛雷弗斯·暗锤",
   ['level']=57,
   ['questLevel']='62+',
@@ -27665,7 +27666,7 @@ QuestieHashMap = {
   ['name']="毒液瓶",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Venom Bottle",
+  ['startedBy']="毒液瓶",
   ['finishedBy']="药剂师林度恩",
   ['level']=40,
   ['questLevel']='43',
@@ -27776,7 +27777,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="濒死的考古学家",
-  ['finishedBy']="Altar of Suntara",
+  ['finishedBy']="苏塔拉祭坛",
   ['level']=40,
   ['questLevel']='52+',
   ['rr']=77,
@@ -27786,7 +27787,7 @@ QuestieHashMap = {
   ['name']="击败纳克罗什",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Dragonmaw Catapult",
+  ['startedBy']="龙喉投石车",
   ['finishedBy']="斯托菲队长",
   ['level']=23,
   ['questLevel']='32+',
@@ -27920,7 +27921,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="高阶牧师玛多妮尔",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='53',
   ['rr']=77,
@@ -27976,7 +27977,7 @@ QuestieHashMap = {
   ['name']="通缉：奥图和法库雷斯特",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted Board",
+  ['startedBy']="通缉板",
   ['finishedBy']="尼艾丝队长",
   ['level']=30,
   ['questLevel']='40+',
@@ -28526,8 +28527,8 @@ QuestieHashMap = {
   ['name']="发芽的树叶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Sprouted Frond",
-  ['finishedBy']="Sprouted Frond",
+  ['startedBy']="发芽的树叶",
+  ['finishedBy']="发芽的树叶",
   ['level']=5,
   ['questLevel']='10',
   ['rq']=866040024
@@ -28788,8 +28789,8 @@ QuestieHashMap = {
   ['name']="奈兹里奥克",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Bubbling Cauldron",
-  ['finishedBy']="Bubbling Cauldron",
+  ['startedBy']="冒泡的大锅",
+  ['finishedBy']="冒泡的大锅",
   ['level']=30,
   ['questLevel']='40',
   ['rr']=178,
@@ -28846,7 +28847,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="加隆·石矛",
-  ['finishedBy']="Damaged Crate",
+  ['finishedBy']="破损的箱子",
   ['level']=53,
   ['questLevel']='59',
   ['rr']=77
@@ -28895,7 +28896,7 @@ QuestieHashMap = {
   ['name']="发光的水果",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Strange Fruited Plant",
+  ['startedBy']="奇怪的果树",
   ['finishedBy']="德纳兰",
   ['level']=6,
   ['questLevel']='10'
@@ -28996,8 +28997,8 @@ QuestieHashMap = {
   ['name']="条纹礼物盒",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Ticking Present",
-  ['finishedBy']="Ticking Present",
+  ['startedBy']="节日礼物",
+  ['finishedBy']="节日礼物",
   ['level']=40,
   ['questLevel']='60'
  },
@@ -29204,8 +29205,8 @@ QuestieHashMap = {
   ['name']="被锁起来的农夫",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Outhouse",
-  ['finishedBy']="Outhouse",
+  ['startedBy']="厕所",
+  ['finishedBy']="厕所",
   ['level']=52,
   ['questLevel']='60'
  },
@@ -29213,8 +29214,8 @@ QuestieHashMap = {
   ['name']="暮光之锤的营地",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Scrying Bowl",
-  ['finishedBy']="Twilight Tome",
+  ['startedBy']="占卜之碗",
+  ['finishedBy']="暮光之书",
   ['level']=14,
   ['questLevel']='17',
   ['rq']=890541336
@@ -29391,7 +29392,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="斯托菲队长",
-  ['finishedBy']="Dragonmaw Catapult",
+  ['finishedBy']="龙喉投石车",
   ['level']=23,
   ['questLevel']='31',
   ['rq']=829258016
@@ -29401,7 +29402,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="帕米拉·雷德帕斯",
-  ['finishedBy']="Joseph's Chest",
+  ['finishedBy']="约瑟夫的箱子",
   ['level']=50,
   ['questLevel']='60',
   ['rq']=2576639008
@@ -29411,7 +29412,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="加林·古瓦德",
-  ['finishedBy']="Galen's Strongbox",
+  ['finishedBy']="加林的保险箱",
   ['level']=30,
   ['questLevel']='38'
  },
@@ -29419,7 +29420,7 @@ QuestieHashMap = {
   ['name']="血色学者之帽",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Malyfous's Catalogue",
+  ['startedBy']="玛雷弗斯的目录",
   ['finishedBy']="玛雷弗斯·暗锤",
   ['level']=57,
   ['questLevel']='60+',
@@ -29472,8 +29473,8 @@ QuestieHashMap = {
   ['name']="防御水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Western Crystal Pylon",
-  ['finishedBy']="Western Crystal Pylon",
+  ['startedBy']="西部水晶塔",
+  ['finishedBy']="西部水晶塔",
   ['level']=48,
   ['questLevel']='53',
   ['rq']=177646728
@@ -29621,7 +29622,7 @@ QuestieHashMap = {
   ['name']="向马莱斯回报",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Unguarded Thunder Ale Barrel",
+  ['startedBy']="无人守卫的雷酒桶",
   ['finishedBy']="马莱斯·麦酒",
   ['level']=2,
   ['questLevel']='7',
@@ -29741,8 +29742,8 @@ QuestieHashMap = {
   ['name']="拉克摩尔的财宝！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Rackmore's Log",
-  ['finishedBy']="Rackmore's Chest",
+  ['startedBy']="拉克摩尔的日志",
+  ['finishedBy']="拉克摩尔的箱子",
   ['level']=32,
   ['questLevel']='36'
  },
@@ -29782,8 +29783,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=77
@@ -30075,7 +30076,7 @@ QuestieHashMap = {
   ['name']="被斩下的头颅",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Loose Dirt",
+  ['startedBy']="松软的泥土",
   ['finishedBy']="纳泽尔·血矛",
   ['level']=30,
   ['questLevel']='35',
@@ -30127,7 +30128,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="塞欧克瑞图斯",
-  ['finishedBy']="Old Lion Statue",
+  ['finishedBy']="石狮子",
   ['level']=20,
   ['questLevel']='21',
   ['rr']=77
@@ -30260,7 +30261,7 @@ QuestieHashMap = {
   ['name']="玛尔格的嘱托",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Bubbling Cauldron",
+  ['startedBy']="冒泡的大锅",
   ['finishedBy']="纳泽尔·血矛",
   ['level']=35,
   ['questLevel']='40',
@@ -30479,7 +30480,7 @@ QuestieHashMap = {
   ['name']="返回亡灵壁垒",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="暗影牧师范蒂丝",
   ['level']=50,
   ['questLevel']='53',
@@ -30758,8 +30759,8 @@ QuestieHashMap = {
   ['name']="杉德尔船长的宝藏",
   ['startedType']="item",
   ['finishedType']="object",
-  ['startedBy']="Captain Sander's Treasure Map",
-  ['finishedBy']="Captain's Footlocker",
+  ['startedBy']="杉德尔船长的藏宝图",
+  ['finishedBy']="船长的手提箱",
   ['level']=10,
   ['questLevel']='16',
   ['rr']=77
@@ -31016,7 +31017,7 @@ QuestieHashMap = {
   ['name']="职位空缺：恶齿村卫兵队长",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Call to Arms!",
+  ['startedBy']="作战公告！",
   ['finishedBy']="断齿族长",
   ['level']=46,
   ['questLevel']='51+',
@@ -31344,8 +31345,8 @@ QuestieHashMap = {
   ['name']="继续搜寻",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Damaged Crate",
-  ['finishedBy']="Sealed Barrel",
+  ['startedBy']="破损的箱子",
+  ['finishedBy']="密封的桶",
   ['level']=20,
   ['questLevel']='25',
   ['rr']=77,
@@ -31716,7 +31717,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Mysterious Deadmines Chest",
+  ['finishedBy']="死亡矿井货物箱",
   ['level']=58,
   ['questLevel']='60'
  },
@@ -31765,7 +31766,7 @@ QuestieHashMap = {
   ['name']="向安努回复",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Twilight Tome",
+  ['startedBy']="暮光之书",
   ['finishedBy']="安努",
   ['level']=13,
   ['questLevel']='17',
@@ -31807,7 +31808,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="辛德拉古灵",
-  ['finishedBy']="Treasure of the Shen'dralar",
+  ['finishedBy']="辛德拉的宝藏",
   ['level']=57,
   ['questLevel']='60D',
   ['rr']=178,
@@ -31898,8 +31899,8 @@ QuestieHashMap = {
   ['name']="被激怒的枭兽",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Damaged Crate",
-  ['finishedBy']="Jaron's Wagon",
+  ['startedBy']="破损的箱子",
+  ['finishedBy']="加隆的马车",
   ['level']=53,
   ['questLevel']='59',
   ['rr']=77,
@@ -31910,7 +31911,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="哈杜肯·迅蹄",
-  ['finishedBy']="Woodpaw Battle Map",
+  ['finishedBy']="木爪作战地图",
   ['level']=40,
   ['questLevel']='43',
   ['rr']=178,
@@ -32014,7 +32015,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Mysterious Eastvale Haystack",
+  ['finishedBy']="神秘的东谷干草堆",
   ['level']=58,
   ['questLevel']='60'
  },
@@ -32055,7 +32056,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="勘察员基恩萨·铁环",
-  ['finishedBy']="Battered Dwarven Skeleton",
+  ['finishedBy']="残破的矮人骸骨",
   ['level']=30,
   ['questLevel']='38',
   ['rr']=77,
@@ -32159,7 +32160,7 @@ QuestieHashMap = {
   ['name']="林克的剑",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="A Conspicuous Gravestone",
+  ['startedBy']="明显的墓碑",
   ['finishedBy']="林克",
   ['level']=52,
   ['questLevel']='52',
@@ -32694,7 +32695,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="暗影牧师范蒂丝",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='58',
   ['rr']=178,
@@ -32872,7 +32873,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="高级执行官哈德瑞克",
-  ['finishedBy']="Corpse Laden Boat",
+  ['finishedBy']="运尸船",
   ['level']=10,
   ['questLevel']='16',
   ['rr']=178,
@@ -32904,7 +32905,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="珊蒂斯·羽月",
-  ['finishedBy']="Solarsal Gazebo",
+  ['finishedBy']="索兰萨尔掺望台",
   ['level']=40,
   ['questLevel']='43',
   ['rr']=77
@@ -32924,8 +32925,8 @@ QuestieHashMap = {
   ['name']="破碎的陷阱",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Broken Trap",
-  ['finishedBy']="Broken Trap",
+  ['startedBy']="损坏的陷阱",
+  ['finishedBy']="损坏的陷阱",
   ['level']=60,
   ['questLevel']='60D'
  },
@@ -33038,7 +33039,7 @@ QuestieHashMap = {
   ['name']="帕瓦尔·雷瑟上尉",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Theramore Guard Badge",
+  ['startedBy']="塞拉摩卫兵徽章",
   ['finishedBy']="克罗格",
   ['level']=30,
   ['questLevel']='37',
@@ -33241,7 +33242,7 @@ QuestieHashMap = {
   ['name']="船运时刻表",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Ship Schedule",
+  ['startedBy']="船运时刻表",
   ['finishedBy']="安全主管吉罗姆·比格维兹",
   ['level']=40,
   ['questLevel']='45'
@@ -33260,8 +33261,8 @@ QuestieHashMap = {
   ['name']="再次使用超级清洁器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=178,
@@ -33461,8 +33462,8 @@ QuestieHashMap = {
   ['name']="杉德尔船长的宝藏",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Old Jug",
-  ['finishedBy']="Locked Chest",
+  ['startedBy']="旧罐子",
+  ['finishedBy']="锁住的箱子",
   ['level']=10,
   ['questLevel']='16',
   ['rr']=77,
@@ -34000,7 +34001,7 @@ QuestieHashMap = {
   ['name']="纳特的卷尺",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Battered Tackle Box",
+  ['startedBy']="破碎的工具箱",
   ['finishedBy']="纳特·帕格",
   ['level']=58,
   ['questLevel']='60R'
@@ -34213,7 +34214,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="圣骑士的遗体",
-  ['finishedBy']="Talvash's Scrying Bowl",
+  ['finishedBy']="塔瓦斯德的占卜之碗",
   ['level']=40,
   ['questLevel']='43D',
   ['rr']=77,
@@ -34357,8 +34358,8 @@ QuestieHashMap = {
   ['name']="再次使用超级清洁器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=77,
@@ -34439,7 +34440,7 @@ QuestieHashMap = {
   ['name']="修复项链",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Talvash's Scrying Bowl",
+  ['startedBy']="塔瓦斯德的占卜之碗",
   ['finishedBy']="塔瓦斯德·基瑟尔",
   ['level']=38,
   ['questLevel']='44D',
@@ -34450,7 +34451,7 @@ QuestieHashMap = {
   ['name']="黑石之王",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Head of Nefarian",
+  ['startedBy']="奈法利安的头颅",
   ['finishedBy']="伯瓦尔·弗塔根公爵",
   ['level']=60,
   ['questLevel']='60',
@@ -34501,8 +34502,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=77
@@ -34629,7 +34630,7 @@ QuestieHashMap = {
   ['name']="神秘的粘液",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Deadwood Cauldron",
+  ['startedBy']="死木蒸锅",
   ['finishedBy']="多诺瓦·雪山",
   ['level']=52,
   ['questLevel']='56',
@@ -34692,7 +34693,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="德纳兰",
-  ['finishedBy']="Denalan's Planter",
+  ['finishedBy']="德纳兰的培养皿",
   ['level']=9,
   ['questLevel']='12',
   ['rr']=77,
@@ -34712,7 +34713,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="泰尔夫·祖拉姆",
-  ['finishedBy']="Brazier of the Dormant Flame",
+  ['finishedBy']="眠炎火盆",
   ['level']=10,
   ['questLevel']='13',
   ['rr']=178,
@@ -34949,7 +34950,7 @@ QuestieHashMap = {
   ['name']="什么什么平衡器",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Control Console",
+  ['startedBy']="控制台",
   ['finishedBy']="斯布特瓦夫",
   ['level']=11,
   ['questLevel']='16',
@@ -35289,7 +35290,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="多伦上尉",
-  ['finishedBy']="Bookie Herod's Records",
+  ['finishedBy']="书呆子赫罗德的档案",
   ['level']=30,
   ['questLevel']='35',
   ['rr']=77,
@@ -35413,7 +35414,7 @@ QuestieHashMap = {
   ['name']="占卜眼镜？没问题！",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Inconspicuous Crate",
+  ['startedBy']="不起眼的箱子",
   ['finishedBy']="纳瑞安",
   ['level']=60,
   ['questLevel']='60R',
@@ -35443,7 +35444,7 @@ QuestieHashMap = {
   ['name']="无人知晓的秘密",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="A Small Pack",
+  ['startedBy']="小背包",
   ['finishedBy']="林克",
   ['level']=48,
   ['questLevel']='52',
@@ -35512,7 +35513,7 @@ QuestieHashMap = {
   ['name']="驾驶员的复仇",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="A Dwarven Corpse",
+  ['startedBy']="矮人的尸体",
   ['finishedBy']="驾驶员塞克·锤足",
   ['level']=8,
   ['questLevel']='11',
@@ -35695,7 +35696,7 @@ QuestieHashMap = {
   ['name']="莱恩的净化",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Hidden Shrine",
+  ['startedBy']="隐蔽的神龛",
   ['finishedBy']="莎尔蒂恩",
   ['level']=24,
   ['questLevel']='28',
@@ -35802,7 +35803,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Mysterious Tree Stump",
+  ['finishedBy']="神秘的树桩",
   ['level']=58,
   ['questLevel']='60'
  },
@@ -36415,7 +36416,7 @@ QuestieHashMap = {
   ['name']="瓦拉里尔的搜寻",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Malem Chest",
+  ['startedBy']="玛雷姆的箱子",
   ['finishedBy']="瓦拉里尔·屠魔者",
   ['level']=30,
   ['questLevel']='33',
@@ -36468,7 +36469,7 @@ QuestieHashMap = {
   ['name']="被破坏的货车",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Sealed Supply Crate",
+  ['startedBy']="密封的补给箱",
   ['finishedBy']="摩林·云行者",
   ['level']=5,
   ['questLevel']='8',
@@ -36479,7 +36480,7 @@ QuestieHashMap = {
   ['name']="叛徒",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Kaldorei Tome of Summoning",
+  ['startedBy']="卡多雷召唤宝典",
   ['finishedBy']="阿格图·血拳",
   ['level']=49,
   ['questLevel']='56',
@@ -36539,7 +36540,7 @@ QuestieHashMap = {
   ['name']="血帆海盗",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Bloodsail Correspondence",
+  ['startedBy']="血帆海盗的信件",
   ['finishedBy']="大副克拉兹",
   ['level']=37,
   ['questLevel']='41',
@@ -36610,7 +36611,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="纳拉·蛮鬃",
-  ['finishedBy']="Uldum Pedestal",
+  ['finishedBy']="奥丹姆石座",
   ['level']=45,
   ['questLevel']='50+',
   ['rr']=178,
@@ -36925,7 +36926,7 @@ QuestieHashMap = {
   ['name']="卡尼托的背包",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Karnitol's Chest",
+  ['startedBy']="卡尼托的箱子",
   ['finishedBy']="克雷迪格·安戈尔",
   ['level']=33,
   ['questLevel']='39',
@@ -36936,7 +36937,7 @@ QuestieHashMap = {
   ['name']="守护秘密",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Blue-feathered Necklace",
+  ['startedBy']="蓝羽项链",
   ['finishedBy']="特鲁尔·法贝恩",
   ['level']=54,
   ['questLevel']='59',
@@ -37093,8 +37094,8 @@ QuestieHashMap = {
   ['name']="达尔松之泪的瘟疫之锅",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Scourge Cauldron",
-  ['finishedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55'
  },
@@ -37145,7 +37146,7 @@ QuestieHashMap = {
   ['name']="回复托马斯",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Rolf's corpse",
+  ['startedBy']="罗尔夫的尸体",
   ['finishedBy']="卫兵托马斯",
   ['level']=7,
   ['questLevel']='10',
@@ -37166,7 +37167,7 @@ QuestieHashMap = {
   ['name']="通缉：巴隆·朗绍尔",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="WANTED",
+  ['startedBy']="通缉",
   ['finishedBy']="加兹鲁维",
   ['level']=11,
   ['questLevel']='16'
@@ -37352,7 +37353,7 @@ QuestieHashMap = {
   ['name']="一线希望",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Crumpled Map",
+  ['startedBy']="弄皱的地图",
   ['finishedBy']="勘察员雷杜尔",
   ['level']=35,
   ['questLevel']='35',
@@ -37620,7 +37621,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="暗影牧师奥利斯特",
-  ['finishedBy']="Dalaran Crate",
+  ['finishedBy']="达拉然板条箱",
   ['level']=10,
   ['questLevel']='14',
   ['rr']=178
@@ -37630,7 +37631,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="诺甘农的石卫兵",
-  ['finishedBy']="Uldum Pedestal",
+  ['finishedBy']="奥丹姆石座",
   ['level']=45,
   ['questLevel']='50+'
  },
@@ -37812,7 +37813,7 @@ QuestieHashMap = {
   ['name']="地图与符记",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Dalaran Crate",
+  ['startedBy']="达拉然板条箱",
   ['finishedBy']="暗影牧师奥利斯特",
   ['level']=10,
   ['questLevel']='14',
@@ -38105,7 +38106,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="卡尔·波兰",
-  ['finishedBy']="Damaged Crate",
+  ['finishedBy']="破损的箱子",
   ['level']=20,
   ['questLevel']='25',
   ['rr']=77,
@@ -38316,8 +38317,8 @@ QuestieHashMap = {
   ['name']="隐藏的钥匙",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Bookie Herod's Records",
-  ['finishedBy']="Bookie Herod's Strongbox",
+  ['startedBy']="书呆子赫罗德的档案",
+  ['finishedBy']="书呆子赫罗德的保险箱",
   ['level']=30,
   ['questLevel']='37',
   ['rr']=77,
@@ -38339,7 +38340,7 @@ QuestieHashMap = {
   ['name']="返回亡灵壁垒",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="暗影牧师范蒂丝",
   ['level']=50,
   ['questLevel']='55',
@@ -38514,7 +38515,7 @@ QuestieHashMap = {
   ['name']="贝瑟莱斯",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted Poster: Besseleth",
+  ['startedBy']="通缉：贝瑟莱斯",
   ['finishedBy']="马格兰",
   ['level']=14,
   ['questLevel']='21+',
@@ -38605,8 +38606,8 @@ QuestieHashMap = {
   ['name']="轻轻摇晃过的礼品",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Gently Shaken Gift",
-  ['finishedBy']="Gently Shaken Gift",
+  ['startedBy']="精美的礼品",
+  ['finishedBy']="精美的礼品",
   ['level']=1,
   ['questLevel']='60'
  },
@@ -38676,7 +38677,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="The Sparklematic 5200",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=28,
   ['questLevel']='34D'
  },
@@ -38715,7 +38716,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Shards of Myzrael",
+  ['finishedBy']="密斯莱尔水晶碎块",
   ['level']=30,
   ['questLevel']='35'
  },
@@ -38724,7 +38725,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="高阶牧师玛多妮尔",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55',
   ['rr']=77,
@@ -38982,7 +38983,7 @@ QuestieHashMap = {
   ['name']="遗失的报告",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Loose Dirt",
+  ['startedBy']="松软的泥土",
   ['finishedBy']="纳泽尔·血矛",
   ['level']=30,
   ['questLevel']='35',
@@ -39011,8 +39012,8 @@ QuestieHashMap = {
   ['name']="砰！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Scarab Gong",
-  ['finishedBy']="The Scarab Gong",
+  ['startedBy']="甲虫之锣",
+  ['finishedBy']="甲虫之锣",
   ['level']=60,
   ['questLevel']='60',
   ['rq']=1891404552
@@ -39240,7 +39241,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="普兹克",
-  ['finishedBy']="Rizzle's Unguarded Plans",
+  ['finishedBy']="瑞兹尔的计划",
   ['level']=38,
   ['questLevel']='41',
   ['rq']=1353914168
@@ -39318,7 +39319,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Essence Font",
+  ['finishedBy']="精华之泉",
   ['level']=48,
   ['questLevel']='55D'
  },
@@ -39390,7 +39391,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="安努",
-  ['finishedBy']="Scrying Bowl",
+  ['finishedBy']="占卜之碗",
   ['level']=14,
   ['questLevel']='17',
   ['rq']=4023064552
@@ -40242,7 +40243,7 @@ QuestieHashMap = {
   ['name']="悬赏：蛆眼",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted!",
+  ['startedBy']="通缉！",
   ['finishedBy']="执行官塞加德",
   ['level']=6,
   ['questLevel']='10',
@@ -40356,8 +40357,8 @@ QuestieHashMap = {
   ['name']="白金圆盘",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Discs of Norgannon",
-  ['finishedBy']="The Discs of Norgannon",
+  ['startedBy']="诺甘农圆盘",
+  ['finishedBy']="诺甘农圆盘",
   ['level']=40,
   ['questLevel']='47D'
  },
@@ -41288,7 +41289,7 @@ QuestieHashMap = {
   ['name']="迟到总比不到好",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Janice's Parcel",
+  ['startedBy']="詹妮丝的包裹",
   ['finishedBy']="皇家管理人巴哈乌斯",
   ['level']=50,
   ['questLevel']='52',
@@ -41362,7 +41363,7 @@ QuestieHashMap = {
   ['name']="斯塔文的传说",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Old Footlocker",
+  ['startedBy']="旧提箱",
   ['finishedBy']="书记员达尔塔",
   ['level']=22,
   ['questLevel']='28',
@@ -41463,7 +41464,7 @@ QuestieHashMap = {
   ['name']="水之召唤",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Brazier of Everfount",
+  ['startedBy']="火盆",
   ['finishedBy']="水之魂",
   ['level']=20,
   ['questLevel']='23',
@@ -41518,8 +41519,8 @@ QuestieHashMap = {
   ['name']="科尔戈的黄金",
   ['startedType']="item",
   ['finishedType']="object",
-  ['startedBy']="Cuergo's Treasure Map",
-  ['finishedBy']="Pirate's Treasure!",
+  ['startedBy']="科尔戈的藏宝图",
+  ['finishedBy']="海盗的宝藏!",
   ['level']=42,
   ['questLevel']='45'
  },
@@ -41551,7 +41552,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="玛尔冯·瑞文斯克",
-  ['finishedBy']="Altar of Hakkar",
+  ['finishedBy']="哈卡祭坛",
   ['level']=46,
   ['questLevel']='51D',
   ['rq']=3543636368
@@ -41775,7 +41776,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="主工程师辛德维尔七世",
-  ['finishedBy']="Suspicious Barrel",
+  ['finishedBy']="可疑的桶",
   ['level']=16,
   ['questLevel']='18',
   ['rr']=77
@@ -41922,7 +41923,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="乌莫尔特",
-  ['finishedBy']="Holly Preserver",
+  ['finishedBy']="冬青树储藏器",
   ['level']=40,
   ['questLevel']='1'
  },
@@ -42260,7 +42261,7 @@ QuestieHashMap = {
   ['name']="莫甘斯",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Old Lion Statue",
+  ['startedBy']="石狮子",
   ['finishedBy']="塞欧克瑞图斯",
   ['level']=20,
   ['questLevel']='27+',
@@ -42582,7 +42583,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="斯布特瓦夫",
-  ['finishedBy']="Control Console",
+  ['finishedBy']="控制台",
   ['level']=10,
   ['questLevel']='14'
  },
@@ -42711,7 +42712,7 @@ QuestieHashMap = {
   ['name']="斯温的营地",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Mound of loose dirt",
+  ['startedBy']="一堆松软的泥土",
   ['finishedBy']="斯温·约根",
   ['level']=20,
   ['questLevel']='25',
@@ -42870,8 +42871,8 @@ QuestieHashMap = {
   ['name']="打开钥匙之石",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Stone of Inner Binding",
-  ['finishedBy']="Keystone",
+  ['startedBy']="内禁锢之石",
+  ['finishedBy']="钥匙之石",
   ['level']=30,
   ['questLevel']='42+',
   ['rq']=2273057776
@@ -43408,8 +43409,8 @@ QuestieHashMap = {
   ['name']="超级测蛋器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Egg-O-Matic",
-  ['finishedBy']="Egg-O-Matic",
+  ['startedBy']="测蛋器",
+  ['finishedBy']="测蛋器",
   ['level']=42,
   ['questLevel']='47',
   ['rq']=3247385096
@@ -43726,7 +43727,7 @@ QuestieHashMap = {
   ['name']="作战计划",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Woodpaw Battle Map",
+  ['startedBy']="木爪作战地图",
   ['finishedBy']="哈杜肯·迅蹄",
   ['level']=38,
   ['questLevel']='43',
@@ -43944,8 +43945,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=178,
@@ -43974,8 +43975,8 @@ QuestieHashMap = {
   ['name']="尖刺水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Eastern Crystal Pylon",
-  ['finishedBy']="Eastern Crystal Pylon",
+  ['startedBy']="东部水晶塔",
+  ['finishedBy']="东部水晶塔",
   ['level']=53,
   ['questLevel']='53',
   ['rq']=177646728
@@ -44037,8 +44038,8 @@ QuestieHashMap = {
   ['name']="科泰罗的谜题",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="A Soggy Scroll",
-  ['finishedBy']="Musty Scroll",
+  ['startedBy']="浸水的卷轴",
+  ['finishedBy']="发霉的卷轴",
   ['level']=21,
   ['questLevel']='43',
   ['rq']=2798799808
@@ -44238,7 +44239,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="拉格·加玛森",
-  ['finishedBy']="Ebenezer Rustlocke's Corpse",
+  ['finishedBy']="伊贝尼瑟的尸体",
   ['level']=28,
   ['questLevel']='31+'
  },
@@ -44255,8 +44256,8 @@ QuestieHashMap = {
   ['name']="什么什么平衡器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Control Console",
-  ['finishedBy']="Control Console",
+  ['startedBy']="控制台",
+  ['finishedBy']="控制台",
   ['level']=11,
   ['questLevel']='14',
   ['rq']=201768176
@@ -44493,7 +44494,7 @@ QuestieHashMap = {
   ['name']="通缉：死亡弯钩",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted Poster: Deathclasp",
+  ['startedBy']="通缉布告：死亡弯钩",
   ['finishedBy']="维斯·库鲁兹",
   ['level']=54,
   ['questLevel']='59+'
@@ -44562,7 +44563,7 @@ QuestieHashMap = {
   ['name']="收货人",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Gold Pickup Schedule",
+  ['startedBy']="采金日程表",
   ['finishedBy']="治安官杜汉",
   ['level']=7,
   ['questLevel']='10',
@@ -44788,7 +44789,7 @@ QuestieHashMap = {
   ['name']="白金圆盘",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="The Discs of Norgannon",
+  ['startedBy']="诺甘农圆盘",
   ['finishedBy']="资深探险家麦格拉斯",
   ['level']=40,
   ['questLevel']='47',
@@ -44871,7 +44872,7 @@ QuestieHashMap = {
   ['name']="返回冰风岗",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="高阶牧师玛多妮尔",
   ['level']=50,
   ['questLevel']='58',
@@ -44936,7 +44937,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="学徒塞万德",
-  ['finishedBy']="Helcular's Grave",
+  ['finishedBy']="赫尔库拉的墓地",
   ['level']=29,
   ['questLevel']='33',
   ['rr']=178,
@@ -45175,7 +45176,7 @@ QuestieHashMap = {
   ['name']="戒指归来",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
   ['finishedBy']="塔瓦斯德·基瑟尔",
   ['level']=28,
   ['questLevel']='34D',
@@ -45609,7 +45610,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="布莱林·火拳",
-  ['finishedBy']="Talon Den Hoard",
+  ['finishedBy']="猛禽洞穴储藏室",
   ['level']=25,
   ['questLevel']='29+',
   ['rr']=178,
@@ -45619,8 +45620,8 @@ QuestieHashMap = {
   ['name']="恢复水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Northern Crystal Pylon",
-  ['finishedBy']="Northern Crystal Pylon",
+  ['startedBy']="北部水晶塔",
+  ['finishedBy']="北部水晶塔",
   ['level']=53,
   ['questLevel']='53',
   ['rq']=177646728
@@ -45630,7 +45631,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="纳萨尼尔·杜马",
-  ['finishedBy']="Termite Barrel",
+  ['finishedBy']="白蚁桶",
   ['level']=48,
   ['questLevel']='55',
   ['rr']=77,
@@ -45783,7 +45784,7 @@ QuestieHashMap = {
   ['name']="可疑的蹄印",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Suspicious Hoofprint",
+  ['startedBy']="可疑的蹄印",
   ['finishedBy']="克罗格",
   ['level']=30,
   ['questLevel']='35',
@@ -46015,8 +46016,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rq']=584575437
@@ -46108,7 +46109,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="杜里奥斯·裂石",
-  ['finishedBy']="Singed Letter",
+  ['finishedBy']="烧焦的信件",
   ['level']=40,
   ['questLevel']='48',
   ['rr']=77
@@ -46130,7 +46131,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="Shallow Grave",
+  ['finishedBy']="浅墓穴",
   ['level']=12,
   ['questLevel']='17',
   ['rr']=178
@@ -46266,7 +46267,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="守夜人拉迪摩尔",
-  ['finishedBy']="A Weathered Grave",
+  ['finishedBy']="破旧的坟墓",
   ['level']=28,
   ['questLevel']='35',
   ['rr']=77,
@@ -46318,7 +46319,7 @@ QuestieHashMap = {
   ['name']="密斯莱尔的盟友",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Keystone",
+  ['startedBy']="钥匙之石",
   ['finishedBy']="葛利·硬骨",
   ['level']=30,
   ['questLevel']='40',
@@ -46350,7 +46351,7 @@ QuestieHashMap = {
   ['name']="给比索的魔杖",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Dusty Shelf",
+  ['startedBy']="布满灰尘的书架",
   ['finishedBy']="比索·埃斯沙德",
   ['level']=12,
   ['questLevel']='18',
@@ -46381,7 +46382,7 @@ QuestieHashMap = {
   ['name']="迟到总比不到好",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Janice's Parcel",
+  ['startedBy']="詹妮丝的包裹",
   ['finishedBy']="皇家代理人巴瑟罗尔",
   ['level']=50,
   ['questLevel']='52',
@@ -46473,7 +46474,7 @@ QuestieHashMap = {
   ['name']="白金圆盘",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="The Discs of Norgannon",
+  ['startedBy']="诺甘农圆盘",
   ['finishedBy']="圣者图希克",
   ['level']=40,
   ['questLevel']='47D',
@@ -46582,7 +46583,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="阿格图·血拳",
-  ['finishedBy']="Kaldorei Tome of Summoning",
+  ['finishedBy']="卡多雷召唤宝典",
   ['level']=45,
   ['questLevel']='53',
   ['rq']=3041868208
@@ -46878,7 +46879,7 @@ QuestieHashMap = {
   ['name']="托卡拉尔",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Trollbane's Tomb",
+  ['startedBy']="托尔贝恩的墓室",
   ['finishedBy']="森古",
   ['level']=32,
   ['questLevel']='42+',
@@ -47318,7 +47319,7 @@ QuestieHashMap = {
   ['name']="火焰的召唤",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Brazier of the Dormant Flame",
+  ['startedBy']="眠炎火盆",
   ['finishedBy']="卡纳尔·菲斯",
   ['level']=10,
   ['questLevel']='13',
@@ -47612,7 +47613,7 @@ QuestieHashMap = {
   ['name']="通缉：玛雷兹·考尔",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted Board",
+  ['startedBy']="通缉板",
   ['finishedBy']="尼艾丝队长",
   ['level']=30,
   ['questLevel']='39+',
@@ -47692,7 +47693,7 @@ QuestieHashMap = {
   ['name']="水坝危机",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Explosive Charge",
+  ['startedBy']="爆炸品",
   ['finishedBy']="主工程师辛德维尔七世",
   ['level']=16,
   ['questLevel']='20',
@@ -48022,7 +48023,7 @@ QuestieHashMap = {
   ['name']="兽人的报告",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Loose Dirt",
+  ['startedBy']="松软的泥土",
   ['finishedBy']="塞拉摩海军上尉",
   ['level']=30,
   ['questLevel']='35',
@@ -48088,7 +48089,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="马莱斯·麦酒",
-  ['finishedBy']="Unguarded Thunder Ale Barrel",
+  ['finishedBy']="无人守卫的雷酒桶",
   ['level']=2,
   ['questLevel']='6',
   ['rr']=77
@@ -48390,7 +48391,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="迷失者塞尔杜林",
-  ['finishedBy']="Shards of Myzrael",
+  ['finishedBy']="密斯莱尔水晶碎块",
   ['level']=30,
   ['questLevel']='50+',
   ['rq']=1495886352
@@ -48419,8 +48420,8 @@ QuestieHashMap = {
   ['name']="流放精华",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Bath'rah's Cauldron",
-  ['finishedBy']="Bath'rah's Cauldron",
+  ['startedBy']="巴斯拉的大锅炉",
+  ['finishedBy']="巴斯拉的大锅炉",
   ['level']=30,
   ['questLevel']='37',
   ['rc']=1,
@@ -48575,8 +48576,8 @@ QuestieHashMap = {
   ['name']="打开箱子…",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Hoard of the Black Dragonflight",
-  ['finishedBy']="Hoard of the Black Dragonflight",
+  ['startedBy']="黑龙的财宝",
+  ['finishedBy']="黑龙的财宝",
   ['level']=40,
   ['questLevel']='50',
   ['rq']=151727432
@@ -48614,8 +48615,8 @@ QuestieHashMap = {
   ['name']="无人知晓的秘密",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="A Wrecked Raft",
-  ['finishedBy']="A Small Pack",
+  ['startedBy']="破碎的木筏",
+  ['finishedBy']="小背包",
   ['level']=48,
   ['questLevel']='52'
  },
@@ -48799,8 +48800,8 @@ QuestieHashMap = {
   ['name']="潜伏的阴影",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Lillith's Dinner Table",
-  ['finishedBy']="Lillith's Dinner Table",
+  ['startedBy']="莉莉丝的餐桌",
+  ['finishedBy']="莉莉丝的餐桌",
   ['level']=5,
   ['questLevel']='10',
   ['rr']=178,
@@ -48963,7 +48964,7 @@ QuestieHashMap = {
   ['name']="塔纳利斯的账本",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Wooden Outhouse",
+  ['startedBy']="木制厕所",
   ['finishedBy']="克林科·古德斯迪尔",
   ['level']=43,
   ['questLevel']='46',
@@ -49791,7 +49792,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="卫兵托马斯",
-  ['finishedBy']="A half-eaten body",
+  ['finishedBy']="被吃掉一半的尸体",
   ['level']=7,
   ['questLevel']='10',
   ['rr']=77,
@@ -49802,7 +49803,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="海达克西斯公爵",
-  ['finishedBy']="Hydraxis' Coffer",
+  ['finishedBy']="海达克西斯的箱子",
   ['level']=60,
   ['questLevel']='60',
   ['rq']=89951464
@@ -49925,8 +49926,8 @@ QuestieHashMap = {
   ['name']="破甲水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Western Crystal Pylon",
-  ['finishedBy']="Western Crystal Pylon",
+  ['startedBy']="西部水晶塔",
+  ['finishedBy']="西部水晶塔",
   ['level']=53,
   ['questLevel']='53',
   ['rq']=177646728
@@ -50191,8 +50192,8 @@ QuestieHashMap = {
   ['name']="自由的钥匙",
   ['startedType']="item",
   ['finishedType']="monster",
-  ['startedBy']="Grimesilt Outhouse Key",
-  ['finishedBy']="Wooden Outhouse",
+  ['startedBy']="格里塞特厕所钥匙",
+  ['finishedBy']="木制厕所",
   ['level']=43,
   ['questLevel']='47'
  },
@@ -50388,7 +50389,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="管理员弗索姆",
-  ['finishedBy']="Sealed Crate",
+  ['finishedBy']="密封的箱子",
   ['level']=22,
   ['questLevel']='28',
   ['rr']=77,
@@ -50526,7 +50527,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="大副克拉兹",
-  ['finishedBy']="Bloodsail Correspondence",
+  ['finishedBy']="血帆海盗的信件",
   ['level']=37,
   ['questLevel']='41'
  },
@@ -50739,7 +50740,7 @@ QuestieHashMap = {
   ['name']="返回冰风岗",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
   ['finishedBy']="高阶牧师玛多妮尔",
   ['level']=50,
   ['questLevel']='55',
@@ -50819,8 +50820,8 @@ QuestieHashMap = {
   ['name']="堕落检测 - 费伍德森林",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Testing Equipment",
-  ['finishedBy']="Testing Equipment",
+  ['startedBy']="测试仪器",
+  ['finishedBy']="测试仪器",
   ['level']=48,
   ['questLevel']='52',
   ['rr']=178,
@@ -50967,7 +50968,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="米克·莱文",
-  ['finishedBy']="Termite Barrel",
+  ['finishedBy']="白蚁桶",
   ['level']=49,
   ['questLevel']='55',
   ['rr']=178,
@@ -51145,7 +51146,7 @@ QuestieHashMap = {
   ['name']="往日的回忆",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Crystalline Tear",
+  ['startedBy']="水晶之泪",
   ['finishedBy']="安纳克罗斯",
   ['level']=60,
   ['questLevel']='60',
@@ -51196,7 +51197,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="莎尔蒂恩",
-  ['finishedBy']="Hidden Shrine",
+  ['finishedBy']="隐蔽的神龛",
   ['level']=18,
   ['questLevel']='28',
   ['rr']=77,
@@ -51555,7 +51556,7 @@ QuestieHashMap = {
   ['name']="线索",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Corpse Laden Boat",
+  ['startedBy']="运尸船",
   ['finishedBy']="高级执行官哈德瑞克",
   ['level']=10,
   ['questLevel']='16',
@@ -51747,7 +51748,7 @@ QuestieHashMap = {
   ['name']="船只的残骸",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wrecked Row Boat",
+  ['startedBy']="失事的独木舟",
   ['finishedBy']="基恩诺·火花",
   ['level']=40,
   ['questLevel']='44',
@@ -51890,7 +51891,7 @@ QuestieHashMap = {
   ['startedType']="item",
   ['finishedType']="object",
   ['startedBy']="unknown",
-  ['finishedBy']="A Soggy Scroll",
+  ['finishedBy']="浸水的卷轴",
   ['level']=21,
   ['questLevel']='43'
  },
@@ -52570,8 +52571,8 @@ QuestieHashMap = {
   ['name']="再次使用超级清洁器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=77,
@@ -52601,7 +52602,7 @@ QuestieHashMap = {
   ['name']="密斯莱尔的盟友",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Keystone",
+  ['startedBy']="钥匙之石",
   ['finishedBy']="萨鲁克",
   ['level']=30,
   ['questLevel']='40',
@@ -52764,7 +52765,7 @@ QuestieHashMap = {
   ['name']="黑色盾牌",
   ['startedType']="monster",
   ['finishedType']="monster",
-  ['startedBy']="Black Shield",
+  ['startedBy']="黑色盾牌",
   ['finishedBy']="克罗格",
   ['level']=30,
   ['questLevel']='35',
@@ -52823,8 +52824,8 @@ QuestieHashMap = {
   ['name']="罗尔夫的下落",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="A half-eaten body",
-  ['finishedBy']="Rolf's corpse",
+  ['startedBy']="被吃掉一半的尸体",
+  ['finishedBy']="罗尔夫的尸体",
   ['level']=7,
   ['questLevel']='10',
   ['rr']=77,
@@ -52854,7 +52855,7 @@ QuestieHashMap = {
   ['name']="分享知识",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Sandy Cookbook",
+  ['startedBy']="盖满沙子的烹饪书",
   ['finishedBy']="卡兰德拉斯",
   ['level']=55,
   ['questLevel']='57',
@@ -52866,8 +52867,8 @@ QuestieHashMap = {
   ['name']="爆炸水晶",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Northern Crystal Pylon",
-  ['finishedBy']="Northern Crystal Pylon",
+  ['startedBy']="北部水晶塔",
+  ['finishedBy']="北部水晶塔",
   ['level']=53,
   ['questLevel']='53',
   ['rq']=177646728
@@ -53052,7 +53053,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="高阶牧师玛多妮尔",
-  ['finishedBy']="Scourge Cauldron",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='58',
   ['rr']=77,
@@ -53095,8 +53096,8 @@ QuestieHashMap = {
   ['name']="哈米亚的请求",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Torn Scroll",
-  ['finishedBy']="Mound of Dirt",
+  ['startedBy']="破损的卷轴",
+  ['finishedBy']="一堆泥土",
   ['level']=54,
   ['questLevel']='60'
  },
@@ -53228,8 +53229,8 @@ QuestieHashMap = {
   ['name']="什么什么平衡器",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Control Console",
-  ['finishedBy']="Control Console",
+  ['startedBy']="控制台",
+  ['finishedBy']="控制台",
   ['level']=11,
   ['questLevel']='14',
   ['rq']=1335318568
@@ -53343,8 +53344,8 @@ QuestieHashMap = {
   ['name']="痛苦深渊",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Large Leather Backpacks",
-  ['finishedBy']="Zukk'ash Pod",
+  ['startedBy']="大皮包",
+  ['finishedBy']="祖卡什虫茧",
   ['level']=40,
   ['questLevel']='46',
   ['rr']=77,
@@ -53376,8 +53377,8 @@ QuestieHashMap = {
   ['name']="嚎哭鬼屋的瘟疫之锅",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Scourge Cauldron",
-  ['finishedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55'
  },
@@ -53536,7 +53537,7 @@ QuestieHashMap = {
   ['name']="被盗：鼓风机和望远镜",
   ['startedType']="object",
   ['finishedType']="monster",
-  ['startedBy']="Wanted/Missing/Lost & Found",
+  ['startedBy']="通缉/失踪/失物招领",
   ['finishedBy']="监工斯克兰格",
   ['level']=45,
   ['questLevel']='48'
@@ -53604,8 +53605,8 @@ QuestieHashMap = {
   ['name']="超级清洁器5200型！",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="The Sparklematic 5200",
-  ['finishedBy']="The Sparklematic 5200",
+  ['startedBy']="超级清洁器5200型",
+  ['finishedBy']="超级清洁器5200型",
   ['level']=25,
   ['questLevel']='30D',
   ['rr']=77
@@ -53656,7 +53657,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="水之先知伊斯伦",
-  ['finishedBy']="Brazier of Everfount",
+  ['finishedBy']="火盆",
   ['level']=20,
   ['questLevel']='23',
   ['rr']=178,
@@ -53739,8 +53740,8 @@ QuestieHashMap = {
   ['name']="盖罗恩农场的瘟疫之锅",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Scourge Cauldron",
-  ['finishedBy']="Scourge Cauldron",
+  ['startedBy']="瘟疫之锅",
+  ['finishedBy']="瘟疫之锅",
   ['level']=50,
   ['questLevel']='55'
  },
@@ -53833,8 +53834,8 @@ QuestieHashMap = {
   ['name']="密室",
   ['startedType']="object",
   ['finishedType']="object",
-  ['startedBy']="Shallow Grave",
-  ['finishedBy']="Dusty Shelf",
+  ['startedBy']="浅墓穴",
+  ['finishedBy']="布满灰尘的书架",
   ['level']=12,
   ['questLevel']='18',
   ['rr']=178,
@@ -53909,7 +53910,7 @@ QuestieHashMap = {
   ['startedType']="monster",
   ['finishedType']="object",
   ['startedBy']="瓦拉里尔·屠魔者",
-  ['finishedBy']="Malem Chest",
+  ['finishedBy']="玛雷姆的箱子",
   ['level']=30,
   ['questLevel']='33',
   ['rr']=77

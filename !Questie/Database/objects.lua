@@ -1,5 +1,5 @@
 QuestieObjects = {
-    ["Torn Scroll"] = {
+    ["破损的卷轴"] = {
         locations = {
             {
                 34.0,
@@ -32,7 +32,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Buzzbox 525"] = {
+    ["传声盒525号"] = {
         locations = {
             {
                 16.0,
@@ -254,7 +254,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Hidden Shrine"] = {
+    ["隐蔽的神龛"] = {
         locations = {
             {
                 2.0,
@@ -437,7 +437,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Henrig Lonebrow's Journal"] = {
+    ["亨里格·独眉的日记"] = {
         locations = {
             {
                 14.0,
@@ -525,7 +525,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["WANTED: Chok'sul"] = {
+    ["通缉令：卓克苏尔"] = {
         locations = {
             {
                 29.0,
@@ -587,9 +587,9 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Rusty Chest"] = {
+    ["生锈的箱子"] = {
         drop = {
-            ["Rotting Slime"] = 1,
+            ["腐烂的泥浆怪"] = 1,
         },
     },
     ["Big Wagon Full of Explosives retrieved"] = {
@@ -669,7 +669,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Termite Barrel"] = {
+    ["白蚁桶"] = {
         locations = {
             {
                 50.0,
@@ -724,7 +724,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Old Lion Statue"] = {
+    ["石狮子"] = {
         locations = {
             {
                 30.0,
@@ -880,7 +880,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["WANTED: Murkdeep!"] = {
+    ["通缉：莫克迪普!"] = {
         locations = {
             {
                 16.0,
@@ -891,7 +891,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Rolf's corpse"] = {
+    ["罗尔夫的尸体"] = {
         locations = {
             {
                 37.0,
@@ -902,7 +902,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["A half-eaten body"] = {
+    ["被吃掉一半的尸体"] = {
         locations = {
             {
                 37.0,
@@ -1116,7 +1116,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Wanted: Gath'Ilzogg"] = {
+    ["通缉：加塞尔佐格"] = {
         locations = {
             {
                 30.0,
@@ -1138,7 +1138,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Wanted: Lieutenant Fangore"] = {
+    ["通缉：范高雷中尉"] = {
         locations = {
             {
                 30.0,
@@ -1149,7 +1149,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Buzzbox 411"] = {
+    ["传声盒411号"] = {
         locations = {
             {
                 16.0,
@@ -1160,7 +1160,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Buzzbox 323"] = {
+    ["传声盒323号"] = {
         locations = {
             {
                 16.0,
@@ -1470,7 +1470,7 @@ QuestieObjects = {
         },
         locationCount = 1,
     },
-    ["Buzzbox 827"] = {
+    ["传声盒827号"] = {
         locations = {
             {
                 16.0,

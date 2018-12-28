@@ -1,6 +1,6 @@
 QuestieNewObjects = {
  [164662] = {
-  name = "Equipment Boxes",
+  name = "物资箱",
   locations = {
    {2,21,0.3287,0.646},
    {2,21,0.3301,0.6539},
@@ -25,7 +25,7 @@ QuestieNewObjects = {
   },
  },
  [176189] = {
-  name = "Skeletal Sea Turtle",
+  name = "海龟骨头",
   locations = {
    {1,3,0.3182,0.4631},
   },
@@ -37,13 +37,13 @@ QuestieNewObjects = {
   },
  },
  [92013] = {
-  name = "Tome of the Cabal",
+  name = "阴谋之书",
   locations = {
    {2,11,0.2778,0.7279},
   },
  },
  [11714] = {
-  name = "Scaber Stalk",
+  name = "粗柄蘑菇",
   locations = {
    {1,3,0.5513,0.3459},
    {1,3,0.5554,0.344},
@@ -69,7 +69,7 @@ QuestieNewObjects = {
   },
  },
  [176630] = {
-  name = "Keepsake of Remembrance",
+  name = "巫妖生前的遗物",
   locations = {
    {2,2,0.1791,0.6941},
   },
@@ -116,13 +116,13 @@ QuestieNewObjects = {
   },
  },
  [165554] = {
-  name = "Heart of the Mountain",
+  name = "山脉之心",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [102985] = {
-  name = "Balnir Snapdragons",
+  name = "巴尼尔金鱼草",
   locations = {
    {2,21,0.7758,0.6176},
    {2,21,0.7759,0.6201},
@@ -140,7 +140,7 @@ QuestieNewObjects = {
   },
  },
  [152620] = {
-  name = "Azsharite Formation",
+  name = "艾萨拉晶体",
   locations = {
    {1,2,0.518,0.8544},
    {1,2,0.6093,0.7976},
@@ -156,7 +156,7 @@ QuestieNewObjects = {
   },
  },
  [2068] = {
-  name = "Pupellyverbos Port",
+  name = "紫葡萄酒",
   locations = {
    {2,20,0.7508,0.8609},
    {2,20,0.7494,0.8842},
@@ -193,7 +193,7 @@ QuestieNewObjects = {
   },
  },
  [2714] = {
-  name = "Alterac Granite",
+  name = "奥特兰克花岗岩",
   locations = {
    {2,11,0.4516,0.2829},
    {2,11,0.4305,0.3291},
@@ -204,19 +204,19 @@ QuestieNewObjects = {
   },
  },
  [178204] = {
-  name = "Warsong Axe Shipment",
+  name = "一箱战歌之斧",
   locations = {
    {2,18,0.2643,0.733},
   },
  },
  [103664] = {
-  name = "Rituals of Power",
+  name = "能量仪祭",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [20727] = {
-  name = "Gizmorium Shipping Crate",
+  name = "基兹莫瑞货箱",
   locations = {
    {1,7,0.5407,0.5649},
   },
@@ -228,7 +228,7 @@ QuestieNewObjects = {
   },
  },
  [2912] = {
-  name = "Ambercorn",
+  name = "琥珀颗粒",
   locations = {
    {1,11,0.623,0.5611},
    {1,11,0.3558,0.4337},
@@ -283,7 +283,7 @@ QuestieNewObjects = {
   },
  },
  [148506] = {
-  name = "Twilight Artifact",
+  name = "暮光神器",
   locations = {
    {2,15,0.2914,0.2587},
   },
@@ -295,7 +295,7 @@ QuestieNewObjects = {
   },
  },
  [2907] = {
-  name = "Water Pitcher",
+  name = "水罐",
   locations = {
    {1,11,0.5035,0.8158},
    {1,11,0.5035,0.8137},
@@ -310,13 +310,13 @@ QuestieNewObjects = {
   },
  },
  [57] = {
-  name = "Moon Over the Vale",
+  name = "月亮照耀着山谷",
   locations = {
    {2,18,0.2948,0.1914},
   },
  },
  [177464] = {
-  name = "Large Termite Mound",
+  name = "大白蚁丘",
   locations = {
    {2,9,0.2652,0.3753},
    {2,9,0.1951,0.3391},
@@ -347,7 +347,7 @@ QuestieNewObjects = {
   },
  },
  [175207] = {
-  name = "Beached Sea Creature",
+  name = "搁浅的海洋生物",
   locations = {
    {1,3,0.3637,0.5092},
   },
@@ -359,7 +359,7 @@ QuestieNewObjects = {
   },
  },
  [13872] = {
-  name = "Mathystra Relic",
+  name = "黑暗深渊遗物",
   locations = {
    {1,3,0.5804,0.2586},
    {1,3,0.6031,0.2172},
@@ -369,7 +369,7 @@ QuestieNewObjects = {
   },
  },
  [176356] = {
-  name = "Sacred Highborne Writings",
+  name = "神圣的上层精灵笔迹",
   locations = {
    {1,2,0.4151,0.5254},
   },
@@ -393,7 +393,7 @@ QuestieNewObjects = {
   },
  },
  [161752] = {
-  name = "Tool Bucket",
+  name = "工具篮",
   locations = {
    {1,17,0.5613,0.0917},
    {1,17,0.5683,0.0878},
@@ -409,7 +409,7 @@ QuestieNewObjects = {
   },
  },
  [175893] = {
-  name = "Highborne Relic Fragment",
+  name = "上层精灵遗物碎片",
   locations = {
    {1,21,0.5242,0.415},
   },
@@ -421,7 +421,7 @@ QuestieNewObjects = {
   },
  },
  [124388] = {
-  name = "Garrett Family Chest",
+  name = "加勒特的宝箱",
   locations = {
    {2,7,0.9608,0.707},
    {2,3,0.342,0.1863},
@@ -435,13 +435,13 @@ QuestieNewObjects = {
   },
  },
  [179553] = {
-  name = "Core Fragment",
+  name = "熔火碎片",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [176487] = {
-  name = "The Deed to Tarren Mill",
+  name = "塔伦米尔地契",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -464,20 +464,20 @@ QuestieNewObjects = {
   },
  },
  [140911] = {
-  name = "Spool of Light Chartreuse Silk Thread",
+  name = "淡绿色丝线",
   locations = {
    {2,17,0.4019,0.4645},
    {2,17,0.3994,0.4614},
   },
  },
  [333] = {
-  name = "Ancient Relic",
+  name = "古代遗物",
   locations = {
    {2,25,0.3523,0.4441},
   },
  },
  [2741] = {
-  name = "Chest of the Sky",
+  name = "天空之箱",
   locations = {
    {1,16,0.447,0.6244},
   },
@@ -512,19 +512,19 @@ QuestieNewObjects = {
   },
  },
  [103815] = {
-  name = "Ambermill Strongbox",
+  name = "安伯米尔保险箱",
   locations = {
    {2,16,0.6371,0.6524},
   },
  },
  [161526] = {
-  name = "Crate of Foodstuffs",
+  name = "食物箱",
   locations = {
    {1,20,0.6854,0.3654},
   },
  },
  [105175] = {
-  name = "Cantation of Manifestation",
+  name = "显形卷轴",
   locations = {
    {2,22,0.8578,0.1005},
    {2,22,0.857,0.1011},
@@ -536,7 +536,7 @@ QuestieNewObjects = {
   },
  },
  [178784] = {
-  name = "Coldtooth Supplies",
+  name = "冷齿补给品",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -553,7 +553,7 @@ QuestieNewObjects = {
   },
  },
  [175892] = {
-  name = "Highborne Relic Fragment",
+  name = "上层精灵遗物碎片",
   locations = {
    {1,21,0.5331,0.4344},
   },
@@ -571,25 +571,25 @@ QuestieNewObjects = {
   },
  },
  [142958] = {
-  name = "Feralas: A History",
+  name = "菲拉斯的历史",
   locations = {
    {1,16,0.5522,0.9146},
   },
  },
  [1760] = {
-  name = "Weathered Bookcase",
+  name = "陈旧的书架",
   locations = {
    {2,1,0.3842,0.4638},
   },
  },
  [177805] = {
-  name = "Mangled Human Remains",
+  name = "破碎的人类残骸",
   locations = {
    {2,9,0.2881,0.7488},
   },
  },
  [105170] = {
-  name = "Agamand Weapon Rack",
+  name = "阿加曼德武器架",
   locations = {
    {2,21,0.5168,0.2569},
   },
@@ -667,7 +667,7 @@ QuestieNewObjects = {
   },
  },
  [176485] = {
-  name = "The Deed to Caer Darrow",
+  name = "凯尔达隆地契",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -693,19 +693,19 @@ QuestieNewObjects = {
   },
  },
  [190483] = {
-  name = "Document Chest",
+  name = "文件箱",
   locations = {
    {1,18,0.3376,0.3999},
   },
  },
  [176344] = {
-  name = "Document Chest",
+  name = "文件箱",
   locations = {
    {1,18,0.3179,0.3258},
   },
  },
  [19871] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.869,0.7223},
    {1,18,0.8192,0.8734},
@@ -733,7 +733,7 @@ QuestieNewObjects = {
   },
  },
  [3290] = {
-  name = "Stolen Supply Sack",
+  name = "被偷走的补给袋",
   locations = {
    {1,6,0.4809,0.3438},
    {1,6,0.4963,0.3211},
@@ -748,19 +748,19 @@ QuestieNewObjects = {
   },
  },
  [50935] = {
-  name = "Sack of Corn",
+  name = "一袋玉米",
   locations = {
    {1,15,0.6574,0.3673},
   },
  },
  [126260] = {
-  name = "Ancient Chest",
+  name = "上古之柜",
   locations = {
    {2,13,0.3857,0.9318},
   },
  },
  [174728] = {
-  name = "Damaged Crate",
+  name = "破损的箱子",
   locations = {
    {1,7,0.5408,0.559},
   },
@@ -790,7 +790,7 @@ QuestieNewObjects = {
   },
  },
  [126049] = {
-  name = "Magenta Cap Clusters",
+  name = "紫色蘑菇",
   locations = {
    {2,7,0.9811,0.699},
    {2,7,0.96,0.7363},
@@ -814,25 +814,25 @@ QuestieNewObjects = {
   },
  },
  [177964] = {
-  name = "Fathom Stone",
+  name = "深渊之石",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [3768] = {
-  name = "Fragile - Do Not Drop",
+  name = "易碎品",
   locations = {
    {1,17,0.6358,0.4925},
   },
  },
  [175385] = {
-  name = "Darkstone Tablet",
+  name = "黑暗石板",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [19016] = {
-  name = "Stardust Covered Bush",
+  name = "星尘覆盖的草丛",
   locations = {
    {1,1,0.3311,0.686},
    {1,1,0.335,0.6764},
@@ -847,7 +847,7 @@ QuestieNewObjects = {
   },
  },
  [178105] = {
-  name = "Resonite Crystal",
+  name = "共鸣水晶",
   locations = {
    {1,14,0.586,0.9214},
    {1,14,0.5872,0.9068},
@@ -863,7 +863,7 @@ QuestieNewObjects = {
   },
  },
  [11713] = {
-  name = "Death Cap",
+  name = "毒帽蘑菇",
   locations = {
    {1,3,0.5629,0.3491},
    {1,3,0.5558,0.3605},
@@ -880,7 +880,7 @@ QuestieNewObjects = {
   },
  },
  [152095] = {
-  name = "Moonpetal Lily",
+  name = "月牙百合花",
   locations = {
    {1,16,0.5882,0.3757},
    {1,16,0.5677,0.3755},
@@ -903,7 +903,7 @@ QuestieNewObjects = {
   },
  },
  [177675] = {
-  name = "Mound of Dirt",
+  name = "一堆泥土",
   locations = {
    {2,9,0.2804,0.8615},
   },
@@ -915,19 +915,19 @@ QuestieNewObjects = {
   },
  },
  [175233] = {
-  name = "Beached Sea Creature",
+  name = "搁浅的海洋生物",
   locations = {
    {1,3,0.4193,0.3153},
   },
  },
  [263] = {
-  name = "Kurzen Supplies",
+  name = "库尔森补给品",
   locations = {
    {2,18,0.441,0.0954},
   },
  },
  [181098] = {
-  name = "Volcanic Ash",
+  name = "火山灰",
   locations = {
    {2,5,0.6973,0.4203},
    {2,5,0.3586,0.4707},
@@ -986,19 +986,19 @@ QuestieNewObjects = {
   },
  },
  [179025] = {
-  name = "Frostwolf Banner",
+  name = "霜狼军旗",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [334] = {
-  name = "Ancient Relic",
+  name = "古代遗物",
   locations = {
    {2,25,0.3435,0.4446},
   },
  },
  [178195] = {
-  name = "Warsong Oil",
+  name = "战歌之油",
   locations = {
    {1,1,0.6685,0.5714},
    {1,1,0.6645,0.5685},
@@ -1009,7 +1009,7 @@ QuestieNewObjects = {
   },
  },
  [17282] = {
-  name = "Plant Bundle",
+  name = "草药",
   locations = {
    {1,1,0.3093,0.2098},
    {1,1,0.3044,0.2549},
@@ -1022,7 +1022,7 @@ QuestieNewObjects = {
   },
  },
  [176151] = {
-  name = "Musty Tome",
+  name = "发霉的书籍",
   locations = {
    {2,23,0.4341,0.6922},
    {2,23,0.436,0.6997},
@@ -1036,13 +1036,13 @@ QuestieNewObjects = {
   },
  },
  [20807] = {
-  name = "Ancient Brazier",
+  name = "古代火盆",
   locations = {
    {1,18,0.4201,0.3147},
   },
  },
  [13891] = {
-  name = "Serpentbloom",
+  name = "毒蛇花",
   locations = {
    {1,17,0.4908,0.3351},
    {1,17,0.4806,0.319},
@@ -1116,7 +1116,7 @@ QuestieNewObjects = {
   },
  },
  [175324] = {
-  name = "Frostmaul Shards",
+  name = "霜槌碎片",
   locations = {
    {1,21,0.6591,0.6897},
    {1,21,0.6436,0.7236},
@@ -1140,7 +1140,7 @@ QuestieNewObjects = {
   },
  },
  [175802] = {
-  name = "Small Lockbox",
+  name = "小箱子",
   locations = {
    {2,23,0.4085,0.6712},
    {2,23,0.4359,0.735},
@@ -1171,7 +1171,7 @@ QuestieNewObjects = {
   },
  },
  [175566] = {
-  name = "Gloom Weed",
+  name = "阴暗草",
   locations = {
    {2,21,0.4213,0.5966},
    {2,21,0.4632,0.535},
@@ -1243,7 +1243,7 @@ QuestieNewObjects = {
   },
  },
  [178104] = {
-  name = "Resonite Crystal",
+  name = "共鸣水晶",
   locations = {
    {1,14,0.5961,0.9234},
    {1,14,0.5956,0.9198},
@@ -1277,13 +1277,13 @@ QuestieNewObjects = {
   },
  },
  [142088] = {
-  name = "Tablet of Will",
+  name = "意志之匾",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [19284] = {
-  name = "Mythology of the Titans",
+  name = "神话",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -1295,19 +1295,19 @@ QuestieNewObjects = {
   },
  },
  [160845] = {
-  name = "Dark Coffer",
+  name = "黑暗宝箱",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [175889] = {
-  name = "Ancient Egg",
+  name = "远古之卵",
   locations = {
    {2,20,0.5758,0.8679},
   },
  },
  [164958] = {
-  name = "Bloodpetal Sprout",
+  name = "血瓣花苗",
   locations = {
    {1,20,0.3214,0.6686},
    {1,20,0.3403,0.6821},
@@ -1366,13 +1366,13 @@ QuestieNewObjects = {
   },
  },
  [92423] = {
-  name = "Damaged Chest",
+  name = "破损的箱子",
   locations = {
    {1,17,0.4902,0.9677},
   },
  },
  [4406] = {
-  name = "Webwood Eggs",
+  name = "树林蜘蛛的卵",
   locations = {
    {1,16,0.5701,0.2649},
    {1,16,0.5679,0.2657},
@@ -1383,13 +1383,13 @@ QuestieNewObjects = {
   },
  },
  [2739] = {
-  name = "Chest of the Black Feather",
+  name = "黑羽之箱",
   locations = {
    {1,16,0.437,0.6122},
   },
  },
  [19603] = {
-  name = "Venture Co. Documents",
+  name = "风险投资公司文件",
   locations = {
    {1,14,0.7446,0.593},
   },
@@ -1415,13 +1415,13 @@ QuestieNewObjects = {
   },
  },
  [179565] = {
-  name = "Dusty Reliquary",
+  name = "覆满灰尘的箱子",
   locations = {
    {1,13,0.6323,0.5535},
   },
  },
  [2867] = {
-  name = "Excavation Supply Crate",
+  name = "挖掘场补给箱",
   locations = {
    {2,3,0.6692,0.2345},
   },
@@ -1436,13 +1436,13 @@ QuestieNewObjects = {
   },
  },
  [105172] = {
-  name = "Agamand Weapon Rack",
+  name = "阿加曼德武器架",
   locations = {
    {2,21,0.5266,0.2704},
   },
  },
  [152622] = {
-  name = "Azsharite Formation",
+  name = "艾萨拉晶体",
   locations = {
    {1,2,0.5291,0.8954},
    {1,2,0.5527,0.9045},
@@ -1463,7 +1463,7 @@ QuestieNewObjects = {
   },
  },
  [3685] = {
-  name = "Silithid Mound",
+  name = "异种蝎土丘",
   locations = {
    {1,17,0.473,0.7036},
    {1,17,0.4809,0.7099},
@@ -1481,13 +1481,13 @@ QuestieNewObjects = {
   },
  },
  [176785] = {
-  name = "Ammo Crate",
+  name = "弹药箱",
   locations = {
    {2,7,0.4413,0.5695},
   },
  },
  [19541] = {
-  name = "Deepmoss Eggs",
+  name = "深苔蜘蛛的卵",
   locations = {
    {1,14,0.6139,0.5674},
    {1,14,0.7764,0.5458},
@@ -1516,7 +1516,7 @@ QuestieNewObjects = {
   },
  },
  [175785] = {
-  name = "Inconspicuous Documents",
+  name = "不显眼的文件",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -1525,7 +1525,7 @@ QuestieNewObjects = {
   },
  },
  [177926] = {
-  name = "Gaea Seed",
+  name = "盖亚之种",
   locations = {
    {1,14,0.4974,0.4511},
    {1,14,0.5177,0.4262},
@@ -1548,7 +1548,7 @@ QuestieNewObjects = {
   },
  },
  [128293] = {
-  name = "Magenta Cap Clusters",
+  name = "紫色蘑菇",
   locations = {
    {2,7,0.9571,0.6828},
    {2,7,0.9936,0.6661},
@@ -1573,7 +1573,7 @@ QuestieNewObjects = {
   },
  },
  [176793] = {
-  name = "Bundle of Wood",
+  name = "一捆木柴",
   locations = {
    {2,10,0.793,0.6335},
    {2,10,0.8024,0.6147},
@@ -1603,7 +1603,7 @@ QuestieNewObjects = {
   },
  },
  [178106] = {
-  name = "Resonite Crystal",
+  name = "共鸣水晶",
   locations = {
    {1,14,0.6005,0.9164},
    {1,14,0.609,0.9245},
@@ -1627,7 +1627,7 @@ QuestieNewObjects = {
   },
  },
  [19873] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.8865,0.7687},
    {1,18,0.7734,0.8651},
@@ -1640,7 +1640,7 @@ QuestieNewObjects = {
   },
  },
  [18036] = {
-  name = "Bottle of Disease",
+  name = "一瓶病菌",
   locations = {
    {1,1,0.7531,0.7193},
    {1,1,0.7531,0.7188},
@@ -1656,14 +1656,14 @@ QuestieNewObjects = {
   },
  },
  [2087] = {
-  name = "Bloodsail Orders",
+  name = "血帆计划书",
   locations = {
    {2,18,0.2718,0.8266},
    {2,18,0.2774,0.8313},
   },
  },
  [12654] = {
-  name = "Mathystra Relic",
+  name = "黑暗深渊遗物",
   locations = {
    {1,3,0.6081,0.2321},
    {1,3,0.5995,0.2402},
@@ -1673,7 +1673,7 @@ QuestieNewObjects = {
   },
  },
  [176752] = {
-  name = "Kodo Bones",
+  name = "科多兽骨",
   locations = {
    {1,5,0.5114,0.6002},
    {1,5,0.4968,0.5708},
@@ -1683,7 +1683,7 @@ QuestieNewObjects = {
   },
  },
  [1620] = {
-  name = "Mageroyal",
+  name = "魔皇草",
   locations = {
    {2,16,0.4755,0.3389},
    {2,16,0.5672,0.2318},
@@ -2319,7 +2319,7 @@ QuestieNewObjects = {
   },
  },
  [1619] = {
-  name = "Earthroot",
+  name = "地根草",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -2811,7 +2811,7 @@ QuestieNewObjects = {
   },
  },
  [17783] = {
-  name = "Ancient Statuette",
+  name = "古代雕像",
   locations = {
    {1,1,0.142,0.2064},
   },
@@ -2823,7 +2823,7 @@ QuestieNewObjects = {
   },
  },
  [19870] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.8775,0.7807},
    {1,18,0.8818,0.6774},
@@ -2844,7 +2844,7 @@ QuestieNewObjects = {
   },
  },
  [13360] = {
-  name = "Mathystra Relic",
+  name = "黑暗深渊遗物",
   locations = {
    {1,3,0.5845,0.2503},
    {1,3,0.5671,0.2249},
@@ -2854,7 +2854,7 @@ QuestieNewObjects = {
   },
  },
  [176150] = {
-  name = "Musty Tome",
+  name = "发霉的书籍",
   locations = {
    {2,23,0.4339,0.6969},
   },
@@ -2866,13 +2866,13 @@ QuestieNewObjects = {
   },
  },
  [50936] = {
-  name = "Sack of Barley",
+  name = "一袋大麦",
   locations = {
    {2,19,0.6254,0.2311},
   },
  },
  [142181] = {
-  name = "Stolen Cargo",
+  name = "被偷走的货物",
   locations = {
    {1,15,0.7218,0.4684},
    {1,15,0.7214,0.468},
@@ -2888,13 +2888,13 @@ QuestieNewObjects = {
   },
  },
  [1736] = {
-  name = "Shipment of Iron",
+  name = "一箱铁材",
   locations = {
    {2,11,0.3201,0.4545},
   },
  },
  [24798] = {
-  name = "Sundried Driftwood",
+  name = "晒干的流木",
   locations = {
    {2,19,0.9188,0.6864},
    {2,19,0.9493,0.5208},
@@ -2936,7 +2936,7 @@ QuestieNewObjects = {
   },
  },
  [20920] = {
-  name = "Blueleaf Tuber",
+  name = "蓝叶薯",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -2962,12 +2962,12 @@ QuestieNewObjects = {
   },
  },
  [19022] = {
-  name = "Worn Chest",
+  name = "旧箱子",
   locations = {
    {1,1,0.5442,0.354},
   },
   openedby = {
-   ["Wooden Key"] = 1
+   ["木制钥匙"] = 1
   }
  },
  [175950] = {
@@ -2977,7 +2977,7 @@ QuestieNewObjects = {
   },
  },
  [1621] = {
-  name = "Briarthorn",
+  name = "石南草",
   locations = {
    {2,16,0.4912,0.3357},
    {2,16,0.5243,0.5669},
@@ -3559,7 +3559,7 @@ QuestieNewObjects = {
   },
  },
  [141853] = {
-  name = "Violet Tragan",
+  name = "紫色水生菇",
   locations = {
    {2,20,0.4156,0.5894},
    {2,20,0.4066,0.5907},
@@ -3570,13 +3570,13 @@ QuestieNewObjects = {
   },
  },
  [175888] = {
-  name = "Highborne Relic Fragment",
+  name = "上层精灵遗物碎片",
   locations = {
    {1,21,0.5514,0.4298},
   },
  },
  [179922] = {
-  name = "Vessel of Tainted Blood",
+  name = "腐化之血",
   locations = {
    {2,20,0.6757,0.6697},
    {2,20,0.6352,0.8398},
@@ -3609,13 +3609,13 @@ QuestieNewObjects = {
   },
  },
  [2708] = {
-  name = "Spirit of Silverpine Charts",
+  name = "银松之魂号的航海图",
   locations = {
    {2,2,0.2046,0.8561},
   },
  },
  [36738] = {
-  name = "The Book of Ur",
+  name = "乌尔之书",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -3637,13 +3637,13 @@ QuestieNewObjects = {
   },
  },
  [177287] = {
-  name = "Unfinished Painting",
+  name = "未完成的油画",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [180501] = {
-  name = "Twilight Tablet Fragment",
+  name = "暮光石板碎片",
   locations = {
    {1,13,0.206,0.0785},
    {1,13,0.2743,0.1048},
@@ -3661,7 +3661,7 @@ QuestieNewObjects = {
   },
  },
  [180436] = {
-  name = "Twilight Tablet Fragment",
+  name = "暮光石板碎片",
   locations = {
    {1,13,0.284,0.1171},
    {1,13,0.2644,0.159},
@@ -3672,13 +3672,13 @@ QuestieNewObjects = {
   },
  },
  [179914] = {
-  name = "Pile of Bones",
+  name = "白骨堆",
   locations = {
    {2,20,0.6211,0.7535},
   },
  },
  [173266] = {
-  name = "Goodsteel Ledger",
+  name = "古德斯迪尔的账本",
   locations = {
    {2,15,0.655,0.6219},
   },
@@ -3690,7 +3690,7 @@ QuestieNewObjects = {
   },
  },
  [3240] = {
-  name = "Taillasher Eggs",
+  name = "鞭尾龙的蛋",
   locations = {
    {1,6,0.6967,0.746},
    {1,6,0.6211,0.962},
@@ -3707,7 +3707,7 @@ QuestieNewObjects = {
   },
  },
  [375] = {
-  name = "Tirisfal Pumpkin",
+  name = "提瑞斯法南瓜",
   locations = {
    {2,21,0.3607,0.5208},
    {2,21,0.3191,0.4667},
@@ -3743,7 +3743,7 @@ QuestieNewObjects = {
   },
  },
  [4608] = {
-  name = "Timberling Sprout",
+  name = "林精的新芽",
   locations = {
    {1,16,0.6006,0.705},
    {1,16,0.6164,0.6886},
@@ -3781,7 +3781,7 @@ QuestieNewObjects = {
   },
  },
  [161495] = {
-  name = "Secret Safe",
+  name = "秘密保险箱",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -3793,13 +3793,13 @@ QuestieNewObjects = {
   },
  },
  [331] = {
-  name = "Loose Soil",
+  name = "松软的土壤",
   locations = {
    {2,25,0.365,0.4209},
   },
  },
  [21052] = {
-  name = "Defias Strongbox",
+  name = "迪菲亚保险箱",
   locations = {
    {2,8,0.2392,0.7207},
   },
@@ -3811,19 +3811,19 @@ QuestieNewObjects = {
   },
  },
  [20725] = {
-  name = "The Legacy of the Aspects",
+  name = "巨龙的遗产",
   locations = {
    {1,1,0.7557,0.7437},
   },
  },
  [176486] = {
-  name = "The Deed to Southshore",
+  name = "南海镇地契",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [113757] = {
-  name = "Shadowforge Cache",
+  name = "暗影熔炉地窖",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -3835,19 +3835,19 @@ QuestieNewObjects = {
   },
  },
  [176484] = {
-  name = "The Deed to Brill",
+  name = "布瑞尔地契",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [50982] = {
-  name = "The Charred Oak",
+  name = "烧焦的橡木",
   locations = {
    {2,15,0.5449,0.5047},
   },
  },
  [19602] = {
-  name = "Venture Co. Engineering Plans",
+  name = "风险投资公司工程计划书",
   locations = {
    {1,14,0.6609,0.5133},
   },
@@ -3865,13 +3865,13 @@ QuestieNewObjects = {
   },
  },
  [321] = {
-  name = "Tear of Tilloa",
+  name = "蒂罗亚之泪",
   locations = {
    {2,8,0.7835,0.3595},
   },
  },
  [22246] = {
-  name = "Tear of Theradras",
+  name = "瑟莱德丝之泪",
   locations = {
    {1,5,0.4083,0.9475},
    {1,5,0.3904,0.9184},
@@ -3888,7 +3888,7 @@ QuestieNewObjects = {
   },
  },
  [176751] = {
-  name = "Kodo Bones",
+  name = "科多兽骨",
   locations = {
    {1,5,0.4889,0.5881},
    {1,5,0.4897,0.6009},
@@ -3903,13 +3903,13 @@ QuestieNewObjects = {
   },
  },
  [58369] = {
-  name = "Stolen Iron Chest",
+  name = "被偷走的铁箱",
   locations = {
    {1,17,0.5505,0.2665},
   },
  },
  [2910] = {
-  name = "Well Stone",
+  name = "水井石",
   locations = {
    {1,11,0.4281,0.1443},
    {1,11,0.431,0.1387},
@@ -3936,7 +3936,7 @@ QuestieNewObjects = {
   },
  },
  [20726] = {
-  name = "Beginnings of the Undead Threat",
+  name = "亡灵的起源",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -3948,7 +3948,7 @@ QuestieNewObjects = {
   },
  },
  [148514] = {
-  name = "Tablet of Markri",
+  name = "玛科里石板",
   locations = {
    {1,2,0.3984,0.4588},
    {1,2,0.3792,0.4775},
@@ -3968,19 +3968,19 @@ QuestieNewObjects = {
   },
  },
  [177264] = {
-  name = "Symbol of Lost Honor",
+  name = "失落荣耀的象征",
   locations = {
    {2,9,0.7133,0.3397},
   },
  },
  [2740] = {
-  name = "Chest of the Raven Claw",
+  name = "鸦爪之箱",
   locations = {
    {1,16,0.4565,0.5744},
   },
  },
  [181053] = {
-  name = "Basket of Bloodkelp",
+  name = "一篮血藻",
   locations = {
    {1,7,0.751,0.1498},
    {1,7,0.7581,0.2183},
@@ -3988,7 +3988,7 @@ QuestieNewObjects = {
   },
  },
  [89635] = {
-  name = "Sunscorched Shell",
+  name = "晒焦的蛋壳",
   locations = {
    {1,18,0.1018,0.3435},
    {1,18,0.1347,0.3705},
@@ -4001,61 +4001,61 @@ QuestieNewObjects = {
   },
  },
  [105171] = {
-  name = "Agamand Weapon Rack",
+  name = "阿加曼德武器架",
   locations = {
    {2,21,0.5188,0.2714},
   },
  },
  [32] = {
-  name = "Sunken Chest",
+  name = "沉没的箱子",
   locations = {
    {2,14,0.4152,0.5466},
   },
  },
  [179024] = {
-  name = "Stormpike Banner",
+  name = "雷矛军旗",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [1560] = {
-  name = "Storage Chest",
+  name = "储物箱",
   locations = {
    {2,10,0.443,0.6582},
   },
  },
  [123214] = {
-  name = "Duskwood Chest",
+  name = "暮色森林的箱子",
   locations = {
    {2,24,0.7041,0.7393},
   },
  },
  [2689] = {
-  name = "Stone of West Binding",
+  name = "西禁锢之石",
   locations = {
    {2,2,0.2546,0.3011},
   },
  },
  [2690] = {
-  name = "Stone of Outer Binding",
+  name = "外禁锢之石",
   locations = {
    {2,2,0.5204,0.5073},
   },
  },
  [2691] = {
-  name = "Stone of East Binding",
+  name = "东禁锢之石",
   locations = {
    {2,2,0.667,0.2972},
   },
  },
  [147557] = {
-  name = "Stolen Silver",
+  name = "被偷走的银币",
   locations = {
    {1,17,0.5804,0.5387},
   },
  },
  [19869] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.8842,0.8104},
    {1,18,0.8727,0.7347},
@@ -4071,13 +4071,13 @@ QuestieNewObjects = {
   },
  },
  [177806] = {
-  name = "Mangled Human Remains",
+  name = "破碎的人类残骸",
   locations = {
    {2,9,0.2881,0.7984},
   },
  },
  [83763] = {
-  name = "Stolen Books",
+  name = "被偷走的书",
   locations = {
    {2,10,0.5671,0.4396},
   },
@@ -4096,7 +4096,7 @@ QuestieNewObjects = {
   },
  },
  [178785] = {
-  name = "Irondeep Supplies",
+  name = "深铁矿洞补给品",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -4116,13 +4116,13 @@ QuestieNewObjects = {
   },
  },
  [35252] = {
-  name = "Ancient Relic",
+  name = "古代遗物",
   locations = {
    {2,25,0.3492,0.4704},
   },
  },
  [161527] = {
-  name = "Dinosaur Bone",
+  name = "恐龙骨头",
   locations = {
    {1,20,0.3097,0.7215},
    {1,20,0.3266,0.7352},
@@ -4141,13 +4141,13 @@ QuestieNewObjects = {
   },
  },
  [1759] = {
-  name = "Hillsbrad Town Registry",
+  name = "希尔斯布莱德城镇文档",
   locations = {
    {2,11,0.2952,0.4153},
   },
  },
  [89634] = {
-  name = "Iron Coral",
+  name = "铁珊瑚",
   locations = {
    {2,25,0.0908,0.7176},
    {2,25,0.0869,0.7112},
@@ -4160,7 +4160,7 @@ QuestieNewObjects = {
   },
  },
  [175928] = {
-  name = "Incendia Agave",
+  name = "火焰龙舌兰",
   locations = {
    {1,18,0.3659,0.3877},
    {1,18,0.3337,0.3286},
@@ -4181,19 +4181,19 @@ QuestieNewObjects = {
   },
  },
  [58595] = {
-  name = "Burning Blade Stash",
+  name = "火刃营地",
   locations = {
    {1,6,0.5162,0.0976},
   },
  },
  [175588] = {
-  name = "Spire Spider Egg",
+  name = "尖塔蜘蛛卵",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [22550] = {
-  name = "Draenethyst Crystals",
+  name = "德莱尼水晶",
   locations = {
    {2,19,0.6476,0.227},
    {2,19,0.6537,0.2035},
@@ -4207,7 +4207,7 @@ QuestieNewObjects = {
   },
  },
  [68865] = {
-  name = "Snufflenose Command Sticks",
+  name = "地鼠指挥棒",
   locations = {
    {1,17,0.6234,0.376},
   },
@@ -4219,19 +4219,19 @@ QuestieNewObjects = {
   },
  },
  [190484] = {
-  name = "Document Chest",
+  name = "文件箱",
   locations = {
    {1,18,0.3934,0.4153},
   },
  },
  [166863] = {
-  name = "Fresh Threshadon Carcass",
+  name = "新鲜的蛇颈龙肉",
   locations = {
    {1,20,0.6874,0.5671},
   },
  },
  [2724] = {
-  name = "Sack of Oats",
+  name = "一袋燕麦",
   locations = {
    {2,24,0.3853,0.581},
    {2,24,0.5611,0.3545},
@@ -4282,7 +4282,7 @@ QuestieNewObjects = {
   },
  },
  [153239] = {
-  name = "Wildkin Feather",
+  name = "枭兽羽毛",
   locations = {
    {2,20,0.5202,0.58},
    {2,20,0.5308,0.5538},
@@ -4362,7 +4362,7 @@ QuestieNewObjects = {
   },
  },
  [264] = {
-  name = "Kurzen Supplies",
+  name = "库尔森补给品",
   locations = {
    {2,18,0.4449,0.0972},
   },
@@ -4374,7 +4374,7 @@ QuestieNewObjects = {
   },
  },
  [179826] = {
-  name = "Secret Plans: Fiery Flux",
+  name = "秘密设计图：炽热助熔剂",
   locations = {
    {2,15,0.4045,0.3574},
   },
@@ -4403,7 +4403,7 @@ QuestieNewObjects = {
   },
  },
  [86492] = {
-  name = "Crate of Elunite",
+  name = "月神矿石",
   locations = {
    {1,3,0.3384,0.4444},
    {1,3,0.3358,0.4423},
@@ -4421,7 +4421,7 @@ QuestieNewObjects = {
   },
  },
  [175384] = {
-  name = "Highperch Wyvern Egg",
+  name = "风巢双足飞龙的蛋",
   locations = {
    {1,18,0.1757,0.4225},
    {1,18,0.1802,0.4168},
@@ -4447,7 +4447,7 @@ QuestieNewObjects = {
   },
  },
  [142344] = {
-  name = "Artificial Extrapolator",
+  name = "机械储存柜",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -4499,7 +4499,7 @@ QuestieNewObjects = {
   },
  },
  [19598] = {
-  name = "Barrow Cache",
+  name = "兽穴储物箱",
   locations = {
    {1,14,0.2796,0.1381},
   },
@@ -4511,19 +4511,19 @@ QuestieNewObjects = {
   },
  },
  [1571] = {
-  name = "Dusty Spellbooks",
+  name = "布满灰尘的法术书",
   locations = {
    {2,16,0.5283,0.2858},
   },
  },
  [105169] = {
-  name = "Agamand Weapon Rack",
+  name = "阿加曼德武器架",
   locations = {
    {2,21,0.5266,0.2585},
   },
  },
  [276] = {
-  name = "Shimmerweed Basket",
+  name = "微光草篮",
   locations = {
    {2,7,0.4264,0.3561},
    {2,7,0.4102,0.4465},
@@ -4550,7 +4550,7 @@ QuestieNewObjects = {
   },
  },
  [13949] = {
-  name = "Pitted Iron Chest",
+  name = "铁箱",
   locations = {
    {0,0,-0.01,-0.01},
   },
@@ -4562,7 +4562,7 @@ QuestieNewObjects = {
   },
  },
  [1617] = {
-  name = "Silverleaf",
+  name = "银叶草",
   locations = {
    {1,17,0.5371,0.1755},
    {1,17,0.5949,0.1719},
@@ -5418,7 +5418,7 @@ QuestieNewObjects = {
   },
  },
  [22245] = {
-  name = "Sack of Meat",
+  name = "一袋肉",
   locations = {
    {1,5,0.6582,0.8054},
    {1,5,0.6641,0.8111},
@@ -5441,7 +5441,7 @@ QuestieNewObjects = {
   },
  },
  [152621] = {
-  name = "Azsharite Formation",
+  name = "艾萨拉晶体",
   locations = {
    {1,2,0.5995,0.7995},
    {1,2,0.6263,0.8803},
@@ -5452,25 +5452,25 @@ QuestieNewObjects = {
   },
  },
  [52] = {
-  name = "Fall of Gurubashi",
+  name = "古拉巴什的毁灭",
   locations = {
    {2,18,0.2295,0.1202},
   },
  },
  [19283] = {
-  name = "Compendium of the Fallen",
+  name = "堕落者纲要",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [2742] = {
-  name = "Chest of Nesting",
+  name = "巢穴之箱",
   locations = {
    {1,16,0.444,0.6066},
   },
  },
  [2710] = {
-  name = "Spirit of Silverpine Log",
+  name = "银松之魂号的航海日志",
   locations = {
    {2,2,0.2065,0.851},
   },
@@ -5482,13 +5482,13 @@ QuestieNewObjects = {
   },
  },
  [175891] = {
-  name = "Highborne Relic Fragment",
+  name = "上层精灵遗物碎片",
   locations = {
    {1,21,0.5088,0.4171},
   },
  },
  [152631] = {
-  name = "Azsharite Formation",
+  name = "艾萨拉晶体",
   locations = {
    {1,2,0.4853,0.7943},
    {1,2,0.6276,0.8586},
@@ -5502,19 +5502,19 @@ QuestieNewObjects = {
   },
  },
  [50937] = {
-  name = "Sack of Rye",
+  name = "一袋黑麦",
   locations = {
    {2,20,0.3998,0.6626},
   },
  },
  [177804] = {
-  name = "Mangled Human Remains",
+  name = "破碎的人类残骸",
   locations = {
    {2,9,0.2716,0.7496},
   },
  },
  [149482] = {
-  name = "Rune of Markri",
+  name = "玛克雷符文",
   locations = {
    {1,2,0.3936,0.5548},
   },
@@ -5532,7 +5532,7 @@ QuestieNewObjects = {
   },
  },
  [105174] = {
-  name = "Chest of Containment Coffers",
+  name = "一盒封灵箱",
   locations = {
    {2,22,0.8567,0.0991},
    {2,22,0.8553,0.1003},
@@ -5545,7 +5545,7 @@ QuestieNewObjects = {
   },
  },
  [19872] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.8147,0.8626},
    {1,18,0.8064,0.5626},
@@ -5558,7 +5558,7 @@ QuestieNewObjects = {
   },
  },
  [2712] = {
-  name = "Calcified Elven Gem",
+  name = "石化精灵宝钻",
   locations = {
    {2,2,0.1936,0.9006},
    {2,2,0.2249,0.8996},
@@ -5574,19 +5574,19 @@ QuestieNewObjects = {
   },
  },
  [176197] = {
-  name = "Beached Sea Turtle",
+  name = "搁浅的海龟",
   locations = {
    {1,3,0.4419,0.206},
   },
  },
  [93192] = {
-  name = "Heartswood",
+  name = "同心树",
   locations = {
    {1,1,0.3153,0.3152},
   },
  },
  [21277] = {
-  name = "Crate with Holes",
+  name = "开孔的箱子",
   locations = {
    {1,17,0.6232,0.3761},
    {1,17,0.6232,0.3762},
@@ -5596,7 +5596,7 @@ QuestieNewObjects = {
   },
  },
  [19868] = {
-  name = "Rocket Car Rubble",
+  name = "火箭车碎片",
   locations = {
    {1,18,0.8617,0.7447},
    {1,18,0.8708,0.7543},
@@ -5617,7 +5617,7 @@ QuestieNewObjects = {
   },
  },
  [142191] = {
-  name = "Horde Supply Crate",
+  name = "部落补给箱",
   locations = {
    {2,20,0.5999,0.4249},
    {2,20,0.5783,0.3862},
@@ -5632,19 +5632,19 @@ QuestieNewObjects = {
   },
  },
  [1727] = {
-  name = "Keg of Shindigger Stout",
+  name = "矿工烈酒",
   locations = {
    {2,11,0.7156,0.8097},
   },
  },
  [161521] = {
-  name = "Research Equipment",
+  name = "研究设备",
   locations = {
    {1,20,0.3845,0.6606},
   },
  },
  [171938] = {
-  name = "Cactus Apple",
+  name = "仙人掌果",
   locations = {
    {1,6,0.4526,0.7107},
    {1,6,0.4485,0.6165},
@@ -5700,7 +5700,7 @@ QuestieNewObjects = {
   },
  },
  [164910] = {
-  name = "Ornate Chest",
+  name = "华丽的箱子",
   locations = {
    {1,20,0.5028,0.4997},
   },
@@ -5720,7 +5720,7 @@ QuestieNewObjects = {
   },
  },
  [154357] = {
-  name = "Glinting Mud",
+  name = "闪光的泥浆",
   locations = {
    {2,14,0.3804,0.5449},
    {2,14,0.1916,0.5174},
@@ -5729,13 +5729,13 @@ QuestieNewObjects = {
   },
  },
  [179915] = {
-  name = "Pile of Skulls",
+  name = "颅骨堆",
   locations = {
    {2,20,0.5856,0.6476},
   },
  },
  [178144] = {
-  name = "Troll Chest",
+  name = "食人妖的箱子",
   locations = {
    {1,1,0.4172,0.3448},
    {1,1,0.412,0.3535},
@@ -5755,7 +5755,7 @@ QuestieNewObjects = {
   },
  },
  [176753] = {
-  name = "Doom Weed",
+  name = "末日草",
   locations = {
    {2,21,0.5883,0.4065},
    {2,21,0.5747,0.3597},
@@ -5787,7 +5787,7 @@ QuestieNewObjects = {
   },
  },
  [176209] = {
-  name = "Shattered Sword of Marduk",
+  name = "马杜克的破碎之剑",
   locations = {
    {2,9,0.5391,0.6576},
   },
@@ -5799,13 +5799,13 @@ QuestieNewObjects = {
   },
  },
  [28024] = {
-  name = "Caravan Chest",
+  name = "车队箱子",
   locations = {
    {2,19,0.6446,0.183},
   },
  },
  [176249] = {
-  name = "Scourge Data",
+  name = "天灾军团档案",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -5819,7 +5819,7 @@ QuestieNewObjects = {
   },
  },
  [152094] = {
-  name = "Hyacinth Mushroom",
+  name = "紫蓝色蘑菇",
   locations = {
    {1,16,0.6326,0.4428},
    {1,16,0.625,0.4404},
@@ -5862,13 +5862,13 @@ QuestieNewObjects = {
   },
  },
  [2084] = {
-  name = "Musquash Root",
+  name = "麝鼠根",
   locations = {
    {2,25,0.6478,0.7532},
   },
  },
  [1723] = {
-  name = "Mudsnout Blossom",
+  name = "泥头花",
   locations = {
    {2,11,0.6512,0.6253},
    {2,11,0.6285,0.6214},
@@ -5908,7 +5908,7 @@ QuestieNewObjects = {
   },
  },
  [3236] = {
-  name = "Gnomish Toolbox",
+  name = "侏儒工具箱",
   locations = {
    {1,6,0.6475,0.5358},
    {1,6,0.6194,0.5549},
@@ -5933,13 +5933,13 @@ QuestieNewObjects = {
   },
  },
  [125477] = {
-  name = "Conspicuous Urn",
+  name = "显眼的石罐",
   locations = {
    {0,0,-0.01,-0.01},
   },
  },
  [175407] = {
-  name = "Moontouched Feather",
+  name = "月光羽毛",
   locations = {
    {1,21,0.3779,0.457},
    {1,21,0.4595,0.4167},
@@ -6010,7 +6010,7 @@ QuestieNewObjects = {
   },
  },
  [3640] = {
-  name = "Laden Mushroom",
+  name = "丰满的蘑菇",
   locations = {
    {1,17,0.464,0.3752},
    {1,17,0.4627,0.3801},
@@ -6035,7 +6035,7 @@ QuestieNewObjects = {
   },
  },
  [175565] = {
-  name = "Alien Egg",
+  name = "异型卵",
   locations = {
    {1,18,0.5636,0.5039},
    {1,18,0.5234,0.5525},
@@ -6075,7 +6075,7 @@ QuestieNewObjects = {
   },
  },
  [1673] = {
-  name = "Fel Cone",
+  name = "魔锥果",
   locations = {
    {1,16,0.5422,0.6553},
    {1,16,0.4993,0.6822},
@@ -6142,7 +6142,7 @@ QuestieNewObjects = {
   },
  },
  [177750] = {
-  name = "Lunar Fungal Bloom",
+  name = "月光蘑菇花",
   locations = {
    {1,3,0.4337,0.4599},
    {1,3,0.4348,0.4576},
@@ -6167,13 +6167,13 @@ QuestieNewObjects = {
   },
  },
  [2086] = {
-  name = "Bloodsail Charts",
+  name = "血帆海图",
   locations = {
    {2,18,0.2715,0.8268},
   },
  },
  [175606] = {
-  name = "Spire Spider Egg",
+  name = "尖塔蜘蛛卵",
   locations = {
    {0,0,-0.01,-0.01},
    {0,0,-0.01,-0.01},
@@ -6205,7 +6205,7 @@ QuestieNewObjects = {
   },
  },
  [3237] = {
-  name = "Imprisoned Darkspear",
+  name = "被囚禁的暗矛巨魔",
   locations = {
    {1,6,0.6745,0.8784},
    {1,6,0.6744,0.8779},
@@ -6217,7 +6217,7 @@ QuestieNewObjects = {
   },
  },
  [2743] = {
-  name = "Carved Stone Urn",
+  name = "雕纹石罐",
   locations = {
    {2,7,0.9634,0.7339},
    {2,7,0.9647,0.7246},
