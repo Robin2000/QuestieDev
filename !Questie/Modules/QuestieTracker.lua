@@ -97,6 +97,7 @@ function QuestieTracker:updateTrackingFrameSize()
         if maxWidth == nil then maxWidth = 0; end
         local totalWidth = maxWidth;
         QuestieTracker.frame:SetWidth(totalWidth);
+		QuestieTracker.frame:SetPoint("TOPRIGHT",-200,120)
         if (QuestieConfig.trackerList == true) then
             local lastbuttonTop = lastButton:GetTop();
             local trackerBottom = QuestieTracker.frame:GetBottom();
